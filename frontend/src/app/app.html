@@ -1,0 +1,38 @@
+<div class="pattern-bg" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<div class="app">
+  <header>
+    <a class="brand" routerLink="/">
+      <span class="star" aria-hidden="true">{{ chronicle.current()?.glyph || '۞' }}</span>
+      <span class="brand-txt">
+        <span class="brand-ar">{{ chronicle.current()?.titleAr || 'السيرة النبوية' }}</span>
+        <span class="brand-en">{{ chronicle.slug() ? 'CHRONICLE' : 'THE LIBRARY' }}</span>
+      </span>
+    </a>
+    @if (chronicle.slug(); as c) {
+      <nav class="nav">
+        <a routerLink="/" class="home" title="All chronicles"><app-icon name="chronicle" [size]="15" /></a>
+        <a [routerLink]="['/c', c]" routerLinkActive="on" [routerLinkActiveOptions]="{ exact: true }"><app-icon name="timeline" [size]="15" />Timeline</a>
+        <a [routerLink]="['/c', c, 'explore']" routerLinkActive="on"><app-icon name="explore" [size]="15" />Explore</a>
+        <a [routerLink]="['/c', c, 'companions']" routerLinkActive="on"><app-icon name="companions" [size]="15" />People</a>
+        <a [routerLink]="['/c', c, 'search']" routerLinkActive="on"><app-icon name="search" [size]="15" />Search</a>
+        <a [routerLink]="['/c', c, 'ask']" routerLinkActive="on"><app-icon name="ask" [size]="15" />Ask</a>
+      </nav>
+    } @else {
+      <nav class="nav">
+        <a routerLink="/" routerLinkActive="on" [routerLinkActiveOptions]="{ exact: true }"><app-icon name="chronicle" [size]="15" />Chronicles</a>
+      </nav>
+    }
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer>
+    <b>SEERAH</b><br>
+    Every fact carries a citation and a certainty tag · No depiction of prophets or companions<br>
+    <span class="fnote">An educational artifact — reviewed content, served from the Seerah platform API.</span>
+  </footer>
+</div>

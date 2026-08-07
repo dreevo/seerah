@@ -1,0 +1,96 @@
+{
+  "_note": "The Story of Prophet al-Yasaʿ (Elisha), drawn strictly from the Qur'an (Surahs al-An'am and Sad). The Qur'an honours al-Yasaʿ twice — naming him among the prophets preferred above the worlds and among the outstanding — but relates no narrative of his life; by tradition he was the companion and successor of Ilyas among the Children of Israel. This chronicle says only what the text says. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "alyasa",
+      "name": "al-Yasaʿ",
+      "ar": "اليسع عليه السلام",
+      "role": "PROPHET"
+    }
+  ],
+  "places": [
+    {
+      "slug": "land-of-bani-israil",
+      "name": "The Land of the Children of Israel",
+      "ar": "أرض بني إسرائيل",
+      "modern": "the Levant",
+      "lat": 32.3,
+      "lng": 35.3,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "alyasa-among-those-preferred",
+      "title": "Among Those Preferred",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-An'am 6:86",
+      "summary": "'And Ismail and al-Yasaʿ and Yunus and Lut — and all We preferred over the worlds.' The Qur'an names al-Yasaʿ within a list of prophets whom Allah favoured above all peoples, granting him a place in the chain of guidance though it tells no story of his deeds.",
+      "why": "The honour of al-Yasaʿ is precisely that Allah names him and prefers him. Where the Qur'an is silent on the details, it is enough for the believer to know he was chosen — and to leave the rest unclaimed.",
+      "people": [
+        "alyasa"
+      ],
+      "verses": [
+        "6:86"
+      ],
+      "place": "land-of-bani-israil",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/alyasa/alyasa-among-those-preferred-calligraphy.svg",
+          "caption": "Calligraphic panel — “All We preferred over the worlds” (al-An'am 6:86).",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "alyasa-among-the-outstanding",
+      "title": "Among the Outstanding",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Sad 38:48",
+      "summary": "'And remember Ismail, al-Yasaʿ, and Dhul-Kifl, and all are among the outstanding.' The Qur'an gathers al-Yasaʿ a second time with the chosen, sealing his rank among the best of the servants of Allah — again without recounting a single event of his life.",
+      "why": "Twice named, twice praised, and never narrated: al-Yasaʿ teaches the reader the discipline of the Qur'an itself — to honour whom Allah honours, and to invent nothing where He has left the page bare.",
+      "people": [
+        "alyasa"
+      ],
+      "verses": [
+        "38:48"
+      ],
+      "place": "land-of-bani-israil",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/alyasa/alyasa-among-the-outstanding-calligraphy.svg",
+          "caption": "Calligraphic panel — “All are among the outstanding” (Sad 38:48).",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-alyasa",
+      "title": "The Arc of al-Yasaʿ",
+      "est": 5,
+      "blurb": "All the Qur'an says of al-Yasaʿ — twice named among the chosen: preferred above the worlds, and counted among the outstanding.",
+      "steps": [
+        "alyasa-among-those-preferred",
+        "alyasa-among-the-outstanding"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+import { Component, computed, inject } from '@angular/core';
+import { Router } from '@angular/router';
+import { httpResource } from '@angular/common/http';
+import { ChronicleItem } from './models';
+
+// A node in the prophetic genealogy. `slug` maps to a chronicle when one exists;
+// otherwise it is a connector prophet (Ismāʿīl/Isḥāq/Yaʿqūb) shown to keep the
+// lineage accurate. Coordinates are hand-authored in the 1600×1450 viewBox.
+interface TreeNode {
+  slug: string; parent: string | null; x: number; y: number; r: number; depth: number;
+  connectorName?: string; note?: string; flagship?: boolean;
+}
+
+const LAYOUT: TreeNode[] = [
+  { slug: 'adam', parent: null, x: 700, y: 58, r: 46, depth: 0 },
+  { slug: 'idris', parent: 'adam', x: 700, y: 216, r: 40, depth: 1 },
+  { slug: 'nuh', parent: 'idris', x: 700, y: 360, r: 44, depth: 2 },
+  { slug: 'hud', parent: 'nuh', x: 360, y: 436, r: 40, depth: 3, note: "ʿĀd · via Sām" },
+  { slug: 'salih', parent: 'nuh', x: 1040, y: 436, r: 40, depth: 3, note: 'Thamūd · via Sām' },
+  { slug: 'ibrahim', parent: 'nuh', x: 700, y: 540, r: 50, depth: 3 },
+  { slug: 'lut', parent: 'ibrahim', x: 452, y: 554, r: 40, depth: 4, note: 'his nephew' },
+  { slug: 'shuayb', parent: 'ibrahim', x: 952, y: 550, r: 40, depth: 4, note: 'via Madyan' },
+  { slug: 'ismail', parent: 'ibrahim', x: 520, y: 684, r: 24, depth: 4, connectorName: 'Ismāʿīl' },
+  { slug: 'ishaq', parent: 'ibrahim', x: 892, y: 684, r: 24, depth: 4, connectorName: 'Isḥāq' },
+  { slug: 'seerah', parent: 'ismail', x: 400, y: 864, r: 56, depth: 5, flagship: true },
+  { slug: 'ayyub', parent: 'ishaq', x: 1262, y: 738, r: 40, depth: 5, note: 'via al-ʿĪṣ' },
+  { slug: 'dhulkifl', parent: 'ayyub', x: 1444, y: 896, r: 36, depth: 6, note: 'held by some his son' },
+  { slug: 'yaqub', parent: 'ishaq', x: 928, y: 804, r: 24, depth: 5, connectorName: 'Yaʿqūb' },
+  { slug: 'yusuf', parent: 'yaqub', x: 690, y: 996, r: 42, depth: 6 },
+  { slug: 'musa', parent: 'yaqub', x: 846, y: 1090, r: 42, depth: 6, note: 'through Lāwī' },
+  { slug: 'yunus', parent: 'yaqub', x: 566, y: 1044, r: 42, depth: 6, note: 'through Bunyāmīn' },
+  { slug: 'dawud', parent: 'yaqub', x: 1120, y: 972, r: 44, depth: 6, note: 'through Yahūdhā' },
+  { slug: 'ilyas', parent: 'yaqub', x: 470, y: 1244, r: 38, depth: 6, note: 'house of Hārūn · via Lāwī' },
+  { slug: 'alyasa', parent: 'ilyas', x: 372, y: 1374, r: 34, depth: 7, note: 'his successor' },
+  { slug: 'isa', parent: 'dawud', x: 992, y: 1188, r: 42, depth: 7, note: 'through Maryam' },
+  { slug: 'sulayman', parent: 'dawud', x: 1226, y: 1154, r: 42, depth: 7 },
+  { slug: 'zakariyya', parent: 'dawud', x: 1446, y: 1138, r: 42, depth: 7, note: 'house of Dāwūd' },
+  { slug: 'yahya', parent: 'zakariyya', x: 1486, y: 1286, r: 40, depth: 8, note: 'his son' },
+];
+
+const BRANCH_W = [15, 13, 11, 9, 6.5, 5, 4, 3.4, 3]; // by child depth
+
+@Component({
+  selector: 'app-gateway',
+  template: `
+    <section class="gw-top">
+      <div class="eyebrow">The Prophetic Library</div>
+      <div class="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <h1>The <em>Tree</em> of the Prophets</h1>
+      <p class="gw-lede">One connected chain of guidance — from Ādam, the father of humankind, to Muhammad ﷺ,
+        the final Messenger. Follow the lineage; choose a life to enter its chronicle.</p>
+    </section>
+
+    @if (chronicles.error()) {
+      <p class="state err">The library service is unavailable. Is the backend running on :8080?</p>
+    } @else {
+      <div class="ptree">
+        <svg viewBox="0 0 1600 1510" role="img" aria-label="Genealogy of the prophets">
+          <defs>
+            <radialGradient id="leaf" cx="42%" cy="34%" r="72%">
+              <stop offset="0%" stop-color="#1f4a63" /><stop offset="60%" stop-color="#123a52" /><stop offset="100%" stop-color="#0b2537" />
+            </radialGradient>
+            <radialGradient id="leaf-flag" cx="42%" cy="34%" r="72%">
+              <stop offset="0%" stop-color="#3a3a22" /><stop offset="55%" stop-color="#2a2914" /><stop offset="100%" stop-color="#171708" />
+            </radialGradient>
+            <linearGradient id="bark" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#C8A44B" /><stop offset="100%" stop-color="#6E551F" />
+            </linearGradient>
+            <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="6" />
+            </filter>
+          </defs>
+
+          <!-- drifting light motes -->
+          <g class="motes">
+            @for (m of motes; track m.i) {
+              <circle class="mote" [attr.cx]="m.x" [attr.cy]="m.y" [attr.r]="m.r" [style.animation-delay.s]="m.d" [style.animation-duration.s]="m.dur" />
+            }
+          </g>
+
+          <!-- branches grow from the root outward -->
+          @for (b of branches(); track b.id) {
+            <path class="branch" [attr.d]="b.d" [attr.stroke-width]="b.w" pathLength="1" [style.animation-delay.ms]="b.delay" />
+            <path class="branch-core" [attr.d]="b.d" [attr.stroke-width]="b.w * 0.4" pathLength="1" [style.animation-delay.ms]="b.delay + 120" />
+          }
+
+          <!-- prophet nodes -->
+          @for (n of nodes(); track n.slug) {
+            <g class="pnode {{ n.kind }}" [class.flagship]="n.flagship"
+               [attr.transform]="'translate(' + n.x + ' ' + n.y + ')'" [style.animation-delay.ms]="n.delay"
+               [attr.tabindex]="n.kind === 'chronicle' ? 0 : null" [attr.role]="n.kind === 'chronicle' ? 'link' : null"
+               (click)="enter(n)" (keydown.enter)="enter(n)">
+              @if (n.kind === 'chronicle') {
+                <circle class="glow" [attr.r]="n.r + 16" filter="url(#soft)" />
+                <circle class="disc" [attr.r]="n.r" [attr.fill]="n.flagship ? 'url(#leaf-flag)' : 'url(#leaf)'" />
+                <circle class="rim" [attr.r]="n.r" />
+                <text class="pglyph" [attr.font-size]="n.r * 0.9" y="1" dominant-baseline="central">{{ n.glyph }}</text>
+                <text class="pname" [attr.y]="n.r + 26">{{ n.name }}</text>
+                <text class="pcount" [attr.y]="n.r + 46">{{ n.count }} events</text>
+                @if (n.note) { <text class="pnote" [attr.y]="-n.r - 12">{{ n.note }}</text> }
+              } @else {
+                <circle class="cdot" r="7" />
+                <text class="cname" y="-14">{{ n.connectorName }}</text>
+              }
+            </g>
+          }
+        </svg>
+      </div>
+      <p class="tl-hint">Every chronicle is reviewed, cited content · No depiction of prophets or companions · Peace be upon them all</p>
+    }
+  `,
+})
+export class GatewayComponent {
+  private router = inject(Router);
+  chronicles = httpResource<ChronicleItem[]>(() => '/api/public/chronicles', { defaultValue: [] });
+
+  readonly motes = Array.from({ length: 36 }, (_, i) => ({
+    i, x: 60 + Math.random() * 1480, y: 40 + Math.random() * 1420,
+    r: 1 + Math.random() * 2.4, d: +(Math.random() * 8).toFixed(1), dur: +(7 + Math.random() * 8).toFixed(1),
+  }));
+
+  nodes = computed(() => {
+    const byslug = new Map(this.chronicles.value().map((c) => [c.slug, c]));
+    return LAYOUT.map((n) => {
+      const c = byslug.get(n.slug);
+      return {
+        ...n,
+        kind: c ? 'chronicle' : 'connector',
+        name: c?.title.replace(/^The Story of Prophet |^The Life of the Prophet /, '') ?? n.connectorName ?? '',
+        glyph: c?.glyph ?? '',
+        count: c?.eventCount ?? 0,
+        delay: 700 + n.depth * 260,
+      };
+    });
+  });
+
+  branches = computed(() => {
+    const pos = new Map(LAYOUT.map((n) => [n.slug, n]));
+    return LAYOUT.filter((n) => n.parent).map((n) => {
+      const p = pos.get(n.parent!)!;
+      const my = (p.y + n.y) / 2;
+      return {
+        id: n.slug, w: BRANCH_W[Math.min(n.depth, BRANCH_W.length - 1)],
+        d: `M ${p.x} ${p.y} C ${p.x} ${my}, ${n.x} ${my}, ${n.x} ${n.y}`,
+        delay: 200 + n.depth * 260,
+      };
+    });
+  });
+
+  enter(n: { kind: string; slug: string }) {
+    if (n.kind === 'chronicle') this.router.navigate(['/c', n.slug]);
+  }
+}

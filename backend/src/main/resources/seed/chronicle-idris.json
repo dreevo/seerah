@@ -1,0 +1,123 @@
+{
+  "_note": "The Story of Prophet Idris (Enoch), drawn strictly from the Qur'an (Surahs Maryam, al-Anbiya). The Qur'an honours him with two brief passages — a man of truth and a prophet, patient and righteous, raised to a high station — and relates no extended narrative; this chronicle says only what the text says. He stands between Adam and Nuh. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "idris",
+      "name": "Idris",
+      "ar": "إدريس عليه السلام",
+      "role": "PROPHET"
+    }
+  ],
+  "places": [
+    {
+      "slug": "the-land-of-idris",
+      "name": "The Land of Idris",
+      "ar": "أرض إدريس",
+      "modern": "ancient Mesopotamia",
+      "lat": 32.54,
+      "lng": 44.42,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "idris-man-of-truth",
+      "title": "A Man of Truth and a Prophet",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:56",
+      "summary": "'And mention in the Book Idris. Indeed, he was a man of truth and a prophet.' The Qur'an names him among those it commands the Prophet to remember, and grants him the two highest honours of speech and standing — truthfulness (ṣiddīq) and prophethood.",
+      "why": "Before any deed is told, the Qur'an fixes Idris's character in a single word — ṣiddīq, utterly truthful — the foundation on which prophethood is built, and the reason his name is worth remembering.",
+      "people": [
+        "idris"
+      ],
+      "verses": [
+        "19:56"
+      ],
+      "place": "the-land-of-idris",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/idris/idris-man-of-truth-calligraphy.svg",
+          "caption": "Calligraphic panel — “A Man of Truth and a Prophet” (Maryam 19:56).",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "idris-raised-high",
+      "title": "Raised to a High Station",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:57",
+      "summary": "'And We raised him to a high station.' In a single verse the Qur'an records Idris's honour before Allah — an elevation of rank and nearness granted to a truthful prophet, without the text detailing its manner.",
+      "why": "The Qur'an lets the honour stand without embellishment: a righteous servant is lifted to a high place with his Lord. Where the text is brief, the believer's knowledge stays brief and content.",
+      "people": [
+        "idris"
+      ],
+      "verses": [
+        "19:57"
+      ],
+      "place": "the-land-of-idris",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/idris/idris-raised-high-calligraphy.svg",
+          "caption": "Calligraphic panel — “And We raised him to a high station” (Maryam 19:57).",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "idris-among-the-patient",
+      "title": "Among the Patient",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:85-86",
+      "summary": "'And Ismail and Idris and Dhul-Kifl — all were of the patient. And We admitted them into Our mercy. Indeed, they were of the righteous.' The Qur'an gathers Idris with two other prophets under a single praise: patience, mercy received, and righteousness.",
+      "why": "Idris is remembered not only for truth and rank but for ṣabr — steadfast patience — the quality the Qur'an ties directly to being admitted into Allah's mercy and counted among the righteous.",
+      "people": [
+        "idris"
+      ],
+      "verses": [
+        "21:85",
+        "21:86"
+      ],
+      "place": "the-land-of-idris",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/idris/idris-among-the-patient-calligraphy.svg",
+          "caption": "Calligraphic panel — “All were of the patient” (al-Anbiya 21:85).",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-idris",
+      "title": "The Arc of Idris",
+      "est": 6,
+      "blurb": "All the Qur'an tells of Idris, in order — the man of truth and prophet, raised to a high station, and gathered among the patient whom Allah admitted into His mercy.",
+      "steps": [
+        "idris-man-of-truth",
+        "idris-raised-high",
+        "idris-among-the-patient"
+      ]
+    }
+  ]
+}

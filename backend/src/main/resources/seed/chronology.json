@@ -1,0 +1,970 @@
+{
+  "_note": "Vetted Phase-1 seed for the ingestion module. Not a fatwa; assumes scholarly review. Events are listed in chronological order; the ingester chains them PRECEDED/FOLLOWED by that order.",
+  "personSource": "ibn-hisham-sira",
+  "sources": [
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-muslim",
+      "workTitle": "Sahih Muslim",
+      "author": "Muslim ibn al-Hajjaj",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "ibn-hisham-sira",
+      "workTitle": "As-Sirah an-Nabawiyyah",
+      "author": "Ibn Hisham",
+      "tier": "CLASSICAL"
+    },
+    {
+      "slug": "ibn-kathir-sira",
+      "workTitle": "Al-Sira al-Nabawiyya",
+      "author": "Ibn Kathir",
+      "tier": "CLASSICAL"
+    },
+    {
+      "slug": "musnad-ahmad",
+      "workTitle": "Musnad Ahmad",
+      "author": "Ahmad ibn Hanbal",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "ar-raheeq-al-makhtum",
+      "workTitle": "Ar-Raheeq Al-Makhtum",
+      "author": "S. R. al-Mubarakpuri",
+      "tier": "SECONDARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "abd-al-muttalib",
+      "name": "Abd al-Muttalib",
+      "ar": "عبد المطلب",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "khadijah",
+      "name": "Khadijah bint Khuwaylid",
+      "ar": "خديجة بنت خويلد",
+      "role": "FAMILY",
+      "deathCe": 619
+    },
+    {
+      "slug": "waraqah",
+      "name": "Waraqah ibn Nawfal",
+      "ar": "ورقة بن نوفل",
+      "role": "OTHER"
+    },
+    {
+      "slug": "abu-bakr",
+      "name": "Abu Bakr as-Siddiq",
+      "ar": "أبو بكر الصديق",
+      "role": "COMPANION",
+      "deathCe": 634
+    },
+    {
+      "slug": "bilal",
+      "name": "Bilal ibn Rabah",
+      "ar": "بلال بن رباح",
+      "role": "COMPANION",
+      "deathCe": 640
+    },
+    {
+      "slug": "ja-far",
+      "name": "Ja'far ibn Abi Talib",
+      "ar": "جعفر بن أبي طالب",
+      "role": "FAMILY",
+      "deathCe": 629
+    },
+    {
+      "slug": "an-najashi",
+      "name": "An-Najashi (the Negus)",
+      "ar": "النجاشي",
+      "role": "RULER"
+    },
+    {
+      "slug": "abu-talib",
+      "name": "Abu Talib",
+      "ar": "أبو طالب",
+      "role": "FAMILY",
+      "deathCe": 619
+    },
+    {
+      "slug": "mutim-ibn-adi",
+      "name": "Mut'im ibn Adi",
+      "ar": "مطعم بن عدي",
+      "role": "OTHER"
+    },
+    {
+      "slug": "zayd-ibn-harithah",
+      "name": "Zayd ibn Harithah",
+      "ar": "زيد بن حارثة",
+      "role": "COMPANION",
+      "deathCe": 629
+    },
+    {
+      "slug": "musab-ibn-umayr",
+      "name": "Mus'ab ibn Umayr",
+      "ar": "مصعب بن عمير",
+      "role": "COMPANION",
+      "deathCe": 625
+    },
+    {
+      "slug": "sad-ibn-muadh",
+      "name": "Sa'd ibn Mu'adh",
+      "ar": "سعد بن معاذ",
+      "role": "COMPANION",
+      "deathCe": 627
+    },
+    {
+      "slug": "ali-ibn-abi-talib",
+      "name": "Ali ibn Abi Talib",
+      "ar": "علي بن أبي طالب",
+      "role": "FAMILY",
+      "deathCe": 661
+    },
+    {
+      "slug": "asma-bint-abi-bakr",
+      "name": "Asma bint Abi Bakr",
+      "ar": "أسماء بنت أبي بكر",
+      "role": "COMPANION",
+      "deathCe": 692
+    },
+    {
+      "slug": "suraqah",
+      "name": "Suraqah ibn Malik",
+      "ar": "سراقة بن مالك",
+      "role": "COMPANION"
+    },
+    {
+      "slug": "hamza",
+      "name": "Hamza ibn Abd al-Muttalib",
+      "ar": "حمزة بن عبد المطلب",
+      "role": "FAMILY",
+      "deathCe": 625
+    },
+    {
+      "slug": "abu-jahl",
+      "name": "Abu Jahl",
+      "ar": "أبو جهل",
+      "role": "OPPONENT",
+      "deathCe": 624
+    },
+    {
+      "slug": "khalid-ibn-al-walid",
+      "name": "Khalid ibn al-Walid",
+      "ar": "خالد بن الوليد",
+      "role": "COMPANION",
+      "deathCe": 642
+    },
+    {
+      "slug": "salman-al-farisi",
+      "name": "Salman al-Farisi",
+      "ar": "سلمان الفارسي",
+      "role": "COMPANION",
+      "deathCe": 656
+    },
+    {
+      "slug": "uthman",
+      "name": "Uthman ibn Affan",
+      "ar": "عثمان بن عفان",
+      "role": "COMPANION",
+      "deathCe": 656
+    },
+    {
+      "slug": "umar",
+      "name": "Umar ibn al-Khattab",
+      "ar": "عمر بن الخطاب",
+      "role": "COMPANION",
+      "deathCe": 644
+    },
+    {
+      "slug": "abu-sufyan",
+      "name": "Abu Sufyan",
+      "ar": "أبو سفيان",
+      "role": "COMPANION",
+      "deathCe": 653
+    },
+    {
+      "slug": "aisha",
+      "name": "Aisha bint Abi Bakr",
+      "ar": "عائشة بنت أبي بكر",
+      "role": "FAMILY",
+      "deathCe": 678
+    },
+    {
+      "slug": "nusaybah",
+      "name": "Nusaybah bint Ka'b",
+      "ar": "نسيبة بنت كعب",
+      "role": "COMPANION"
+    },
+    {
+      "slug": "al-abbas",
+      "name": "Al-Abbas ibn Abd al-Muttalib",
+      "ar": "العباس بن عبد المطلب",
+      "role": "FAMILY",
+      "deathCe": 653
+    },
+    {
+      "slug": "safiyyah",
+      "name": "Safiyyah bint Huyayy",
+      "ar": "صفية بنت حيي",
+      "role": "FAMILY",
+      "deathCe": 670
+    },
+    {
+      "slug": "abdullah-ibn-rawahah",
+      "name": "Abdullah ibn Rawahah",
+      "ar": "عبد الله بن رواحة",
+      "role": "COMPANION",
+      "deathCe": 629
+    },
+    {
+      "slug": "kab-ibn-malik",
+      "name": "Ka'b ibn Malik",
+      "ar": "كعب بن مالك",
+      "role": "COMPANION",
+      "deathCe": 670
+    },
+    {
+      "slug": "suhayl-ibn-amr",
+      "name": "Suhayl ibn Amr",
+      "ar": "سهيل بن عمرو",
+      "role": "COMPANION",
+      "deathCe": 639
+    }
+  ],
+  "places": [
+    {
+      "slug": "makkah",
+      "name": "Makkah",
+      "ar": "مكة",
+      "modern": "Mecca, Saudi Arabia",
+      "lat": 21.4225,
+      "lng": 39.8262
+    },
+    {
+      "slug": "madinah",
+      "name": "Madinah",
+      "ar": "المدينة المنورة",
+      "modern": "Medina, Saudi Arabia",
+      "lat": 24.4686,
+      "lng": 39.6142
+    },
+    {
+      "slug": "cave-of-hira",
+      "name": "Cave of Hira",
+      "ar": "غار حراء",
+      "modern": "Jabal al-Nour, near Mecca",
+      "lat": 21.4577,
+      "lng": 39.859
+    },
+    {
+      "slug": "cave-of-thawr",
+      "name": "Cave of Thawr",
+      "ar": "غار ثور",
+      "modern": "Jabal Thawr, near Mecca",
+      "lat": 21.356,
+      "lng": 39.862
+    },
+    {
+      "slug": "badr",
+      "name": "Badr",
+      "ar": "بدر",
+      "modern": "Badr, Saudi Arabia",
+      "lat": 23.78,
+      "lng": 38.79
+    },
+    {
+      "slug": "mount-uhud",
+      "name": "Mount Uhud",
+      "ar": "جبل أحد",
+      "modern": "Uhud, Medina",
+      "lat": 24.51,
+      "lng": 39.613
+    },
+    {
+      "slug": "hudaybiyyah",
+      "name": "Hudaybiyyah",
+      "ar": "الحديبية",
+      "modern": "Al-Shumaisi, near Mecca",
+      "lat": 21.55,
+      "lng": 39.68,
+      "approx": true
+    },
+    {
+      "slug": "taif",
+      "name": "Ta'if",
+      "ar": "الطائف",
+      "modern": "Ta'if, Saudi Arabia",
+      "lat": 21.2703,
+      "lng": 40.4158
+    },
+    {
+      "slug": "arafat",
+      "name": "Arafat",
+      "ar": "عرفات",
+      "modern": "Mount Arafat, near Mecca",
+      "lat": 21.3548,
+      "lng": 39.9843
+    },
+    {
+      "slug": "jerusalem",
+      "name": "Jerusalem",
+      "ar": "القدس",
+      "modern": "Jerusalem",
+      "lat": 31.7767,
+      "lng": 35.2345
+    },
+    {
+      "slug": "abyssinia",
+      "name": "Abyssinia",
+      "ar": "الحبشة",
+      "modern": "Ethiopia",
+      "lat": 9.03,
+      "lng": 38.74,
+      "approx": true
+    },
+    {
+      "slug": "khaybar",
+      "name": "Khaybar",
+      "ar": "خيبر",
+      "modern": "Khaybar, Saudi Arabia",
+      "lat": 25.7,
+      "lng": 39.29
+    },
+    {
+      "slug": "mutah",
+      "name": "Mu'tah",
+      "ar": "مؤتة",
+      "modern": "Mu'tah, Jordan",
+      "lat": 31.1,
+      "lng": 35.7
+    },
+    {
+      "slug": "hunayn",
+      "name": "Hunayn",
+      "ar": "حنين",
+      "modern": "Valley near Ta'if",
+      "lat": 21.45,
+      "lng": 40.3,
+      "approx": true
+    },
+    {
+      "slug": "tabuk",
+      "name": "Tabuk",
+      "ar": "تبوك",
+      "modern": "Tabuk, Saudi Arabia",
+      "lat": 28.3835,
+      "lng": 36.5662
+    }
+  ],
+  "events": [
+    {
+      "slug": "year-of-the-elephant",
+      "title": "Year of the Elephant",
+      "greg": 570,
+      "certainty": "SCHOLARS_DIFFER",
+      "major": false,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 1, the Elephant",
+      "summary": "Abraha, the Abyssinian governor of Yemen, marched on Makkah with an army that included war elephants, intending to destroy the Kaaba. The campaign was destroyed before it reached the sanctuary. The Prophet ﷺ was born in this same year, which Arabs afterwards used as a calendar landmark.",
+      "why": "Its failure dramatically raised the prestige of the Quraysh as custodians of the sanctuary.",
+      "verses": [
+        "105:1"
+      ],
+      "people": [
+        "abd-al-muttalib"
+      ],
+      "place": "makkah",
+      "positions": [
+        {
+          "key": "date",
+          "heldBy": "Ibn Ishaq",
+          "summary": "Places the campaign in the year of the Prophet's birth, c. 570 CE."
+        },
+        {
+          "key": "date",
+          "heldBy": "Some chronologists",
+          "summary": "Note reports that place it a few years earlier, leaving the exact year contested."
+        }
+      ]
+    },
+    {
+      "slug": "birth-of-the-prophet",
+      "title": "Birth of the Prophet ﷺ",
+      "greg": 570,
+      "certainty": "WELL_ATTESTED",
+      "major": true,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 1, the Birth",
+      "source2": "ibn-kathir-sira",
+      "locator2": "Al-Sira, birth",
+      "summary": "Muhammad ibn Abdullah ﷺ was born in Makkah into the clan of Banu Hashim of the Quraysh; his father Abdullah had died before his birth. Orphaned early and of modest means, he was nonetheless of high lineage.",
+      "why": "Being orphaned early placed him outside the ordinary lines of inherited power, yet his lineage gave him standing — a combination that shaped how his later message was received.",
+      "verses": [
+        "93:6"
+      ],
+      "people": [
+        "abd-al-muttalib",
+        "abu-talib"
+      ],
+      "place": "makkah"
+    },
+    {
+      "slug": "marriage-to-khadijah",
+      "title": "Marriage to Khadijah",
+      "greg": 595,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 1, Khadijah",
+      "summary": "At about twenty-five he married Khadijah bint Khuwaylid, a respected merchant of Makkah who had employed him for his integrity. Their marriage lasted twenty-five years, until her death.",
+      "why": "Khadijah's wealth and standing gave him security; her belief at the first revelation was decisive at the most vulnerable moment of his mission.",
+      "people": [
+        "khadijah",
+        "waraqah"
+      ],
+      "place": "makkah"
+    },
+    {
+      "slug": "the-first-revelation",
+      "title": "The First Revelation",
+      "greg": 610,
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of Revelation, 3",
+      "source2": "ibn-hisham-sira",
+      "locator2": "Vol. 1, Hira",
+      "summary": "During a retreat in the Cave of Hira the angel Jibril appeared and commanded him to read; the first verses of Surah Al-Alaq were revealed. Khadijah comforted him and took him to Waraqah, who recognised the encounter.",
+      "why": "The first command — read, in the name of your Lord — set knowledge at the foundation of everything that followed.",
+      "verses": [
+        "96:1"
+      ],
+      "people": [
+        "khadijah",
+        "waraqah"
+      ],
+      "place": "cave-of-hira",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "calligraphy/iqra.svg",
+          "caption": "“Iqra” — the first word revealed — in thuluth script.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "public-preaching-begins",
+      "title": "Public Preaching Begins",
+      "greg": 613,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of Tafsir, Ash-Shu'ara",
+      "source2": "ar-raheeq-al-makhtum",
+      "locator2": "p. 76",
+      "summary": "After about three years of private teaching, the Prophet ﷺ was commanded to proclaim the message openly. Open hostility began, and persecution of the weaker and enslaved converts intensified.",
+      "why": "Islam's call to abandon idols struck at the authority, pilgrimage economy, and tribal hierarchy on which Quraysh leadership rested.",
+      "verses": [
+        "15:94"
+      ],
+      "people": [
+        "abu-bakr",
+        "bilal"
+      ],
+      "place": "makkah"
+    },
+    {
+      "slug": "migration-to-abyssinia",
+      "title": "Migration to Abyssinia",
+      "greg": 615,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 1, Abyssinia",
+      "source2": "musnad-ahmad",
+      "locator2": "Ja'far before the Negus",
+      "summary": "As persecution intensified, a group of companions sought refuge with the Negus, the Christian king of Abyssinia. Ja'far answered the king by reciting verses of Surah Maryam, and the Negus refused to surrender them.",
+      "why": "The first organised migration in Islam — a deliberate calculation placing vulnerable believers beyond Quraysh's reach.",
+      "verses": [
+        "19:16"
+      ],
+      "people": [
+        "ja-far",
+        "an-najashi"
+      ],
+      "place": "abyssinia"
+    },
+    {
+      "slug": "boycott-of-banu-hashim",
+      "title": "Boycott of Banu Hashim",
+      "greg": 617,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 1, the Boycott",
+      "summary": "Quraysh drew up a pact suspending all trade and dealings with Banu Hashim until they surrendered the Prophet ﷺ. The clans were confined to a valley for roughly three years before the boycott collapsed.",
+      "why": "Unable to reach him directly because of Abu Talib's protection, Quraysh applied collective pressure on his entire clan.",
+      "people": [
+        "abu-talib"
+      ],
+      "place": "makkah"
+    },
+    {
+      "slug": "the-year-of-sorrow",
+      "title": "The Year of Sorrow",
+      "greg": 619,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 1, the Year of Sorrow",
+      "summary": "Within a short span the Prophet ﷺ lost both Abu Talib and Khadijah. Stripped of protection, he travelled to Ta'if and was driven out, returning under the protection of Mut'im ibn Adi.",
+      "why": "Losing his tribal shield and his closest support brought the Meccan phase to its lowest point.",
+      "people": [
+        "abu-talib",
+        "khadijah",
+        "mutim-ibn-adi",
+        "zayd-ibn-harithah"
+      ],
+      "place": "taif"
+    },
+    {
+      "slug": "al-isra-and-al-miraj",
+      "title": "Al-Isra & Al-Mi'raj",
+      "greg": 621,
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of Salah, Isra",
+      "source2": "sahih-muslim",
+      "locator2": "Book of Faith, Isra",
+      "summary": "The Prophet ﷺ was taken by night from the Sacred Mosque in Makkah to al-Aqsa in Jerusalem, and from there ascended through the heavens. During this journey the five daily prayers were prescribed. Abu Bakr affirmed the account without hesitation.",
+      "why": "It came at the point of deepest hardship and established the prayer — the practice that would structure the community's daily life.",
+      "verses": [
+        "17:1"
+      ],
+      "people": [
+        "abu-bakr"
+      ],
+      "place": "jerusalem"
+    },
+    {
+      "slug": "the-pledges-of-aqaba",
+      "title": "The Pledges of Aqaba",
+      "greg": 621,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 1, Aqaba",
+      "summary": "Delegations from Yathrib met the Prophet ﷺ at Aqaba and pledged to protect him as they would their own families — an offer of political refuge that made the Hijrah possible.",
+      "why": "Yathrib, exhausted by civil conflict, needed an authority both its tribes could accept; that convergence of need enabled the migration.",
+      "people": [
+        "musab-ibn-umayr",
+        "sad-ibn-muadh"
+      ],
+      "place": "madinah"
+    },
+    {
+      "slug": "the-hijrah-to-madinah",
+      "title": "The Hijrah to Madinah",
+      "greg": 622,
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Merits of the Ansar",
+      "source2": "ibn-hisham-sira",
+      "locator2": "Vol. 1, the Hijrah",
+      "summary": "With Quraysh plotting to kill him, the Prophet ﷺ left Makkah with Abu Bakr, sheltering three nights in the Cave of Thawr before taking an indirect route to Madinah. There he built the mosque, paired Emigrants with Helpers, and drew up the Constitution of Madinah.",
+      "why": "The pivot of the entire Seerah: from a persecuted minority to a community with territory and the capacity to govern. The Islamic calendar dates from this year.",
+      "verses": [
+        "9:40"
+      ],
+      "people": [
+        "abu-bakr",
+        "ali-ibn-abi-talib",
+        "asma-bint-abi-bakr",
+        "suraqah"
+      ],
+      "place": "madinah",
+      "media": [
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "diagrams/hijrah-route.svg",
+          "caption": "The indirect route to Madinah via the Cave of Thawr.",
+          "attribution": "Seerah Platform — schematic route diagram"
+        }
+      ]
+    },
+    {
+      "slug": "the-battle-of-badr",
+      "title": "The Battle of Badr",
+      "greg": 624,
+      "certainty": "WELL_ATTESTED",
+      "major": true,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 2, Badr",
+      "source2": "ar-raheeq-al-makhtum",
+      "locator2": "p. 133",
+      "summary": "Around three hundred and thirteen Muslims met a Quraysh force roughly three times their number at the wells of Badr, and prevailed decisively; several Quraysh leaders, including Abu Jahl, were killed. A literate captive could ransom himself by teaching ten Muslim children to read.",
+      "why": "Badr established the young community in Madinah as a real power in the region rather than a group of refugees.",
+      "verses": [
+        "8:17"
+      ],
+      "people": [
+        "hamza",
+        "ali-ibn-abi-talib",
+        "abu-jahl"
+      ],
+      "place": "badr",
+      "media": [
+        {
+          "kind": "MAP",
+          "s3Key": "diagrams/badr-campaign.svg",
+          "caption": "Stylised map of the approach to the wells of Badr.",
+          "attribution": "Seerah Platform — schematic map, not to scale, no figural imagery"
+        }
+      ]
+    },
+    {
+      "slug": "the-battle-of-uhud",
+      "title": "The Battle of Uhud",
+      "greg": 625,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of Maghazi, Uhud",
+      "source2": "ibn-hisham-sira",
+      "locator2": "Vol. 2, Uhud",
+      "summary": "Quraysh returned with around three thousand men to avenge Badr. When most of the archers left their assigned hill to collect spoils, Khalid ibn al-Walid led cavalry around the exposed flank and reversed the battle. Hamza was killed, and the Prophet ﷺ himself was wounded.",
+      "why": "The reversal came from a single lapse in discipline; the Quran addresses the episode at length rather than passing over it.",
+      "verses": [
+        "3:152"
+      ],
+      "people": [
+        "hamza",
+        "khalid-ibn-al-walid",
+        "nusaybah"
+      ],
+      "place": "mount-uhud"
+    },
+    {
+      "slug": "the-battle-of-the-trench",
+      "title": "The Battle of the Trench",
+      "greg": 627,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of Maghazi, Khandaq",
+      "source2": "ibn-hisham-sira",
+      "locator2": "Vol. 2, the Trench",
+      "summary": "A coalition of some ten thousand advanced on Madinah. On Salman al-Farisi's proposal the Muslims dug a trench across the city's exposed approach — a tactic unfamiliar to Arabian warfare. After about a month the coalition withdrew without a general engagement.",
+      "why": "The largest attempt to destroy the community outright; its failure passed the initiative permanently to Madinah.",
+      "verses": [
+        "33:9"
+      ],
+      "people": [
+        "salman-al-farisi",
+        "sad-ibn-muadh"
+      ],
+      "place": "madinah"
+    },
+    {
+      "slug": "treaty-of-hudaybiyyah",
+      "title": "Treaty of Hudaybiyyah",
+      "greg": 628,
+      "certainty": "WELL_ATTESTED",
+      "major": true,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of Conditions",
+      "source2": "ar-raheeq-al-makhtum",
+      "locator2": "p. 400",
+      "summary": "The Prophet ﷺ set out with about fourteen hundred to perform umrah and was barred at Hudaybiyyah. The negotiated truce looked one-sided, yet within two years it allowed Islam to spread more widely than the preceding nineteen years of conflict.",
+      "why": "The treaty converted an armed standoff into open borders; the Quran calls it a clear victory.",
+      "verses": [
+        "48:1"
+      ],
+      "people": [
+        "uthman",
+        "umar",
+        "suhayl-ibn-amr"
+      ],
+      "place": "hudaybiyyah"
+    },
+    {
+      "slug": "the-expedition-of-khaybar",
+      "title": "The Expedition of Khaybar",
+      "greg": 628,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 2, Khaybar",
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of Maghazi, Khaybar",
+      "summary": "Some months after Hudaybiyyah the Prophet ﷺ led an expedition against the fortified oasis of Khaybar, whose leaders had mobilised the confederacy against Madinah. After a series of engagements the oasis surrendered; its people were permitted to remain and farm the land in exchange for a share of the produce.",
+      "why": "Securing the northern frontier removed the last organised base of hostility around Madinah while the Meccan front stayed frozen by the truce.",
+      "verses": [
+        "48:20"
+      ],
+      "people": [
+        "ali-ibn-abi-talib",
+        "ja-far",
+        "safiyyah"
+      ],
+      "place": "khaybar"
+    },
+    {
+      "slug": "the-battle-of-mutah",
+      "title": "The Battle of Mu'tah",
+      "greg": 629,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "ibn-hisham-sira",
+      "locator": "Vol. 2, Mu'tah",
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of Maghazi, Mu'tah",
+      "summary": "A force sent toward the Byzantine frontier lost its three named commanders in succession — Zayd, then Ja'far, then Abdullah ibn Rawahah. Khalid ibn al-Walid took the banner, held the army together, and withdrew it intact against far greater numbers.",
+      "why": "The first major encounter on the northern frontier; the disciplined withdrawal, preserving the force, was itself remembered as an achievement.",
+      "people": [
+        "zayd-ibn-harithah",
+        "ja-far",
+        "abdullah-ibn-rawahah",
+        "khalid-ibn-al-walid"
+      ],
+      "place": "mutah"
+    },
+    {
+      "slug": "the-conquest-of-makkah",
+      "title": "The Conquest of Makkah",
+      "greg": 630,
+      "certainty": "WELL_ATTESTED",
+      "major": true,
+      "source": "sahih-muslim",
+      "locator": "Book of Jihad, the Conquest",
+      "source2": "ibn-hisham-sira",
+      "locator2": "Vol. 2, the Conquest",
+      "summary": "The Prophet ﷺ advanced on Makkah with around ten thousand and took the city almost without fighting. He entered with his head lowered, declared a general amnesty, and cleared the idols from the Kaaba — pardoning those who had persecuted the community for twenty years.",
+      "why": "The amnesty, at the moment of complete power over former persecutors, is among the most cited episodes of the Seerah.",
+      "verses": [
+        "17:81"
+      ],
+      "people": [
+        "abu-sufyan",
+        "bilal",
+        "khalid-ibn-al-walid"
+      ],
+      "place": "makkah"
+    },
+    {
+      "slug": "the-battle-of-hunayn",
+      "title": "The Battle of Hunayn",
+      "greg": 630,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-muslim",
+      "locator": "Book of Jihad, Hunayn",
+      "source2": "ibn-hisham-sira",
+      "locator2": "Vol. 2, Hunayn",
+      "summary": "Weeks after the conquest of Makkah the tribes of Hawazin and Thaqif assembled at the valley of Hunayn and ambushed the Muslim army — its largest ever. The front ranks scattered; the Prophet ﷺ held his ground and rallied the companions, and the day was recovered.",
+      "why": "A corrective after the euphoria of Makkah: the Quran fixes the day as a lesson that numbers alone secure nothing.",
+      "verses": [
+        "9:25"
+      ],
+      "people": [
+        "al-abbas",
+        "khalid-ibn-al-walid"
+      ],
+      "place": "hunayn"
+    },
+    {
+      "slug": "the-expedition-of-tabuk",
+      "title": "The Expedition of Tabuk",
+      "greg": 630,
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Hadith of Ka'b ibn Malik",
+      "source2": "ibn-hisham-sira",
+      "locator2": "Vol. 2, Tabuk",
+      "summary": "In severe heat the Prophet ﷺ called for a large expedition north toward Tabuk in response to reports of a Byzantine mobilisation. No battle occurred; the force reached Tabuk, secured agreements with frontier communities, and returned. The episode is remembered for the three who stayed behind and were later forgiven.",
+      "why": "The last major expedition he ﷺ led — its significance moral more than military, a test of sincerity the community answered in drought and heat.",
+      "verses": [
+        "9:118"
+      ],
+      "people": [
+        "kab-ibn-malik",
+        "uthman",
+        "ali-ibn-abi-talib"
+      ],
+      "place": "tabuk"
+    },
+    {
+      "slug": "the-farewell-pilgrimage",
+      "title": "The Farewell Pilgrimage",
+      "greg": 632,
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "sahih-muslim",
+      "locator": "Hadith of Jabir on the Hajj",
+      "source2": "musnad-ahmad",
+      "locator2": "the Farewell Sermon",
+      "summary": "The Prophet ﷺ performed Hajj with well over a hundred thousand and delivered the Farewell Sermon at Arafat, abolishing pre-Islamic blood feuds and usury, affirming the rights of women, and declaring that no Arab has superiority over a non-Arab except in piety. He died some three months later.",
+      "why": "The summation of twenty-three years of prophethood — its principles stated openly before the largest gathering of his lifetime.",
+      "verses": [
+        "5:3"
+      ],
+      "people": [
+        "abu-bakr",
+        "aisha",
+        "bilal"
+      ],
+      "place": "arafat"
+    },
+    {
+      "slug": "the-passing-of-the-prophet",
+      "title": "The Passing of the Prophet ﷺ",
+      "greg": 632,
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of Maghazi, final illness",
+      "source2": "ibn-hisham-sira",
+      "locator2": "Vol. 2, the Passing",
+      "summary": "Some three months after the Farewell Pilgrimage the Prophet ﷺ fell ill and passed away in the apartment of Aisha, in Madinah. Umar could not accept it until Abu Bakr addressed the people, reminding them that Muhammad ﷺ was a messenger who had passed as messengers before him, while the One he worshipped does not die.",
+      "why": "His passing closed the age of revelation and opened the question of how a community built around a living prophet would carry his message forward.",
+      "verses": [
+        "3:144"
+      ],
+      "people": [
+        "abu-bakr",
+        "aisha",
+        "umar"
+      ],
+      "place": "madinah"
+    }
+  ],
+  "routes": [
+    {
+      "slug": "hijrah-route",
+      "event": "the-hijrah-to-madinah",
+      "conjectural": false,
+      "points": [
+        [
+          21.4225,
+          39.8262
+        ],
+        [
+          21.356,
+          39.862
+        ],
+        [
+          22.7,
+          39.0
+        ],
+        [
+          24.4686,
+          39.6142
+        ]
+      ]
+    },
+    {
+      "slug": "badr-march",
+      "event": "the-battle-of-badr",
+      "conjectural": true,
+      "points": [
+        [
+          24.4686,
+          39.6142
+        ],
+        [
+          23.78,
+          38.79
+        ]
+      ]
+    },
+    {
+      "slug": "abyssinia-migration",
+      "event": "migration-to-abyssinia",
+      "conjectural": true,
+      "points": [
+        [
+          21.4225,
+          39.8262
+        ],
+        [
+          19.6,
+          41.1
+        ],
+        [
+          15.5,
+          39.47
+        ],
+        [
+          9.03,
+          38.74
+        ]
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "slug": "start-here",
+      "title": "Start Here — The Pivotal Events",
+      "est": 25,
+      "blurb": "New to the Seerah? Begin with the turning points that give the whole chronology its shape.",
+      "steps": [
+        "birth-of-the-prophet",
+        "the-first-revelation",
+        "the-hijrah-to-madinah",
+        "the-battle-of-badr",
+        "treaty-of-hudaybiyyah",
+        "the-conquest-of-makkah"
+      ]
+    },
+    {
+      "slug": "the-meccan-period",
+      "title": "The Meccan Period",
+      "est": 25,
+      "blurb": "From the first revelation to the eve of the Hijrah — persecution, patience, and the search for refuge.",
+      "steps": [
+        "the-first-revelation",
+        "public-preaching-begins",
+        "migration-to-abyssinia",
+        "boycott-of-banu-hashim",
+        "the-year-of-sorrow",
+        "al-isra-and-al-miraj",
+        "the-pledges-of-aqaba"
+      ]
+    },
+    {
+      "slug": "the-major-battles",
+      "title": "The Major Battles in Sequence",
+      "est": 22,
+      "blurb": "Badr, Uhud, the Trench, and the Conquest read as one connected chain of cause and consequence.",
+      "steps": [
+        "the-battle-of-badr",
+        "the-battle-of-uhud",
+        "the-battle-of-the-trench",
+        "the-conquest-of-makkah"
+      ]
+    },
+    {
+      "slug": "the-hijrah-and-after",
+      "title": "The Hijrah and Its Aftermath",
+      "est": 18,
+      "blurb": "Why the migration happened and what it set in motion — from Madinah to the conquest of Makkah.",
+      "steps": [
+        "the-hijrah-to-madinah",
+        "the-battle-of-badr",
+        "treaty-of-hudaybiyyah",
+        "the-conquest-of-makkah"
+      ]
+    }
+  ]
+}

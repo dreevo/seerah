@@ -1,0 +1,183 @@
+{
+  "_note": "The Story of Prophet Ayyub (Job), a descendant of Ibrahim through Ishaq, drawn strictly from the Qur'an (Surahs al-Anbiya, Sad, an-Nisa, al-An'am). The prophet of patience through affliction. Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "ayyub",
+      "name": "Ayyub",
+      "ar": "أيوب عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "wife-of-ayyub",
+      "name": "The Wife of Ayyub",
+      "ar": "امرأة أيوب",
+      "role": "FAMILY"
+    }
+  ],
+  "places": [
+    {
+      "slug": "land-of-ayyub",
+      "name": "The Land of Ayyub",
+      "ar": "أرض أيوب",
+      "modern": "Ḥawrān, Syria",
+      "lat": 32.68,
+      "lng": 36.3,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "ayyub-the-affliction",
+      "title": "The Affliction",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Sad 38:41 · al-Anbiya 21:83",
+      "summary": "Remember Our servant Ayyub, when he called to his Lord, 'Satan has touched me with hardship and torment.' A man once given wealth, family, and health lost them all and was worn down by long sickness — yet he turned not away from his Lord.",
+      "why": "The Qur'an frames the deepest suffering as a trial, not a punishment. Ayyub, stripped of everything, becomes the very emblem of the believer whose faith is tested to its limit.",
+      "people": [
+        "ayyub"
+      ],
+      "verses": [
+        "38:41",
+        "21:83"
+      ],
+      "place": "land-of-ayyub",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ayyub/ayyub-the-affliction-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Affliction”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ayyub/ayyub-the-affliction-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Affliction.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ayyub-the-patience",
+      "title": "The Prayer of the Patient",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:83 · Sad 38:44",
+      "summary": "Ayyub called upon his Lord: 'Indeed adversity has touched me, and You are the most merciful of the merciful.' He never complained against Allah, only laid his need before Him. And Allah said, 'Indeed We found him patient — an excellent servant. He was ever turning back to Us.'",
+      "why": "His prayer is the model of complaint that is not complaint: he names his pain to Allah alone, and appeals only to His mercy. The Qur'an crowns it with the highest praise — 'an excellent servant.'",
+      "people": [
+        "ayyub"
+      ],
+      "verses": [
+        "21:83",
+        "38:44"
+      ],
+      "place": "land-of-ayyub",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ayyub/ayyub-the-patience-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Prayer of the Patient”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ayyub/ayyub-the-patience-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Prayer of the Patient.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ayyub-the-healing-spring",
+      "title": "Strike with Your Foot",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Sad 38:42 · al-Anbiya 21:84",
+      "summary": "It was said to him, 'Strike with your foot; this is a spring, cool and refreshing to bathe in and to drink.' So a spring gushed up at his foot, and by it Allah removed his affliction and restored his health — mercy answering patience at last.",
+      "why": "The cure comes by a simple command and a spring from the ground — a reminder that healing, like affliction, is wholly in Allah's hand, and arrives in His time for those who wait upon Him.",
+      "people": [
+        "ayyub"
+      ],
+      "verses": [
+        "38:42",
+        "21:84"
+      ],
+      "place": "land-of-ayyub",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ayyub/ayyub-the-healing-spring-calligraphy.svg",
+          "caption": "Calligraphic panel — “Strike with Your Foot”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ayyub/ayyub-the-healing-spring-diagram.svg",
+          "caption": "Schematic diagram of the setting — Strike with Your Foot.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ayyub-restored",
+      "title": "Family Restored and Doubled",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:84 · Sad 38:43-44",
+      "summary": "We removed what afflicted him and gave him back his family, and the like of them with them — a mercy from Us and a reminder for the worshippers. And that he might keep an oath he had sworn without harshness, he was told, 'Take in your hand a bundle of grass and strike with it, and do not break your oath.' — a gentle way out for a gentle servant.",
+      "why": "Patience is rewarded not only with restoration but with abundance, and even Ayyub's oath is honoured by the softest possible means. The Qur'an holds his whole story up as 'a reminder for the worshippers.'",
+      "people": [
+        "ayyub",
+        "wife-of-ayyub"
+      ],
+      "verses": [
+        "21:84",
+        "38:43",
+        "38:44"
+      ],
+      "place": "land-of-ayyub",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ayyub/ayyub-restored-calligraphy.svg",
+          "caption": "Calligraphic panel — “Family Restored and Doubled”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ayyub/ayyub-restored-diagram.svg",
+          "caption": "Schematic diagram of the setting — Family Restored and Doubled.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-ayyub",
+      "title": "The Arc of Ayyub",
+      "est": 10,
+      "blurb": "The trial that stripped away everything, the prayer that never complained, the healing spring, and the family restored and doubled.",
+      "steps": [
+        "ayyub-the-affliction",
+        "ayyub-the-patience",
+        "ayyub-the-healing-spring",
+        "ayyub-restored"
+      ]
+    }
+  ]
+}

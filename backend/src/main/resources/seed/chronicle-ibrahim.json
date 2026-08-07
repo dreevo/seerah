@@ -1,0 +1,632 @@
+{
+  "_note": "The Story of Prophet Ibrahim, drawn from the Qur'an (Surahs al-An'am, Maryam, al-Anbiya, as-Saffat, al-Baqarah, al-Ankabut, Ibrahim, al-Hajj, an-Nisa) and sound hadith in Sahih al-Bukhari (Hajar & Zamzam, Sarah in Egypt). Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "ibrahim",
+      "name": "Ibrahim",
+      "ar": "إبراهيم عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "ismail",
+      "name": "Ismail",
+      "ar": "إسماعيل عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "ishaq",
+      "name": "Ishaq",
+      "ar": "إسحاق عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "lut",
+      "name": "Lut",
+      "ar": "لوط عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "sarah",
+      "name": "Sarah",
+      "ar": "سارة",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "hajar",
+      "name": "Hajar",
+      "ar": "هاجر",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "azar",
+      "name": "Azar (his father)",
+      "ar": "آزر",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "the-king-nimrud",
+      "name": "The King (Nimrud)",
+      "ar": "الملك",
+      "role": "OPPONENT"
+    },
+    {
+      "slug": "the-tyrant-of-egypt",
+      "name": "The Tyrant of Egypt",
+      "ar": "ملك مصر",
+      "role": "OPPONENT"
+    }
+  ],
+  "places": [
+    {
+      "slug": "babylon",
+      "name": "Babylon",
+      "ar": "بابل",
+      "modern": "Iraq",
+      "lat": 32.54,
+      "lng": 44.42
+    },
+    {
+      "slug": "canaan",
+      "name": "Canaan",
+      "ar": "أرض كنعان",
+      "modern": "Palestine / Levant",
+      "lat": 31.9,
+      "lng": 35.25
+    },
+    {
+      "slug": "egypt",
+      "name": "Egypt",
+      "ar": "مصر",
+      "modern": "Egypt (Nile valley)",
+      "lat": 30.05,
+      "lng": 31.23
+    },
+    {
+      "slug": "makkah",
+      "name": "Makkah",
+      "ar": "مكة",
+      "modern": "Mecca, Saudi Arabia",
+      "lat": 21.4225,
+      "lng": 39.8262
+    }
+  ],
+  "events": [
+    {
+      "slug": "ibrahim-the-stars",
+      "title": "The Stars, the Moon, and the Sun",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-An'am 6:76-79",
+      "summary": "Reasoning with his people, Ibrahim points in turn to a star, the moon, and the rising sun — 'this is my Lord' — and as each sets, he rejects it: 'I do not love those that set.' He turns his face to the One who created the heavens and the earth, upright, rejecting all partners.",
+      "why": "Ibrahim reaches tawhid by pure reason: whatever fades and sets cannot be the Lord. It is the Qur'an's model of a mind seeking God and finding Him beyond every created thing.",
+      "people": [
+        "ibrahim"
+      ],
+      "verses": [
+        "6:76",
+        "6:77",
+        "6:78",
+        "6:79"
+      ],
+      "place": "babylon",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-the-stars-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Stars, the Moon, and the Sun”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-the-stars-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Stars, the Moon, and the Sun.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ibrahim-and-his-father",
+      "title": "Calling His Father",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:41-48",
+      "summary": "With the gentlest words, Ibrahim asks his father why he worships what cannot hear or see or benefit him, and offers to guide him to a straight path. His father threatens to stone him and tells him to leave. Ibrahim answers only with peace, and promises to pray for his forgiveness.",
+      "why": "The Qur'an shows how to call even a hostile parent: with tenderness, patience, and prayer, never with contempt — da'wah as mercy, not victory.",
+      "people": [
+        "ibrahim",
+        "azar"
+      ],
+      "verses": [
+        "19:42",
+        "19:43",
+        "19:46",
+        "19:47"
+      ],
+      "place": "babylon",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-and-his-father-calligraphy.svg",
+          "caption": "Calligraphic panel — “Calling His Father”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-and-his-father-diagram.svg",
+          "caption": "Schematic diagram of the setting — Calling His Father.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ibrahim-breaks-the-idols",
+      "title": "Breaking the Idols",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:57-67",
+      "summary": "While the people are away at their festival, Ibrahim breaks their idols to pieces, leaving the largest one. Questioned, he tells them to ask the big idol — 'if they could speak.' Confronted with the absurdity, they fall back into their hearts for a moment, then return to defending stones that cannot help or harm.",
+      "why": "Ibrahim's argument is unanswerable: gods that cannot defend themselves cannot be gods. The Qur'an exposes idolatry not with force but with a question the idolaters cannot answer.",
+      "people": [
+        "ibrahim"
+      ],
+      "verses": [
+        "21:57",
+        "21:58",
+        "21:62",
+        "21:63",
+        "21:66",
+        "21:67"
+      ],
+      "place": "babylon",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-breaks-the-idols-calligraphy.svg",
+          "caption": "Calligraphic panel — “Breaking the Idols”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-breaks-the-idols-diagram.svg",
+          "caption": "Schematic diagram of the setting — Breaking the Idols.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ibrahim-cast-into-the-fire",
+      "title": "Cast into the Fire",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:68-70",
+      "summary": "The people build a great fire and cast Ibrahim into it to avenge their gods. Allah commands: 'O fire, be coolness and safety upon Ibrahim.' They meant him harm, but Allah made them the greatest losers, and delivered His servant unburned.",
+      "why": "The clearest sign of tawhid's protection: the fire itself obeys its Maker. Ibrahim's trust — placing everything on Allah alone — is answered before the eyes of his persecutors.",
+      "people": [
+        "ibrahim",
+        "the-king-nimrud"
+      ],
+      "verses": [
+        "21:68",
+        "21:69",
+        "21:70"
+      ],
+      "place": "babylon",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-cast-into-the-fire-calligraphy.svg",
+          "caption": "Calligraphic panel — “Cast into the Fire”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-cast-into-the-fire-diagram.svg",
+          "caption": "Schematic diagram of the setting — Cast into the Fire.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ibrahim-and-the-king",
+      "title": "The King Who Claimed to Give Life",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:258",
+      "summary": "A king, given power by Allah, disputes with Ibrahim about his Lord. Ibrahim says, 'My Lord gives life and causes death.' The king boasts that he too gives life and death. So Ibrahim says: 'Allah brings the sun from the east — bring it from the west.' The disbeliever is left utterly confounded.",
+      "why": "Against a tyrant's arrogance Ibrahim answers with the order of creation itself. Power over a courtroom is nothing before the One who moves the sun.",
+      "people": [
+        "ibrahim",
+        "the-king-nimrud"
+      ],
+      "verses": [
+        "2:258"
+      ],
+      "place": "babylon",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-and-the-king-calligraphy.svg",
+          "caption": "Calligraphic panel — “The King Who Claimed to Give Life”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-and-the-king-diagram.svg",
+          "caption": "Schematic diagram of the setting — The King Who Claimed to Give Life.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ibrahim-the-migration",
+      "title": "The Migration for Allah",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Ankabut 29:26 · as-Saffat 37:99",
+      "summary": "Rejected by his people, Ibrahim declares, 'I am going to my Lord; He will guide me,' and emigrates from the land of his birth. Lut believes in him and goes with him, and Allah grants Ibrahim a blessed land and, in time, righteous sons — Ismail and Ishaq.",
+      "why": "The first hijrah of the friends of Allah: to leave home, kin, and safety for the sake of tawhid, trusting that the One who calls will also guide.",
+      "people": [
+        "ibrahim",
+        "lut",
+        "sarah"
+      ],
+      "verses": [
+        "29:26",
+        "37:99",
+        "37:100"
+      ],
+      "place": "canaan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-the-migration-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Migration for Allah”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-the-migration-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Migration for Allah.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ibrahim-sarah-in-egypt",
+      "title": "Sarah in Egypt",
+      "certainty": "WELL_ATTESTED",
+      "source": "sahih-al-bukhari",
+      "locator": "no. 3357-3358 — Ibrahim and Sarah before the tyrant",
+      "source2": "the-noble-quran",
+      "locator2": "Surah al-Ankabut 29:26 (his emigration)",
+      "summary": "Passing through the land of a tyrant who seized every married woman, Ibrahim tells the truth in the deeper sense — that Sarah is his sister in faith. Three times the tyrant reaches for her; three times her prayer freezes his hand, until he releases her in fear and gives her Hajar as a servant.",
+      "why": "A sound hadith preserves what the Qur'an leaves brief: Sarah's steadfast prayer under threat, and the coming of Hajar — the thread that leads, in time, to Makkah.",
+      "people": [
+        "ibrahim",
+        "sarah",
+        "hajar",
+        "the-tyrant-of-egypt"
+      ],
+      "verses": [],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-sarah-in-egypt-calligraphy.svg",
+          "caption": "Calligraphic panel — “Sarah in Egypt”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-sarah-in-egypt-diagram.svg",
+          "caption": "Schematic diagram of the setting — Sarah in Egypt.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ibrahim-hajar-and-ismail",
+      "title": "Hajar and Ismail in the Valley",
+      "certainty": "WELL_ATTESTED",
+      "major": true,
+      "source": "sahih-al-bukhari",
+      "locator": "no. 3364 — Ibrahim settles Hajar and Ismail at Makkah",
+      "source2": "the-noble-quran",
+      "locator2": "Surah Ibrahim 14:37",
+      "summary": "By Allah's command Ibrahim brings Hajar and the infant Ismail to a barren valley with no water and no people, and leaves them there in trust, praying: 'Our Lord, I have settled some of my offspring in a valley without cultivation by Your Sacred House… so make hearts incline toward them and provide them fruits.'",
+      "why": "The founding of Makkah begins as an act of pure obedience and trust in a lifeless valley — the seed from which the Sacred House, and a whole people, would grow.",
+      "people": [
+        "ibrahim",
+        "hajar",
+        "ismail"
+      ],
+      "verses": [
+        "14:37"
+      ],
+      "place": "makkah",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-hajar-and-ismail-calligraphy.svg",
+          "caption": "Calligraphic panel — “Hajar and Ismail in the Valley”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-hajar-and-ismail-diagram.svg",
+          "caption": "Schematic diagram of the setting — Hajar and Ismail in the Valley.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "the-well-of-zamzam",
+      "title": "The Well of Zamzam",
+      "certainty": "WELL_ATTESTED",
+      "major": true,
+      "source": "sahih-al-bukhari",
+      "locator": "no. 3364 — Hajar between Safa and Marwah, and the spring",
+      "summary": "When the water runs out and the child thirsts, Hajar runs seven times between the hills of Safa and Marwah, searching. At the infant's feet the angel strikes the ground and a spring gushes forth — Zamzam. She dams it, saying 'Zam, zam,' and by that water a caravan settles, and the valley comes to life.",
+      "why": "Hajar's running, out of trust and effort together, becomes a rite of the Hajj for all time; and Zamzam, springing in the desert, is Allah's answer to Ibrahim's prayer for provision.",
+      "people": [
+        "hajar",
+        "ismail"
+      ],
+      "verses": [],
+      "place": "makkah",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/the-well-of-zamzam-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Well of Zamzam”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/the-well-of-zamzam-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Well of Zamzam.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "the-vision-of-sacrifice",
+      "title": "The Vision of Sacrifice",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah as-Saffat 37:100-107",
+      "summary": "When Ismail is old enough to strive alongside him, Ibrahim sees in a dream that he is sacrificing him, and tells his son. Ismail answers, 'O my father, do as you are commanded; you will find me, if Allah wills, of the patient.' As Ibrahim lays him down, he is called — 'You have fulfilled the vision' — and a great ram is ransomed in his place.",
+      "why": "The summit of submission, from both father and son: to obey Allah in the hardest thing, and to be answered with a ransom. The Qur'an makes it a lasting lesson, honoured every year at the Feast of Sacrifice.",
+      "people": [
+        "ibrahim",
+        "ismail"
+      ],
+      "verses": [
+        "37:102",
+        "37:103",
+        "37:105",
+        "37:107"
+      ],
+      "place": "makkah",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/the-vision-of-sacrifice-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Vision of Sacrifice”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/the-vision-of-sacrifice-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Vision of Sacrifice.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "building-the-kaaba",
+      "title": "Raising the Foundations of the House",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:125-129",
+      "summary": "Ibrahim and Ismail raise the foundations of the Sacred House together, praying, 'Our Lord, accept this from us; indeed You are the Hearing, the Knowing.' They ask Allah to make them submitting to Him, to show them the rites, and to raise up from their descendants a messenger who will teach the Book and wisdom.",
+      "why": "The Kaaba is built as a house of pure worship, and with it a prayer answered centuries later in the Prophet Muhammad ﷺ — binding the story of Ibrahim to the Seerah itself.",
+      "people": [
+        "ibrahim",
+        "ismail"
+      ],
+      "verses": [
+        "2:125",
+        "2:127",
+        "2:128",
+        "2:129"
+      ],
+      "place": "makkah",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/building-the-kaaba-calligraphy.svg",
+          "caption": "Calligraphic panel — “Raising the Foundations of the House”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/building-the-kaaba-diagram.svg",
+          "caption": "Schematic diagram of the setting — Raising the Foundations of the House.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "the-call-to-hajj",
+      "title": "The Call to Pilgrimage",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Hajj 22:26-27",
+      "summary": "Allah shows Ibrahim the site of the House, commanding him to keep it pure for those who circle it and pray there, and to 'proclaim to the people the Hajj — they will come to you on foot and on every lean camel, from every distant pass.'",
+      "why": "The pilgrimage that fills Makkah in every age begins as a single call by Ibrahim, answered ever since by believers from every corner of the earth.",
+      "people": [
+        "ibrahim"
+      ],
+      "verses": [
+        "22:26",
+        "22:27"
+      ],
+      "place": "makkah",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/the-call-to-hajj-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Call to Pilgrimage”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/the-call-to-hajj-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Call to Pilgrimage.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "ibrahim-khalil-allah",
+      "title": "The Friend of the Most Merciful",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah an-Nisa 4:125 · an-Nahl 16:120-123",
+      "summary": "Allah took Ibrahim as a khalil — an intimate friend. He was a nation unto himself, devoutly obedient, upright, never of the idolaters; grateful for Allah's favours, chosen and guided to a straight path. The believers are told to follow the way of Ibrahim, inclining to truth.",
+      "why": "The Qur'an gathers Ibrahim's whole life into a title no other bears so — the Friend of Allah — and sets his pure monotheism as the pattern the final community is to follow.",
+      "people": [
+        "ibrahim"
+      ],
+      "verses": [
+        "4:125",
+        "16:120",
+        "16:121",
+        "16:123"
+      ],
+      "place": "makkah",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/ibrahim/ibrahim-khalil-allah-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Friend of the Most Merciful”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/ibrahim/ibrahim-khalil-allah-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Friend of the Most Merciful.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "slug": "ibrahim-migration-route",
+      "event": "ibrahim-the-migration",
+      "conjectural": true,
+      "points": [
+        [
+          32.54,
+          44.42
+        ],
+        [
+          33.51,
+          36.29
+        ],
+        [
+          31.9,
+          35.25
+        ]
+      ]
+    },
+    {
+      "slug": "ibrahim-to-makkah",
+      "event": "ibrahim-hajar-and-ismail",
+      "conjectural": true,
+      "points": [
+        [
+          31.9,
+          35.25
+        ],
+        [
+          28.4,
+          36.5
+        ],
+        [
+          24.47,
+          39.61
+        ],
+        [
+          21.4225,
+          39.8262
+        ]
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "slug": "the-arc-of-ibrahim",
+      "title": "The Arc of Ibrahim",
+      "est": 22,
+      "blurb": "From a mind reasoning its way to the one God in Babylon, through the fire and the great migration, to the founding of Makkah, the sacrifice, and the building of the Sacred House.",
+      "steps": [
+        "ibrahim-the-stars",
+        "ibrahim-breaks-the-idols",
+        "ibrahim-cast-into-the-fire",
+        "ibrahim-the-migration",
+        "ibrahim-hajar-and-ismail",
+        "the-vision-of-sacrifice",
+        "building-the-kaaba"
+      ]
+    },
+    {
+      "slug": "ibrahim-monotheist",
+      "title": "The Making of a Monotheist",
+      "est": 14,
+      "blurb": "How Ibrahim reasoned his way to the one God, broke the idols, and stood firm in the fire and before the king.",
+      "steps": [
+        "ibrahim-the-stars",
+        "ibrahim-breaks-the-idols",
+        "ibrahim-cast-into-the-fire",
+        "ibrahim-and-the-king"
+      ]
+    },
+    {
+      "slug": "ibrahim-makkah",
+      "title": "The Founding of Makkah",
+      "est": 18,
+      "blurb": "The desert valley, Hajar and Zamzam, the vision of sacrifice, the raising of the Kaaba, and the call to Hajj.",
+      "steps": [
+        "ibrahim-hajar-and-ismail",
+        "the-well-of-zamzam",
+        "the-vision-of-sacrifice",
+        "building-the-kaaba",
+        "the-call-to-hajj"
+      ]
+    }
+  ]
+}

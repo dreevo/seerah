@@ -1,0 +1,238 @@
+{
+  "_note": "The Story of Prophet Yunus (Jonah), drawn strictly from the Qur'an (Surahs al-Anbiya, as-Saffat, al-Qalam, Yunus). The prophet of the fish, and of the only town that believed and was spared. Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "yunus",
+      "name": "Yunus",
+      "ar": "يونس عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "the-people-of-nineveh",
+      "name": "The People of Nineveh",
+      "ar": "أهل نينوى",
+      "role": "OTHER"
+    }
+  ],
+  "places": [
+    {
+      "slug": "nineveh",
+      "name": "Nineveh",
+      "ar": "نِينَوَى",
+      "modern": "near Mosul, Iraq",
+      "lat": 36.36,
+      "lng": 43.15
+    },
+    {
+      "slug": "the-open-sea",
+      "name": "The Sea",
+      "ar": "البحر",
+      "lat": 33.5,
+      "lng": 35.2,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "yunus-leaves-his-people",
+      "title": "He Left in Anger",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:87 · as-Saffat 37:139-140",
+      "summary": "Yunus, the man of the fish, left his people in anger when they would not believe, thinking Allah would not restrict him — and he fled to the laden ship, without waiting for his Lord's leave.",
+      "why": "Even a prophet's impatience is recorded plainly: Yunus departs before he is permitted, and the whole ordeal that follows is Allah's mercy teaching him — and us — to wait upon His command.",
+      "people": [
+        "yunus",
+        "the-people-of-nineveh"
+      ],
+      "verses": [
+        "21:87",
+        "37:139",
+        "37:140"
+      ],
+      "place": "nineveh",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yunus/yunus-leaves-his-people-calligraphy.svg",
+          "caption": "Calligraphic panel — “He Left in Anger”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yunus/yunus-leaves-his-people-diagram.svg",
+          "caption": "Schematic diagram of the setting — He Left in Anger.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yunus-cast-into-the-sea",
+      "title": "Cast into the Sea",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah as-Saffat 37:141 · al-Qalam 68:48",
+      "summary": "When the overloaded ship was in danger, lots were drawn to lighten it, and Yunus was among the losers. He was thrown into the sea — and a great fish, appointed by Allah, swallowed him while he was blameworthy.",
+      "why": "The lot falls on the prophet himself. The Qur'an lets the sea and the fish become the instruments of a reckoning between a servant and his Lord — a private mercy in the depths.",
+      "people": [
+        "yunus"
+      ],
+      "verses": [
+        "37:141",
+        "37:142",
+        "68:48"
+      ],
+      "place": "the-open-sea",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yunus/yunus-cast-into-the-sea-calligraphy.svg",
+          "caption": "Calligraphic panel — “Cast into the Sea”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yunus/yunus-cast-into-the-sea-diagram.svg",
+          "caption": "Schematic diagram of the setting — Cast into the Sea.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yunus-the-prayer-in-the-darkness",
+      "title": "The Prayer in the Darkness",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:87-88",
+      "summary": "In the layered darkness — of the night, the sea, and the belly of the fish — Yunus called out: 'There is no god but You; glory be to You; indeed, I was among the wrongdoers.' So Allah responded to him and saved him from the distress. 'And thus do We save the believers.'",
+      "why": "The most famous prayer of return in the Qur'an: no excuse, no bargain — only tawhid, the glorifying of Allah, and the confession of one's own wrong. And the promise is universal: thus are the believers saved.",
+      "people": [
+        "yunus"
+      ],
+      "verses": [
+        "21:87",
+        "21:88"
+      ],
+      "place": "the-open-sea",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yunus/yunus-the-prayer-in-the-darkness-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Prayer in the Darkness”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yunus/yunus-the-prayer-in-the-darkness-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Prayer in the Darkness.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yunus-cast-onto-the-shore",
+      "title": "Cast onto the Shore",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah as-Saffat 37:143-146",
+      "summary": "Had he not been of those who glorify Allah, he would have remained in its belly until the Day of Resurrection. But he was cast onto the open shore, ill, and Allah caused a gourd vine to grow over him to shade and shelter him — a tenderness after the trial.",
+      "why": "His glorifying of Allah, even before the ordeal, is what delivers him. And Allah does not merely release him but nurses him back — a shade, a plant, a gentle recovery — mercy upon mercy.",
+      "people": [
+        "yunus"
+      ],
+      "verses": [
+        "37:143",
+        "37:144",
+        "37:145",
+        "37:146"
+      ],
+      "place": "the-open-sea",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yunus/yunus-cast-onto-the-shore-calligraphy.svg",
+          "caption": "Calligraphic panel — “Cast onto the Shore”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yunus/yunus-cast-onto-the-shore-diagram.svg",
+          "caption": "Schematic diagram of the setting — Cast onto the Shore.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yunus-the-people-believe",
+      "title": "The Town That Believed",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah as-Saffat 37:147-148 · Yunus 10:98",
+      "summary": "Yunus was sent to a hundred thousand or more, and they believed, so Allah gave them enjoyment for a time. 'If only there had been a town that believed and profited from its faith — except the people of Yunus: when they believed, We removed from them the punishment of disgrace and let them enjoy life.'",
+      "why": "The Qur'an singles out the people of Yunus as the one nation that believed at the edge of ruin and was spared — the door of repentance held open even after the warning, if a people truly turns.",
+      "people": [
+        "yunus",
+        "the-people-of-nineveh"
+      ],
+      "verses": [
+        "37:147",
+        "37:148",
+        "10:98"
+      ],
+      "place": "nineveh",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yunus/yunus-the-people-believe-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Town That Believed”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yunus/yunus-the-people-believe-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Town That Believed.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-yunus",
+      "title": "The Arc of Yunus",
+      "est": 12,
+      "blurb": "From a prophet who left in anger, through the sea and the belly of the fish and the prayer in the darkness, to the town that believed and was spared.",
+      "steps": [
+        "yunus-leaves-his-people",
+        "yunus-cast-into-the-sea",
+        "yunus-the-prayer-in-the-darkness",
+        "yunus-cast-onto-the-shore",
+        "yunus-the-people-believe"
+      ]
+    },
+    {
+      "slug": "yunus-the-prayer-of-return",
+      "title": "The Prayer of Return",
+      "est": 8,
+      "blurb": "The distress, the darkness, and the words that saved him — 'there is no god but You; glory be to You; indeed I was among the wrongdoers.'",
+      "steps": [
+        "yunus-cast-into-the-sea",
+        "yunus-the-prayer-in-the-darkness",
+        "yunus-cast-onto-the-shore"
+      ]
+    }
+  ]
+}

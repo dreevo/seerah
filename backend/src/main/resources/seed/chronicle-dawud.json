@@ -1,0 +1,285 @@
+{
+  "_note": "The Story of Prophet Dawud (David), drawn strictly from the Qur'an (Surahs al-Baqarah, an-Nisa, al-Isra, al-Anbiya, Saba, Sad). King and prophet, given the Zabur (Psalms); the mountains and birds glorified with him and iron was made soft in his hands. Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "dawud",
+      "name": "Dawud",
+      "ar": "داود عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "sulayman",
+      "name": "Sulayman",
+      "ar": "سليمان عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "jalut",
+      "name": "Jalut (Goliath)",
+      "ar": "جالوت",
+      "role": "OPPONENT"
+    },
+    {
+      "slug": "talut",
+      "name": "Talut (Saul)",
+      "ar": "طالوت",
+      "role": "RULER"
+    }
+  ],
+  "places": [
+    {
+      "slug": "elah-valley",
+      "name": "The Valley of Battle",
+      "ar": "وادي المعركة",
+      "lat": 31.7,
+      "lng": 34.95,
+      "approx": true
+    },
+    {
+      "slug": "jerusalem",
+      "name": "Jerusalem (Bayt al-Maqdis)",
+      "ar": "بيت المقدس",
+      "modern": "Jerusalem",
+      "lat": 31.78,
+      "lng": 35.23
+    }
+  ],
+  "events": [
+    {
+      "slug": "dawud-and-jalut",
+      "title": "David and Goliath",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:249-251",
+      "summary": "When the army of Talut faced the mighty Jalut, the small band of believers prayed for patience and firm footing. By the leave of Allah they routed the enemy, and the young Dawud killed Jalut. Then Allah gave Dawud the kingship and wisdom and taught him of what He willed.",
+      "why": "The Qur'an turns a famous battle into a lesson: victory is by Allah's leave, not numbers — and from that day the shepherd Dawud is raised to kingship and prophethood together.",
+      "people": [
+        "dawud",
+        "jalut",
+        "talut"
+      ],
+      "verses": [
+        "2:249",
+        "2:250",
+        "2:251"
+      ],
+      "place": "elah-valley",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/dawud/dawud-and-jalut-calligraphy.svg",
+          "caption": "Calligraphic panel — “David and Goliath”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/dawud/dawud-and-jalut-diagram.svg",
+          "caption": "Schematic diagram of the setting — David and Goliath.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "dawud-mountains-and-birds",
+      "title": "The Mountains and Birds Glorify",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:79 · Saba 34:10 · Sad 38:18-19",
+      "summary": "Allah subjected the mountains to glorify His praise together with Dawud, evening and morning, and the birds as well, gathered around him — all echoing his worship. 'O mountains, repeat My praises with him, and the birds too.'",
+      "why": "Dawud's devotion was so pure that creation itself joined him in praise — the Qur'an's image of a heart so turned to Allah that the whole world answers it.",
+      "people": [
+        "dawud"
+      ],
+      "verses": [
+        "21:79",
+        "34:10",
+        "38:18",
+        "38:19"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/dawud/dawud-mountains-and-birds-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Mountains and Birds Glorify”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/dawud/dawud-mountains-and-birds-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Mountains and Birds Glorify.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "dawud-the-zabur",
+      "title": "The Psalms (Zabūr)",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Isra 17:55 · an-Nisa 4:163",
+      "summary": "Among the favours Allah preferred upon Dawud, He gave him the Zabūr — the Psalms — a scripture of praise and remembrance, just as He revealed to the prophets before and after him.",
+      "why": "Dawud is not only a king but a bearer of revelation: the Zabūr places him firmly in the single chain of scripture that runs from Musa's Torah to Isa's Gospel to the final Qur'an.",
+      "people": [
+        "dawud"
+      ],
+      "verses": [
+        "17:55",
+        "4:163"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/dawud/dawud-the-zabur-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Psalms (Zabūr)”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/dawud/dawud-the-zabur-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Psalms (Zabūr).",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "dawud-iron-made-soft",
+      "title": "Iron Made Soft",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Saba 34:10-11 · al-Anbiya 21:80",
+      "summary": "Allah made iron soft for Dawud and taught him to fashion coats of mail, measuring the links well, and to work righteousness. It was a craft of protection He taught him, that his people might be shielded in battle — 'so be grateful for what you make.'",
+      "why": "Prophethood joins honest labour: Dawud, a king, works iron with his own hands. The Qur'an dignifies skilled work and links it to gratitude and the good of the community.",
+      "people": [
+        "dawud"
+      ],
+      "verses": [
+        "34:10",
+        "34:11",
+        "21:80"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/dawud/dawud-iron-made-soft-calligraphy.svg",
+          "caption": "Calligraphic panel — “Iron Made Soft”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/dawud/dawud-iron-made-soft-diagram.svg",
+          "caption": "Schematic diagram of the setting — Iron Made Soft.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "dawud-the-two-litigants",
+      "title": "The Two Litigants",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Sad 38:21-25",
+      "summary": "Two disputants climb the wall into Dawud's prayer-chamber and startle him. One complains that his brother, who owns ninety-nine ewes, demands his single ewe as well. Dawud judges swiftly against the wrong — then realises he himself is being tested. He falls down in prostration and turns to his Lord in repentance, and Allah forgives him.",
+      "why": "Even a righteous king is tested and turns at once to repentance. The Qur'an shows greatness not in never erring, but in the humility to prostrate and return the moment one sees the truth.",
+      "people": [
+        "dawud"
+      ],
+      "verses": [
+        "38:21",
+        "38:22",
+        "38:24",
+        "38:25"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/dawud/dawud-the-two-litigants-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Two Litigants”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/dawud/dawud-the-two-litigants-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Two Litigants.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "dawud-a-successor-on-earth",
+      "title": "A Successor on the Earth",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Sad 38:20, 38:26 · al-Anbiya 21:78-79",
+      "summary": "Allah strengthened Dawud's kingdom and gave him wisdom and decisive speech, and He judged with Dawud and Sulayman in the matter of a field into which sheep had strayed by night. 'O Dawud, We have made you a successor upon the earth, so judge between the people in truth, and do not follow desire, lest it lead you astray.'",
+      "why": "The charge to Dawud is the charge to every ruler and judge: to weigh truth above desire. It also opens the door to his son Sulayman, who judged beside him and would inherit his prophethood and throne.",
+      "people": [
+        "dawud",
+        "sulayman"
+      ],
+      "verses": [
+        "38:20",
+        "38:26",
+        "21:78",
+        "21:79"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/dawud/dawud-a-successor-on-earth-calligraphy.svg",
+          "caption": "Calligraphic panel — “A Successor on the Earth”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/dawud/dawud-a-successor-on-earth-diagram.svg",
+          "caption": "Schematic diagram of the setting — A Successor on the Earth.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-dawud",
+      "title": "The Arc of Dawud",
+      "est": 14,
+      "blurb": "From the boy who felled Jalut to the king given the Psalms, whom the mountains praised — and the test that taught him to prostrate and repent.",
+      "steps": [
+        "dawud-and-jalut",
+        "dawud-mountains-and-birds",
+        "dawud-the-zabur",
+        "dawud-the-two-litigants",
+        "dawud-a-successor-on-earth"
+      ]
+    },
+    {
+      "slug": "dawud-king-and-worshipper",
+      "title": "King and Worshipper",
+      "est": 10,
+      "blurb": "The two sides of Dawud the Qur'an holds together: a just ruler and craftsman, and a servant whose praise the mountains echoed.",
+      "steps": [
+        "dawud-mountains-and-birds",
+        "dawud-iron-made-soft",
+        "dawud-the-two-litigants",
+        "dawud-a-successor-on-earth"
+      ]
+    }
+  ]
+}

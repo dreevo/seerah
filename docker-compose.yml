@@ -1,0 +1,62 @@
+# ============================================================================
+#  Seerah platform — the whole backend as one command:  docker compose up
+#
+#  Brings up PostGIS + the Spring Boot API (with the full chronology seeded).
+#  The Angular reader is run separately in dev (see frontend/README.md) or built
+#  and served statically; run it with `npm start` and it proxies to :8080.
+#
+#  OpenSearch is optional — enable the search phase with:
+#     docker compose --profile search up
+#  and set search.engine=opensearch (see the `backend` environment below).
+# ============================================================================
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: seerah
+      POSTGRES_PASSWORD: seerah
+      POSTGRES_DB: seerah
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U seerah"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - seerah-db:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/seerah
+      DB_USER: seerah
+      DB_PASSWORD: seerah
+      # Load the full Qur'an + the pivotal-events chronology on first boot.
+      SEERAH_SEED: "true"
+      # --- editorial credentials (dev only; override in real deployments) ---
+      SEERAH_EDITOR_PASSWORD: editor-dev
+      SEERAH_SCHOLAR_PASSWORD: scholar-dev
+      # --- to run search on OpenSearch instead of Postgres, uncomment: ------
+      # SEARCH_ENGINE: opensearch
+      # SEARCH_OPENSEARCH_URI: http://opensearch:9200
+    command: ["--seerah.seed=true"]
+    ports:
+      - "8080:8080"
+
+  # Optional — only started with `--profile search`.
+  opensearch:
+    image: opensearchproject/opensearch:2.17.1
+    profiles: ["search"]
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: "true"
+      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+
+volumes:
+  seerah-db:

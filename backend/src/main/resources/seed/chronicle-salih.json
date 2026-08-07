@@ -1,0 +1,254 @@
+{
+  "_note": "The Story of Prophet Salih, sent to the people of Thamud, drawn strictly from the Qur'an (Surahs al-A'raf, Hud, ash-Shu'ara, al-Qamar, al-Hijr, an-Naml, Fussilat). An Arab prophet; the sign of the she-camel. Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "salih",
+      "name": "Salih",
+      "ar": "صالح عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "the-people-of-thamud",
+      "name": "The People of Thamūd",
+      "ar": "قوم ثمود",
+      "role": "OPPONENT"
+    }
+  ],
+  "places": [
+    {
+      "slug": "al-hijr",
+      "name": "Al-Ḥijr (Madāʾin Ṣāliḥ)",
+      "ar": "الحِجر",
+      "modern": "al-'Ula, NW Arabia",
+      "lat": 26.79,
+      "lng": 37.95
+    }
+  ],
+  "events": [
+    {
+      "slug": "salih-sent-to-thamud",
+      "title": "Sent to Thamūd",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:73 · Hud 11:61",
+      "summary": "To Thamūd — a people who carved houses into the mountains and were made successors after 'Ād — Allah sent their brother Salih: 'O my people, worship Allah; you have no deity other than Him. He produced you from the earth and settled you in it, so seek His forgiveness and turn to Him.'",
+      "why": "Heirs to 'Ād's land and skill, Thamūd are called by the same word to the same One — a fresh chance for a new generation not to repeat the pride of those before them.",
+      "people": [
+        "salih",
+        "the-people-of-thamud"
+      ],
+      "verses": [
+        "7:73",
+        "11:61"
+      ],
+      "place": "al-hijr",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/salih/salih-sent-to-thamud-calligraphy.svg",
+          "caption": "Calligraphic panel — “Sent to Thamūd”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/salih/salih-sent-to-thamud-diagram.svg",
+          "caption": "Schematic diagram of the setting — Sent to Thamūd.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "salih-the-she-camel",
+      "title": "The She-Camel — a Sign",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:73 · Hud 11:64 · ash-Shu'ara 26:155-156",
+      "summary": "They demanded a sign, and Allah brought forth from the rock a she-camel as a clear sign and a test. Salih said: 'This is the she-camel of Allah — a sign for you. Leave her to graze on Allah's earth, and do her no harm. She has a share of the water, and you have a share, on a known day. Do not touch her with evil, lest a great punishment seize you.'",
+      "why": "The sign is also a trust: to share the water and let the camel be. The Qur'an turns a miracle into a daily test of restraint and justice — whether a people can leave alone what Allah has set apart.",
+      "people": [
+        "salih",
+        "the-people-of-thamud"
+      ],
+      "verses": [
+        "7:73",
+        "11:64",
+        "26:155"
+      ],
+      "place": "al-hijr",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/salih/salih-the-she-camel-calligraphy.svg",
+          "caption": "Calligraphic panel — “The She-Camel — a Sign”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/salih/salih-the-she-camel-diagram.svg",
+          "caption": "Schematic diagram of the setting — The She-Camel — a Sign.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "salih-the-plot",
+      "title": "The Plot of the Nine",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah an-Naml 27:48-50",
+      "summary": "In the city were nine men who spread corruption in the land and never set right. They swore by Allah to attack Salih and his family by night, then to tell his heir they had not witnessed the destruction of his people, and that they spoke the truth. They plotted a plot, and Allah planned a plan, while they did not perceive it.",
+      "why": "The rejection of Thamūd hardens into conspiracy against the prophet himself — the recurring choice of the corrupt to silence the warner rather than heed the warning.",
+      "people": [
+        "the-people-of-thamud",
+        "salih"
+      ],
+      "verses": [
+        "27:48",
+        "27:49",
+        "27:50"
+      ],
+      "place": "al-hijr",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/salih/salih-the-plot-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Plot of the Nine”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/salih/salih-the-plot-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Plot of the Nine.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "salih-the-camel-hamstrung",
+      "title": "They Hamstrung the She-Camel",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:77 · Hud 11:65 · al-Qamar 54:29",
+      "summary": "They called their companion, and he took a sword and hamstrung her. So they killed the she-camel, defied the command of their Lord, and said, 'O Salih, bring us what you threaten, if you are among the messengers.' Salih told them to enjoy themselves in their homes for three days — a promise that would not be belied.",
+      "why": "The one restraint they were given, they break — and with contempt. The Qur'an marks the killing of the she-camel as the point of no return, the deed that seals a nation's fate.",
+      "people": [
+        "the-people-of-thamud",
+        "salih"
+      ],
+      "verses": [
+        "7:77",
+        "11:65",
+        "54:29"
+      ],
+      "place": "al-hijr",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/salih/salih-the-camel-hamstrung-calligraphy.svg",
+          "caption": "Calligraphic panel — “They Hamstrung the She-Camel”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/salih/salih-the-camel-hamstrung-diagram.svg",
+          "caption": "Schematic diagram of the setting — They Hamstrung the She-Camel.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "salih-the-blast",
+      "title": "The Blast",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:67-68 · al-A'raf 7:78 · al-Qamar 54:31",
+      "summary": "And the blast seized those who had wronged, and they lay fallen in their homes, as if they had never prospered there. It was a single mighty cry, and they became like the dry twig-fragments of a corral-builder. Thus was Thamūd — they disbelieved in their Lord; so away with Thamūd.",
+      "why": "After the three-day reprieve, one cry ends them. The Qur'an leaves the carved cities of Thamūd standing empty as a lasting sign for travellers — greatness of stone, undone in a moment.",
+      "people": [
+        "the-people-of-thamud",
+        "salih"
+      ],
+      "verses": [
+        "11:67",
+        "7:78",
+        "54:31"
+      ],
+      "place": "al-hijr",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/salih/salih-the-blast-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Blast”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/salih/salih-the-blast-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Blast.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "salih-the-believers-saved",
+      "title": "Salih and the Believers Saved",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:66 · al-A'raf 7:79",
+      "summary": "When Our command came, We saved Salih and those who believed with him by a mercy from Us, and from the disgrace of that day. Salih turned away from them and said, 'O my people, I had conveyed to you the message of my Lord and advised you, but you do not like advisers.'",
+      "why": "Again the believers are delivered and the warner vindicated — and his parting words are not triumph but sorrow: he gave them every counsel, and they would not love the truth.",
+      "people": [
+        "salih",
+        "the-people-of-thamud"
+      ],
+      "verses": [
+        "11:66",
+        "7:79"
+      ],
+      "place": "al-hijr",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/salih/salih-the-believers-saved-calligraphy.svg",
+          "caption": "Calligraphic panel — “Salih and the Believers Saved”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/salih/salih-the-believers-saved-diagram.svg",
+          "caption": "Schematic diagram of the setting — Salih and the Believers Saved.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-salih",
+      "title": "The Arc of Salih",
+      "est": 14,
+      "blurb": "A warner sent to Thamūd — the she-camel drawn from the rock, the trust betrayed, the plot, the blast, and the deliverance of the believers.",
+      "steps": [
+        "salih-sent-to-thamud",
+        "salih-the-she-camel",
+        "salih-the-camel-hamstrung",
+        "salih-the-blast",
+        "salih-the-believers-saved"
+      ]
+    }
+  ]
+}

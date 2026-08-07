@@ -1,0 +1,693 @@
+{
+  "_note": "The Story of Prophet Yusuf, drawn strictly from Surah Yusuf (Qur'an 12), the most detailed continuous narrative in the Qur'an. Every event cites its ayat; verse text is resolved from the loaded Qur'an reference. One hadith (Sahih al-Bukhari) adds context on Yusuf's lineage. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "yusuf",
+      "name": "Yusuf",
+      "ar": "يوسف عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "yaqub",
+      "name": "Ya'qub",
+      "ar": "يعقوب عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "binyamin",
+      "name": "Binyamin",
+      "ar": "بنيامين",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "brothers-of-yusuf",
+      "name": "The Brothers of Yusuf",
+      "ar": "إخوة يوسف",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "al-aziz",
+      "name": "Al-Aziz (the Minister)",
+      "ar": "العزيز",
+      "role": "RULER"
+    },
+    {
+      "slug": "wife-of-al-aziz",
+      "name": "The Wife of al-Aziz",
+      "ar": "امرأة العزيز",
+      "role": "OTHER"
+    },
+    {
+      "slug": "king-of-egypt",
+      "name": "The King of Egypt",
+      "ar": "ملك مصر",
+      "role": "RULER"
+    }
+  ],
+  "places": [
+    {
+      "slug": "canaan",
+      "name": "Canaan",
+      "ar": "أرض كنعان",
+      "modern": "Palestine / Levant",
+      "lat": 31.9,
+      "lng": 35.25
+    },
+    {
+      "slug": "the-well",
+      "name": "The Well",
+      "ar": "الجُبّ",
+      "lat": 32.0,
+      "lng": 35.4,
+      "approx": true
+    },
+    {
+      "slug": "egypt",
+      "name": "Egypt",
+      "ar": "مصر",
+      "modern": "Egypt (Nile valley)",
+      "lat": 30.05,
+      "lng": 31.23
+    },
+    {
+      "slug": "the-prison",
+      "name": "The Prison",
+      "ar": "السِّجن",
+      "lat": 30.0,
+      "lng": 31.2,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "yusuf-the-dream",
+      "title": "The Dream of Eleven Stars",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:4-6",
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of the Prophets, no. 3390",
+      "summary": "The young Yusuf tells his father Ya'qub that he saw eleven stars and the sun and the moon prostrating to him. Ya'qub, himself a prophet, recognises the sign and warns him not to relate the vision to his brothers, lest their envy move them to plot against him.",
+      "why": "The dream sets the whole story in motion: it foretells Yusuf's future eminence, and Ya'qub's caution names the danger — his brothers' jealousy — that drives every event that follows.",
+      "people": [
+        "yusuf",
+        "yaqub"
+      ],
+      "verses": [
+        "12:4",
+        "12:5",
+        "12:6"
+      ],
+      "place": "canaan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-the-dream-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Dream of Eleven Stars”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-the-dream-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Dream of Eleven Stars.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-the-plot",
+      "title": "The Brothers' Plot",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:8-10",
+      "summary": "Resentful that their father loves Yusuf and his younger brother more, the brothers resolve to remove Yusuf — some urging that he be killed, until one proposes instead that he be cast into the bottom of a well for a passing caravan to pick up.",
+      "why": "Envy hardens into conspiracy. The Qur'an records their reasoning plainly, so the reader sees how a family bond is broken by jealousy rather than by any wrong on Yusuf's part.",
+      "people": [
+        "brothers-of-yusuf",
+        "yusuf",
+        "yaqub"
+      ],
+      "verses": [
+        "12:8",
+        "12:9",
+        "12:10"
+      ],
+      "place": "canaan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-the-plot-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Brothers' Plot”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-the-plot-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Brothers' Plot.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-cast-into-the-well",
+      "title": "Cast into the Well",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:15-18",
+      "summary": "The brothers take Yusuf out, lower him into the well, and return to their father at nightfall weeping, claiming a wolf had devoured him and producing his shirt stained with false blood. Ya'qub does not believe them and resolves upon beautiful patience.",
+      "why": "Yusuf's trial begins in abandonment. Allah reassures him even in the well that he will one day remind his brothers of this deed — the first promise of the reversal to come.",
+      "people": [
+        "yusuf",
+        "brothers-of-yusuf",
+        "yaqub"
+      ],
+      "verses": [
+        "12:15",
+        "12:16",
+        "12:18"
+      ],
+      "place": "the-well",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-cast-into-the-well-calligraphy.svg",
+          "caption": "Calligraphic panel — “Cast into the Well”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-cast-into-the-well-diagram.svg",
+          "caption": "Schematic diagram of the setting — Cast into the Well.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-sold-in-egypt",
+      "title": "Sold in Egypt",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:19-21",
+      "summary": "A passing caravan draws Yusuf up from the well and sells him for a paltry price. In Egypt he is bought by al-Aziz, a man of rank, who tells his wife to treat him honourably, sensing the boy may benefit them. So Allah establishes Yusuf in the land.",
+      "why": "What the brothers meant as ruin becomes the doorway to Yusuf's rise. The Qur'an frames his arrival in Egypt as Allah's own establishing of him, and the teaching of the interpretation of events.",
+      "people": [
+        "yusuf",
+        "al-aziz"
+      ],
+      "verses": [
+        "12:19",
+        "12:20",
+        "12:21"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-sold-in-egypt-calligraphy.svg",
+          "caption": "Calligraphic panel — “Sold in Egypt”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-sold-in-egypt-diagram.svg",
+          "caption": "Schematic diagram of the setting — Sold in Egypt.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-the-temptation",
+      "title": "The Temptation and the Torn Shirt",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:23-29",
+      "summary": "The wife of al-Aziz attempts to seduce the grown Yusuf; he refuses, seeking refuge in Allah, and flees toward the door. His shirt is torn from behind — proof, a witness observes, that she pursued him. Al-Aziz sees the truth yet asks Yusuf to overlook it.",
+      "why": "Yusuf's chastity under pressure is the turning point of his character: he chooses prison over sin. The torn shirt, examined as evidence, shows the Qur'an's care for proof and testimony.",
+      "people": [
+        "yusuf",
+        "wife-of-al-aziz",
+        "al-aziz"
+      ],
+      "verses": [
+        "12:23",
+        "12:24",
+        "12:26"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-the-temptation-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Temptation and the Torn Shirt”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-the-temptation-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Temptation and the Torn Shirt.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-women-of-the-city",
+      "title": "The Women of the City",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:30-34",
+      "summary": "When the women of the city gossip about her, she invites them, gives them knives, and summons Yusuf; struck by him, they cut their hands. She admits her design, and Yusuf prays that prison is dearer to him than the sin they call him to. His Lord answers him.",
+      "why": "Yusuf publicly declares he would rather be imprisoned than yield. The Qur'an shows righteousness as an active choice, and Allah's response as turning the plotters' scheme away from him.",
+      "people": [
+        "yusuf",
+        "wife-of-al-aziz"
+      ],
+      "verses": [
+        "12:31",
+        "12:32",
+        "12:33"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-women-of-the-city-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Women of the City”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-women-of-the-city-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Women of the City.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-imprisonment",
+      "title": "Imprisonment",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:35-36",
+      "summary": "Though his innocence is plain, it suits the household to imprison Yusuf for a time. Two young men enter the prison with him — one of them a cupbearer, the other a baker — and each carries a troubling dream he cannot explain.",
+      "why": "In the lowest place Yusuf's gift becomes his mission. Prison is not the end of his story but the stage on which his knowledge, given by Allah, begins to serve others.",
+      "people": [
+        "yusuf"
+      ],
+      "verses": [
+        "12:35",
+        "12:36"
+      ],
+      "place": "the-prison",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-imprisonment-calligraphy.svg",
+          "caption": "Calligraphic panel — “Imprisonment”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-imprisonment-diagram.svg",
+          "caption": "Schematic diagram of the setting — Imprisonment.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-two-prisoners",
+      "title": "The Two Prisoners' Dreams",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:37-42",
+      "summary": "Before interpreting their dreams, Yusuf calls his fellow prisoners to the worship of one God alone, rejecting false lords. He then tells them their futures: one will serve wine to his king again, the other will be crucified. He asks the survivor to remember him.",
+      "why": "Even imprisoned and wronged, Yusuf's first concern is calling others to tawhid — the oneness of God — before he speaks of their dreams. Da'wah precedes his own release.",
+      "people": [
+        "yusuf"
+      ],
+      "verses": [
+        "12:37",
+        "12:39",
+        "12:40",
+        "12:41"
+      ],
+      "place": "the-prison",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-two-prisoners-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Two Prisoners' Dreams”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-two-prisoners-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Two Prisoners' Dreams.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-kings-dream",
+      "title": "The King's Dream",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:43-49",
+      "summary": "The king dreams of seven fat cows devoured by seven lean ones, and seven green ears of grain and others dry. His court is baffled. The freed cupbearer remembers Yusuf and comes to him, and Yusuf reads the dream: seven years of plenty, then seven of hard famine — so store the grain.",
+      "why": "Yusuf's God-given knowledge now reaches the throne itself. His interpretation is also sound counsel — a plan to save a whole land from famine — showing knowledge joined to service.",
+      "people": [
+        "king-of-egypt",
+        "yusuf"
+      ],
+      "verses": [
+        "12:43",
+        "12:46",
+        "12:47",
+        "12:49"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-kings-dream-calligraphy.svg",
+          "caption": "Calligraphic panel — “The King's Dream”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-kings-dream-diagram.svg",
+          "caption": "Schematic diagram of the setting — The King's Dream.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-vindication",
+      "title": "Vindication and Rise to Power",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:50-57",
+      "summary": "Yusuf will not leave prison until his name is cleared. The women confess, and the wife of al-Aziz admits the truth: he was truthful, she was the one at fault. Cleared, Yusuf is brought before the king, who sets him over the storehouses of the land, and Allah gives him authority in Egypt.",
+      "why": "Yusuf insists on justice and a clear record before accepting honour. The Qur'an shows patience rewarded: the wronged prisoner becomes the trusted guardian of a nation's grain.",
+      "people": [
+        "yusuf",
+        "king-of-egypt",
+        "wife-of-al-aziz"
+      ],
+      "verses": [
+        "12:51",
+        "12:54",
+        "12:55",
+        "12:56"
+      ],
+      "place": "egypt",
+      "source2": "sahih-al-bukhari",
+      "locator2": "no. 3372 — the Prophet ﷺ on the patience of Yusuf",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-vindication-calligraphy.svg",
+          "caption": "Calligraphic panel — “Vindication and Rise to Power”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-vindication-diagram.svg",
+          "caption": "Schematic diagram of the setting — Vindication and Rise to Power.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-brothers-return",
+      "title": "The Brothers Come for Grain",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:58-62",
+      "summary": "When famine spreads, Yusuf's brothers come to Egypt seeking grain and stand before him without knowing him. He recognises them, gives them full measure, and tells them to bring their younger brother next time, quietly returning their trade-goods to their saddlebags.",
+      "why": "The dream of the eleven stars begins to come true: the brothers who cast him out now stand as petitioners before him. Yusuf tests and provides for them without revealing himself.",
+      "people": [
+        "yusuf",
+        "brothers-of-yusuf"
+      ],
+      "verses": [
+        "12:58",
+        "12:59",
+        "12:62"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-brothers-return-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Brothers Come for Grain”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-brothers-return-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Brothers Come for Grain.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-binyamin-and-the-cup",
+      "title": "Binyamin and the King's Cup",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:69-79",
+      "summary": "On the next journey they bring Binyamin. Yusuf privately makes himself known to his full brother, then places the king's measuring-cup in Binyamin's pack so that, by Egypt's own law, he may keep him. The brothers are dismayed, bound by the very judgement they had proposed.",
+      "why": "By a devised sign, Allah keeps Binyamin at Yusuf's side and draws the family toward reunion. The Qur'an notes it was a plan Allah taught Yusuf, not a wrong of his own.",
+      "people": [
+        "yusuf",
+        "binyamin",
+        "brothers-of-yusuf"
+      ],
+      "verses": [
+        "12:69",
+        "12:70",
+        "12:76"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-binyamin-and-the-cup-calligraphy.svg",
+          "caption": "Calligraphic panel — “Binyamin and the King's Cup”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-binyamin-and-the-cup-diagram.svg",
+          "caption": "Schematic diagram of the setting — Binyamin and the King's Cup.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-reveals-himself",
+      "title": "Yusuf Reveals Himself",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:88-92",
+      "summary": "When the brothers return in humbled need, Yusuf asks whether they remember what they did to him and his brother in their ignorance. Astonished, they realise it is Yusuf. He does not reproach them: 'No blame upon you today; may Allah forgive you, for He is the most merciful.'",
+      "why": "The climax of the story is forgiveness. Holding all power over those who wronged him, Yusuf chooses mercy — the model of pardon the Qur'an sets before every reader.",
+      "people": [
+        "yusuf",
+        "brothers-of-yusuf"
+      ],
+      "verses": [
+        "12:89",
+        "12:90",
+        "12:91",
+        "12:92"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-reveals-himself-calligraphy.svg",
+          "caption": "Calligraphic panel — “Yusuf Reveals Himself”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-reveals-himself-diagram.svg",
+          "caption": "Schematic diagram of the setting — Yusuf Reveals Himself.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-the-shirt",
+      "title": "The Shirt and Restored Sight",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:93-98",
+      "summary": "Yusuf sends his shirt back with his brothers: cast it over their father's face and his sight will return. Far off in Canaan, Ya'qub says he senses the scent of Yusuf. When the bearer of good news lays the shirt on him, his sight is restored, and he asks forgiveness for his sons.",
+      "why": "The grief of Ya'qub, borne with beautiful patience since the well, is answered. The returning shirt mirrors the false-bloodied shirt of the beginning — sorrow undone by truth.",
+      "people": [
+        "yusuf",
+        "yaqub",
+        "brothers-of-yusuf"
+      ],
+      "verses": [
+        "12:93",
+        "12:94",
+        "12:96"
+      ],
+      "place": "canaan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-the-shirt-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Shirt and Restored Sight”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-the-shirt-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Shirt and Restored Sight.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yusuf-the-reunion",
+      "title": "Reunion in Egypt — the Dream Fulfilled",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Yusuf 12:99-101",
+      "summary": "The whole family journeys to Egypt. Yusuf raises his parents to the throne beside him, and they fall down before him in honour. 'This,' he says, 'is the meaning of my dream of old; my Lord has made it come true.' He thanks Allah for taking him from the prison and reuniting them, and prays to die in submission.",
+      "why": "The eleven stars, the sun and the moon prostrate at last: the childhood dream is fulfilled. Yusuf reads his whole life as Allah's kindness — the story's closing lesson that patience and trust are never wasted.",
+      "people": [
+        "yusuf",
+        "yaqub",
+        "brothers-of-yusuf",
+        "binyamin"
+      ],
+      "verses": [
+        "12:99",
+        "12:100",
+        "12:101"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yusuf/yusuf-the-reunion-calligraphy.svg",
+          "caption": "Calligraphic panel — “Reunion in Egypt — the Dream Fulfilled”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yusuf/yusuf-the-reunion-diagram.svg",
+          "caption": "Schematic diagram of the setting — Reunion in Egypt — the Dream Fulfilled.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "slug": "yusuf-to-egypt",
+      "event": "yusuf-sold-in-egypt",
+      "conjectural": true,
+      "points": [
+        [
+          32.0,
+          35.4
+        ],
+        [
+          31.2,
+          34.3
+        ],
+        [
+          30.05,
+          31.23
+        ]
+      ]
+    },
+    {
+      "slug": "family-to-egypt",
+      "event": "yusuf-the-reunion",
+      "conjectural": true,
+      "points": [
+        [
+          31.9,
+          35.25
+        ],
+        [
+          31.2,
+          34.3
+        ],
+        [
+          30.05,
+          31.23
+        ]
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "slug": "the-arc-of-yusuf",
+      "title": "The Arc of Yusuf",
+      "est": 20,
+      "blurb": "Seven turning points that carry Yusuf from a boy's dream, through the well, the house of al-Aziz, and the prison, to power and forgiveness in Egypt.",
+      "steps": [
+        "yusuf-the-dream",
+        "yusuf-cast-into-the-well",
+        "yusuf-the-temptation",
+        "yusuf-two-prisoners",
+        "yusuf-vindication",
+        "yusuf-reveals-himself",
+        "yusuf-the-reunion"
+      ]
+    },
+    {
+      "slug": "yusuf-patience",
+      "title": "Patience Through Trial",
+      "est": 14,
+      "blurb": "How Yusuf's ordeal — the well, the false accusation, the prison — became the very road to his rise, for the one who is patient.",
+      "steps": [
+        "yusuf-cast-into-the-well",
+        "yusuf-the-temptation",
+        "yusuf-imprisonment",
+        "yusuf-vindication"
+      ]
+    },
+    {
+      "slug": "yusuf-dreams",
+      "title": "Dreams and Their Meaning",
+      "est": 12,
+      "blurb": "The thread of dreams that runs from a boy's vision of eleven stars to a king's cattle and, at last, to its fulfilment.",
+      "steps": [
+        "yusuf-the-dream",
+        "yusuf-two-prisoners",
+        "yusuf-kings-dream",
+        "yusuf-the-reunion"
+      ]
+    }
+  ]
+}

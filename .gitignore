@@ -1,0 +1,13 @@
+# build output
+backend/build/
+backend/.gradle/
+frontend/dist/
+frontend/.angular/
+node_modules/
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+# logs
+*.log

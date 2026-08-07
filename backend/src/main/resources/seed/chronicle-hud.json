@@ -1,0 +1,221 @@
+{
+  "_note": "The Story of Prophet Hud, sent to the people of 'Ad, drawn strictly from the Qur'an (Surahs al-A'raf, Hud, ash-Shu'ara, Fussilat, al-Ahqaf, al-Haqqa). An Arab prophet, a descendant of Nuh through Sam. Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "hud",
+      "name": "Hud",
+      "ar": "هود عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "the-people-of-ad",
+      "name": "The People of 'Ād",
+      "ar": "قوم عاد",
+      "role": "OPPONENT"
+    }
+  ],
+  "places": [
+    {
+      "slug": "al-ahqaf",
+      "name": "Al-Aḥqāf (the Sand-Dunes)",
+      "ar": "الأحقاف",
+      "modern": "southern Arabia (Ḥaḍramawt)",
+      "lat": 17.9,
+      "lng": 50.5,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "hud-sent-to-ad",
+      "title": "Sent to 'Ād",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:65 · Hud 11:50",
+      "summary": "To the people of 'Ād — a mighty people of towering builds, given strength beyond others — Allah sent their brother Hud: 'O my people, worship Allah; you have no deity other than Him. Will you not fear Him?'",
+      "why": "The same single message, now to a people drunk on their own power: worship Allah alone. Every prophet's call begins here, whatever the greatness of those he faces.",
+      "people": [
+        "hud",
+        "the-people-of-ad"
+      ],
+      "verses": [
+        "7:65",
+        "11:50"
+      ],
+      "place": "al-ahqaf",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/hud/hud-sent-to-ad-calligraphy.svg",
+          "caption": "Calligraphic panel — “Sent to 'Ād”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/hud/hud-sent-to-ad-diagram.svg",
+          "caption": "Schematic diagram of the setting — Sent to 'Ād.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "hud-the-pride-of-ad",
+      "title": "The Pride of 'Ād",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Fussilat 41:15 · ash-Shu'ara 26:128-130",
+      "summary": "'Ād grew arrogant on the earth without right and said, 'Who is greater than us in strength?' They built monuments on every high place for vanity, took mighty fortresses as if to live forever, and seized others with cruelty — not seeing that Allah, who created them, is mightier than they.",
+      "why": "The Qur'an diagnoses 'Ād's ruin as pride in strength and permanence — building as though never to die — the very illusion that a warner is sent to shatter.",
+      "people": [
+        "the-people-of-ad",
+        "hud"
+      ],
+      "verses": [
+        "41:15",
+        "26:128",
+        "26:129"
+      ],
+      "place": "al-ahqaf",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/hud/hud-the-pride-of-ad-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Pride of 'Ād”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/hud/hud-the-pride-of-ad-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Pride of 'Ād.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "hud-warns-and-they-defy",
+      "title": "The Warning and the Defiance",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:52-57 · al-A'raf 7:70",
+      "summary": "Hud calls them to seek forgiveness and turn to their Lord, that He might send the sky upon them in rain and add strength to their strength. They answer that they will not leave their gods for his word, and defy him: 'Bring us what you promise, if you are truthful.' Hud puts his whole trust in Allah, the Lord of every creature.",
+      "why": "Offered mercy and increase if they repent, 'Ād choose their idols and dare the punishment. Hud's reply — total reliance on Allah against a whole people — is the courage of the lone truthful man.",
+      "people": [
+        "hud",
+        "the-people-of-ad"
+      ],
+      "verses": [
+        "11:52",
+        "11:54",
+        "11:56",
+        "7:70"
+      ],
+      "place": "al-ahqaf",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/hud/hud-warns-and-they-defy-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Warning and the Defiance”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/hud/hud-warns-and-they-defy-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Warning and the Defiance.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "hud-the-barren-wind",
+      "title": "The Barren Wind",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Aḥqāf 46:24-25 · al-Ḥāqqa 69:6-8",
+      "summary": "When they saw a cloud approaching their valleys, they rejoiced, 'This is a cloud bringing us rain.' Rather, it was the punishment they sought — a furious, barren wind, loosed upon them for seven nights and eight days without cease, that destroyed everything by the command of its Lord and left them fallen like hollow trunks of palm trees.",
+      "why": "The mercy they refused becomes the ruin they mistook for mercy: the very sky they hoped would bless them carries their end. Nothing of their strength or fortresses avails against the wind of Allah.",
+      "people": [
+        "the-people-of-ad"
+      ],
+      "verses": [
+        "46:24",
+        "46:25",
+        "69:6",
+        "69:7"
+      ],
+      "place": "al-ahqaf",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/hud/hud-the-barren-wind-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Barren Wind”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/hud/hud-the-barren-wind-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Barren Wind.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "hud-the-believers-saved",
+      "title": "Hud and the Believers Saved",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:58 · al-A'raf 7:72",
+      "summary": "When Our command came, We saved Hud and those who believed with him by a mercy from Us, and delivered them from a harsh punishment. And that was 'Ād — they rejected the signs of their Lord and disobeyed His messengers, and followed every obstinate tyrant. So they were pursued with a curse in this world and on the Day of Resurrection.",
+      "why": "The pattern that will repeat through the warner-prophets: the messenger and the believers are delivered, and the arrogant nation is cut off root and branch — a sign left for every people that comes after.",
+      "people": [
+        "hud",
+        "the-people-of-ad"
+      ],
+      "verses": [
+        "11:58",
+        "7:72"
+      ],
+      "place": "al-ahqaf",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/hud/hud-the-believers-saved-calligraphy.svg",
+          "caption": "Calligraphic panel — “Hud and the Believers Saved”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/hud/hud-the-believers-saved-diagram.svg",
+          "caption": "Schematic diagram of the setting — Hud and the Believers Saved.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-hud",
+      "title": "The Arc of Hud",
+      "est": 12,
+      "blurb": "A warner sent to the mighty people of 'Ād — their pride in strength, their defiance, the barren wind, and the deliverance of the few who believed.",
+      "steps": [
+        "hud-sent-to-ad",
+        "hud-the-pride-of-ad",
+        "hud-warns-and-they-defy",
+        "hud-the-barren-wind",
+        "hud-the-believers-saved"
+      ]
+    }
+  ]
+}

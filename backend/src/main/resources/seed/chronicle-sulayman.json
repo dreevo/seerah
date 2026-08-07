@@ -1,0 +1,364 @@
+{
+  "_note": "The Story of Prophet Sulayman (Solomon), son of Dawud, drawn strictly from the Qur'an (Surahs al-Anbiya, an-Naml, Saba, Sad). King and prophet, taught the speech of the birds, with the wind and the jinn subjected to him; the ant, the hoopoe, and the Queen of Sheba. Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "sulayman",
+      "name": "Sulayman",
+      "ar": "سليمان عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "dawud",
+      "name": "Dawud",
+      "ar": "داود عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "bilqis",
+      "name": "The Queen of Sheba (Bilqīs)",
+      "ar": "ملكة سبأ",
+      "role": "RULER"
+    },
+    {
+      "slug": "the-jinn-of-sulayman",
+      "name": "The Jinn and the Hosts",
+      "ar": "الجن والجنود",
+      "role": "OTHER"
+    }
+  ],
+  "places": [
+    {
+      "slug": "jerusalem",
+      "name": "Jerusalem (Bayt al-Maqdis)",
+      "ar": "بيت المقدس",
+      "modern": "Jerusalem",
+      "lat": 31.78,
+      "lng": 35.23
+    },
+    {
+      "slug": "saba",
+      "name": "Sheba (Sabaʾ)",
+      "ar": "سبأ",
+      "modern": "Marib, Yemen",
+      "lat": 15.42,
+      "lng": 45.33
+    },
+    {
+      "slug": "valley-of-the-ants",
+      "name": "The Valley of the Ants",
+      "ar": "وادي النمل",
+      "lat": 29.5,
+      "lng": 40.2,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "sulayman-inherits-dawud",
+      "title": "The Inheritance of Dawud",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah an-Naml 27:15-16 · Sad 38:30",
+      "summary": "Allah gave knowledge to Dawud and Sulayman, and Sulayman inherited his father. He said, 'O people, we have been taught the speech of birds, and we have been given from all things; this is evident bounty.' What an excellent servant — ever turning to his Lord.",
+      "why": "Sulayman receives not gold but knowledge and a listening to creation itself — and names it plainly as a bounty from Allah, the mark of the grateful servant.",
+      "people": [
+        "sulayman",
+        "dawud"
+      ],
+      "verses": [
+        "27:15",
+        "27:16",
+        "38:30"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/sulayman/sulayman-inherits-dawud-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Inheritance of Dawud”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/sulayman/sulayman-inherits-dawud-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Inheritance of Dawud.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "sulayman-wind-and-jinn",
+      "title": "The Wind and the Jinn",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:81-82 · Saba 34:12-13",
+      "summary": "Allah subjected to Sulayman the wind, racing at his command to the land He had blessed, and the jinn who dived and built for him — fashioning great halls, statues, basins like reservoirs, and cauldrons fixed in place. The molten brass was made to flow for him. All of it a trust to be met with gratitude and work.",
+      "why": "Wind, jinn, and metal all bend to Sulayman's command — an empire beyond any other — yet the Qur'an frames it as a test of gratitude, not a licence for pride.",
+      "people": [
+        "sulayman",
+        "the-jinn-of-sulayman"
+      ],
+      "verses": [
+        "21:81",
+        "21:82",
+        "34:12",
+        "34:13"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/sulayman/sulayman-wind-and-jinn-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Wind and the Jinn”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/sulayman/sulayman-wind-and-jinn-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Wind and the Jinn.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "sulayman-valley-of-the-ants",
+      "title": "The Valley of the Ants",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah an-Naml 27:17-19",
+      "summary": "Marching with his hosts of jinn, men, and birds, Sulayman comes upon the valley of the ants. An ant cries, 'O ants, enter your dwellings, lest Sulayman and his soldiers crush you without noticing.' Sulayman smiles at her words and prays, 'My Lord, enable me to be grateful for Your favour… and to do righteousness that pleases You.'",
+      "why": "The mightiest king on earth stops for the warning of an ant, and turns it into a prayer for gratitude. The Qur'an makes humility before the smallest creature the true measure of greatness.",
+      "people": [
+        "sulayman"
+      ],
+      "verses": [
+        "27:18",
+        "27:19"
+      ],
+      "place": "valley-of-the-ants",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/sulayman/sulayman-valley-of-the-ants-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Valley of the Ants”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/sulayman/sulayman-valley-of-the-ants-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Valley of the Ants.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "sulayman-the-hoopoe",
+      "title": "The Hoopoe and the News of Sheba",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah an-Naml 27:20-28",
+      "summary": "Reviewing the birds, Sulayman misses the hoopoe. It arrives with news of a kingdom in Sheba ruled by a woman given all things, with a magnificent throne — but she and her people prostrate to the sun instead of Allah. Sulayman sends a letter with the hoopoe, calling her to submit to the Lord of the worlds.",
+      "why": "Even at the height of empire, Sulayman's concern is tawhid: a distant people worshipping the sun. The Qur'an shows power used to call others to Allah, not to conquer.",
+      "people": [
+        "sulayman",
+        "bilqis"
+      ],
+      "verses": [
+        "27:22",
+        "27:23",
+        "27:24",
+        "27:26"
+      ],
+      "place": "saba",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/sulayman/sulayman-the-hoopoe-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Hoopoe and the News of Sheba”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/sulayman/sulayman-the-hoopoe-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Hoopoe and the News of Sheba.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "sulayman-the-throne-of-bilqis",
+      "title": "The Throne Brought in an Instant",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah an-Naml 27:38-42",
+      "summary": "Sulayman asks who can bring the queen's throne before she arrives. A mighty jinn offers to fetch it before he rises from his place; but one who had knowledge of the Scripture says, 'I will bring it to you before your glance returns to you' — and there it is, settled before him. Sulayman gives thanks, saying this is to test whether he is grateful or ungrateful.",
+      "why": "The greater wonder is not the jinn's strength but the knowledge given by Allah that outdoes it in an instant — and Sulayman's response is again gratitude, crediting every power to its Giver.",
+      "people": [
+        "sulayman",
+        "bilqis",
+        "the-jinn-of-sulayman"
+      ],
+      "verses": [
+        "27:38",
+        "27:39",
+        "27:40"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/sulayman/sulayman-the-throne-of-bilqis-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Throne Brought in an Instant”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/sulayman/sulayman-the-throne-of-bilqis-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Throne Brought in an Instant.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "sulayman-the-queen-submits",
+      "title": "The Queen Submits to Allah",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah an-Naml 27:42-44",
+      "summary": "When the queen arrives, her own throne is shown to her, disguised, and she recognises it. Invited into a hall paved so smoothly she mistakes it for water and bares her legs, she is told it is polished glass. Seeing the signs, she says, 'My Lord, I have wronged myself, and I submit with Sulayman to Allah, Lord of the worlds.'",
+      "why": "The story's aim is reached: not the queen's kingdom added to his, but her heart turned to Allah. Sulayman's wisdom wins a soul, and the Qur'an closes the account with her free confession of faith.",
+      "people": [
+        "sulayman",
+        "bilqis"
+      ],
+      "verses": [
+        "27:42",
+        "27:44"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/sulayman/sulayman-the-queen-submits-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Queen Submits to Allah”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/sulayman/sulayman-the-queen-submits-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Queen Submits to Allah.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "sulayman-the-death",
+      "title": "The Death of Sulayman",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Sabaʾ 34:14",
+      "summary": "When Allah decreed Sulayman's death, nothing showed the jinn that he had died except a creature of the earth eating away his staff. When he fell, it became clear to the jinn that, had they known the unseen, they would not have remained in their humiliating labour.",
+      "why": "The greatest of kings dies leaning on a staff, and the mighty jinn labour on, unknowing — the Qur'an's quiet proof that the unseen belongs to Allah alone, and that no power on earth outlasts His decree.",
+      "people": [
+        "sulayman",
+        "the-jinn-of-sulayman"
+      ],
+      "verses": [
+        "34:14"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/sulayman/sulayman-the-death-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Death of Sulayman”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/sulayman/sulayman-the-death-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Death of Sulayman.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "slug": "the-throne-from-sheba",
+      "event": "sulayman-the-throne-of-bilqis",
+      "conjectural": true,
+      "points": [
+        [
+          15.42,
+          45.33
+        ],
+        [
+          21.4,
+          42.5
+        ],
+        [
+          28.0,
+          38.5
+        ],
+        [
+          31.78,
+          35.23
+        ]
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "slug": "the-arc-of-sulayman",
+      "title": "The Arc of Sulayman",
+      "est": 18,
+      "blurb": "From the inheritance of Dawud and the wind and jinn at his command, through the ant and the hoopoe, to the Queen of Sheba's faith and his quiet death.",
+      "steps": [
+        "sulayman-inherits-dawud",
+        "sulayman-wind-and-jinn",
+        "sulayman-valley-of-the-ants",
+        "sulayman-the-hoopoe",
+        "sulayman-the-throne-of-bilqis",
+        "sulayman-the-queen-submits",
+        "sulayman-the-death"
+      ]
+    },
+    {
+      "slug": "sulayman-power-and-gratitude",
+      "title": "Power and Gratitude",
+      "est": 12,
+      "blurb": "The wind, the jinn, and knowledge that outran them — and a king who met every power with a prayer of thanks.",
+      "steps": [
+        "sulayman-wind-and-jinn",
+        "sulayman-valley-of-the-ants",
+        "sulayman-the-throne-of-bilqis",
+        "sulayman-the-death"
+      ]
+    },
+    {
+      "slug": "sulayman-and-sheba",
+      "title": "Sulayman and the Queen of Sheba",
+      "est": 12,
+      "blurb": "The hoopoe's news, the letter, the throne brought in an instant, and the queen who submitted to the Lord of the worlds.",
+      "steps": [
+        "sulayman-the-hoopoe",
+        "sulayman-the-throne-of-bilqis",
+        "sulayman-the-queen-submits"
+      ]
+    }
+  ]
+}

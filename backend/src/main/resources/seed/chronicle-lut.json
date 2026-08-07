@@ -1,0 +1,273 @@
+{
+  "_note": "The Story of Prophet Lut (Lot), nephew of Ibrahim, sent to the people of Sodom, drawn strictly from the Qur'an (Surahs al-A'raf, Hud, al-Hijr, ash-Shu'ara, an-Naml, al-'Ankabut, al-Qamar, at-Tahrim). Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "lut",
+      "name": "Lut",
+      "ar": "لوط عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "the-people-of-lut",
+      "name": "The People of Lut",
+      "ar": "قوم لوط",
+      "role": "OPPONENT"
+    },
+    {
+      "slug": "wife-of-lut",
+      "name": "The Wife of Lut",
+      "ar": "امرأة لوط",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "the-angel-guests",
+      "name": "The Angel Guests",
+      "ar": "الملائكة الضيوف",
+      "role": "OTHER"
+    }
+  ],
+  "places": [
+    {
+      "slug": "sodom",
+      "name": "The Cities of the Plain (Sodom)",
+      "ar": "قرى قوم لوط",
+      "modern": "by the Dead Sea",
+      "lat": 31.2,
+      "lng": 35.45,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "lut-sent-to-his-people",
+      "title": "Sent to His People",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:80-81 · ash-Shu'ara 26:160-166",
+      "summary": "Lut said to his people: 'Do you commit an immorality that no one in the worlds has done before you? You approach men with desire instead of women — you are a transgressing people.' He called them, as every prophet does, to fear Allah and obey.",
+      "why": "Lut confronts a sin his people were the first to invent, naming it plainly and calling them back to the fitrah — the natural way Allah created — and above all to the fear of their Lord.",
+      "people": [
+        "lut",
+        "the-people-of-lut"
+      ],
+      "verses": [
+        "7:80",
+        "7:81",
+        "26:165",
+        "26:166"
+      ],
+      "place": "sodom",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/lut/lut-sent-to-his-people-calligraphy.svg",
+          "caption": "Calligraphic panel — “Sent to His People”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/lut/lut-sent-to-his-people-diagram.svg",
+          "caption": "Schematic diagram of the setting — Sent to His People.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "lut-they-reject-him",
+      "title": "The Answer of His People",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:82 · an-Naml 27:56",
+      "summary": "Their only answer was to say, 'Expel them from your town; they are people who keep themselves pure!' — mocking the very purity Lut called them to, and threatening to drive out the righteous among them.",
+      "why": "The Qur'an captures a society so inverted that it treats chastity as a crime and seeks to banish the pure — the measure of how far a people can fall.",
+      "people": [
+        "the-people-of-lut",
+        "lut"
+      ],
+      "verses": [
+        "7:82",
+        "27:56"
+      ],
+      "place": "sodom",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/lut/lut-they-reject-him-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Answer of His People”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/lut/lut-they-reject-him-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Answer of His People.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "lut-the-guests",
+      "title": "The Guests and the Assault",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:77-80 · al-Hijr 15:67-71",
+      "summary": "When the angel-messengers came to Lut in the form of guests, he was distressed and felt powerless to protect them. His people rushed to the house, driven by their desire. Lut pleaded, 'These are my guests, so do not disgrace me… fear Allah,' and wished he had strength or a strong support against them.",
+      "why": "The anguish of the lone righteous man is drawn without softening: Lut stands at his own door, unable to shield his guests from his people — the loneliness of virtue in a corrupt town, just before the rescue comes.",
+      "people": [
+        "lut",
+        "the-people-of-lut",
+        "the-angel-guests"
+      ],
+      "verses": [
+        "11:77",
+        "11:78",
+        "11:80",
+        "15:68"
+      ],
+      "place": "sodom",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/lut/lut-the-guests-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Guests and the Assault”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/lut/lut-the-guests-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Guests and the Assault.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "lut-the-guests-reveal",
+      "title": "The Command to Depart by Night",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:81 · al-Hijr 15:65-66 · al-Qamar 54:37",
+      "summary": "The guests said, 'O Lut, we are messengers of your Lord; they will never reach you.' They blotted out the eyes of the assailants, and commanded him to set out with his family in the last part of the night — and not to look back — except his wife; what struck them would strike her too.",
+      "why": "The rescue and the judgement are announced together: the angels reveal themselves, the aggressors are struck blind, and Lut is led out — the believers separated from the doomed at the final hour.",
+      "people": [
+        "lut",
+        "the-angel-guests",
+        "the-people-of-lut"
+      ],
+      "verses": [
+        "11:81",
+        "15:65",
+        "54:37"
+      ],
+      "place": "sodom",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/lut/lut-the-guests-reveal-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Command to Depart by Night”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/lut/lut-the-guests-reveal-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Command to Depart by Night.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "lut-the-destruction",
+      "title": "The Overturning of the Cities",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:82-83 · al-Hijr 15:73-74",
+      "summary": "When Our command came, We turned the cities upside down and rained upon them stones of layered hard clay, marked from your Lord — and never far from the wrongdoers. The blast seized them at sunrise, and their land was made a ruin, a sign left plain on a road still travelled.",
+      "why": "The punishment fits the inversion of their nature: the cities themselves are overturned. The Qur'an leaves their ruin as a lasting sign on the highway, a warning to all who pass.",
+      "people": [
+        "the-people-of-lut"
+      ],
+      "verses": [
+        "11:82",
+        "11:83",
+        "15:73",
+        "15:74"
+      ],
+      "place": "sodom",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/lut/lut-the-destruction-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Overturning of the Cities”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/lut/lut-the-destruction-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Overturning of the Cities.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "lut-saved-his-wife-perished",
+      "title": "Saved, Except His Wife",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:83 · Hud 11:81 · at-Tahrim 66:10",
+      "summary": "We saved Lut and his family, except his wife — she was of those who stayed behind. The wife of Nuh and the wife of Lut, married to two righteous servants, betrayed them, and it availed them nothing against Allah: 'Enter the Fire with those who enter.'",
+      "why": "The hardest lesson, twice told: nearness to a prophet — even marriage to one — saves no one whose own heart sides with the wrongdoers. Faith is not inherited or married into; it is a soul's own choice.",
+      "people": [
+        "lut",
+        "wife-of-lut"
+      ],
+      "verses": [
+        "7:83",
+        "11:81",
+        "66:10"
+      ],
+      "place": "sodom",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/lut/lut-saved-his-wife-perished-calligraphy.svg",
+          "caption": "Calligraphic panel — “Saved, Except His Wife”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/lut/lut-saved-his-wife-perished-diagram.svg",
+          "caption": "Schematic diagram of the setting — Saved, Except His Wife.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-lut",
+      "title": "The Arc of Lut",
+      "est": 12,
+      "blurb": "A prophet alone in a corrupt city — the sin never seen before, the assault on his guests, the rescue by night, and the overturning of the cities of the plain.",
+      "steps": [
+        "lut-sent-to-his-people",
+        "lut-they-reject-him",
+        "lut-the-guests",
+        "lut-the-guests-reveal",
+        "lut-the-destruction",
+        "lut-saved-his-wife-perished"
+      ]
+    }
+  ]
+}

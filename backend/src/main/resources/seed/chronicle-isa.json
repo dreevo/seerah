@@ -1,0 +1,482 @@
+{
+  "_note": "The Story of Prophet Isa (Jesus), presented strictly per the Qur'an (Surahs Al Imran, Maryam, an-Nisa, al-Ma'ida, as-Saff) and sound hadith on his return — the Islamic view: a servant and messenger of Allah, His word and a spirit from Him, born of the virgin Maryam by Allah's command, not crucified but raised to Allah, and to return. He is not divine and not a son. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "isa",
+      "name": "Isa",
+      "ar": "عيسى عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "maryam",
+      "name": "Maryam",
+      "ar": "مريم عليها السلام",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "zakariyya",
+      "name": "Zakariyya",
+      "ar": "زكريا عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "the-disciples",
+      "name": "The Disciples (al-Ḥawāriyyūn)",
+      "ar": "الحواريون",
+      "role": "COMPANION"
+    }
+  ],
+  "places": [
+    {
+      "slug": "bethlehem",
+      "name": "Bethlehem",
+      "ar": "بيت لحم",
+      "modern": "Palestine",
+      "lat": 31.7,
+      "lng": 35.2,
+      "approx": true
+    },
+    {
+      "slug": "jerusalem",
+      "name": "Jerusalem (Bayt al-Maqdis)",
+      "ar": "بيت المقدس",
+      "modern": "Jerusalem",
+      "lat": 31.78,
+      "lng": 35.23
+    },
+    {
+      "slug": "galilee",
+      "name": "Galilee",
+      "ar": "الجليل",
+      "modern": "northern Palestine",
+      "lat": 32.7,
+      "lng": 35.3,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "isa-glad-tidings-to-maryam",
+      "title": "Glad Tidings to Maryam",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Al Imran 3:42-47 · Maryam 19:16-21",
+      "summary": "The angels tell the chaste Maryam that Allah has chosen and purified her above the women of the worlds, and gives her glad tidings of a Word from Him — the Messiah, Isa son of Maryam, honoured in this world and the next. When she asks how she can have a child, untouched by any man, she is told: so it is; Allah creates what He wills, and only says to it, 'Be,' and it is.",
+      "why": "The Qur'an opens Isa's story with a miracle of pure creation: a child brought into being by Allah's word alone, the sign that his origin is a command, not a claim to divinity.",
+      "people": [
+        "maryam",
+        "isa"
+      ],
+      "verses": [
+        "3:42",
+        "3:45",
+        "3:47",
+        "19:19",
+        "19:20",
+        "19:21"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-glad-tidings-to-maryam-calligraphy.svg",
+          "caption": "Calligraphic panel — “Glad Tidings to Maryam”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-glad-tidings-to-maryam-diagram.svg",
+          "caption": "Schematic diagram of the setting — Glad Tidings to Maryam.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-the-birth",
+      "title": "The Birth by the Palm",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:22-26",
+      "summary": "In her pains Maryam withdraws to a distant place and clings to the trunk of a palm tree, wishing she had died before this. A voice from below comforts her: her Lord has placed a stream beneath her, and the palm, if she shakes it, will drop fresh ripe dates. 'So eat and drink and be contented.'",
+      "why": "At her most alone and afraid, Maryam is met not with punishment but with provision and tenderness — water, food, and reassurance — showing Allah's mercy to His righteous servant.",
+      "people": [
+        "maryam",
+        "isa"
+      ],
+      "verses": [
+        "19:23",
+        "19:24",
+        "19:25",
+        "19:26"
+      ],
+      "place": "bethlehem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-the-birth-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Birth by the Palm”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-the-birth-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Birth by the Palm.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-speaks-in-the-cradle",
+      "title": "The Infant Speaks",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:27-34",
+      "summary": "When her people accuse her, Maryam points to the child. Astonished, they ask how they can speak to an infant in the cradle. Isa speaks: 'Indeed, I am the servant of Allah. He has given me the Scripture and made me a prophet, and blessed me wherever I am, and enjoined upon me prayer and charity as long as I live.'",
+      "why": "Isa's very first words clear his mother and define himself forever: not a lord, not a son, but 'the servant of Allah' — the truth the Qur'an sets against every later exaggeration about him.",
+      "people": [
+        "isa",
+        "maryam"
+      ],
+      "verses": [
+        "19:30",
+        "19:31",
+        "19:32",
+        "19:33"
+      ],
+      "place": "bethlehem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-speaks-in-the-cradle-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Infant Speaks”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-speaks-in-the-cradle-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Infant Speaks.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-messenger-to-israel",
+      "title": "A Messenger to the Children of Israel",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Al Imran 3:49-50 · as-Saff 61:6",
+      "summary": "Grown, Isa is sent to the Children of Israel confirming the Torah before him and making lawful some of what had been forbidden them. He calls them to worship Allah, his Lord and theirs — 'this is a straight path' — and brings clear signs by the leave of Allah.",
+      "why": "Isa comes not to abolish but to confirm and complete what came before, and to call to the same one message as every prophet: worship of Allah alone.",
+      "people": [
+        "isa"
+      ],
+      "verses": [
+        "3:49",
+        "3:50",
+        "3:51"
+      ],
+      "place": "galilee",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-messenger-to-israel-calligraphy.svg",
+          "caption": "Calligraphic panel — “A Messenger to the Children of Israel”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-messenger-to-israel-diagram.svg",
+          "caption": "Schematic diagram of the setting — A Messenger to the Children of Israel.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-the-signs",
+      "title": "The Signs by Allah's Leave",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Al Imran 3:49 · al-Ma'ida 5:110",
+      "summary": "By the leave of Allah, Isa shapes from clay the form of a bird and breathes into it, and it becomes a bird; he heals the one born blind and the leper, and brings the dead to life — each time, the Qur'an stresses, 'by My permission.' Allah recounts these favours upon him and upon his mother.",
+      "why": "Every miracle is bound to the same refrain — 'by Allah's leave' — so the signs point not to Isa's own power but to the One who granted it: proof of prophethood, never of godhood.",
+      "people": [
+        "isa"
+      ],
+      "verses": [
+        "3:49",
+        "5:110"
+      ],
+      "place": "galilee",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-the-signs-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Signs by Allah's Leave”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-the-signs-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Signs by Allah's Leave.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-the-disciples",
+      "title": "The Disciples",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Al Imran 3:52-53 · as-Saff 61:14",
+      "summary": "When Isa senses disbelief from his people, he asks, 'Who are my supporters for Allah?' The disciples answer, 'We are supporters of Allah; we believe in Allah, so bear witness that we are Muslims.' They pray to be written down among those who testify to the truth.",
+      "why": "The true followers of Isa declare exactly what he taught: submission to Allah alone. The Qur'an names them Muslims — those who surrender to God — as the pattern of faithful discipleship.",
+      "people": [
+        "isa",
+        "the-disciples"
+      ],
+      "verses": [
+        "3:52",
+        "3:53",
+        "61:14"
+      ],
+      "place": "galilee",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-the-disciples-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Disciples”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-the-disciples-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Disciples.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-the-table-spread",
+      "title": "The Table from Heaven",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Ma'ida 5:112-115",
+      "summary": "The disciples ask whether Isa's Lord can send down a table spread with food from heaven, that their hearts be reassured. Isa prays for it as a festival and a sign. Allah says He will send it down — but whoever disbelieves afterward will be punished as no one else is, for having seen and then denied.",
+      "why": "Even a heavenly feast is given as a mercy with a warning: signs increase the responsibility of those who witness them. The surah that carries this story — al-Ma'ida, 'the Table' — takes its name from it.",
+      "people": [
+        "isa",
+        "the-disciples"
+      ],
+      "verses": [
+        "5:112",
+        "5:114",
+        "5:115"
+      ],
+      "place": "galilee",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-the-table-spread-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Table from Heaven”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-the-table-spread-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Table from Heaven.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-not-crucified",
+      "title": "He Was Not Crucified — He Was Raised",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah an-Nisa 4:157-158",
+      "summary": "Those who plotted against Isa claimed to have killed the Messiah — but they did not kill him, nor did they crucify him; it was only made to appear so to them, and those who differ about it are in doubt, following only conjecture. Rather, Allah raised him up to Himself; and Allah is ever Exalted in Might and Wise.",
+      "why": "The decisive Qur'anic correction: the plot to kill Isa failed. Allah did not abandon His prophet to his enemies but raised him to Himself — a rescue, not a defeat.",
+      "people": [
+        "isa"
+      ],
+      "verses": [
+        "4:157",
+        "4:158"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-not-crucified-calligraphy.svg",
+          "caption": "Calligraphic panel — “He Was Not Crucified — He Was Raised”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-not-crucified-diagram.svg",
+          "caption": "Schematic diagram of the setting — He Was Not Crucified — He Was Raised.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-a-servant-not-a-son",
+      "title": "A Servant, Not a Son",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah an-Nisa 4:171-172 · Al Imran 3:59 · Maryam 19:35",
+      "summary": "The Qur'an calls the People of the Scripture not to exceed the bounds of their religion: the Messiah Isa was only a messenger of Allah and His word, which He directed to Maryam, and a spirit from Him. So believe in Allah and do not say 'Three.' It is not for Allah to take a son; the example of Isa before Allah is like that of Adam — created from dust, then told 'Be,' and he was. Isa himself never disdained to be a servant of Allah.",
+      "why": "The heart of the Islamic view of Isa: honoured as one of the greatest messengers, yet purely a servant of Allah — his miraculous creation likened to Adam's, so that a birth without a father proves creation, not sonship.",
+      "people": [
+        "isa"
+      ],
+      "verses": [
+        "4:171",
+        "3:59",
+        "19:35",
+        "19:36"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-a-servant-not-a-son-calligraphy.svg",
+          "caption": "Calligraphic panel — “A Servant, Not a Son”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-a-servant-not-a-son-diagram.svg",
+          "caption": "Schematic diagram of the setting — A Servant, Not a Son.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-foretells-ahmad",
+      "title": "Glad Tidings of Aḥmad",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah as-Saff 61:6",
+      "summary": "Isa son of Maryam says: 'O Children of Israel, I am the messenger of Allah to you, confirming what came before me of the Torah and bringing good tidings of a messenger to come after me, whose name is Aḥmad.'",
+      "why": "Isa's mission points beyond himself — to the final Messenger, Muhammad ﷺ — binding his story into the single chain of prophecy that the whole Library traces.",
+      "people": [
+        "isa"
+      ],
+      "verses": [
+        "61:6"
+      ],
+      "place": "galilee",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-foretells-ahmad-calligraphy.svg",
+          "caption": "Calligraphic panel — “Glad Tidings of Aḥmad”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-foretells-ahmad-diagram.svg",
+          "caption": "Schematic diagram of the setting — Glad Tidings of Aḥmad.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "isa-will-return",
+      "title": "The Descent of Isa",
+      "certainty": "WELL_ATTESTED",
+      "major": true,
+      "source": "sahih-al-bukhari",
+      "locator": "no. 3448 — the descent of Isa son of Maryam near the End",
+      "source2": "the-noble-quran",
+      "locator2": "Surah az-Zukhruf 43:61 (Isa a sign of the Hour)",
+      "summary": "The Prophet Muhammad ﷺ foretold that Isa son of Maryam will descend as a just ruler near the end of time: he will break the cross, and judge by the law of the Qur'an, and there will be one worship of Allah alone. The Qur'an calls him a sign of the Hour.",
+      "why": "Isa's story is not closed: raised by Allah, he is to return — and his return will settle the very disputes about him, worshipping Allah as he always called others to do.",
+      "people": [
+        "isa"
+      ],
+      "verses": [
+        "43:61"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/isa/isa-will-return-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Descent of Isa”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/isa/isa-will-return-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Descent of Isa.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-isa",
+      "title": "The Arc of Isa",
+      "est": 18,
+      "blurb": "From the glad tidings to Maryam and the infant who spoke in the cradle, through the signs given by Allah's leave, to his rescue from the cross and the promise of his return.",
+      "steps": [
+        "isa-glad-tidings-to-maryam",
+        "isa-the-birth",
+        "isa-speaks-in-the-cradle",
+        "isa-the-signs",
+        "isa-not-crucified",
+        "isa-a-servant-not-a-son",
+        "isa-will-return"
+      ]
+    },
+    {
+      "slug": "isa-signs",
+      "title": "The Signs and the Message",
+      "est": 14,
+      "blurb": "Sent to the Children of Israel with clear signs by Allah's leave, the disciples who believed, and the table from heaven.",
+      "steps": [
+        "isa-messenger-to-israel",
+        "isa-the-signs",
+        "isa-the-disciples",
+        "isa-the-table-spread"
+      ]
+    },
+    {
+      "slug": "isa-who-was-the-messiah",
+      "title": "Who Was the Messiah?",
+      "est": 12,
+      "blurb": "The Qur'anic answer — the infant who called himself Allah's servant, the one not crucified but raised, and his return.",
+      "steps": [
+        "isa-speaks-in-the-cradle",
+        "isa-not-crucified",
+        "isa-a-servant-not-a-son",
+        "isa-will-return"
+      ]
+    }
+  ]
+}

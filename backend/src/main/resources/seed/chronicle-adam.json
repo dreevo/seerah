@@ -1,0 +1,326 @@
+{
+  "_note": "The Story of Prophet Adam, the first human and first prophet, drawn strictly from the Qur'an (Surahs al-Baqarah, al-A'raf, al-Hijr, Ta-Ha, Sad, al-Ma'ida, Al Imran). His story is cosmic (the Garden, the fall, the descent to earth), so it carries no map geography. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "adam",
+      "name": "Adam",
+      "ar": "آدم عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "hawwa",
+      "name": "Hawwa",
+      "ar": "حواء",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "iblis",
+      "name": "Iblis",
+      "ar": "إبليس",
+      "role": "OPPONENT"
+    },
+    {
+      "slug": "habil",
+      "name": "Habil",
+      "ar": "هابيل",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "qabil",
+      "name": "Qabil",
+      "ar": "قابيل",
+      "role": "OPPONENT"
+    }
+  ],
+  "places": [],
+  "events": [
+    {
+      "slug": "adam-the-creation",
+      "title": "The Creation of Adam",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Hijr 15:26-29 · Sad 38:71-72",
+      "summary": "Allah announces to the angels that He will create a human being from sounding clay, from moulded mud, and that when He has proportioned him and breathed into him of His spirit, they are to fall down before him in prostration. So the first of humankind is shaped by the hand of his Maker and given life by His breath.",
+      "why": "The Qur'an grounds all human dignity in this moment: every person descends from one whom Allah shaped Himself and honoured with His spirit — origin, not accident.",
+      "people": [
+        "adam"
+      ],
+      "verses": [
+        "15:28",
+        "15:29",
+        "38:71",
+        "38:72"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-the-creation-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Creation of Adam”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "adam-the-angels-and-iblis",
+      "title": "The Prostration and the Refusal",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:34 · al-A'raf 7:11 · al-Hijr 15:30-33",
+      "summary": "The angels all prostrate to Adam in honour — except Iblis. He refuses out of pride, arguing, 'I am better than him; You created me from fire and created him from clay.' So arrogance and envy make their first appearance, and Iblis is cast out and cursed.",
+      "why": "The first sin in creation is pride, not appetite: Iblis judges by his own reasoning against Allah's command. His envy of Adam sets the enmity that runs through every story after.",
+      "people": [
+        "adam",
+        "iblis"
+      ],
+      "verses": [
+        "2:34",
+        "7:11",
+        "15:31",
+        "15:33"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-the-angels-and-iblis-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Prostration and the Refusal”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "adam-taught-the-names",
+      "title": "Taught the Names of All Things",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:31-33",
+      "summary": "Allah teaches Adam the names of all things, then presents them to the angels and asks them to name them. They answer that they know only what He has taught them. When Adam tells them the names, Allah shows that He knows what they do not — and that this new creation carries a knowledge the angels were not given.",
+      "why": "Adam's honour is knowledge. The Qur'an makes learning — the naming and understanding of things — the very gift that sets humankind apart and makes them worthy of trust on earth.",
+      "people": [
+        "adam"
+      ],
+      "verses": [
+        "2:31",
+        "2:32",
+        "2:33"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-taught-the-names-calligraphy.svg",
+          "caption": "Calligraphic panel — “Taught the Names of All Things”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "adam-the-garden",
+      "title": "The Garden and the One Tree",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:35 · al-A'raf 7:19",
+      "summary": "Allah settles Adam and his wife in the Garden and tells them to eat freely from wherever they wish in ease and plenty — but not to approach one tree, lest they be among the wrongdoers. A single, gentle limit is set within a vast freedom.",
+      "why": "The test is the smallest possible: one tree amid endless provision. The Qur'an shows that obedience is measured not by the size of the command but by trust in the One who gives it.",
+      "people": [
+        "adam",
+        "hawwa"
+      ],
+      "verses": [
+        "2:35",
+        "7:19"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-the-garden-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Garden and the One Tree”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "adam-the-whisper",
+      "title": "The Whisper of Shayṭān",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:20-22 · Ta-Ha 20:120",
+      "summary": "Shayṭān whispers to them, promising that the forbidden tree will make them angels or grant them eternal life, and swears to them that he is a sincere adviser. So he leads them on by deception, and they taste the tree, and at once their nakedness is exposed to them, and they begin to cover themselves with the leaves of the Garden.",
+      "why": "The enemy works by whisper and false promise, cloaked as sincere advice. The Qur'an names his method exactly, so the reader learns to recognise it in every temptation that follows.",
+      "people": [
+        "adam",
+        "hawwa",
+        "iblis"
+      ],
+      "verses": [
+        "7:20",
+        "7:21",
+        "7:22",
+        "20:120"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-the-whisper-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Whisper of Shayṭān”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "adam-the-fall-and-forgiveness",
+      "title": "The Fall and the Words of Repentance",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:36-37 · al-A'raf 7:23",
+      "summary": "They say, 'Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy on us, we will surely be among the losers.' Adam receives from his Lord words of repentance, and Allah turns to him in forgiveness — for He is the Accepting of repentance, the Merciful.",
+      "why": "The contrast with Iblis is the heart of the story: Iblis sinned and grew proud; Adam sinned and repented — and was forgiven. The way back is always open to the one who turns, humbly, to Allah.",
+      "people": [
+        "adam",
+        "hawwa"
+      ],
+      "verses": [
+        "2:36",
+        "2:37",
+        "7:23"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-the-fall-and-forgiveness-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Fall and the Words of Repentance”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "adam-the-descent-to-earth",
+      "title": "The Descent to Earth",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:38-39 · Ta-Ha 20:123",
+      "summary": "They are sent down to the earth, where they and their descendants will dwell for a time — as enemies to Shayṭān. And the promise is given: 'When guidance comes to you from Me, whoever follows My guidance will not go astray nor suffer.'",
+      "why": "Earth is not a punishment but the arena of the test, and it opens with a promise of guidance. The whole story of the prophets — this entire Library — is that guidance being sent, age after age.",
+      "people": [
+        "adam",
+        "hawwa"
+      ],
+      "verses": [
+        "2:38",
+        "20:123"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-the-descent-to-earth-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Descent to Earth”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "adam-the-two-sons",
+      "title": "The Two Sons",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Ma'ida 5:27-31",
+      "summary": "Two of Adam's sons each offer a sacrifice; it is accepted from one and not the other. In envy, the rejected one threatens to kill his brother, who answers, 'Allah only accepts from the righteous… I will not raise my hand against you.' The first murder is committed — and Allah sends a crow scratching the ground to show the killer how to bury his brother, and he is filled with regret.",
+      "why": "The first death among mankind is murder born of envy — the same sin as Iblis's — while the victim's restraint and God-consciousness are held up as the better way. From the start, the Qur'an sets the two paths of the human heart against each other.",
+      "people": [
+        "habil",
+        "qabil"
+      ],
+      "verses": [
+        "5:27",
+        "5:28",
+        "5:30",
+        "5:31"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-the-two-sons-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Two Sons”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "adam-the-chosen",
+      "title": "Chosen by Allah",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Al Imran 3:33 · Ta-Ha 20:122",
+      "summary": "Allah chose Adam, and Nuh, and the family of Ibrahim and the family of Imran above the worlds. Then his Lord chose Adam, and turned to him in forgiveness, and guided him — the first of the prophets, and the father of them all.",
+      "why": "Adam's story closes as it began: chosen, forgiven, and guided. He is the root of every line of prophecy that follows — the first branch of the tree the whole Library grows from.",
+      "people": [
+        "adam"
+      ],
+      "verses": [
+        "3:33",
+        "20:122"
+      ],
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/adam/adam-the-chosen-calligraphy.svg",
+          "caption": "Calligraphic panel — “Chosen by Allah”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-adam",
+      "title": "The Arc of Adam",
+      "est": 16,
+      "blurb": "From the shaping of the first human and the angels' prostration, through the whisper and the fall, to repentance, the descent to earth, and the first sons.",
+      "steps": [
+        "adam-the-creation",
+        "adam-the-angels-and-iblis",
+        "adam-the-garden",
+        "adam-the-whisper",
+        "adam-the-fall-and-forgiveness",
+        "adam-the-descent-to-earth",
+        "adam-the-two-sons"
+      ]
+    },
+    {
+      "slug": "pride-and-repentance",
+      "title": "Pride and Repentance",
+      "est": 10,
+      "blurb": "The two responses to sin that the story sets against each other: the arrogance of Iblis, and the humble return of Adam.",
+      "steps": [
+        "adam-the-angels-and-iblis",
+        "adam-the-whisper",
+        "adam-the-fall-and-forgiveness",
+        "adam-the-two-sons"
+      ]
+    },
+    {
+      "slug": "the-honour-of-knowledge",
+      "title": "The Honour of Knowledge",
+      "est": 8,
+      "blurb": "Why humankind was made worthy of the earth — the gift of knowledge, and the trust that came with it.",
+      "steps": [
+        "adam-the-creation",
+        "adam-taught-the-names",
+        "adam-the-descent-to-earth",
+        "adam-the-chosen"
+      ]
+    }
+  ]
+}

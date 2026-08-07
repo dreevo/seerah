@@ -1,0 +1,192 @@
+{
+  "_note": "The Story of Prophet Zakariyya (Zechariah), of the house of Dawud, guardian of Maryam, drawn strictly from the Qur'an (Surahs Al Imran, Maryam, al-Anbiya). Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "zakariyya",
+      "name": "Zakariyya",
+      "ar": "زكريا عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "yahya",
+      "name": "Yahya",
+      "ar": "يحيى عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "maryam",
+      "name": "Maryam",
+      "ar": "مريم عليها السلام",
+      "role": "FAMILY"
+    }
+  ],
+  "places": [
+    {
+      "slug": "jerusalem",
+      "name": "Jerusalem (Bayt al-Maqdis)",
+      "ar": "بيت المقدس",
+      "modern": "Jerusalem",
+      "lat": 31.78,
+      "lng": 35.23
+    }
+  ],
+  "events": [
+    {
+      "slug": "zakariyya-guardian-of-maryam",
+      "title": "The Guardian of Maryam",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Al Imran 3:37",
+      "summary": "Allah accepted the infant Maryam with gracious acceptance, caused her to grow in purity, and placed her in the care of Zakariyya. Whenever he entered upon her in the sanctuary, he found provision with her. He asked, 'O Maryam, from where is this to you?' She said, 'It is from Allah. Indeed, Allah provides for whom He wills without account.'",
+      "why": "The out-of-season provision Zakariyya finds with Maryam kindles his own hope: if Allah can provide for her so, He can grant an old and childless man an heir. Her miracle prepares his prayer.",
+      "people": [
+        "zakariyya",
+        "maryam"
+      ],
+      "verses": [
+        "3:37"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/zakariyya/zakariyya-guardian-of-maryam-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Guardian of Maryam”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/zakariyya/zakariyya-guardian-of-maryam-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Guardian of Maryam.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "zakariyya-prays-for-an-heir",
+      "title": "The Prayer for an Heir",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:2-6 · Al Imran 3:38",
+      "summary": "There, Zakariyya called upon his Lord in a private, hidden supplication: 'My Lord, my bones have weakened and my head is aflame with grey, and never have I been unhappy in my prayer to You. I fear my successors after me, and my wife is barren — so give me from Yourself an heir who will inherit me and inherit from the family of Yaʿqub, and make him, my Lord, pleasing.'",
+      "why": "The Qur'an preserves one of its tenderest prayers: an old man, aware of his weakness, asking not for wealth but for a righteous heir to carry the faith after him — hope voiced humbly, in secret, to Allah alone.",
+      "people": [
+        "zakariyya"
+      ],
+      "verses": [
+        "19:3",
+        "19:4",
+        "19:5",
+        "3:38"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/zakariyya/zakariyya-prays-for-an-heir-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Prayer for an Heir”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/zakariyya/zakariyya-prays-for-an-heir-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Prayer for an Heir.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "zakariyya-glad-tidings-of-yahya",
+      "title": "Glad Tidings of Yaḥyā",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:7-9 · Al Imran 3:39",
+      "summary": "The angels called to him as he stood praying in the sanctuary: 'O Zakariyya, We give you glad tidings of a boy whose name is Yaḥyā — We have not given that name to anyone before.' Astonished that a barren wife and extreme old age could bear a child, he was told: 'So it will be; your Lord says, It is easy for Me, and I created you before, when you were nothing.'",
+      "why": "Allah answers the secret prayer beyond hope, and even names the child Himself — Yaḥyā, a name never borne before. The impossible is 'easy' for the One who made Zakariyya from nothing.",
+      "people": [
+        "zakariyya",
+        "yahya"
+      ],
+      "verses": [
+        "19:7",
+        "19:8",
+        "19:9",
+        "3:39"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/zakariyya/zakariyya-glad-tidings-of-yahya-calligraphy.svg",
+          "caption": "Calligraphic panel — “Glad Tidings of Yaḥyā”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/zakariyya/zakariyya-glad-tidings-of-yahya-diagram.svg",
+          "caption": "Schematic diagram of the setting — Glad Tidings of Yaḥyā.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "zakariyya-the-sign-of-silence",
+      "title": "The Sign of Silence",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:10-11 · Al Imran 3:41",
+      "summary": "Zakariyya asked for a sign, and was told: 'Your sign is that you will not speak to people for three nights, while sound in body.' So he came out to his people from the sanctuary and signalled to them to glorify Allah in the morning and the evening.",
+      "why": "The sign turns him wholly to praise: unable to speak to people, he devotes his tongue to the remembrance of Allah — the fitting response of a servant whose prayer has just been answered.",
+      "people": [
+        "zakariyya"
+      ],
+      "verses": [
+        "19:10",
+        "19:11",
+        "3:41"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/zakariyya/zakariyya-the-sign-of-silence-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Sign of Silence”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/zakariyya/zakariyya-the-sign-of-silence-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Sign of Silence.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-zakariyya",
+      "title": "The Arc of Zakariyya",
+      "est": 10,
+      "blurb": "An old and childless guardian of Maryam, the provision that kindled his hope, the hidden prayer for an heir, and the glad tidings of Yaḥyā.",
+      "steps": [
+        "zakariyya-guardian-of-maryam",
+        "zakariyya-prays-for-an-heir",
+        "zakariyya-glad-tidings-of-yahya",
+        "zakariyya-the-sign-of-silence"
+      ]
+    }
+  ]
+}

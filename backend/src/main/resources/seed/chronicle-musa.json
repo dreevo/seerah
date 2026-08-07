@@ -1,0 +1,840 @@
+{
+  "_note": "The Story of Prophet Musa (Moses), drawn strictly from the Qur'an (Surahs Ta-Ha, al-Qasas, al-A'raf, ash-Shu'ara, Yunus, al-Baqarah, al-Kahf). Every event cites its ayat; verse text resolves from the loaded Qur'an reference. A couple of sound hadith (Sahih al-Bukhari) add context. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "musa",
+      "name": "Musa",
+      "ar": "موسى عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "harun",
+      "name": "Harun",
+      "ar": "هارون عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "firawn",
+      "name": "Pharaoh (Fir'awn)",
+      "ar": "فرعون",
+      "role": "OPPONENT"
+    },
+    {
+      "slug": "wife-of-firawn",
+      "name": "The Wife of Pharaoh",
+      "ar": "امرأة فرعون",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "mother-of-musa",
+      "name": "The Mother of Musa",
+      "ar": "أم موسى",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "sister-of-musa",
+      "name": "The Sister of Musa",
+      "ar": "أخت موسى",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "elder-of-midian",
+      "name": "The Elder of Midian",
+      "ar": "شيخ مدين",
+      "role": "SCHOLAR"
+    },
+    {
+      "slug": "magicians-of-firawn",
+      "name": "The Magicians of Pharaoh",
+      "ar": "سحرة فرعون",
+      "role": "OTHER"
+    },
+    {
+      "slug": "as-samiri",
+      "name": "As-Samiri",
+      "ar": "السامري",
+      "role": "OPPONENT"
+    },
+    {
+      "slug": "al-khidr",
+      "name": "Al-Khidr",
+      "ar": "الخضر",
+      "role": "SCHOLAR"
+    }
+  ],
+  "places": [
+    {
+      "slug": "egypt",
+      "name": "Egypt",
+      "ar": "مصر",
+      "modern": "Egypt (Nile valley)",
+      "lat": 30.05,
+      "lng": 31.23
+    },
+    {
+      "slug": "midian",
+      "name": "Midian",
+      "ar": "مدين",
+      "modern": "NW Arabia (Al-Bad')",
+      "lat": 28.48,
+      "lng": 35.32
+    },
+    {
+      "slug": "mount-sinai",
+      "name": "Mount Sinai (at-Tur)",
+      "ar": "الطُّور",
+      "modern": "Sinai",
+      "lat": 28.54,
+      "lng": 33.97
+    },
+    {
+      "slug": "the-red-sea",
+      "name": "The Sea",
+      "ar": "البحر",
+      "lat": 29.6,
+      "lng": 32.55,
+      "approx": true
+    },
+    {
+      "slug": "the-wilderness",
+      "name": "The Wilderness",
+      "ar": "التِّيه",
+      "modern": "Sinai desert",
+      "lat": 29.7,
+      "lng": 33.9,
+      "approx": true
+    },
+    {
+      "slug": "the-two-seas",
+      "name": "The Junction of the Two Seas",
+      "ar": "مجمع البحرين",
+      "lat": 28.0,
+      "lng": 34.6,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "musa-cast-into-the-river",
+      "title": "Cast into the River",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Qasas 28:7",
+      "summary": "As Pharaoh slaughters the sons of the Children of Israel, Allah inspires the mother of the newborn Musa to place him in the river, promising to return him to her and to make him one of the messengers. She sets the basket upon the water in trust.",
+      "why": "The story opens with a mother's terror turned to trust: the very river Pharaoh uses to drown Israel's sons becomes the road that carries Musa safely into Pharaoh's own house.",
+      "people": [
+        "mother-of-musa",
+        "musa"
+      ],
+      "verses": [
+        "28:7"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-cast-into-the-river-calligraphy.svg",
+          "caption": "Calligraphic panel — “Cast into the River”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-cast-into-the-river-diagram.svg",
+          "caption": "Schematic diagram of the setting — Cast into the River.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-in-pharaohs-house",
+      "title": "Found by Pharaoh's Household",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Qasas 28:8-9",
+      "summary": "Pharaoh's family draws the basket from the water. His wife pleads that the child be a comfort to them and not be killed, hoping he may benefit them or be taken as a son — not perceiving who he would become.",
+      "why": "Allah places His prophet, unrecognised, in the household of the tyrant who feared him. The wife of Pharaoh, a believer, is the means of his safety.",
+      "people": [
+        "firawn",
+        "wife-of-firawn",
+        "musa"
+      ],
+      "verses": [
+        "28:8",
+        "28:9"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-in-pharaohs-house-calligraphy.svg",
+          "caption": "Calligraphic panel — “Found by Pharaoh's Household”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-in-pharaohs-house-diagram.svg",
+          "caption": "Schematic diagram of the setting — Found by Pharaoh's Household.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-returned-to-his-mother",
+      "title": "Returned to His Mother",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Qasas 28:10-13",
+      "summary": "The infant refuses every wet-nurse. His sister, following at a distance, offers to point them to a household that will nurse him — and so his own mother is brought to feed him. Allah returns him to her that her eye might be comforted and she know His promise is true.",
+      "why": "The promise of 28:7 is kept at once: the child is restored to his mother, and Pharaoh unknowingly pays her to raise the very deliverer he dreaded.",
+      "people": [
+        "sister-of-musa",
+        "mother-of-musa",
+        "musa"
+      ],
+      "verses": [
+        "28:11",
+        "28:12",
+        "28:13"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-returned-to-his-mother-calligraphy.svg",
+          "caption": "Calligraphic panel — “Returned to His Mother”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-returned-to-his-mother-diagram.svg",
+          "caption": "Schematic diagram of the setting — Returned to His Mother.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-strikes-the-egyptian",
+      "title": "The Man He Struck",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Qasas 28:15-16",
+      "summary": "Grown, Musa enters the city and finds two men fighting — one of his people, one of Pharaoh's. He strikes the aggressor and the man dies. Musa grieves, saying this is from Satan's doing, and asks his Lord's forgiveness; and Allah forgives him.",
+      "why": "Even a prophet's error becomes a moment of turning: Musa does not justify himself but seeks forgiveness, and the incident sets his flight from Egypt in motion.",
+      "people": [
+        "musa"
+      ],
+      "verses": [
+        "28:15",
+        "28:16"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-strikes-the-egyptian-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Man He Struck”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-strikes-the-egyptian-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Man He Struck.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-flees-to-midian",
+      "title": "Flight to Midian",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Qasas 28:21-24",
+      "summary": "Warned that the chiefs are plotting to kill him, Musa leaves the city in fear and turns toward Midian, praying to be delivered from the wrongdoing people. Arriving at its water, he finds two women holding back their flock, waters it for them, and turns to the shade, asking his Lord for whatever good He might send.",
+      "why": "Stripped of home and safety, Musa's first act in exile is service to strangers and reliance on Allah — the character of the man Allah is preparing to send back to Pharaoh.",
+      "people": [
+        "musa"
+      ],
+      "verses": [
+        "28:21",
+        "28:22",
+        "28:23",
+        "28:24"
+      ],
+      "place": "midian",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-flees-to-midian-calligraphy.svg",
+          "caption": "Calligraphic panel — “Flight to Midian”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-flees-to-midian-diagram.svg",
+          "caption": "Schematic diagram of the setting — Flight to Midian.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-marries-in-midian",
+      "title": "Marriage and the Ten Years",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Qasas 28:25-28",
+      "summary": "One of the two women returns shyly to invite him; her father, an honourable elder, hears his story and reassures him. Judging Musa strong and trustworthy, he offers him a daughter in marriage in return for hiring himself for eight years, or ten if he wishes. Musa agrees.",
+      "why": "Years of quiet, honest labour in Midian temper the fugitive into a shepherd and a husband — the training Allah gives His prophet before the mountain and the mission.",
+      "people": [
+        "musa",
+        "elder-of-midian"
+      ],
+      "verses": [
+        "28:25",
+        "28:26",
+        "28:27"
+      ],
+      "place": "midian",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-marries-in-midian-calligraphy.svg",
+          "caption": "Calligraphic panel — “Marriage and the Ten Years”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-marries-in-midian-diagram.svg",
+          "caption": "Schematic diagram of the setting — Marriage and the Ten Years.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-the-burning-bush",
+      "title": "The Fire at the Mountain",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Ta-Ha 20:9-24",
+      "summary": "Travelling by night, Musa sees a fire by the mount and goes for a brand to guide his family. There he is called: 'I am Allah; there is no god but Me, so worship Me and establish prayer.' His staff becomes a serpent, his hand comes out shining white — two signs — and he is commanded to go to Pharaoh, who has transgressed.",
+      "why": "This is the hinge of the whole story: the shepherd of Midian is made Kalim Allah, the one Allah speaks to, and is sent back to the land he fled — armed only with the truth and two signs.",
+      "people": [
+        "musa"
+      ],
+      "verses": [
+        "20:11",
+        "20:12",
+        "20:14",
+        "20:17",
+        "20:19",
+        "20:22",
+        "20:24"
+      ],
+      "place": "mount-sinai",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-the-burning-bush-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Fire at the Mountain”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-the-burning-bush-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Fire at the Mountain.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-asks-for-harun",
+      "title": "Harun Given as a Helper",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Ta-Ha 20:25-36",
+      "summary": "Musa prays for his breast to be expanded, his task made easy, and a knot loosed from his tongue, and asks that his brother Harun be appointed as a helper and share his mission. Allah grants his whole request.",
+      "why": "The prophet does not go alone or in his own strength: he asks for ease, for clear speech, and for his brother — and Allah answers every part, joining Harun to him as a prophet.",
+      "people": [
+        "musa",
+        "harun"
+      ],
+      "verses": [
+        "20:25",
+        "20:26",
+        "20:27",
+        "20:29",
+        "20:30",
+        "20:36"
+      ],
+      "place": "mount-sinai",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-asks-for-harun-calligraphy.svg",
+          "caption": "Calligraphic panel — “Harun Given as a Helper”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-asks-for-harun-diagram.svg",
+          "caption": "Schematic diagram of the setting — Harun Given as a Helper.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-before-pharaoh",
+      "title": "Before Pharaoh",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah ash-Shu'ara 26:16-31",
+      "summary": "Musa and Harun come to Pharaoh: 'We are messengers of the Lord of the worlds — send the Children of Israel with us.' Pharaoh mocks him, recalls the man he killed, and demands, 'And what is the Lord of the worlds?' Musa answers: the Lord of the heavens and the earth and all between them.",
+      "why": "The confrontation is set as a contest between two claims of lordship — Pharaoh's over Egypt and Allah's over all creation — and Musa answers tyranny not with fear but with the plain truth of tawhid.",
+      "people": [
+        "musa",
+        "harun",
+        "firawn"
+      ],
+      "verses": [
+        "26:16",
+        "26:17",
+        "26:23",
+        "26:24"
+      ],
+      "place": "egypt",
+      "source2": "sahih-al-bukhari",
+      "locator2": "no. 3340 — the intercession hadith, naming Musa as one Allah spoke to",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-before-pharaoh-calligraphy.svg",
+          "caption": "Calligraphic panel — “Before Pharaoh”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-before-pharaoh-diagram.svg",
+          "caption": "Schematic diagram of the setting — Before Pharaoh.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-and-the-magicians",
+      "title": "The Duel with the Magicians",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Ta-Ha 20:65-70",
+      "summary": "On a day of festival Pharaoh gathers his finest magicians. They cast their ropes and staffs, which seem to slither by their spell; Musa is told not to fear. He casts his staff and it swallows all their falsehood. The magicians fall down in prostration, declaring belief in the Lord of Musa and Harun — and defy Pharaoh's threats.",
+      "why": "The very experts Pharaoh summoned to defeat Musa are the first to believe: they know real signs from trickery, and choose faith over Pharaoh's crucifixion — the truth's first public victory.",
+      "people": [
+        "musa",
+        "magicians-of-firawn",
+        "firawn"
+      ],
+      "verses": [
+        "20:65",
+        "20:66",
+        "20:68",
+        "20:69",
+        "20:70"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-and-the-magicians-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Duel with the Magicians”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-and-the-magicians-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Duel with the Magicians.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-the-signs-on-egypt",
+      "title": "The Signs upon Egypt",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:130-133",
+      "summary": "Pharaoh's people are seized with years of drought and shortage of fruits, that they might take heed. When they still turn away, Allah sends upon them the flood, the locusts, the lice, the frogs, and the blood — clear signs, one after another — yet they remain arrogant, a criminal people.",
+      "why": "Sign after sign is sent as mercy and warning, so none can say they were not shown the truth; Pharaoh's persistence is a choice, made against overwhelming proof.",
+      "people": [
+        "firawn",
+        "musa"
+      ],
+      "verses": [
+        "7:130",
+        "7:133"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-the-signs-on-egypt-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Signs upon Egypt”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-the-signs-on-egypt-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Signs upon Egypt.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-the-departure-by-night",
+      "title": "The Command to Depart",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah ash-Shu'ara 26:52-59",
+      "summary": "Allah reveals to Musa to travel by night with His servants, for they will be pursued. Pharaoh sends into the cities to muster his forces against the small band who have angered him — and so the Children of Israel set out toward the sea with Pharaoh's army at their backs.",
+      "why": "The deliverance from Egypt begins in secrecy and danger: a slave people, leaving in the night, hemmed between the sea before them and Pharaoh's chariots behind.",
+      "people": [
+        "musa",
+        "firawn"
+      ],
+      "verses": [
+        "26:52",
+        "26:53",
+        "26:54",
+        "26:59"
+      ],
+      "place": "egypt",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-the-departure-by-night-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Command to Depart”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-the-departure-by-night-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Command to Depart.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-parting-of-the-sea",
+      "title": "The Parting of the Sea",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah ash-Shu'ara 26:60-66",
+      "summary": "At the sea's edge Musa's people fear they are overtaken; he answers, 'No! Indeed, my Lord is with me; He will guide me.' Commanded to strike the sea with his staff, it parts into towering walls with a dry path between. The Children of Israel cross; Pharaoh and his army follow into the parted way — and the sea returns upon them.",
+      "why": "The climax of the exodus: the same sea that opens as a road of rescue for the believers closes as a grave for the tyrant. Faith's certainty — 'my Lord is with me' — is vindicated before all.",
+      "people": [
+        "musa",
+        "firawn"
+      ],
+      "verses": [
+        "26:61",
+        "26:62",
+        "26:63",
+        "26:65",
+        "26:66"
+      ],
+      "place": "the-red-sea",
+      "source2": "sahih-al-bukhari",
+      "locator2": "no. 2004 — the fast of ʿAshura commemorating Musa’s deliverance",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-parting-of-the-sea-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Parting of the Sea”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-parting-of-the-sea-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Parting of the Sea.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-drowning-of-pharaoh",
+      "title": "The Drowning of Pharaoh",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Yunus 10:90-92",
+      "summary": "As the water overtakes him, Pharaoh cries out that he believes there is no god but the One the Children of Israel believe in. The answer comes: 'Now? — when before you disobeyed and were of the corrupters?' Yet his body is preserved as a sign to those who come after.",
+      "why": "Faith declared only when escape is gone is no faith at all. Pharaoh's drowning, and the preserving of his body, stand as a lasting warning against pride that repents too late.",
+      "people": [
+        "firawn"
+      ],
+      "verses": [
+        "10:90",
+        "10:91",
+        "10:92"
+      ],
+      "place": "the-red-sea",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-drowning-of-pharaoh-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Drowning of Pharaoh”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-drowning-of-pharaoh-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Drowning of Pharaoh.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-manna-and-quails",
+      "title": "Manna and the Quails",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Baqarah 2:57",
+      "summary": "In the wilderness Allah shades the Children of Israel with clouds and sends down upon them the manna and the quails: 'Eat from the good things We have provided you.' They wronged not Allah, but were wronging themselves by their ingratitude.",
+      "why": "Freed from Egypt, the people are carried by pure provision — food and shade from the sky — a mercy meant to teach gratitude, which they so often forgot.",
+      "people": [
+        "musa"
+      ],
+      "verses": [
+        "2:57"
+      ],
+      "place": "the-wilderness",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-manna-and-quails-calligraphy.svg",
+          "caption": "Calligraphic panel — “Manna and the Quails”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-manna-and-quails-diagram.svg",
+          "caption": "Schematic diagram of the setting — Manna and the Quails.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-appointment-at-sinai",
+      "title": "The Appointment at Mount Sinai",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:142-145",
+      "summary": "Musa is appointed thirty nights, completed with ten, to meet his Lord — forty nights — leaving Harun over the people. He asks, 'My Lord, show me, that I may look at You.' He is told he will not see Him; the mountain, when its Lord appears to it, is crushed level, and Musa falls unconscious. He is given the Tablets — guidance and detail for all things.",
+      "why": "At the mountain the Law is given and the limits of even a prophet's sight are shown: Musa cannot behold Allah in this life, yet receives His guidance in the Tablets to carry to his people.",
+      "people": [
+        "musa"
+      ],
+      "verses": [
+        "7:142",
+        "7:143",
+        "7:144",
+        "7:145"
+      ],
+      "place": "mount-sinai",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-appointment-at-sinai-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Appointment at Mount Sinai”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-appointment-at-sinai-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Appointment at Mount Sinai.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-the-golden-calf",
+      "title": "The Golden Calf",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Ta-Ha 20:83-98",
+      "summary": "In Musa's absence, as-Samiri fashions from their ornaments a calf — a mere body that lows — and many of the people take it as a god, though Harun warns them and calls them back. Musa returns angry and grieved, casts down the Tablets, takes his brother's head, then hears Harun's plea and turns to confront as-Samiri.",
+      "why": "The greatest danger to the people is not Pharaoh's army but their own hearts: within weeks of the sea they turn to a calf. Harun's restraint and Musa's zeal together guard tawhid against the idol.",
+      "people": [
+        "musa",
+        "harun",
+        "as-samiri"
+      ],
+      "verses": [
+        "20:83",
+        "20:85",
+        "20:88",
+        "20:90",
+        "20:92",
+        "20:94"
+      ],
+      "place": "the-wilderness",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-the-golden-calf-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Golden Calf”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-the-golden-calf-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Golden Calf.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "musa-and-al-khidr",
+      "title": "Musa and al-Khidr",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Kahf 18:60-82",
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of Knowledge, no. 74",
+      "summary": "Seeking a servant of Allah given special knowledge, Musa meets al-Khidr at the junction of the two seas and asks to follow and learn. Al-Khidr warns he will not be able to bear patience. He scuttles a boat, takes the life of a boy, and rebuilds a falling wall without pay — each time Musa objects — then explains: the boat was spared from a seizing king, the boy would have burdened his believing parents, and the wall guarded an orphans' treasure. Then they part.",
+      "why": "Even Kalim Allah is sent to learn: that Allah's wisdom often lies hidden beneath events that seem wrong to us, and that patience with what we cannot yet understand is itself a kind of knowledge.",
+      "people": [
+        "musa",
+        "al-khidr"
+      ],
+      "verses": [
+        "18:65",
+        "18:66",
+        "18:71",
+        "18:74",
+        "18:77",
+        "18:82"
+      ],
+      "place": "the-two-seas",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/musa/musa-and-al-khidr-calligraphy.svg",
+          "caption": "Calligraphic panel — “Musa and al-Khidr”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/musa/musa-and-al-khidr-diagram.svg",
+          "caption": "Schematic diagram of the setting — Musa and al-Khidr.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "slug": "musa-flight-to-midian",
+      "event": "musa-flees-to-midian",
+      "conjectural": true,
+      "points": [
+        [
+          30.05,
+          31.23
+        ],
+        [
+          29.6,
+          33.4
+        ],
+        [
+          28.48,
+          35.32
+        ]
+      ]
+    },
+    {
+      "slug": "musa-the-exodus",
+      "event": "musa-parting-of-the-sea",
+      "conjectural": true,
+      "points": [
+        [
+          30.05,
+          31.23
+        ],
+        [
+          29.9,
+          32.4
+        ],
+        [
+          29.6,
+          32.55
+        ],
+        [
+          28.7,
+          33.9
+        ]
+      ]
+    }
+  ],
+  "paths": [
+    {
+      "slug": "the-arc-of-musa",
+      "title": "The Arc of Musa",
+      "est": 22,
+      "blurb": "Seven turning points from a basket on the river, through Midian and the fire at the mountain, to the parting of the sea and the Law at Sinai.",
+      "steps": [
+        "musa-cast-into-the-river",
+        "musa-flees-to-midian",
+        "musa-the-burning-bush",
+        "musa-and-the-magicians",
+        "musa-parting-of-the-sea",
+        "musa-appointment-at-sinai",
+        "musa-and-al-khidr"
+      ]
+    },
+    {
+      "slug": "musa-vs-pharaoh",
+      "title": "The Confrontation with Pharaoh",
+      "est": 16,
+      "blurb": "From the first audience in the court to the duel with the magicians and the parting of the sea — truth against tyranny.",
+      "steps": [
+        "musa-before-pharaoh",
+        "musa-and-the-magicians",
+        "musa-the-signs-on-egypt",
+        "musa-the-departure-by-night",
+        "musa-parting-of-the-sea"
+      ]
+    },
+    {
+      "slug": "musa-law-and-wilderness",
+      "title": "The Law and the Wilderness",
+      "est": 16,
+      "blurb": "After the sea: provision in the desert, the Tablets at Sinai, the golden calf, and the lessons of al-Khidr.",
+      "steps": [
+        "musa-parting-of-the-sea",
+        "musa-manna-and-quails",
+        "musa-appointment-at-sinai",
+        "musa-the-golden-calf",
+        "musa-and-al-khidr"
+      ]
+    }
+  ]
+}

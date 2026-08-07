@@ -1,0 +1,33 @@
+{
+  "//": "CDC-phase swap for SearchProjectionRelay (§25.5, §17). Registered on Kafka",
+  "//2": "Connect; from here Debezium tails the outbox via Postgres logical decoding",
+  "//3": "and the poller is retired. The outbox table and its columns do not change —",
+  "//4": "this connector reads exactly what the Phase-1 relay polled.",
+  "name": "seerah-outbox-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "${DB_HOST}",
+    "database.port": "5432",
+    "database.user": "${DB_USER}",
+    "database.password": "${DB_PASSWORD}",
+    "database.dbname": "seerah",
+    "topic.prefix": "seerah",
+    "plugin.name": "pgoutput",
+    "slot.name": "seerah_outbox",
+    "publication.name": "seerah_outbox_pub",
+    "table.include.list": "public.outbox_event",
+    "tombstones.on.delete": "false",
+    "transforms": "outbox",
+    "transforms.outbox.type": "io.debezium.transforms.outbox.EventRouter",
+    "transforms.outbox.table.field.event.id": "id",
+    "transforms.outbox.table.field.event.key": "aggregate_id",
+    "transforms.outbox.table.field.event.type": "event_type",
+    "transforms.outbox.table.field.event.payload": "payload",
+    "transforms.outbox.route.by.field": "aggregate_type",
+    "transforms.outbox.route.topic.replacement": "seerah.events.${routedByValue}",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false"
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "_note": "The Story of Prophet Nuh (Noah), drawn strictly from the Qur'an (Surahs Nuh, Hud, al-Mu'minun, al-Qamar, al-A'raf, al-Isra). Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "nuh",
+      "name": "Nuh",
+      "ar": "نوح عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "son-of-nuh",
+      "name": "The Son of Nuh",
+      "ar": "ابن نوح",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "wife-of-nuh",
+      "name": "The Wife of Nuh",
+      "ar": "امرأة نوح",
+      "role": "FAMILY"
+    },
+    {
+      "slug": "the-chiefs-of-nuhs-people",
+      "name": "The Chiefs of His People",
+      "ar": "ملأ قوم نوح",
+      "role": "OPPONENT"
+    }
+  ],
+  "places": [
+    {
+      "slug": "the-land-of-nuh",
+      "name": "The Land of Nuh's People",
+      "ar": "أرض قوم نوح",
+      "modern": "Mesopotamia",
+      "lat": 33.5,
+      "lng": 43.5,
+      "approx": true
+    },
+    {
+      "slug": "the-ark",
+      "name": "The Ark",
+      "ar": "السفينة",
+      "lat": 35.2,
+      "lng": 42.8,
+      "approx": true
+    },
+    {
+      "slug": "mount-judi",
+      "name": "Mount Judi",
+      "ar": "الجُودِيّ",
+      "modern": "Cizre, on the Iraq–Turkey border",
+      "lat": 37.38,
+      "lng": 42.43
+    }
+  ],
+  "events": [
+    {
+      "slug": "nuh-sent-to-his-people",
+      "title": "Sent to His People",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Nuh 71:1-4 · al-A'raf 7:59",
+      "summary": "Allah sends Nuh to his people before a painful punishment reaches them: 'O my people, worship Allah; you have no deity other than Him.' He calls them to fear their Lord and obey him, that their sins might be forgiven and their term extended.",
+      "why": "The first of the great messengers to a straying nation opens with the one message every prophet carries: worship Allah alone, before the door of mercy closes.",
+      "people": [
+        "nuh"
+      ],
+      "verses": [
+        "71:1",
+        "71:2",
+        "71:3",
+        "7:59"
+      ],
+      "place": "the-land-of-nuh",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/nuh-sent-to-his-people-calligraphy.svg",
+          "caption": "Calligraphic panel — “Sent to His People”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/nuh-sent-to-his-people-diagram.svg",
+          "caption": "Schematic diagram of the setting — Sent to His People.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "nuh-calls-night-and-day",
+      "title": "Calling Night and Day",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Nuh 71:5-12",
+      "summary": "Nuh calls his people night and day, in secret and in public, reminding them to seek their Lord's forgiveness — 'He will send rain in abundance, and give you wealth and children, and gardens and rivers.' But the more he calls, the more they flee, thrusting their fingers in their ears.",
+      "why": "The Qur'an records a patience almost beyond measure: a caller who never tires, met by a people who cover their ears — the loneliness of guidance offered and refused.",
+      "people": [
+        "nuh"
+      ],
+      "verses": [
+        "71:5",
+        "71:6",
+        "71:7",
+        "71:10",
+        "71:11"
+      ],
+      "place": "the-land-of-nuh",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/nuh-calls-night-and-day-calligraphy.svg",
+          "caption": "Calligraphic panel — “Calling Night and Day”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/nuh-calls-night-and-day-diagram.svg",
+          "caption": "Schematic diagram of the setting — Calling Night and Day.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "the-people-cling-to-idols",
+      "title": "Clinging to the Idols",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Nuh 71:21-24",
+      "summary": "The chiefs follow those whose wealth and children only increase them in loss, and plot a mighty plot. They urge one another never to leave their gods — Wadd, Suwa, Yaghuth, Ya'uq, and Nasr — and by them many are led astray.",
+      "why": "The Qur'an names the very idols, showing how a people's ruin is bound up in the names they will not let go of — attachment to the dead past against the living truth.",
+      "people": [
+        "the-chiefs-of-nuhs-people",
+        "nuh"
+      ],
+      "verses": [
+        "71:21",
+        "71:22",
+        "71:23",
+        "71:24"
+      ],
+      "place": "the-land-of-nuh",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/the-people-cling-to-idols-calligraphy.svg",
+          "caption": "Calligraphic panel — “Clinging to the Idols”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/the-people-cling-to-idols-diagram.svg",
+          "caption": "Schematic diagram of the setting — Clinging to the Idols.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "nuh-prays-against-them",
+      "title": "The Prayer of Nuh",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Nuh 71:26-28 · al-Qamar 54:10",
+      "summary": "After long centuries, when it is revealed that none of his people will believe except those who already have, Nuh turns to his Lord: 'My Lord, do not leave upon the earth a single disbeliever,' and 'I am overpowered, so help.' He prays for the believers, and for his parents, and for all who enter his house in faith.",
+      "why": "Only when guidance is finally, knowingly refused does the patient caller ask for judgement — and even then he prays for mercy on every believer who comes after.",
+      "people": [
+        "nuh"
+      ],
+      "verses": [
+        "71:26",
+        "71:27",
+        "71:28",
+        "54:10"
+      ],
+      "place": "the-land-of-nuh",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/nuh-prays-against-them-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Prayer of Nuh”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/nuh-prays-against-them-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Prayer of Nuh.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "the-building-of-the-ark",
+      "title": "The Building of the Ark",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:37-38",
+      "summary": "Allah commands Nuh to build the ship under His eyes and by His revelation, and not to address Him again concerning the wrongdoers, for they are to be drowned. As he builds, the chiefs of his people pass by and mock him — and he answers, 'If you ridicule us, we will ridicule you as you ridicule.'",
+      "why": "Nuh builds a great ship on dry land at Allah's word, enduring the mockery of those who cannot imagine the flood — obedience acted out before any sign of rain.",
+      "people": [
+        "nuh",
+        "the-chiefs-of-nuhs-people"
+      ],
+      "verses": [
+        "11:37",
+        "11:38"
+      ],
+      "place": "the-ark",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/the-building-of-the-ark-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Building of the Ark”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/the-building-of-the-ark-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Building of the Ark.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "the-flood-and-the-pairs",
+      "title": "The Flood and the Pairs",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:40 · al-Mu'minun 23:27",
+      "summary": "When the command comes and the face of the earth gushes with water, Nuh loads into the ark a pair of every kind, and his family — except those against whom the word had gone forth — and the few who believed. He says, 'Embark; in the name of Allah is its course and its anchorage.'",
+      "why": "The mercy and the judgement arrive together: the ark carries life of every kind through the ruin, sailing only in the name of Allah.",
+      "people": [
+        "nuh"
+      ],
+      "verses": [
+        "11:40",
+        "23:27"
+      ],
+      "place": "the-ark",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/the-flood-and-the-pairs-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Flood and the Pairs”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/the-flood-and-the-pairs-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Flood and the Pairs.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "nuh-and-his-son",
+      "title": "Nuh and His Son",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:42-46",
+      "summary": "As the waves rise like mountains, Nuh calls to his son, standing apart: 'O my son, embark with us and be not with the disbelievers.' The son replies that he will take refuge on a mountain that will protect him. 'There is no protector today from the decree of Allah, except for whom He gives mercy' — and the wave came between them, and he was among the drowned.",
+      "why": "The hardest lesson of the flood: kinship is no shelter from the truth. Faith, not blood, is what carries a soul across — a grief the Qur'an does not soften.",
+      "people": [
+        "nuh",
+        "son-of-nuh",
+        "wife-of-nuh"
+      ],
+      "verses": [
+        "11:42",
+        "11:43",
+        "11:45",
+        "11:46"
+      ],
+      "place": "the-ark",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/nuh-and-his-son-calligraphy.svg",
+          "caption": "Calligraphic panel — “Nuh and His Son”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/nuh-and-his-son-diagram.svg",
+          "caption": "Schematic diagram of the setting — Nuh and His Son.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "the-ark-rests-on-judi",
+      "title": "The Ark Rests on Jūdī",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:44-48",
+      "summary": "It is said: 'O earth, swallow your water, and O sky, withhold.' The water subsides, the matter is accomplished, and the ark comes to rest upon Mount Jūdī. Nuh is told to descend in peace and blessings upon him and upon nations to come from those with him.",
+      "why": "The flood ends not in despair but in a covenant of peace: the earth renewed, and a blessing set upon the believing remnant and the peoples who would descend from them.",
+      "people": [
+        "nuh"
+      ],
+      "verses": [
+        "11:44",
+        "11:48"
+      ],
+      "place": "mount-judi",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/the-ark-rests-on-judi-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Ark Rests on Jūdī”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/the-ark-rests-on-judi-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Ark Rests on Jūdī.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "nuh-a-grateful-servant",
+      "title": "A Grateful Servant",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Isra 17:3",
+      "summary": "Allah names Nuh among the descendants of those He carried with him, and calls him 'a grateful servant' — a title of honour for a lifetime of patient calling and thankfulness through trial and deliverance alike.",
+      "why": "After centuries of rejection and the ordeal of the flood, the Qur'an sums up Nuh in two words — grateful servant — the quality that outlasts every hardship.",
+      "people": [
+        "nuh"
+      ],
+      "verses": [
+        "17:3"
+      ],
+      "place": "mount-judi",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/nuh/nuh-a-grateful-servant-calligraphy.svg",
+          "caption": "Calligraphic panel — “A Grateful Servant”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/nuh/nuh-a-grateful-servant-diagram.svg",
+          "caption": "Schematic diagram of the setting — A Grateful Servant.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-nuh",
+      "title": "The Arc of Nuh",
+      "est": 16,
+      "blurb": "From the first call to a straying people, through centuries of patience and the building of the ark, to the flood, the loss of a son, and the ark's resting on Jūdī.",
+      "steps": [
+        "nuh-sent-to-his-people",
+        "nuh-prays-against-them",
+        "the-building-of-the-ark",
+        "the-flood-and-the-pairs",
+        "nuh-and-his-son",
+        "the-ark-rests-on-judi"
+      ]
+    },
+    {
+      "slug": "nuh-patience",
+      "title": "The Patience of the Caller",
+      "est": 12,
+      "blurb": "Centuries of calling a people who covered their ears — the endurance of Nuh before the flood.",
+      "steps": [
+        "nuh-sent-to-his-people",
+        "nuh-calls-night-and-day",
+        "the-people-cling-to-idols",
+        "nuh-prays-against-them"
+      ]
+    },
+    {
+      "slug": "nuh-ark-flood",
+      "title": "The Ark and the Flood",
+      "est": 14,
+      "blurb": "Building a ship on dry land amid mockery, the rising waters, the son who refused, and the resting on Jūdī.",
+      "steps": [
+        "the-building-of-the-ark",
+        "the-flood-and-the-pairs",
+        "nuh-and-his-son",
+        "the-ark-rests-on-judi"
+      ]
+    }
+  ]
+}

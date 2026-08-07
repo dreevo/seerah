@@ -1,0 +1,97 @@
+{
+  "_note": "The Story of Prophet Dhu al-Kifl, drawn strictly from the Qur'an (Surahs al-Anbiya and Sad). The Qur'an names Dhu al-Kifl twice — among the patient whom Allah admitted into His mercy, and among the outstanding and righteous — but relates no narrative, and the scholars differ over his identity. This chronicle says only what the text says and claims no more. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "dhulkifl",
+      "name": "Dhu al-Kifl",
+      "ar": "ذو الكفل عليه السلام",
+      "role": "PROPHET"
+    }
+  ],
+  "places": [
+    {
+      "slug": "land-of-dhulkifl",
+      "name": "The Land of Dhu al-Kifl",
+      "ar": "أرض ذي الكفل",
+      "modern": "the Levant / Mesopotamia",
+      "lat": 32.22,
+      "lng": 44.36,
+      "approx": true
+    }
+  ],
+  "events": [
+    {
+      "slug": "dhulkifl-among-the-patient",
+      "title": "Among the Patient",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-Anbiya 21:85-86",
+      "summary": "'And Ismail and Idris and Dhul-Kifl — all were of the patient. And We admitted them into Our mercy. Indeed, they were of the righteous.' The Qur'an sets Dhu al-Kifl beside Ismail and Idris under a single praise: patience, mercy received, and righteousness — the honour of a name, without a story attached.",
+      "why": "What the Qur'an chooses to preserve about Dhu al-Kifl is not an event but a quality — ṣabr, patience — and its reward: entry into Allah's mercy. The lesson is the character, not the chronicle.",
+      "people": [
+        "dhulkifl"
+      ],
+      "verses": [
+        "21:85",
+        "21:86"
+      ],
+      "place": "land-of-dhulkifl",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/dhulkifl/dhulkifl-among-the-patient-calligraphy.svg",
+          "caption": "Calligraphic panel — “All were of the patient” (al-Anbiya 21:85).",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    },
+    {
+      "slug": "dhulkifl-among-the-outstanding",
+      "title": "Among the Outstanding",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Sad 38:48",
+      "summary": "'And remember Ismail, al-Yasaʿ, and Dhul-Kifl, and all are among the outstanding.' A second time the Qur'an names Dhu al-Kifl among the chosen and the best of servants — and a second time it relates nothing of his life, leaving his identity and story among the things known only to Allah.",
+      "why": "The Qur'an's restraint is itself the teaching: it grants Dhu al-Kifl the highest company and the highest praise, and withholds the rest — a reminder to honour him as Allah did, and to add nothing of our own.",
+      "people": [
+        "dhulkifl"
+      ],
+      "verses": [
+        "38:48"
+      ],
+      "place": "land-of-dhulkifl",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/dhulkifl/dhulkifl-among-the-outstanding-calligraphy.svg",
+          "caption": "Calligraphic panel — “All are among the outstanding” (Sad 38:48).",
+          "attribution": "Seerah Platform — original calligraphy"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-dhulkifl",
+      "title": "The Arc of Dhu al-Kifl",
+      "est": 5,
+      "blurb": "All the Qur'an says of Dhu al-Kifl — twice named among the chosen: of the patient admitted into Allah's mercy, and among the outstanding.",
+      "steps": [
+        "dhulkifl-among-the-patient",
+        "dhulkifl-among-the-outstanding"
+      ]
+    }
+  ]
+}

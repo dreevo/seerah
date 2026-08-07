@@ -1,0 +1,219 @@
+{
+  "_note": "The Story of Prophet Shu'ayb, sent to the people of Madyan, drawn strictly from the Qur'an (Surahs al-A'raf, Hud, ash-Shu'ara, al-'Ankabut). An Arab prophet, a descendant of Ibrahim through Madyan; the prophet whose people cheated in weights and measures. Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "shuayb",
+      "name": "Shu'ayb",
+      "ar": "شعيب عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "the-people-of-madyan",
+      "name": "The People of Madyan",
+      "ar": "أهل مدين",
+      "role": "OPPONENT"
+    }
+  ],
+  "places": [
+    {
+      "slug": "madyan",
+      "name": "Madyan",
+      "ar": "مدين",
+      "modern": "NW Arabia (Al-Bad')",
+      "lat": 28.48,
+      "lng": 35.32
+    }
+  ],
+  "events": [
+    {
+      "slug": "shuayb-sent-to-madyan",
+      "title": "Sent to Madyan",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:85 · Hud 11:84",
+      "summary": "To Madyan Allah sent their brother Shu'ayb: 'O my people, worship Allah; you have no deity other than Him. A clear sign has come to you from your Lord. So give full measure and weight, and do not deprive people of their due, and do not spread corruption in the land after its reformation.'",
+      "why": "Shu'ayb joins worship of Allah to honesty in trade: the same message of tawhid, applied to the marketplace — for faith that does not reach one's dealings with people is no faith at all.",
+      "people": [
+        "shuayb",
+        "the-people-of-madyan"
+      ],
+      "verses": [
+        "7:85",
+        "11:84",
+        "11:85"
+      ],
+      "place": "madyan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/shuayb/shuayb-sent-to-madyan-calligraphy.svg",
+          "caption": "Calligraphic panel — “Sent to Madyan”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/shuayb/shuayb-sent-to-madyan-diagram.svg",
+          "caption": "Schematic diagram of the setting — Sent to Madyan.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "shuayb-the-cheating",
+      "title": "The Cheating of the Scales",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah ash-Shu'ara 26:181-183 · Hud 11:85",
+      "summary": "Give full measure and do not be of those who cause loss; weigh with an even balance, and do not deprive people of their due, nor go about the earth spreading corruption. What remains lawful from Allah is better for you — if you are believers.",
+      "why": "Madyan's sin is fraud dressed as commerce: shaving the scales, robbing a little from everyone. The Qur'an treats it as corruption in the earth, ranking a dishonest measure among the ruinous sins.",
+      "people": [
+        "the-people-of-madyan",
+        "shuayb"
+      ],
+      "verses": [
+        "26:181",
+        "26:182",
+        "26:183"
+      ],
+      "place": "madyan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/shuayb/shuayb-the-cheating-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Cheating of the Scales”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/shuayb/shuayb-the-cheating-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Cheating of the Scales.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "shuayb-they-mock-and-threaten",
+      "title": "The Mockery and the Threat",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:87-91 · al-A'raf 7:88",
+      "summary": "They mocked him: 'Does your prayer command you that we should leave what our fathers worshipped, or do as we please with our wealth?' The chiefs threatened to expel Shu'ayb and the believers, or force them back to their old ways. He answered that he sought only reform, as much as he was able, and that his success was only through Allah.",
+      "why": "Told to keep religion out of his wealth, Shu'ayb insists that faith governs money too. His reply — 'I only intend reform as much as I am able; my success is but through Allah' — is the creed of every honest reformer.",
+      "people": [
+        "shuayb",
+        "the-people-of-madyan"
+      ],
+      "verses": [
+        "11:87",
+        "11:88",
+        "7:88"
+      ],
+      "place": "madyan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/shuayb/shuayb-they-mock-and-threaten-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Mockery and the Threat”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/shuayb/shuayb-they-mock-and-threaten-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Mockery and the Threat.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "shuayb-the-punishment",
+      "title": "The Earthquake of Madyan",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah al-A'raf 7:91 · Hud 11:94 · ash-Shu'ara 26:189",
+      "summary": "So the earthquake seized them, and they lay fallen in their homes, motionless — as if those who had denied Shu'ayb had never prospered there. Those who denied Shu'ayb, they were the losers. And in another account, the punishment of the Day of the Shadowing Cloud overtook them — a mighty day.",
+      "why": "The fraud that seemed so safe ends in a single tremor. The Qur'an strips away the illusion of security that dishonest wealth buys: those who wronged their neighbours are gone, as though they had never been.",
+      "people": [
+        "the-people-of-madyan"
+      ],
+      "verses": [
+        "7:91",
+        "11:94",
+        "26:189"
+      ],
+      "place": "madyan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/shuayb/shuayb-the-punishment-calligraphy.svg",
+          "caption": "Calligraphic panel — “The Earthquake of Madyan”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/shuayb/shuayb-the-punishment-diagram.svg",
+          "caption": "Schematic diagram of the setting — The Earthquake of Madyan.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "shuayb-and-believers-saved",
+      "title": "Shu'ayb and the Believers Saved",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Hud 11:94 · al-A'raf 7:92",
+      "summary": "When Our command came, We saved Shu'ayb and those who believed with him by a mercy from Us. He turned from them and said, 'O my people, I had certainly conveyed to you the messages of my Lord and advised you; so how could I grieve for a disbelieving people?'",
+      "why": "As with every warner, the believers are delivered and the messenger vindicated — his grief spent, for he withheld nothing of the counsel he was sent to give.",
+      "people": [
+        "shuayb",
+        "the-people-of-madyan"
+      ],
+      "verses": [
+        "11:94",
+        "7:92"
+      ],
+      "place": "madyan",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/shuayb/shuayb-and-believers-saved-calligraphy.svg",
+          "caption": "Calligraphic panel — “Shu'ayb and the Believers Saved”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/shuayb/shuayb-and-believers-saved-diagram.svg",
+          "caption": "Schematic diagram of the setting — Shu'ayb and the Believers Saved.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-shuayb",
+      "title": "The Arc of Shu'ayb",
+      "est": 12,
+      "blurb": "The prophet of honest trade sent to Madyan — the cheating of the scales, the mockery of the merchants, the earthquake, and the rescue of the believers.",
+      "steps": [
+        "shuayb-sent-to-madyan",
+        "shuayb-the-cheating",
+        "shuayb-they-mock-and-threaten",
+        "shuayb-the-punishment",
+        "shuayb-and-believers-saved"
+      ]
+    }
+  ]
+}

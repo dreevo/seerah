@@ -1,0 +1,179 @@
+{
+  "_note": "The Story of Prophet Yahya (John the Baptist), son of Zakariyya, drawn strictly from the Qur'an (Surahs Maryam, Al Imran, al-An'am, al-Anbiya). Verse text resolves from the loaded Qur'an. No figural imagery; summaries carry no Arabic script.",
+  "personSource": "the-noble-quran",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [
+    {
+      "slug": "yahya",
+      "name": "Yahya",
+      "ar": "يحيى عليه السلام",
+      "role": "PROPHET"
+    },
+    {
+      "slug": "zakariyya",
+      "name": "Zakariyya",
+      "ar": "زكريا عليه السلام",
+      "role": "PROPHET"
+    }
+  ],
+  "places": [
+    {
+      "slug": "jerusalem",
+      "name": "Jerusalem (Bayt al-Maqdis)",
+      "ar": "بيت المقدس",
+      "modern": "Jerusalem",
+      "lat": 31.78,
+      "lng": 35.23
+    }
+  ],
+  "events": [
+    {
+      "slug": "yahya-a-name-from-allah",
+      "title": "A Name Given by Allah",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:7 · Al Imran 3:39",
+      "summary": "Yaḥyā was the answer to his father's prayer — a boy whose name Allah Himself chose, one never given to anyone before him. The angels announced him to Zakariyya as 'confirming a word from Allah' — that is, bearing witness to ʿĪsā son of Maryam — and as noble, chaste, and a prophet from among the righteous.",
+      "why": "Yaḥyā's life begins as a miracle and a witness: born to the aged and barren, named by Allah, and appointed to confirm the coming of ʿĪsā — the two cousins whose stories run side by side.",
+      "people": [
+        "yahya",
+        "zakariyya"
+      ],
+      "verses": [
+        "19:7",
+        "3:39"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yahya/yahya-a-name-from-allah-calligraphy.svg",
+          "caption": "Calligraphic panel — “A Name Given by Allah”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yahya/yahya-a-name-from-allah-diagram.svg",
+          "caption": "Schematic diagram of the setting — A Name Given by Allah.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yahya-wisdom-as-a-child",
+      "title": "Wisdom as a Child",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:12",
+      "summary": "'O Yaḥyā, take the Scripture with determination.' And We gave him judgement and wisdom while yet a child — a gravity and understanding of the Book granted him in his earliest years.",
+      "why": "Where prophethood usually comes with age, Yaḥyā is given the Scripture and sound judgement as a boy — a sign that Allah's gifts follow no human timetable.",
+      "people": [
+        "yahya"
+      ],
+      "verses": [
+        "19:12"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yahya/yahya-wisdom-as-a-child-calligraphy.svg",
+          "caption": "Calligraphic panel — “Wisdom as a Child”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yahya/yahya-wisdom-as-a-child-diagram.svg",
+          "caption": "Schematic diagram of the setting — Wisdom as a Child.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yahya-tenderness-and-purity",
+      "title": "Tenderness, Purity, and Duty",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:13-14",
+      "summary": "And affection from Us, and purity; and he was God-fearing, and dutiful to his parents, and he was not arrogant or disobedient.",
+      "why": "In a few words the Qur'an paints a whole character: a heart soft with compassion, a life kept pure, reverence for Allah, and gentleness with his parents — the portrait of the righteous soul.",
+      "people": [
+        "yahya"
+      ],
+      "verses": [
+        "19:13",
+        "19:14"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yahya/yahya-tenderness-and-purity-calligraphy.svg",
+          "caption": "Calligraphic panel — “Tenderness, Purity, and Duty”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yahya/yahya-tenderness-and-purity-diagram.svg",
+          "caption": "Schematic diagram of the setting — Tenderness, Purity, and Duty.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    },
+    {
+      "slug": "yahya-peace-upon-him",
+      "title": "Peace Be Upon Him",
+      "certainty": "MUTAWATIR",
+      "major": true,
+      "source": "the-noble-quran",
+      "locator": "Surah Maryam 19:15",
+      "summary": "'And peace be upon him the day he was born, and the day he dies, and the day he is raised alive.' The same blessing the Qur'an pronounces over ʿĪsā is pronounced over Yaḥyā — over his birth, his death, and his resurrection.",
+      "why": "The threefold peace crowns a life of purity and marks its end: Yaḥyā, who bore witness to the truth, is met with Allah's own greeting of peace at every threshold of his existence.",
+      "people": [
+        "yahya"
+      ],
+      "verses": [
+        "19:15"
+      ],
+      "place": "jerusalem",
+      "media": [
+        {
+          "kind": "CALLIGRAPHY",
+          "s3Key": "chronicles/yahya/yahya-peace-upon-him-calligraphy.svg",
+          "caption": "Calligraphic panel — “Peace Be Upon Him”.",
+          "attribution": "Seerah Platform — original calligraphy"
+        },
+        {
+          "kind": "DIAGRAM",
+          "s3Key": "chronicles/yahya/yahya-peace-upon-him-diagram.svg",
+          "caption": "Schematic diagram of the setting — Peace Be Upon Him.",
+          "attribution": "Seerah Platform — schematic diagram"
+        }
+      ]
+    }
+  ],
+  "routes": [],
+  "paths": [
+    {
+      "slug": "the-arc-of-yahya",
+      "title": "The Arc of Yaḥyā",
+      "est": 8,
+      "blurb": "The child named by Allah and given wisdom young — tender, pure, and dutiful — over whom peace is pronounced at his birth, his death, and his rising.",
+      "steps": [
+        "yahya-a-name-from-allah",
+        "yahya-wisdom-as-a-child",
+        "yahya-tenderness-and-purity",
+        "yahya-peace-upon-him"
+      ]
+    }
+  ]
+}
