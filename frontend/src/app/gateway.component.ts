@@ -40,6 +40,47 @@ const LAYOUT: TreeNode[] = [
 
 const BRANCH_W = [15, 13, 11, 9, 6.5, 5, 4, 3.4, 3]; // by child depth
 
+// Tidy-tree horizontal layout (Reingold–Tilford flavour): pack the leaves at a
+// uniform gap and centre every parent exactly over its children. The root then
+// lands at the true balance point of the whole tree and the branches never bunch
+// up — no matter how lopsided the genealogy is. Only x is computed here; the
+// authored y (depth spacing) is kept.
+const LEAF_GAP = 150;
+const X: Map<string, number> = (() => {
+  const kids = new Map<string, TreeNode[]>();
+  for (const n of LAYOUT) {
+    if (!n.parent) continue;
+    if (!kids.has(n.parent)) kids.set(n.parent, []);
+    kids.get(n.parent)!.push(n);
+  }
+  for (const list of kids.values()) list.sort((a, b) => a.x - b.x); // keep authored left→right order
+  const x = new Map<string, number>();
+  let cursor = 0;
+  const place = (slug: string): number => {
+    const cs = kids.get(slug) ?? [];
+    let v: number;
+    if (cs.length === 0) { v = cursor; cursor += LEAF_GAP; }
+    else { const xs = cs.map((c) => place(c.slug)); v = (xs[0] + xs[xs.length - 1]) / 2; }
+    x.set(slug, v);
+    return v;
+  };
+  place('adam');
+  return x;
+})();
+
+// A viewBox centred on the root, tall enough for the depth and wide enough for
+// whichever side reaches further — so the root is horizontally centred on screen.
+const VIEW = (() => {
+  const xs = LAYOUT.map((n) => X.get(n.slug)!);
+  const ys = LAYOUT.map((n) => n.y);
+  const rootX = X.get('adam')!;
+  const halfW = Math.max(rootX - Math.min(...xs), Math.max(...xs) - rootX) + 130;
+  const top = Math.min(...ys) - 62;
+  const bottom = Math.max(...ys) + 96;
+  return { x: rootX - halfW, y: top, w: 2 * halfW, h: bottom - top };
+})();
+const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
+
 @Component({
   selector: 'app-gateway',
   template: `
@@ -55,7 +96,7 @@ const BRANCH_W = [15, 13, 11, 9, 6.5, 5, 4, 3.4, 3]; // by child depth
       <p class="state err">The library service is unavailable. Is the backend running on :8080?</p>
     } @else {
       <div class="ptree">
-        <svg viewBox="123 0 1600 1510" role="img" aria-label="Genealogy of the prophets">
+        <svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets">
           <defs>
             <radialGradient id="leaf" cx="42%" cy="34%" r="72%">
               <stop offset="0%" stop-color="#1f4a63" /><stop offset="60%" stop-color="#123a52" /><stop offset="100%" stop-color="#0b2537" />
@@ -114,8 +155,10 @@ export class GatewayComponent {
   private router = inject(Router);
   chronicles = httpResource<ChronicleItem[]>(() => '/api/public/chronicles', { defaultValue: [] });
 
+  readonly viewBox = VIEWBOX;
+
   readonly motes = Array.from({ length: 36 }, (_, i) => ({
-    i, x: 60 + Math.random() * 1480, y: 40 + Math.random() * 1420,
+    i, x: VIEW.x + Math.random() * VIEW.w, y: VIEW.y + Math.random() * VIEW.h,
     r: 1 + Math.random() * 2.4, d: +(Math.random() * 8).toFixed(1), dur: +(7 + Math.random() * 8).toFixed(1),
   }));
 
@@ -125,6 +168,7 @@ export class GatewayComponent {
       const c = byslug.get(n.slug);
       return {
         ...n,
+        x: X.get(n.slug)!,
         kind: c ? 'chronicle' : 'connector',
         name: c?.title.replace(/^The Story of Prophet |^The Life of the Prophet /, '') ?? n.connectorName ?? '',
         glyph: c?.glyph ?? '',
@@ -135,13 +179,13 @@ export class GatewayComponent {
   });
 
   branches = computed(() => {
-    const pos = new Map(LAYOUT.map((n) => [n.slug, n]));
     return LAYOUT.filter((n) => n.parent).map((n) => {
-      const p = pos.get(n.parent!)!;
-      const my = (p.y + n.y) / 2;
+      const px = X.get(n.parent!)!, cx = X.get(n.slug)!;
+      const py = LAYOUT.find((m) => m.slug === n.parent)!.y;
+      const my = (py + n.y) / 2;
       return {
         id: n.slug, w: BRANCH_W[Math.min(n.depth, BRANCH_W.length - 1)],
-        d: `M ${p.x} ${p.y} C ${p.x} ${my}, ${n.x} ${my}, ${n.x} ${n.y}`,
+        d: `M ${px} ${py} C ${px} ${my}, ${cx} ${my}, ${cx} ${n.y}`,
         delay: 200 + n.depth * 260,
       };
     });
