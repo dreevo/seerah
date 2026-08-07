@@ -45,7 +45,7 @@ const BRANCH_W = [15, 13, 11, 9, 6.5, 5, 4, 3.4, 3]; // by child depth
 // lands at the true balance point of the whole tree and the branches never bunch
 // up — no matter how lopsided the genealogy is. Only x is computed here; the
 // authored y (depth spacing) is kept.
-const LEAF_GAP = 150;
+const LEAF_GAP = 112;
 const X: Map<string, number> = (() => {
   const kids = new Map<string, TreeNode[]>();
   for (const n of LAYOUT) {
@@ -65,6 +65,13 @@ const X: Map<string, number> = (() => {
     return v;
   };
   place('adam');
+  // Pull the trunk's side-branches (peoples of ʿĀd/Thamūd/Madyan and Lūṭ) in
+  // toward their parent, so they read as short wings instead of being flung to the
+  // edges of Ibrāhīm's huge subtree with long horizontal branches.
+  const wings: Record<string, string> = { hud: 'nuh', salih: 'nuh', lut: 'ibrahim', shuayb: 'ibrahim' };
+  for (const [w, par] of Object.entries(wings)) {
+    if (x.has(w) && x.has(par)) x.set(w, x.get(par)! + 0.4 * (x.get(w)! - x.get(par)!));
+  }
   return x;
 })();
 
@@ -74,7 +81,7 @@ const VIEW = (() => {
   const xs = LAYOUT.map((n) => X.get(n.slug)!);
   const ys = LAYOUT.map((n) => n.y);
   const rootX = X.get('adam')!;
-  const halfW = Math.max(rootX - Math.min(...xs), Math.max(...xs) - rootX) + 130;
+  const halfW = Math.max(rootX - Math.min(...xs), Math.max(...xs) - rootX) + 78;
   const top = Math.min(...ys) - 62;
   const bottom = Math.max(...ys) + 96;
   return { x: rootX - halfW, y: top, w: 2 * halfW, h: bottom - top };
