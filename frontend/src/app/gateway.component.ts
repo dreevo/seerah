@@ -55,7 +55,7 @@ const BRANCH_W = [15, 13, 11, 9, 6.5, 5, 4, 3.4, 3]; // by child depth
       <p class="state err">The library service is unavailable. Is the backend running on :8080?</p>
     } @else {
       <div class="ptree">
-        <svg viewBox="0 0 1600 1510" role="img" aria-label="Genealogy of the prophets">
+        <svg viewBox="123 0 1600 1510" role="img" aria-label="Genealogy of the prophets">
           <defs>
             <radialGradient id="leaf" cx="42%" cy="34%" r="72%">
               <stop offset="0%" stop-color="#1f4a63" /><stop offset="60%" stop-color="#123a52" /><stop offset="100%" stop-color="#0b2537" />
