@@ -7,6 +7,12 @@
       "workTitle": "The Noble Qur'an",
       "author": "Qur'anic Revelation",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "jami-at-tirmidhi",
+      "workTitle": "Jami' at-Tirmidhi",
+      "author": "Muhammad at-Tirmidhi",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -68,7 +74,9 @@
       "verses": [
         "19:12"
       ],
-      "place": "jerusalem"
+      "place": "jerusalem",
+      "source2": "jami-at-tirmidhi",
+      "locator2": "Chapters on Parables, no. 2863 — the five commands Allah charged Yaḥyā to convey to Banī Isrāʾīl (ḥadīth, Jāmiʿ at-Tirmidhī)"
     },
     {
       "slug": "yahya-tenderness-and-purity",

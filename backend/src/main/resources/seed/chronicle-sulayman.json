@@ -7,6 +7,12 @@
       "workTitle": "The Noble Qur'an",
       "author": "Qur'anic Revelation",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-muslim",
+      "workTitle": "Sahih Muslim",
+      "author": "Muslim ibn al-Hajjaj",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -180,6 +186,20 @@
       "place": "jerusalem"
     },
     {
+      "slug": "sulayman-the-two-women",
+      "title": "The Judgment of the Two Women",
+      "certainty": "WELL_ATTESTED",
+      "major": true,
+      "source": "sahih-muslim",
+      "locator": "Book of Judicial Decisions, no. 1720a — Sulaymān's judgment between the two women whose child a wolf had taken",
+      "summary": "Two women each had a son; a wolf carried one away, and they disputed over the survivor. Dāwūd judged the child to the elder. They came to Sulaymān, who said, 'Bring me a knife; I will divide him between you.' The younger cried out, 'Do not! He is her son' — and by her mercy Sulaymān knew the true mother, and gave the child to the younger. So Allah singled out Sulaymān with understanding of the case.",
+      "why": "The Qur'an says Allah gave Sulaymān and Dāwūd knowledge and made Sulaymān understand the case (21:78-79); this sound ḥadīth shows that understanding in action — wisdom that reads the heart, not only the claim.",
+      "people": [
+        "sulayman"
+      ],
+      "verses": []
+    },
+    {
       "slug": "sulayman-the-death",
       "title": "The Death of Sulayman",
       "certainty": "MUTAWATIR",
@@ -236,6 +256,7 @@
         "sulayman-the-hoopoe",
         "sulayman-the-throne-of-bilqis",
         "sulayman-the-queen-submits",
+        "sulayman-the-two-women",
         "sulayman-the-death"
       ]
     },

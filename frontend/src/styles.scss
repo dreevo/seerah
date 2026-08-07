@@ -246,13 +246,22 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 }
 .pane h2 { font-family: 'Cormorant Garamond', serif; font-size: 25px; font-weight: 500; color: var(--gold-soft); margin-bottom: 16px; display: flex; align-items: center; gap: 11px; }
 .pane h2::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
-.pane p { color: #D3DDE6; font-size: 17px; line-height: 1.9; font-weight: 300; }
+.pane p { color: #DDE7F0; font-size: 17.5px; line-height: 1.85; font-weight: 400; }
 .pane .note { color: var(--muted); font-size: 13px; margin-top: 14px; font-style: italic; }
+
+/* educational highlight — the takeaway "Why" reads as a distinct lesson callout */
+.pane.insight { position: relative; border-color: rgba(200, 164, 75, .42); border-left: 4px solid var(--gold);
+  background: linear-gradient(150deg, rgba(200, 164, 75, .13), rgba(200, 164, 75, .03)); }
+.insight-tag { display: inline-block; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800;
+  color: var(--navy); background: linear-gradient(135deg, var(--gold-soft), var(--gold)); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
+.pane.insight h2 { color: var(--gold-soft); }
+.pane.insight p { color: #F1F5FA; }
 
 /* verse */
 .verse { background: linear-gradient(155deg, var(--parch), var(--sand-2)); border: 1px solid var(--gold); border-radius: 5px; padding: 24px 26px; margin: 14px 0; box-shadow: var(--shadow); }
 .v-ar { font-family: 'Amiri', serif; font-size: 28px; line-height: 2.15; color: #2A1F0E; text-align: right; margin-bottom: 16px; }
-.v-tr { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.75; color: #43361F; font-style: italic; margin-bottom: 12px; }
+.v-tr { font-family: 'Cormorant Garamond', serif; font-size: 19.5px; line-height: 1.9; color: #3A2E19; font-style: italic; margin-bottom: 14px;
+  background: linear-gradient(transparent 62%, rgba(200, 164, 75, .32) 62%); padding: 0 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .v-cite { font-size: 11.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; }
 
 /* grids / minis */
@@ -266,20 +275,9 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .mini .k { font-size: 10.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
 .mini .r { font-size: 13.5px; color: #9DACBB; line-height: 1.6; font-weight: 300; }
 
-/* calligraphy — the key āyah rendered as an illuminated art panel */
-.calli { position: relative; margin: 6px 0 2px; padding: 46px 40px 34px; border-radius: 8px; overflow: hidden;
-  background: radial-gradient(ellipse at 50% 18%, rgba(200, 164, 75, .16), transparent 68%),
-              linear-gradient(160deg, #0c2135, #091827);
-  border: 1px solid rgba(200, 164, 75, .35);
-  box-shadow: inset 0 0 80px -34px rgba(200, 164, 75, .55), var(--shadow); }
-.calli-ar { font-family: 'Amiri', serif; font-size: clamp(27px, 4.6vw, 42px); line-height: 2.15; text-align: center;
-  color: #ECD9A0; text-shadow: 0 2px 22px rgba(200, 164, 75, .35); }
-.calli-ref { margin-top: 22px; text-align: center; font-family: 'Amiri', serif; font-size: 15px; letter-spacing: .4px; color: var(--gold-soft); opacity: .82; }
-.calli-corner { position: absolute; width: 26px; height: 26px; border: 2px solid var(--gold); opacity: .5; }
-.calli-corner.tl { top: 13px; left: 13px; border-right: 0; border-bottom: 0; border-top-left-radius: 7px; }
-.calli-corner.tr { top: 13px; right: 13px; border-left: 0; border-bottom: 0; border-top-right-radius: 7px; }
-.calli-corner.bl { bottom: 13px; left: 13px; border-right: 0; border-top: 0; border-bottom-left-radius: 7px; }
-.calli-corner.br { bottom: 13px; right: 13px; border-left: 0; border-top: 0; border-bottom-right-radius: 7px; }
+/* the first verse of the Revelation section stands out as the illuminated āyah */
+.verse:first-of-type { background: radial-gradient(ellipse at 50% 12%, rgba(255, 249, 235, 1), var(--sand-2));
+  box-shadow: 0 0 0 1px rgba(200, 164, 75, .5) inset, var(--shadow); }
 
 /* sources */
 .src { display: flex; justify-content: space-between; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(200, 164, 75, .12); font-size: 14.5px; }

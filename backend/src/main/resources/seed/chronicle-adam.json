@@ -7,6 +7,12 @@
       "workTitle": "The Noble Qur'an",
       "author": "Qur'anic Revelation",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -60,7 +66,9 @@
         "15:29",
         "38:71",
         "38:72"
-      ]
+      ],
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of the Prophets, no. 3326 — Allah created Ādam sixty cubits tall, and the first greeting of salām"
     },
     {
       "slug": "adam-the-angels-and-iblis",

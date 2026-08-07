@@ -7,6 +7,12 @@
       "workTitle": "The Noble Qur'an",
       "author": "Qur'anic Revelation",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -96,7 +102,9 @@
         "21:87",
         "21:88"
       ],
-      "place": "the-open-sea"
+      "place": "the-open-sea",
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of the Prophets, no. 3395 — the Prophet ﷺ: 'None should say I am better than Yūnus ibn Mattā'"
     },
     {
       "slug": "yunus-cast-onto-the-shore",

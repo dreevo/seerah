@@ -68,7 +68,11 @@ interface SectionRef { id: string; label: string; icon: string; }
             <section id="what" data-sec="what" class="pane"><h2><app-icon name="info" [size]="18" />What Happened</h2><p>{{ e.summary }}</p></section>
           }
           @if (e.why) {
-            <section id="why" data-sec="why" class="pane"><h2><app-icon name="explore" [size]="18" />Why It Happened</h2><p>{{ e.why }}</p></section>
+            <section id="why" data-sec="why" class="pane insight">
+              <div class="insight-tag">The Lesson</div>
+              <h2><app-icon name="explore" [size]="18" />Why It Happened</h2>
+              <p>{{ e.why }}</p>
+            </section>
           }
 
           @if (e.verses.length) {
@@ -107,20 +111,6 @@ interface SectionRef { id: string; label: string; icon: string; }
             </section>
           }
 
-          @if (keyVerse(); as kv) {
-            <section id="calligraphy" data-sec="calligraphy" class="pane">
-              <h2><app-icon name="verse" [size]="18" />The Āyah in Calligraphy</h2>
-              <figure class="calli">
-                <span class="calli-corner tl" aria-hidden="true"></span>
-                <span class="calli-corner tr" aria-hidden="true"></span>
-                <span class="calli-corner bl" aria-hidden="true"></span>
-                <span class="calli-corner br" aria-hidden="true"></span>
-                <div class="calli-ar" dir="rtl">{{ kv.textUthmani }}</div>
-                <figcaption class="calli-ref">سورة {{ kv.surahNameAr }} · Surah {{ kv.surahNameEn }} {{ kv.reference }}</figcaption>
-              </figure>
-              <p class="note">The heart of the event, illuminated in the words of the revelation itself — the written word as art, never a depiction of any person.</p>
-            </section>
-          }
 
           @if (e.relatedEvents.length) {
             <section id="timeline" data-sec="timeline" class="pane">
@@ -177,31 +167,29 @@ export class EventDetailComponent {
     if (e.verses.length) s.push({ id: 'revelation', label: 'Revelation', icon: 'verse' });
     if (e.people.length) s.push({ id: 'people', label: 'Companions', icon: 'companions' });
     if (e.places.length) s.push({ id: 'geography', label: 'Geography', icon: 'waypoint' });
-    if (e.verses.length) s.push({ id: 'calligraphy', label: 'Calligraphy', icon: 'verse' });
     if (e.relatedEvents.length) s.push({ id: 'timeline', label: 'Timeline', icon: 'timeline' });
     if (e.sources.length) s.push({ id: 'sources', label: 'Sources', icon: 'source' });
     return s;
   });
 
-  /** The key āyah rendered as calligraphy — the first verse tied to the event, if any. */
-  keyVerse = computed(() => this.event.value()?.verses?.[0] ?? null);
-
   /** What the event is grounded in, read from its real citations — shown as vivid chips. */
   grounding = computed(() => {
     const e = this.event.value();
     if (!e) return [] as { key: string; text: string; icon: string; cls: string; title: string }[];
+    const isQuran = (t: string) => /qur'?an|quran/i.test(t);
+    const isHadith = (t: string) => /bukhari|muslim|tirmidhi|nasa|abu[ -]?dawud|ibn[ -]?majah|muwatta|musnad|sunan/i.test(t);
     let quran = false, sahih = false, hadith = false, classical = false;
     for (const s of e.sources) {
-      if (/qur'?an|quran/i.test(s.workTitle)) quran = true;
-      else if (s.grade === 'SAHIH') sahih = true;
-      else if (s.grade) hadith = true;
+      if (isQuran(s.workTitle)) quran = true;
+      else if (isHadith(s.workTitle) && s.grade === 'SAHIH') sahih = true;
+      else if (isHadith(s.workTitle)) hadith = true;
       else classical = true;
     }
     const out: { key: string; text: string; icon: string; cls: string; title: string }[] = [];
     if (quran) out.push({ key: 'quran', text: 'Qur’ān', icon: 'verse', cls: 'g-quran', title: 'Grounded in the Qur’an — mass-transmitted revelation' });
-    if (sahih) out.push({ key: 'sahih', text: 'Ṣaḥīḥ ḥadīth', icon: 'source', cls: 'g-sahih', title: 'Supported by a sound (ṣaḥīḥ) narration' });
-    if (hadith) out.push({ key: 'hadith', text: 'Ḥadīth', icon: 'source', cls: 'g-hadith', title: 'Supported by a graded ḥadīth narration' });
-    if (classical) out.push({ key: 'classical', text: 'Classical source', icon: 'source', cls: 'g-classical', title: 'Drawn from a classical scholarly work' });
+    if (sahih) out.push({ key: 'sahih', text: 'Ṣaḥīḥ ḥadīth', icon: 'source', cls: 'g-sahih', title: 'Supported by a sound (ṣaḥīḥ) narration from al-Bukhārī or Muslim' });
+    if (hadith) out.push({ key: 'hadith', text: 'Ḥadīth', icon: 'source', cls: 'g-hadith', title: 'Supported by a narration from a Sunan collection' });
+    if (classical) out.push({ key: 'classical', text: 'Classical source', icon: 'source', cls: 'g-classical', title: 'Drawn from a classical scholarly work (sīra)' });
     return out;
   });
 
