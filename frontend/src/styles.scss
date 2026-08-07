@@ -153,6 +153,32 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .zoom .lvl { min-width: 84px; text-align: center; color: var(--gold-soft); font-weight: 500; }
 .tl-hint { text-align: center; color: #5F6D7B; font-size: 10.5px; letter-spacing: 1.3px; padding: 2px 20px 40px; }
 
+/* the detached "?" branch — events confirmed by the sources but not placed in time */
+.undated-band { max-width: 1180px; margin: 4px auto 46px; padding: 0 22px; }
+.undated-band .ub-head { display: flex; align-items: flex-start; gap: 16px; padding: 20px 0 18px;
+  border-top: 2px dashed rgba(200, 164, 75, .38); }
+.ub-q { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
+  font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: var(--gold);
+  background: rgba(200, 164, 75, .1); border: 1.5px solid rgba(200, 164, 75, .5); }
+.ub-title { font-family: 'Cormorant Garamond', serif; font-size: 21px; color: var(--gold-soft); font-weight: 500; }
+.ub-note { color: var(--muted); font-size: 13.5px; line-height: 1.6; margin-top: 4px; max-width: 74ch; }
+.ub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+.ub-card { position: relative; text-align: left; cursor: pointer; background: linear-gradient(160deg, rgba(20, 42, 62, .72), rgba(12, 28, 44, .72));
+  border: 1px solid var(--line); border-left: 3px solid rgba(200, 164, 75, .55); border-radius: 7px;
+  padding: 15px 16px 14px; color: inherit; transition: transform .14s, border-color .14s, box-shadow .14s; }
+.ub-card:hover { transform: translateY(-2px); border-color: rgba(200, 164, 75, .7); box-shadow: var(--shadow); }
+.ub-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.ub-mark { position: absolute; top: 11px; right: 12px; font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-weight: 700; color: var(--gold); opacity: .8; }
+.ub-card .ttl { font-family: 'Cormorant Garamond', serif; font-size: 18.5px; line-height: 1.25; color: #EAF1F7;
+  margin: 2px 34px 12px 0; }
+.ub-card .cat { font-size: 9.5px; letter-spacing: .7px; text-transform: uppercase; font-weight: 700;
+  padding: 4px 9px; border-radius: 3px; }
+.ub-card .keytag { position: absolute; bottom: -8px; left: 14px; font-size: 8px; letter-spacing: 1px;
+  background: var(--gold); color: var(--navy); padding: 3px 7px; border-radius: 3px; font-weight: 700;
+  text-transform: uppercase; }
+@media (max-width: 560px) { .ub-grid { grid-template-columns: 1fr 1fr; } }
+
 /* zoomable timeline canvas — full-bleed, breaks out of the narrow column */
 .tl-wrap { position: relative; width: 100vw; margin-left: calc(50% - 50vw);
   overflow-x: auto; overflow-y: hidden; padding: 18px clamp(24px, 6vw, 96px) 34px;

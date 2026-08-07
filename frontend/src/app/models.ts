@@ -20,6 +20,8 @@ export interface TimelineItem {
   gregYear: number | null;
   certainty: string;
   major: boolean;
+  /** True when no source fixes this event's timing — shown off the dated spine. */
+  undated: boolean;
 }
 
 export interface RelatedPerson {

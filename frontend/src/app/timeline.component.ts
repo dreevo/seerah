@@ -47,6 +47,7 @@ const AXIS_Y = 340;
     } @else if (visible().length === 0) {
       <p class="state">No events published yet in this chronicle.</p>
     } @else {
+      @if (spine().length) {
       <div class="tl-wrap">
         <div class="tl" [style.width.px]="width()">
           @for (b of bands(); track b.name + b.left) {
@@ -72,7 +73,30 @@ const AXIS_Y = 340;
           }
         </div>
       </div>
-      <div class="tl-hint">{{ visible().length }} events · scroll sideways to explore · click any event to open it</div>
+      <div class="tl-hint">{{ spine().length }} dated events · scroll sideways to explore · click any event to open it</div>
+      }
+
+      @if (undatedItems().length) {
+        <div class="undated-band">
+          <div class="ub-head">
+            <span class="ub-q">?</span>
+            <div>
+              <div class="ub-title">Confirmed — timing not given by the sources</div>
+              <div class="ub-note">These events are established by the Qur’ān or authentic ḥadīth, but no source places them at a point in time, so they sit off the dated line.</div>
+            </div>
+          </div>
+          <div class="ub-grid">
+            @for (u of undatedItems(); track u.id) {
+              <button class="ub-card" (click)="open(u)">
+                <span class="ub-mark">?</span>
+                @if (u.major) { <span class="keytag">✦ Pivotal</span> }
+                <div class="ttl">{{ u.title }}</div>
+                <span class="cat c-{{ u.certainty }}">{{ label(u.certainty) }}</span>
+              </button>
+            }
+          </div>
+        </div>
+      }
     }
   `,
 })
@@ -102,15 +126,20 @@ export class TimelineComponent {
     return all.filter((item, i) => er.test(item, i, all.length));
   });
 
+  /** The dated spine — events whose "when" the sources fix. Drives all positioning. */
+  spine = computed<TimelineItem[]>(() => this.visible().filter((i) => !i.undated));
+  /** Confirmed events with no source-given time — rendered on the detached "?" branch. */
+  undatedItems = computed<TimelineItem[]>(() => this.visible().filter((i) => i.undated));
+
   private eraOf(item: TimelineItem, index: number, total: number): Era | undefined {
     return this.eras().find((e) => e.test(item, index, total));
   }
 
   private x(i: number): number { return PAD + i * SPACING[this.zoom()]; }
-  width = computed(() => Math.max(1200, this.x(this.visible().length - 1) + PAD));
+  width = computed(() => Math.max(1200, this.x(this.spine().length - 1) + PAD));
 
   nodes = computed<Node[]>(() => {
-    const vis = this.visible();
+    const vis = this.spine();
     return vis.map((item, i) => {
       const up = i % 2 === 0;
       const long = up ? i % 4 === 0 : i % 4 === 1;
@@ -122,8 +151,8 @@ export class TimelineComponent {
 
   // Group consecutive visible events sharing an era label into period bands.
   bands = computed<Band[]>(() => {
-    const vis = this.visible();
-    if (!this.eras().length) return [];
+    const vis = this.spine();
+    if (!this.eras().length || !vis.length) return [];
     const out: Band[] = [];
     const half = SPACING[this.zoom()] / 2;
     let start = 0;

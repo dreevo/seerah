@@ -12,7 +12,8 @@ public final class PublicViews {
                                 String blurb, String glyph, String kind, int ordinal, int eventCount) { }
 
     public record TimelineItem(UUID id, String slug, String title,
-                               Integer hijriYear, Integer gregYear, String certainty, boolean major) { }
+                               Integer hijriYear, Integer gregYear, String certainty,
+                               boolean major, boolean undated) { }
 
     public record RelatedPerson(UUID id, String slug, String name, String nameArabic,
                                 String role, String relation) { }

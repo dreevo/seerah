@@ -64,13 +64,15 @@ public class PublicReadController {
     private final SearchPort search;
     private final LearningPathReadPort paths;
     private final HadithTexts hadith;
+    private final UndatedEvents undated;
 
     public PublicReadController(EventReadPort events, ChronicleReadPort chronicles,
                                 RelationshipReadPort relationships,
                                 PersonReadPort people, PlaceReadPort places, RouteReadPort routes,
                                 VerseReadPort verses, CitationDirectory citations,
                                 SearchPort search,
-                                LearningPathReadPort paths, HadithTexts hadith) {
+                                LearningPathReadPort paths, HadithTexts hadith,
+                                UndatedEvents undated) {
         this.events = events;
         this.chronicles = chronicles;
         this.relationships = relationships;
@@ -82,6 +84,7 @@ public class PublicReadController {
         this.search = search;
         this.paths = paths;
         this.hadith = hadith;
+        this.undated = undated;
     }
 
     /** The library of chronicles the reader can choose between (the Seerah + prophets' stories). */
@@ -106,7 +109,8 @@ public class PublicReadController {
                                        @RequestParam(required = false) String chronicle) {
         return events.publishedTimeline(locale, chronicle).stream()
                 .map(e -> new TimelineItem(e.id(), e.slug(), e.title(),
-                        e.hijriYear(), e.gregYear(), e.certainty(), e.major()))
+                        e.hijriYear(), e.gregYear(), e.certainty(), e.major(),
+                        undated.isUndated(e.slug())))
                 .toList();
     }
 
