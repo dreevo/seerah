@@ -15,8 +15,9 @@ interface SearchHit {
   imports: [RouterLink],
   template: `
     <section class="hero" style="padding-bottom:18px">
-      <div class="eyebrow">Search this Chronicle</div>
-      <h1>Find an <em>event</em> or <em>person</em></h1>
+      <div class="eyebrow">Smart Search</div>
+      <h1>Search by <em>meaning</em></h1>
+      <p class="sub">Describe what you're looking for in your own words — it understands the idea, not just the exact word.</p>
     </section>
 
     <div class="search-box">
@@ -24,17 +25,17 @@ interface SearchHit {
         class="search-in"
         [value]="q()"
         (input)="q.set($any($event.target).value)"
-        placeholder="Try “Badr”, “Hamza”, “amnesty”, “Hijrah”…"
+        placeholder="Try “who split the sea?”, “leaving Makkah in secret”, “the patient prophet”…"
         autofocus
       />
     </div>
 
     @if (q().trim().length < 2) {
-      <p class="state">Type at least two letters. Answers come only from published, cited content.</p>
+      <p class="state">Ask in plain language. Results are ranked by meaning, drawn only from published, cited content.</p>
     } @else if (results.isLoading()) {
       <p class="state">Searching…</p>
     } @else if (results.value()!.length === 0) {
-      <p class="state">Nothing in the reviewed corpus matches “{{ q() }}”.</p>
+      <p class="state">Nothing in the corpus is close in meaning to “{{ q() }}”.</p>
     } @else {
       <div class="results">
         @for (h of results.value(); track h.type + h.slug) {

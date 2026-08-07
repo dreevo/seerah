@@ -3,7 +3,6 @@ package com.seerah.publicapi;
 import com.seerah.content.api.ChronicleReadPort;
 import com.seerah.content.api.EventReadPort;
 import com.seerah.content.api.RelatedEntity;
-import com.seerah.assistant.api.AssistantPort;
 import com.seerah.content.api.LearningPathReadPort;
 import com.seerah.content.api.LearningPathViews.PathDetail;
 import com.seerah.content.api.LearningPathViews.PathSummary;
@@ -63,14 +62,13 @@ public class PublicReadController {
     private final VerseReadPort verses;
     private final CitationDirectory citations;
     private final SearchPort search;
-    private final AssistantPort assistant;
     private final LearningPathReadPort paths;
 
     public PublicReadController(EventReadPort events, ChronicleReadPort chronicles,
                                 RelationshipReadPort relationships,
                                 PersonReadPort people, PlaceReadPort places, RouteReadPort routes,
                                 VerseReadPort verses, CitationDirectory citations,
-                                SearchPort search, AssistantPort assistant,
+                                SearchPort search,
                                 LearningPathReadPort paths) {
         this.events = events;
         this.chronicles = chronicles;
@@ -81,7 +79,6 @@ public class PublicReadController {
         this.verses = verses;
         this.citations = citations;
         this.search = search;
-        this.assistant = assistant;
         this.paths = paths;
     }
 
@@ -216,27 +213,6 @@ public class PublicReadController {
             }
         }
         return hits;
-    }
-
-    @GetMapping("/ask")
-    public AssistantPort.Answer ask(@RequestParam(defaultValue = "") String q,
-                                    @RequestParam(required = false) String chronicle) {
-        AssistantPort.Answer a = assistant.ask(q);
-        if (chronicle == null || !a.answered()) return a;
-
-        // Scope the grounded answer to this chronicle: keep only passages whose
-        // event belongs to it, and only the sources those passages still cite.
-        Set<String> slugs = new HashSet<>();
-        for (var e : events.publishedTimeline("en", chronicle)) slugs.add(e.slug());
-        var passages = a.passages().stream().filter(p -> slugs.contains(p.eventSlug())).toList();
-        if (passages.isEmpty()) {
-            return new AssistantPort.Answer(false,
-                    "The reviewed corpus for this chronicle has nothing on that yet.", List.of(), List.of());
-        }
-        Set<Integer> used = new HashSet<>();
-        for (var p : passages) used.addAll(p.markers());
-        var sources = a.sources().stream().filter(s -> used.contains(s.index())).toList();
-        return new AssistantPort.Answer(true, a.message(), passages, sources);
     }
 
     @GetMapping("/paths")

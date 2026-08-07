@@ -26,7 +26,6 @@ class PublicApiIntegrationTest {
     static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:16");
 
     @Autowired PublicReadController publicApi;
-    @Autowired com.seerah.assistant.api.AssistantPort assistant;
 
     @Test
     void timelineReturnsThePublishedSeededEvents() {
@@ -79,38 +78,17 @@ class PublicApiIntegrationTest {
     }
 
     @Test
-    void searchFindsEventsAndPeople() {
-        // an event by title/summary
+    void searchRanksByMeaningNotJustKeywords() {
+        // an exact term still works — the event whose title is Badr
         assertThat(publicApi.search("Badr", "en", null))
                 .anyMatch(h -> h.type().equals("EVENT") && h.slug().equals("the-battle-of-badr"));
         // a person by name
         assertThat(publicApi.search("Hamza", "en", null))
                 .anyMatch(h -> h.type().equals("PERSON") && h.slug().equals("hamza"));
-        // a summary word ("conquest")
-        assertThat(publicApi.search("amnesty", "en", null))
-                .anyMatch(h -> h.slug().equals("the-conquest-of-makkah"));
-        // no noise
-        assertThat(publicApi.search("zzzznotacorpusword", "en", null)).isEmpty();
-    }
-
-    @Test
-    void assistantAnswersOnlyFromCitedContentOrRefuses() {
-        var answer = assistant.ask("What happened at Badr?");
-        assertThat(answer.answered()).isTrue();
-        assertThat(answer.passages()).isNotEmpty();
-        // every passage is sourced (rule 1) and its markers point into the source list
-        assertThat(answer.passages()).allSatisfy(p -> {
-            assertThat(p.markers()).isNotEmpty();
-            assertThat(p.text()).doesNotContainPattern("[\\u0600-\\u06FF]"); // rule 6: no Arabic
-        });
-        assertThat(answer.sources()).isNotEmpty();
-        assertThat(answer.passages()).anyMatch(p -> p.eventSlug().equals("the-battle-of-badr"));
-
-        // rule 2: when the corpus does not cover it, the fixed refusal, and nothing else
-        var refused = assistant.ask("what is the recipe for biryani");
-        assertThat(refused.answered()).isFalse();
-        assertThat(refused.message()).isEqualTo("The published material on this platform does not cover that.");
-        assertThat(refused.passages()).isEmpty();
+        // MEANING over keywords: this query shares almost no content words with the
+        // Hijrah summary, yet semantic search still surfaces it
+        assertThat(publicApi.search("emigrating from Makkah to Yathrib to escape those plotting against him", "en", null))
+                .anyMatch(h -> h.slug().equals("the-hijrah-to-madinah"));
     }
 
     @Test

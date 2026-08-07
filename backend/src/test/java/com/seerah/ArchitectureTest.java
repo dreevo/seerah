@@ -92,12 +92,4 @@ class ArchitectureTest {
     static final ArchRule search_adapters_are_private =
             noClasses().that().resideOutsideOfPackage("com.seerah.search..")
                     .should().dependOnClassesThat().resideInAPackage("com.seerah.search.adapter..");
-
-    /** §5.7 — the assistant retrieves and never asserts: it has no store of its own. */
-    @ArchTest
-    static final ArchRule assistant_has_no_persistence =
-            noClasses().that().resideInAPackage("com.seerah.assistant..")
-                    .should().dependOnClassesThat().resideInAnyPackage(
-                            "jakarta.persistence..",
-                            "org.springframework.data..");
 }

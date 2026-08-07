@@ -44,9 +44,14 @@ dependencies {
     // --- operations ---
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
-    // The service is read-only (public GETs only) and search is a live Postgres
-    // ILIKE over the fixed corpus — so no Spring Security and no second search
-    // engine. Both were removed with the write/governance pipeline.
+    // --- semantic search: a small on-device sentence-embedding model (MiniLM),
+    //     run locally via ONNX Runtime with the HuggingFace tokenizer. $0 per query,
+    //     no external service. Both native libs ship linux-aarch64 for the container.
+    implementation("com.microsoft.onnxruntime:onnxruntime:1.20.0")
+    implementation("ai.djl.huggingface:tokenizers:0.30.0")
+
+    // The service is read-only (public GETs only); no Spring Security, no second
+    // search engine — semantic search runs in-process over the fixed corpus.
 
     // --- test: real Postgres via Testcontainers, boundaries via ArchUnit ---
     testImplementation("org.springframework.boot:spring-boot-starter-test")
