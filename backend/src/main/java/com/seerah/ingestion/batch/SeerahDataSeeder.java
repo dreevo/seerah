@@ -402,25 +402,34 @@ public class SeerahDataSeeder implements ApplicationRunner {
     }
 
     /**
-     * A hadith grade applies only to hadith. The Qur'an is mass-transmitted
-     * revelation (its certainty is carried by the event's MUTAWATIR tag, not an
-     * isnād grade), and the classical sīra is biography, not a graded hadith — so
-     * both are left ungraded. Only the authenticated collections carry SAHIH.
+     * A ṣaḥīḥ grade may be asserted from the collection name alone ONLY for the two
+     * Ṣaḥīḥ collections — al-Bukhārī and Muslim — where every ḥadīth met the
+     * compilers' authenticity criteria by definition. Every other collection (the
+     * four Sunan, Muwaṭṭaʾ, Musnad Aḥmad) mixes ṣaḥīḥ, ḥasan and ḍaʿīf, so the grade
+     * must be established per narration, not presumed; here it is left null (no
+     * asserted grade) rather than overstated. The Qur'an and the classical sīra are
+     * not ḥadīth and carry no grade.
      */
     private static HadithGrade gradeFor(String slug) {
         String s = slug == null ? "" : slug.toLowerCase();
-        if (s.contains("bukhari") || s.contains("muslim") || s.contains("tirmidhi")
-                || s.contains("nasai") || s.contains("abu-dawud") || s.contains("ibn-majah")
-                || s.contains("muwatta") || s.contains("ahmad") || s.contains("hadith")) {
+        if (s.contains("bukhari") || s.contains("muslim")) {
             return HadithGrade.SAHIH;
         }
         return null;
     }
 
+    /** A ḥadīth collection (as opposed to Qur'an or sīra) — sets the locator kind. */
+    private static boolean isHadithCollection(String slug) {
+        String s = slug == null ? "" : slug.toLowerCase();
+        return s.contains("bukhari") || s.contains("muslim") || s.contains("tirmidhi")
+                || s.contains("nasai") || s.contains("abu-dawud") || s.contains("ibn-majah")
+                || s.contains("muwatta") || s.contains("ahmad");
+    }
+
     private static String locatorKindFor(String slug) {
         String s = slug == null ? "" : slug.toLowerCase();
         if (s.contains("quran")) return "AYAH";
-        if (gradeFor(slug) != null) return "HADITH";
+        if (isHadithCollection(slug)) return "HADITH";
         return "SECTION";
     }
 
