@@ -44,15 +44,7 @@
       "verses": [
         "19:56"
       ],
-      "place": "the-land-of-idris",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/idris/idris-man-of-truth-calligraphy.svg",
-          "caption": "Calligraphic panel — “A Man of Truth and a Prophet” (Maryam 19:56).",
-          "attribution": "Seerah Platform — original calligraphy"
-        }
-      ]
+      "place": "the-land-of-idris"
     },
     {
       "slug": "idris-raised-high",
@@ -69,15 +61,7 @@
       "verses": [
         "19:57"
       ],
-      "place": "the-land-of-idris",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/idris/idris-raised-high-calligraphy.svg",
-          "caption": "Calligraphic panel — “And We raised him to a high station” (Maryam 19:57).",
-          "attribution": "Seerah Platform — original calligraphy"
-        }
-      ]
+      "place": "the-land-of-idris"
     },
     {
       "slug": "idris-among-the-patient",
@@ -95,15 +79,7 @@
         "21:85",
         "21:86"
       ],
-      "place": "the-land-of-idris",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/idris/idris-among-the-patient-calligraphy.svg",
-          "caption": "Calligraphic panel — “All were of the patient” (al-Anbiya 21:85).",
-          "attribution": "Seerah Platform — original calligraphy"
-        }
-      ]
+      "place": "the-land-of-idris"
     }
   ],
   "routes": [],

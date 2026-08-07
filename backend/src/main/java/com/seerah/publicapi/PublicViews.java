@@ -29,8 +29,6 @@ public final class PublicViews {
 
     public record RouteLine(String slug, boolean conjectural, Double distanceKm, List<MapPoint> points) { }
 
-    public record MediaItem(String kind, String caption, String attribution, String licence, String sourceUrl) { }
-
     public record SourceItem(String workTitle, String tier, String locator, String quote, String grade) { }
 
     public record EventDetail(
@@ -41,7 +39,6 @@ public final class PublicViews {
             List<RelatedVerse> verses,
             List<RelatedPlace> places,
             List<RouteLine> routes,
-            List<MediaItem> media,
             List<RelatedEventItem> relatedEvents,
             List<SourceItem> sources) { }
 

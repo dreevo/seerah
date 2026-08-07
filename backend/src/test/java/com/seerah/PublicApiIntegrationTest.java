@@ -60,15 +60,9 @@ class PublicApiIntegrationTest {
         assertThat(badr.places()).extracting(p -> p.name()).contains("Badr");
         assertThat(badr.places().get(0).latitude()).isNotNull();
 
-        // it is cited: publishing is impossible without a supporting source (§13.2)
+        // it is cited: publishing is impossible without a supporting source (§13.2),
+        // and its sources include the sīra plus a modern secondary work
         assertThat(badr.sources()).isNotEmpty();
-
-        // a stylised illustration, always attributed and never a person (§6.5, §12.9)
-        assertThat(badr.media()).isNotEmpty();
-        assertThat(badr.media().get(0).kind()).isEqualTo("MAP");
-        assertThat(badr.media().get(0).attribution()).isNotBlank();
-
-        // and its sources — two of them, primary + secondary
         assertThat(badr.sources()).extracting(s -> s.workTitle())
                 .contains("As-Sirah an-Nabawiyyah", "Ar-Raheeq Al-Makhtum");
     }

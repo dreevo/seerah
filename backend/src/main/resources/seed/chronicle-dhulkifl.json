@@ -45,15 +45,7 @@
         "21:85",
         "21:86"
       ],
-      "place": "land-of-dhulkifl",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/dhulkifl/dhulkifl-among-the-patient-calligraphy.svg",
-          "caption": "Calligraphic panel — “All were of the patient” (al-Anbiya 21:85).",
-          "attribution": "Seerah Platform — original calligraphy"
-        }
-      ]
+      "place": "land-of-dhulkifl"
     },
     {
       "slug": "dhulkifl-among-the-outstanding",
@@ -70,15 +62,7 @@
       "verses": [
         "38:48"
       ],
-      "place": "land-of-dhulkifl",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/dhulkifl/dhulkifl-among-the-outstanding-calligraphy.svg",
-          "caption": "Calligraphic panel — “All are among the outstanding” (Sad 38:48).",
-          "attribution": "Seerah Platform — original calligraphy"
-        }
-      ]
+      "place": "land-of-dhulkifl"
     }
   ],
   "routes": [],

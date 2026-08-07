@@ -56,21 +56,7 @@
       "verses": [
         "3:37"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/zakariyya/zakariyya-guardian-of-maryam-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Guardian of Maryam”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/zakariyya/zakariyya-guardian-of-maryam-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Guardian of Maryam.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "zakariyya-prays-for-an-heir",
@@ -90,21 +76,7 @@
         "19:5",
         "3:38"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/zakariyya/zakariyya-prays-for-an-heir-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Prayer for an Heir”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/zakariyya/zakariyya-prays-for-an-heir-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Prayer for an Heir.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "zakariyya-glad-tidings-of-yahya",
@@ -125,21 +97,7 @@
         "19:9",
         "3:39"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/zakariyya/zakariyya-glad-tidings-of-yahya-calligraphy.svg",
-          "caption": "Calligraphic panel — “Glad Tidings of Yaḥyā”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/zakariyya/zakariyya-glad-tidings-of-yahya-diagram.svg",
-          "caption": "Schematic diagram of the setting — Glad Tidings of Yaḥyā.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "zakariyya-the-sign-of-silence",
@@ -157,21 +115,7 @@
         "19:11",
         "3:41"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/zakariyya/zakariyya-the-sign-of-silence-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Sign of Silence”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/zakariyya/zakariyya-the-sign-of-silence-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Sign of Silence.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     }
   ],
   "routes": [],

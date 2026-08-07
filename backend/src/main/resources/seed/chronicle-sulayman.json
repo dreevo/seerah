@@ -80,21 +80,7 @@
         "27:16",
         "38:30"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/sulayman/sulayman-inherits-dawud-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Inheritance of Dawud”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/sulayman/sulayman-inherits-dawud-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Inheritance of Dawud.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "sulayman-wind-and-jinn",
@@ -114,21 +100,7 @@
         "34:12",
         "34:13"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/sulayman/sulayman-wind-and-jinn-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Wind and the Jinn”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/sulayman/sulayman-wind-and-jinn-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Wind and the Jinn.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "sulayman-valley-of-the-ants",
@@ -146,21 +118,7 @@
         "27:18",
         "27:19"
       ],
-      "place": "valley-of-the-ants",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/sulayman/sulayman-valley-of-the-ants-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Valley of the Ants”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/sulayman/sulayman-valley-of-the-ants-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Valley of the Ants.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "valley-of-the-ants"
     },
     {
       "slug": "sulayman-the-hoopoe",
@@ -180,21 +138,7 @@
         "27:24",
         "27:26"
       ],
-      "place": "saba",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/sulayman/sulayman-the-hoopoe-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Hoopoe and the News of Sheba”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/sulayman/sulayman-the-hoopoe-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Hoopoe and the News of Sheba.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "saba"
     },
     {
       "slug": "sulayman-the-throne-of-bilqis",
@@ -214,21 +158,7 @@
         "27:39",
         "27:40"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/sulayman/sulayman-the-throne-of-bilqis-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Throne Brought in an Instant”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/sulayman/sulayman-the-throne-of-bilqis-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Throne Brought in an Instant.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "sulayman-the-queen-submits",
@@ -247,21 +177,7 @@
         "27:42",
         "27:44"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/sulayman/sulayman-the-queen-submits-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Queen Submits to Allah”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/sulayman/sulayman-the-queen-submits-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Queen Submits to Allah.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "sulayman-the-death",
@@ -279,21 +195,7 @@
       "verses": [
         "34:14"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/sulayman/sulayman-the-death-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Death of Sulayman”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/sulayman/sulayman-the-death-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Death of Sulayman.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     }
   ],
   "routes": [

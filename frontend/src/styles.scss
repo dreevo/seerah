@@ -255,13 +255,20 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .mini .k { font-size: 10.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
 .mini .r { font-size: 13.5px; color: #9DACBB; line-height: 1.6; font-weight: 300; }
 
-/* media / illustrations */
-.media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
-.media-card { display: flex; gap: 14px; align-items: flex-start; background: rgba(255, 255, 255, .045); border: 1px solid var(--line); border-radius: 5px; padding: 14px 16px; }
-.media-card .mk-glyph { font-size: 24px; color: var(--gold); line-height: 1; flex: none; opacity: .9; }
-.media-card .mk-kind { font-size: 9px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 5px; }
-.media-card .mk-cap { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #fff; line-height: 1.35; margin-bottom: 6px; }
-.media-card .mk-attr { font-size: 11px; color: var(--muted); line-height: 1.5; }
+/* calligraphy — the key āyah rendered as an illuminated art panel */
+.calli { position: relative; margin: 6px 0 2px; padding: 46px 40px 34px; border-radius: 8px; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 18%, rgba(200, 164, 75, .16), transparent 68%),
+              linear-gradient(160deg, #0c2135, #091827);
+  border: 1px solid rgba(200, 164, 75, .35);
+  box-shadow: inset 0 0 80px -34px rgba(200, 164, 75, .55), var(--shadow); }
+.calli-ar { font-family: 'Amiri', serif; font-size: clamp(27px, 4.6vw, 42px); line-height: 2.15; text-align: center;
+  color: #ECD9A0; text-shadow: 0 2px 22px rgba(200, 164, 75, .35); }
+.calli-ref { margin-top: 22px; text-align: center; font-family: 'Amiri', serif; font-size: 15px; letter-spacing: .4px; color: var(--gold-soft); opacity: .82; }
+.calli-corner { position: absolute; width: 26px; height: 26px; border: 2px solid var(--gold); opacity: .5; }
+.calli-corner.tl { top: 13px; left: 13px; border-right: 0; border-bottom: 0; border-top-left-radius: 7px; }
+.calli-corner.tr { top: 13px; right: 13px; border-left: 0; border-bottom: 0; border-top-right-radius: 7px; }
+.calli-corner.bl { bottom: 13px; left: 13px; border-right: 0; border-top: 0; border-bottom-left-radius: 7px; }
+.calli-corner.br { bottom: 13px; right: 13px; border-left: 0; border-top: 0; border-bottom-right-radius: 7px; }
 
 /* sources */
 .src { display: flex; justify-content: space-between; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(200, 164, 75, .12); font-size: 14.5px; }

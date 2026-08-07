@@ -71,14 +71,6 @@ export interface RouteLine {
   points: MapPoint[];
 }
 
-export interface MediaItem {
-  kind: string;
-  caption: string | null;
-  attribution: string;
-  licence: string;
-  sourceUrl: string | null;
-}
-
 export interface SourceItem {
   workTitle: string;
   tier: string;
@@ -103,7 +95,6 @@ export interface EventDetail {
   verses: RelatedVerse[];
   places: RelatedPlace[];
   routes: RouteLine[];
-  media: MediaItem[];
   relatedEvents: RelatedEventItem[];
   sources: SourceItem[];
 }

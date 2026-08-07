@@ -450,15 +450,7 @@
         "khadijah",
         "waraqah"
       ],
-      "place": "cave-of-hira",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "calligraphy/iqra.svg",
-          "caption": "“Iqra” — the first word revealed — in thuluth script.",
-          "attribution": "Seerah Platform — original calligraphy"
-        }
-      ]
+      "place": "cave-of-hira"
     },
     {
       "slug": "public-preaching-begins",
@@ -467,7 +459,7 @@
       "certainty": "WELL_ATTESTED",
       "major": false,
       "source": "sahih-al-bukhari",
-      "locator": "Book of Tafsir, Ash-Shu'ara",
+      "locator": "Tafsīr of Sūrat ash-Shuʿarāʾ, no. 4770 — the Prophet ﷺ on al-Ṣafā: 'And warn your nearest kin'",
       "source2": "ar-raheeq-al-makhtum",
       "locator2": "p. 76",
       "summary": "After about three years of private teaching, the Prophet ﷺ was commanded to proclaim the message openly. Open hostility began, and persecution of the weaker and enslaved converts intensified.",
@@ -542,9 +534,9 @@
       "certainty": "MUTAWATIR",
       "major": true,
       "source": "sahih-al-bukhari",
-      "locator": "Book of Salah, Isra",
+      "locator": "Book of Ṣalāh, no. 349 — Anas ibn Mālik: the night journey and the prescription of the prayers",
       "source2": "sahih-muslim",
-      "locator2": "Book of Faith, Isra",
+      "locator2": "Book of Faith (Īmān), no. 162a — the night journey",
       "summary": "The Prophet ﷺ was taken by night from the Sacred Mosque in Makkah to al-Aqsa in Jerusalem, and from there ascended through the heavens. During this journey the five daily prayers were prescribed. Abu Bakr affirmed the account without hesitation.",
       "why": "It came at the point of deepest hardship and established the prayer — the practice that would structure the community's daily life.",
       "verses": [
@@ -578,7 +570,7 @@
       "certainty": "MUTAWATIR",
       "major": true,
       "source": "sahih-al-bukhari",
-      "locator": "Book of the Merits of the Ansar",
+      "locator": "Book of the Companions, no. 3653 — Abū Bakr in the cave of Thawr: 'two, the third of whom is Allah'",
       "source2": "ibn-hisham-sira",
       "locator2": "Vol. 1, the Hijrah",
       "summary": "With Quraysh plotting to kill him, the Prophet ﷺ left Makkah with Abu Bakr, sheltering three nights in the Cave of Thawr before taking an indirect route to Madinah. There he built the mosque, paired Emigrants with Helpers, and drew up the Constitution of Madinah.",
@@ -592,15 +584,7 @@
         "asma-bint-abi-bakr",
         "suraqah"
       ],
-      "place": "madinah",
-      "media": [
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "diagrams/hijrah-route.svg",
-          "caption": "The indirect route to Madinah via the Cave of Thawr.",
-          "attribution": "Seerah Platform — schematic route diagram"
-        }
-      ]
+      "place": "madinah"
     },
     {
       "slug": "the-battle-of-badr",
@@ -622,15 +606,7 @@
         "ali-ibn-abi-talib",
         "abu-jahl"
       ],
-      "place": "badr",
-      "media": [
-        {
-          "kind": "MAP",
-          "s3Key": "diagrams/badr-campaign.svg",
-          "caption": "Stylised map of the approach to the wells of Badr.",
-          "attribution": "Seerah Platform — schematic map, not to scale, no figural imagery"
-        }
-      ]
+      "place": "badr"
     },
     {
       "slug": "the-battle-of-uhud",
@@ -639,7 +615,7 @@
       "certainty": "WELL_ATTESTED",
       "major": false,
       "source": "sahih-al-bukhari",
-      "locator": "Book of Maghazi, Uhud",
+      "locator": "Book of Maghāzī, no. 4043 — the archers of Uhud leave their post",
       "source2": "ibn-hisham-sira",
       "locator2": "Vol. 2, Uhud",
       "summary": "Quraysh returned with around three thousand men to avenge Badr. When most of the archers left their assigned hill to collect spoils, Khalid ibn al-Walid led cavalry around the exposed flank and reversed the battle. Hamza was killed, and the Prophet ﷺ himself was wounded.",
@@ -661,7 +637,7 @@
       "certainty": "WELL_ATTESTED",
       "major": false,
       "source": "sahih-al-bukhari",
-      "locator": "Book of Maghazi, Khandaq",
+      "locator": "Book of Maghāzī, no. 4103 — the Confederates and the missed prayer at al-Khandaq",
       "source2": "ibn-hisham-sira",
       "locator2": "Vol. 2, the Trench",
       "summary": "A coalition of some ten thousand advanced on Madinah. On Salman al-Farisi's proposal the Muslims dug a trench across the city's exposed approach — a tactic unfamiliar to Arabian warfare. After about a month the coalition withdrew without a general engagement.",
@@ -682,7 +658,7 @@
       "certainty": "WELL_ATTESTED",
       "major": true,
       "source": "sahih-al-bukhari",
-      "locator": "Book of Conditions",
+      "locator": "Book of Conditions (Shurūṭ), no. 2731-2732 — al-Miswar ibn Makhrama on the treaty of al-Ḥudaybiyyah",
       "source2": "ar-raheeq-al-makhtum",
       "locator2": "p. 400",
       "summary": "The Prophet ﷺ set out with about fourteen hundred to perform umrah and was barred at Hudaybiyyah. The negotiated truce looked one-sided, yet within two years it allowed Islam to spread more widely than the preceding nineteen years of conflict.",
@@ -706,7 +682,7 @@
       "source": "ibn-hisham-sira",
       "locator": "Vol. 2, Khaybar",
       "source2": "sahih-al-bukhari",
-      "locator2": "Book of Maghazi, Khaybar",
+      "locator2": "Book of Maghāzī, no. 4210 — the banner given to ʿAlī at Khaybar",
       "summary": "Some months after Hudaybiyyah the Prophet ﷺ led an expedition against the fortified oasis of Khaybar, whose leaders had mobilised the confederacy against Madinah. After a series of engagements the oasis surrendered; its people were permitted to remain and farm the land in exchange for a share of the produce.",
       "why": "Securing the northern frontier removed the last organised base of hostility around Madinah while the Meccan front stayed frozen by the truce.",
       "verses": [
@@ -728,7 +704,7 @@
       "source": "ibn-hisham-sira",
       "locator": "Vol. 2, Mu'tah",
       "source2": "sahih-al-bukhari",
-      "locator2": "Book of Maghazi, Mu'tah",
+      "locator2": "Book of Maghāzī, no. 4262 — Zayd, Jaʿfar and Ibn Rawāḥa at Muʾtah, then 'a Sword of Allah' (Khālid)",
       "summary": "A force sent toward the Byzantine frontier lost its three named commanders in succession — Zayd, then Ja'far, then Abdullah ibn Rawahah. Khalid ibn al-Walid took the banner, held the army together, and withdrew it intact against far greater numbers.",
       "why": "The first major encounter on the northern frontier; the disciplined withdrawal, preserving the force, was itself remembered as an achievement.",
       "people": [
@@ -746,7 +722,7 @@
       "certainty": "WELL_ATTESTED",
       "major": true,
       "source": "sahih-muslim",
-      "locator": "Book of Jihad, the Conquest",
+      "locator": "Book of Jihād, no. 1780 — Abū Hurayra on the conquest of Makkah",
       "source2": "ibn-hisham-sira",
       "locator2": "Vol. 2, the Conquest",
       "summary": "The Prophet ﷺ advanced on Makkah with around ten thousand and took the city almost without fighting. He entered with his head lowered, declared a general amnesty, and cleared the idols from the Kaaba — pardoning those who had persecuted the community for twenty years.",
@@ -768,7 +744,7 @@
       "certainty": "WELL_ATTESTED",
       "major": false,
       "source": "sahih-muslim",
-      "locator": "Book of Jihad, Hunayn",
+      "locator": "Book of Jihād, no. 1776 — al-Barāʾ ibn ʿĀzib: the Prophet ﷺ did not flee at Ḥunayn",
       "source2": "ibn-hisham-sira",
       "locator2": "Vol. 2, Hunayn",
       "summary": "Weeks after the conquest of Makkah the tribes of Hawazin and Thaqif assembled at the valley of Hunayn and ambushed the Muslim army — its largest ever. The front ranks scattered; the Prophet ﷺ held his ground and rallied the companions, and the day was recovered.",
@@ -789,7 +765,7 @@
       "certainty": "WELL_ATTESTED",
       "major": false,
       "source": "sahih-al-bukhari",
-      "locator": "Hadith of Ka'b ibn Malik",
+      "locator": "Book of Maghāzī, no. 4418 — Kaʿb ibn Mālik and the three who stayed behind from Tabūk",
       "source2": "ibn-hisham-sira",
       "locator2": "Vol. 2, Tabuk",
       "summary": "In severe heat the Prophet ﷺ called for a large expedition north toward Tabuk in response to reports of a Byzantine mobilisation. No battle occurred; the force reached Tabuk, secured agreements with frontier communities, and returned. The episode is remembered for the three who stayed behind and were later forgiven.",
@@ -833,7 +809,7 @@
       "certainty": "MUTAWATIR",
       "major": true,
       "source": "sahih-al-bukhari",
-      "locator": "Book of Maghazi, final illness",
+      "locator": "Book of Maghāzī, no. 4463 — ʿĀʾisha: the Prophet ﷺ chose 'the highest companion'",
       "source2": "ibn-hisham-sira",
       "locator2": "Vol. 2, the Passing",
       "summary": "Some three months after the Farewell Pilgrimage the Prophet ﷺ fell ill and passed away in the apartment of Aisha, in Madinah. Umar could not accept it until Abu Bakr addressed the people, reminding them that Muhammad ﷺ was a messenger who had passed as messengers before him, while the One he worshipped does not die.",

@@ -91,21 +91,7 @@
         "19:20",
         "19:21"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-glad-tidings-to-maryam-calligraphy.svg",
-          "caption": "Calligraphic panel — “Glad Tidings to Maryam”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-glad-tidings-to-maryam-diagram.svg",
-          "caption": "Schematic diagram of the setting — Glad Tidings to Maryam.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "isa-the-birth",
@@ -126,21 +112,7 @@
         "19:25",
         "19:26"
       ],
-      "place": "bethlehem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-the-birth-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Birth by the Palm”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-the-birth-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Birth by the Palm.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "bethlehem"
     },
     {
       "slug": "isa-speaks-in-the-cradle",
@@ -161,21 +133,7 @@
         "19:32",
         "19:33"
       ],
-      "place": "bethlehem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-speaks-in-the-cradle-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Infant Speaks”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-speaks-in-the-cradle-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Infant Speaks.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "bethlehem"
     },
     {
       "slug": "isa-messenger-to-israel",
@@ -193,21 +151,7 @@
         "3:50",
         "3:51"
       ],
-      "place": "galilee",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-messenger-to-israel-calligraphy.svg",
-          "caption": "Calligraphic panel — “A Messenger to the Children of Israel”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-messenger-to-israel-diagram.svg",
-          "caption": "Schematic diagram of the setting — A Messenger to the Children of Israel.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "galilee"
     },
     {
       "slug": "isa-the-signs",
@@ -225,21 +169,7 @@
         "3:49",
         "5:110"
       ],
-      "place": "galilee",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-the-signs-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Signs by Allah's Leave”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-the-signs-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Signs by Allah's Leave.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "galilee"
     },
     {
       "slug": "isa-the-disciples",
@@ -258,21 +188,7 @@
         "3:53",
         "61:14"
       ],
-      "place": "galilee",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-the-disciples-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Disciples”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-the-disciples-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Disciples.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "galilee"
     },
     {
       "slug": "isa-the-table-spread",
@@ -291,21 +207,7 @@
         "5:114",
         "5:115"
       ],
-      "place": "galilee",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-the-table-spread-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Table from Heaven”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-the-table-spread-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Table from Heaven.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "galilee"
     },
     {
       "slug": "isa-not-crucified",
@@ -323,21 +225,7 @@
         "4:157",
         "4:158"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-not-crucified-calligraphy.svg",
-          "caption": "Calligraphic panel — “He Was Not Crucified — He Was Raised”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-not-crucified-diagram.svg",
-          "caption": "Schematic diagram of the setting — He Was Not Crucified — He Was Raised.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "isa-a-servant-not-a-son",
@@ -357,21 +245,7 @@
         "19:35",
         "19:36"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-a-servant-not-a-son-calligraphy.svg",
-          "caption": "Calligraphic panel — “A Servant, Not a Son”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-a-servant-not-a-son-diagram.svg",
-          "caption": "Schematic diagram of the setting — A Servant, Not a Son.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "isa-foretells-ahmad",
@@ -387,21 +261,7 @@
       "verses": [
         "61:6"
       ],
-      "place": "galilee",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-foretells-ahmad-calligraphy.svg",
-          "caption": "Calligraphic panel — “Glad Tidings of Aḥmad”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-foretells-ahmad-diagram.svg",
-          "caption": "Schematic diagram of the setting — Glad Tidings of Aḥmad.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "galilee"
     },
     {
       "slug": "isa-will-return",
@@ -409,7 +269,7 @@
       "certainty": "WELL_ATTESTED",
       "major": true,
       "source": "sahih-al-bukhari",
-      "locator": "no. 3448 — the descent of Isa son of Maryam near the End",
+      "locator": "Book of the Prophets, no. 3448 — the descent of ʿĪsā son of Maryam near the End",
       "source2": "the-noble-quran",
       "locator2": "Surah az-Zukhruf 43:61 (Isa a sign of the Hour)",
       "summary": "The Prophet Muhammad ﷺ foretold that Isa son of Maryam will descend as a just ruler near the end of time: he will break the cross, and judge by the law of the Qur'an, and there will be one worship of Allah alone. The Qur'an calls him a sign of the Hour.",
@@ -420,21 +280,7 @@
       "verses": [
         "43:61"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/isa/isa-will-return-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Descent of Isa”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/isa/isa-will-return-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Descent of Isa.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     }
   ],
   "routes": [],

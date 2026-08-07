@@ -93,11 +93,6 @@ class ArchitectureTest {
             noClasses().that().resideOutsideOfPackage("com.seerah.search..")
                     .should().dependOnClassesThat().resideInAPackage("com.seerah.search.adapter..");
 
-    @ArchTest
-    static final ArchRule media_adapters_are_private =
-            noClasses().that().resideOutsideOfPackage("com.seerah.media..")
-                    .should().dependOnClassesThat().resideInAPackage("com.seerah.media.adapter..");
-
     /** §5.7 — the assistant retrieves and never asserts: it has no store of its own. */
     @ArchTest
     static final ArchRule assistant_has_no_persistence =

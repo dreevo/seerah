@@ -60,21 +60,7 @@
         "37:139",
         "37:140"
       ],
-      "place": "nineveh",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yunus/yunus-leaves-his-people-calligraphy.svg",
-          "caption": "Calligraphic panel — “He Left in Anger”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yunus/yunus-leaves-his-people-diagram.svg",
-          "caption": "Schematic diagram of the setting — He Left in Anger.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "nineveh"
     },
     {
       "slug": "yunus-cast-into-the-sea",
@@ -92,21 +78,7 @@
         "37:142",
         "68:48"
       ],
-      "place": "the-open-sea",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yunus/yunus-cast-into-the-sea-calligraphy.svg",
-          "caption": "Calligraphic panel — “Cast into the Sea”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yunus/yunus-cast-into-the-sea-diagram.svg",
-          "caption": "Schematic diagram of the setting — Cast into the Sea.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-open-sea"
     },
     {
       "slug": "yunus-the-prayer-in-the-darkness",
@@ -124,21 +96,7 @@
         "21:87",
         "21:88"
       ],
-      "place": "the-open-sea",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yunus/yunus-the-prayer-in-the-darkness-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Prayer in the Darkness”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yunus/yunus-the-prayer-in-the-darkness-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Prayer in the Darkness.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-open-sea"
     },
     {
       "slug": "yunus-cast-onto-the-shore",
@@ -157,21 +115,7 @@
         "37:145",
         "37:146"
       ],
-      "place": "the-open-sea",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yunus/yunus-cast-onto-the-shore-calligraphy.svg",
-          "caption": "Calligraphic panel — “Cast onto the Shore”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yunus/yunus-cast-onto-the-shore-diagram.svg",
-          "caption": "Schematic diagram of the setting — Cast onto the Shore.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-open-sea"
     },
     {
       "slug": "yunus-the-people-believe",
@@ -191,21 +135,7 @@
         "37:148",
         "10:98"
       ],
-      "place": "nineveh",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yunus/yunus-the-people-believe-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Town That Believed”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yunus/yunus-the-people-believe-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Town That Believed.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "nineveh"
     }
   ],
   "routes": [],

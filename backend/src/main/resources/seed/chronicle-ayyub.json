@@ -51,21 +51,7 @@
         "38:41",
         "21:83"
       ],
-      "place": "land-of-ayyub",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ayyub/ayyub-the-affliction-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Affliction”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ayyub/ayyub-the-affliction-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Affliction.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "land-of-ayyub"
     },
     {
       "slug": "ayyub-the-patience",
@@ -82,21 +68,7 @@
         "21:83",
         "38:44"
       ],
-      "place": "land-of-ayyub",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ayyub/ayyub-the-patience-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Prayer of the Patient”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ayyub/ayyub-the-patience-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Prayer of the Patient.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "land-of-ayyub"
     },
     {
       "slug": "ayyub-the-healing-spring",
@@ -114,21 +86,7 @@
         "38:42",
         "21:84"
       ],
-      "place": "land-of-ayyub",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ayyub/ayyub-the-healing-spring-calligraphy.svg",
-          "caption": "Calligraphic panel — “Strike with Your Foot”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ayyub/ayyub-the-healing-spring-diagram.svg",
-          "caption": "Schematic diagram of the setting — Strike with Your Foot.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "land-of-ayyub"
     },
     {
       "slug": "ayyub-restored",
@@ -148,21 +106,7 @@
         "38:43",
         "38:44"
       ],
-      "place": "land-of-ayyub",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ayyub/ayyub-restored-calligraphy.svg",
-          "caption": "Calligraphic panel — “Family Restored and Doubled”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ayyub/ayyub-restored-diagram.svg",
-          "caption": "Schematic diagram of the setting — Family Restored and Doubled.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "land-of-ayyub"
     }
   ],
   "routes": [],

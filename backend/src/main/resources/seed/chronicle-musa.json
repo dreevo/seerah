@@ -145,21 +145,7 @@
       "verses": [
         "28:7"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-cast-into-the-river-calligraphy.svg",
-          "caption": "Calligraphic panel — “Cast into the River”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-cast-into-the-river-diagram.svg",
-          "caption": "Schematic diagram of the setting — Cast into the River.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "musa-in-pharaohs-house",
@@ -178,21 +164,7 @@
         "28:8",
         "28:9"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-in-pharaohs-house-calligraphy.svg",
-          "caption": "Calligraphic panel — “Found by Pharaoh's Household”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-in-pharaohs-house-diagram.svg",
-          "caption": "Schematic diagram of the setting — Found by Pharaoh's Household.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "musa-returned-to-his-mother",
@@ -212,21 +184,7 @@
         "28:12",
         "28:13"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-returned-to-his-mother-calligraphy.svg",
-          "caption": "Calligraphic panel — “Returned to His Mother”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-returned-to-his-mother-diagram.svg",
-          "caption": "Schematic diagram of the setting — Returned to His Mother.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "musa-strikes-the-egyptian",
@@ -243,21 +201,7 @@
         "28:15",
         "28:16"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-strikes-the-egyptian-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Man He Struck”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-strikes-the-egyptian-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Man He Struck.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "musa-flees-to-midian",
@@ -277,21 +221,7 @@
         "28:23",
         "28:24"
       ],
-      "place": "midian",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-flees-to-midian-calligraphy.svg",
-          "caption": "Calligraphic panel — “Flight to Midian”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-flees-to-midian-diagram.svg",
-          "caption": "Schematic diagram of the setting — Flight to Midian.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "midian"
     },
     {
       "slug": "musa-marries-in-midian",
@@ -310,21 +240,7 @@
         "28:26",
         "28:27"
       ],
-      "place": "midian",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-marries-in-midian-calligraphy.svg",
-          "caption": "Calligraphic panel — “Marriage and the Ten Years”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-marries-in-midian-diagram.svg",
-          "caption": "Schematic diagram of the setting — Marriage and the Ten Years.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "midian"
     },
     {
       "slug": "musa-the-burning-bush",
@@ -347,21 +263,7 @@
         "20:22",
         "20:24"
       ],
-      "place": "mount-sinai",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-the-burning-bush-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Fire at the Mountain”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-the-burning-bush-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Fire at the Mountain.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "mount-sinai"
     },
     {
       "slug": "musa-asks-for-harun",
@@ -383,21 +285,7 @@
         "20:30",
         "20:36"
       ],
-      "place": "mount-sinai",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-asks-for-harun-calligraphy.svg",
-          "caption": "Calligraphic panel — “Harun Given as a Helper”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-asks-for-harun-diagram.svg",
-          "caption": "Schematic diagram of the setting — Harun Given as a Helper.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "mount-sinai"
     },
     {
       "slug": "musa-before-pharaoh",
@@ -420,21 +308,7 @@
       ],
       "place": "egypt",
       "source2": "sahih-al-bukhari",
-      "locator2": "no. 3340 — the intercession hadith, naming Musa as one Allah spoke to",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-before-pharaoh-calligraphy.svg",
-          "caption": "Calligraphic panel — “Before Pharaoh”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-before-pharaoh-diagram.svg",
-          "caption": "Schematic diagram of the setting — Before Pharaoh.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "locator2": "Book of the Prophets, no. 3340 — the intercession: Mūsā, the one to whom Allah spoke"
     },
     {
       "slug": "musa-and-the-magicians",
@@ -457,21 +331,7 @@
         "20:69",
         "20:70"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-and-the-magicians-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Duel with the Magicians”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-and-the-magicians-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Duel with the Magicians.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "musa-the-signs-on-egypt",
@@ -489,21 +349,7 @@
         "7:130",
         "7:133"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-the-signs-on-egypt-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Signs upon Egypt”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-the-signs-on-egypt-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Signs upon Egypt.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "musa-the-departure-by-night",
@@ -523,21 +369,7 @@
         "26:54",
         "26:59"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-the-departure-by-night-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Command to Depart”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-the-departure-by-night-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Command to Depart.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "musa-parting-of-the-sea",
@@ -561,21 +393,7 @@
       ],
       "place": "the-red-sea",
       "source2": "sahih-al-bukhari",
-      "locator2": "no. 2004 — the fast of ʿAshura commemorating Musa’s deliverance",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-parting-of-the-sea-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Parting of the Sea”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-parting-of-the-sea-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Parting of the Sea.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "locator2": "Book of Fasting, no. 2004 — the fast of ʿĀshūrāʾ commemorating Mūsā's deliverance"
     },
     {
       "slug": "musa-drowning-of-pharaoh",
@@ -593,21 +411,7 @@
         "10:91",
         "10:92"
       ],
-      "place": "the-red-sea",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-drowning-of-pharaoh-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Drowning of Pharaoh”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-drowning-of-pharaoh-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Drowning of Pharaoh.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-red-sea"
     },
     {
       "slug": "musa-manna-and-quails",
@@ -623,21 +427,7 @@
       "verses": [
         "2:57"
       ],
-      "place": "the-wilderness",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-manna-and-quails-calligraphy.svg",
-          "caption": "Calligraphic panel — “Manna and the Quails”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-manna-and-quails-diagram.svg",
-          "caption": "Schematic diagram of the setting — Manna and the Quails.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-wilderness"
     },
     {
       "slug": "musa-appointment-at-sinai",
@@ -657,21 +447,7 @@
         "7:144",
         "7:145"
       ],
-      "place": "mount-sinai",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-appointment-at-sinai-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Appointment at Mount Sinai”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-appointment-at-sinai-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Appointment at Mount Sinai.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "mount-sinai"
     },
     {
       "slug": "musa-the-golden-calf",
@@ -694,21 +470,7 @@
         "20:92",
         "20:94"
       ],
-      "place": "the-wilderness",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-the-golden-calf-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Golden Calf”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-the-golden-calf-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Golden Calf.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-wilderness"
     },
     {
       "slug": "musa-and-al-khidr",
@@ -718,7 +480,7 @@
       "source": "the-noble-quran",
       "locator": "Surah al-Kahf 18:60-82",
       "source2": "sahih-al-bukhari",
-      "locator2": "Book of Knowledge, no. 74",
+      "locator2": "Book of Knowledge, no. 74 — Mūsā seeks al-Khiḍr",
       "summary": "Seeking a servant of Allah given special knowledge, Musa meets al-Khidr at the junction of the two seas and asks to follow and learn. Al-Khidr warns he will not be able to bear patience. He scuttles a boat, takes the life of a boy, and rebuilds a falling wall without pay — each time Musa objects — then explains: the boat was spared from a seizing king, the boy would have burdened his believing parents, and the wall guarded an orphans' treasure. Then they part.",
       "why": "Even Kalim Allah is sent to learn: that Allah's wisdom often lies hidden beneath events that seem wrong to us, and that patience with what we cannot yet understand is itself a kind of knowledge.",
       "people": [
@@ -733,21 +495,7 @@
         "18:77",
         "18:82"
       ],
-      "place": "the-two-seas",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/musa/musa-and-al-khidr-calligraphy.svg",
-          "caption": "Calligraphic panel — “Musa and al-Khidr”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/musa/musa-and-al-khidr-diagram.svg",
-          "caption": "Schematic diagram of the setting — Musa and al-Khidr.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-two-seas"
     }
   ],
   "routes": [

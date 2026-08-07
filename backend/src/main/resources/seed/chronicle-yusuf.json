@@ -114,21 +114,7 @@
         "12:5",
         "12:6"
       ],
-      "place": "canaan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-the-dream-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Dream of Eleven Stars”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-the-dream-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Dream of Eleven Stars.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "canaan"
     },
     {
       "slug": "yusuf-the-plot",
@@ -148,21 +134,7 @@
         "12:9",
         "12:10"
       ],
-      "place": "canaan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-the-plot-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Brothers' Plot”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-the-plot-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Brothers' Plot.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "canaan"
     },
     {
       "slug": "yusuf-cast-into-the-well",
@@ -183,21 +155,7 @@
         "12:16",
         "12:18"
       ],
-      "place": "the-well",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-cast-into-the-well-calligraphy.svg",
-          "caption": "Calligraphic panel — “Cast into the Well”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-cast-into-the-well-diagram.svg",
-          "caption": "Schematic diagram of the setting — Cast into the Well.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-well"
     },
     {
       "slug": "yusuf-sold-in-egypt",
@@ -216,21 +174,7 @@
         "12:20",
         "12:21"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-sold-in-egypt-calligraphy.svg",
-          "caption": "Calligraphic panel — “Sold in Egypt”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-sold-in-egypt-diagram.svg",
-          "caption": "Schematic diagram of the setting — Sold in Egypt.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "yusuf-the-temptation",
@@ -250,21 +194,7 @@
         "12:24",
         "12:26"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-the-temptation-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Temptation and the Torn Shirt”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-the-temptation-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Temptation and the Torn Shirt.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "yusuf-women-of-the-city",
@@ -283,21 +213,7 @@
         "12:32",
         "12:33"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-women-of-the-city-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Women of the City”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-women-of-the-city-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Women of the City.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "yusuf-imprisonment",
@@ -314,21 +230,7 @@
         "12:35",
         "12:36"
       ],
-      "place": "the-prison",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-imprisonment-calligraphy.svg",
-          "caption": "Calligraphic panel — “Imprisonment”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-imprisonment-diagram.svg",
-          "caption": "Schematic diagram of the setting — Imprisonment.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-prison"
     },
     {
       "slug": "yusuf-two-prisoners",
@@ -348,21 +250,7 @@
         "12:40",
         "12:41"
       ],
-      "place": "the-prison",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-two-prisoners-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Two Prisoners' Dreams”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-two-prisoners-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Two Prisoners' Dreams.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-prison"
     },
     {
       "slug": "yusuf-kings-dream",
@@ -382,21 +270,7 @@
         "12:47",
         "12:49"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-kings-dream-calligraphy.svg",
-          "caption": "Calligraphic panel — “The King's Dream”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-kings-dream-diagram.svg",
-          "caption": "Schematic diagram of the setting — The King's Dream.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "yusuf-vindication",
@@ -420,21 +294,7 @@
       ],
       "place": "egypt",
       "source2": "sahih-al-bukhari",
-      "locator2": "Book of the Prophets, no. 3372 — 'had I stayed in prison as long as Yūsuf, I would have responded': the Prophet ﷺ on Yūsuf's patience",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-vindication-calligraphy.svg",
-          "caption": "Calligraphic panel — “Vindication and Rise to Power”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-vindication-diagram.svg",
-          "caption": "Schematic diagram of the setting — Vindication and Rise to Power.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "locator2": "Book of the Prophets, no. 3372 — 'had I stayed in prison as long as Yūsuf, I would have responded': the Prophet ﷺ on Yūsuf's patience"
     },
     {
       "slug": "yusuf-brothers-return",
@@ -453,21 +313,7 @@
         "12:59",
         "12:62"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-brothers-return-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Brothers Come for Grain”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-brothers-return-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Brothers Come for Grain.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "yusuf-binyamin-and-the-cup",
@@ -487,21 +333,7 @@
         "12:70",
         "12:76"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-binyamin-and-the-cup-calligraphy.svg",
-          "caption": "Calligraphic panel — “Binyamin and the King's Cup”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-binyamin-and-the-cup-diagram.svg",
-          "caption": "Schematic diagram of the setting — Binyamin and the King's Cup.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "yusuf-reveals-himself",
@@ -522,21 +354,7 @@
         "12:91",
         "12:92"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-reveals-himself-calligraphy.svg",
-          "caption": "Calligraphic panel — “Yusuf Reveals Himself”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-reveals-himself-diagram.svg",
-          "caption": "Schematic diagram of the setting — Yusuf Reveals Himself.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "yusuf-the-shirt",
@@ -556,21 +374,7 @@
         "12:94",
         "12:96"
       ],
-      "place": "canaan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-the-shirt-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Shirt and Restored Sight”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-the-shirt-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Shirt and Restored Sight.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "canaan"
     },
     {
       "slug": "yusuf-the-reunion",
@@ -592,21 +396,7 @@
         "12:100",
         "12:101"
       ],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yusuf/yusuf-the-reunion-calligraphy.svg",
-          "caption": "Calligraphic panel — “Reunion in Egypt — the Dream Fulfilled”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yusuf/yusuf-the-reunion-diagram.svg",
-          "caption": "Schematic diagram of the setting — Reunion in Egypt — the Dream Fulfilled.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     }
   ],
   "routes": [

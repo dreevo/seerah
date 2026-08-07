@@ -52,21 +52,7 @@
         "11:84",
         "11:85"
       ],
-      "place": "madyan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/shuayb/shuayb-sent-to-madyan-calligraphy.svg",
-          "caption": "Calligraphic panel — “Sent to Madyan”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/shuayb/shuayb-sent-to-madyan-diagram.svg",
-          "caption": "Schematic diagram of the setting — Sent to Madyan.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "madyan"
     },
     {
       "slug": "shuayb-the-cheating",
@@ -85,21 +71,7 @@
         "26:182",
         "26:183"
       ],
-      "place": "madyan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/shuayb/shuayb-the-cheating-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Cheating of the Scales”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/shuayb/shuayb-the-cheating-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Cheating of the Scales.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "madyan"
     },
     {
       "slug": "shuayb-they-mock-and-threaten",
@@ -118,21 +90,7 @@
         "11:88",
         "7:88"
       ],
-      "place": "madyan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/shuayb/shuayb-they-mock-and-threaten-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Mockery and the Threat”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/shuayb/shuayb-they-mock-and-threaten-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Mockery and the Threat.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "madyan"
     },
     {
       "slug": "shuayb-the-punishment",
@@ -151,21 +109,7 @@
         "11:94",
         "26:189"
       ],
-      "place": "madyan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/shuayb/shuayb-the-punishment-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Earthquake of Madyan”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/shuayb/shuayb-the-punishment-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Earthquake of Madyan.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "madyan"
     },
     {
       "slug": "shuayb-and-believers-saved",
@@ -183,21 +127,7 @@
         "11:94",
         "7:92"
       ],
-      "place": "madyan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/shuayb/shuayb-and-believers-saved-calligraphy.svg",
-          "caption": "Calligraphic panel — “Shu'ayb and the Believers Saved”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/shuayb/shuayb-and-believers-saved-diagram.svg",
-          "caption": "Schematic diagram of the setting — Shu'ayb and the Believers Saved.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "madyan"
     }
   ],
   "routes": [],

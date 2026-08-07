@@ -51,21 +51,7 @@
         "7:73",
         "11:61"
       ],
-      "place": "al-hijr",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/salih/salih-sent-to-thamud-calligraphy.svg",
-          "caption": "Calligraphic panel — “Sent to Thamūd”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/salih/salih-sent-to-thamud-diagram.svg",
-          "caption": "Schematic diagram of the setting — Sent to Thamūd.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-hijr"
     },
     {
       "slug": "salih-the-she-camel",
@@ -85,21 +71,7 @@
         "11:64",
         "26:155"
       ],
-      "place": "al-hijr",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/salih/salih-the-she-camel-calligraphy.svg",
-          "caption": "Calligraphic panel — “The She-Camel — a Sign”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/salih/salih-the-she-camel-diagram.svg",
-          "caption": "Schematic diagram of the setting — The She-Camel — a Sign.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-hijr"
     },
     {
       "slug": "salih-the-plot",
@@ -118,21 +90,7 @@
         "27:49",
         "27:50"
       ],
-      "place": "al-hijr",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/salih/salih-the-plot-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Plot of the Nine”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/salih/salih-the-plot-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Plot of the Nine.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-hijr"
     },
     {
       "slug": "salih-the-camel-hamstrung",
@@ -152,21 +110,7 @@
         "11:65",
         "54:29"
       ],
-      "place": "al-hijr",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/salih/salih-the-camel-hamstrung-calligraphy.svg",
-          "caption": "Calligraphic panel — “They Hamstrung the She-Camel”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/salih/salih-the-camel-hamstrung-diagram.svg",
-          "caption": "Schematic diagram of the setting — They Hamstrung the She-Camel.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-hijr"
     },
     {
       "slug": "salih-the-blast",
@@ -186,21 +130,7 @@
         "7:78",
         "54:31"
       ],
-      "place": "al-hijr",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/salih/salih-the-blast-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Blast”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/salih/salih-the-blast-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Blast.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-hijr"
     },
     {
       "slug": "salih-the-believers-saved",
@@ -218,21 +148,7 @@
         "11:66",
         "7:79"
       ],
-      "place": "al-hijr",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/salih/salih-the-believers-saved-calligraphy.svg",
-          "caption": "Calligraphic panel — “Salih and the Believers Saved”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/salih/salih-the-believers-saved-diagram.svg",
-          "caption": "Schematic diagram of the setting — Salih and the Believers Saved.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-hijr"
     }
   ],
   "routes": [],

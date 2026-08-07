@@ -73,21 +73,7 @@
         "2:250",
         "2:251"
       ],
-      "place": "elah-valley",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/dawud/dawud-and-jalut-calligraphy.svg",
-          "caption": "Calligraphic panel — “David and Goliath”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/dawud/dawud-and-jalut-diagram.svg",
-          "caption": "Schematic diagram of the setting — David and Goliath.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "elah-valley"
     },
     {
       "slug": "dawud-mountains-and-birds",
@@ -106,21 +92,7 @@
         "38:18",
         "38:19"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/dawud/dawud-mountains-and-birds-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Mountains and Birds Glorify”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/dawud/dawud-mountains-and-birds-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Mountains and Birds Glorify.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "dawud-the-zabur",
@@ -137,21 +109,7 @@
         "17:55",
         "4:163"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/dawud/dawud-the-zabur-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Psalms (Zabūr)”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/dawud/dawud-the-zabur-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Psalms (Zabūr).",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "dawud-iron-made-soft",
@@ -169,21 +127,7 @@
         "34:11",
         "21:80"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/dawud/dawud-iron-made-soft-calligraphy.svg",
-          "caption": "Calligraphic panel — “Iron Made Soft”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/dawud/dawud-iron-made-soft-diagram.svg",
-          "caption": "Schematic diagram of the setting — Iron Made Soft.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "dawud-the-two-litigants",
@@ -203,21 +147,7 @@
         "38:24",
         "38:25"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/dawud/dawud-the-two-litigants-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Two Litigants”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/dawud/dawud-the-two-litigants-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Two Litigants.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "dawud-a-successor-on-earth",
@@ -237,21 +167,7 @@
         "21:78",
         "21:79"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/dawud/dawud-a-successor-on-earth-calligraphy.svg",
-          "caption": "Calligraphic panel — “A Successor on the Earth”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/dawud/dawud-a-successor-on-earth-diagram.svg",
-          "caption": "Schematic diagram of the setting — A Successor on the Earth.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     }
   ],
   "routes": [],

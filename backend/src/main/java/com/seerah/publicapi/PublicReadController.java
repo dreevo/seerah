@@ -8,7 +8,6 @@ import com.seerah.content.api.LearningPathReadPort;
 import com.seerah.content.api.LearningPathViews.PathDetail;
 import com.seerah.content.api.LearningPathViews.PathSummary;
 import com.seerah.content.api.RelationshipReadPort;
-import com.seerah.media.api.MediaReadPort;
 import com.seerah.people.api.PersonReadPort;
 import com.seerah.places.api.PlaceReadPort;
 import com.seerah.places.api.RouteReadPort;
@@ -66,14 +65,13 @@ public class PublicReadController {
     private final SearchPort search;
     private final AssistantPort assistant;
     private final LearningPathReadPort paths;
-    private final MediaReadPort media;
 
     public PublicReadController(EventReadPort events, ChronicleReadPort chronicles,
                                 RelationshipReadPort relationships,
                                 PersonReadPort people, PlaceReadPort places, RouteReadPort routes,
                                 VerseReadPort verses, CitationDirectory citations,
                                 SearchPort search, AssistantPort assistant,
-                                LearningPathReadPort paths, MediaReadPort media) {
+                                LearningPathReadPort paths) {
         this.events = events;
         this.chronicles = chronicles;
         this.relationships = relationships;
@@ -85,7 +83,6 @@ public class PublicReadController {
         this.search = search;
         this.assistant = assistant;
         this.paths = paths;
-        this.media = media;
     }
 
     /** The library of chronicles the reader can choose between (the Seerah + prophets' stories). */
@@ -150,13 +147,9 @@ public class PublicReadController {
                         r.points().stream().map(p -> new MapPoint(p.lat(), p.lng())).toList()))
                 .toList();
 
-        List<PublicViews.MediaItem> mediaItems = media.mediaForEvent(d.id()).stream()
-                .map(m -> new PublicViews.MediaItem(m.kind(), m.caption(), m.attribution(), m.licence(), m.sourceUrl()))
-                .toList();
-
         return new EventDetail(d.id(), d.slug(), d.title(), d.summary(), d.why(), d.certainty(),
                 d.hijriYear(), d.gregYear(), d.major(), d.chronicleSlug(), d.chronicleTitle(),
-                peopleOut, versesOut, placesOut, routeLines, mediaItems, eventsOut, sources);
+                peopleOut, versesOut, placesOut, routeLines, eventsOut, sources);
     }
 
     @GetMapping("/people")

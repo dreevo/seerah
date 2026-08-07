@@ -51,21 +51,7 @@
         "19:7",
         "3:39"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yahya/yahya-a-name-from-allah-calligraphy.svg",
-          "caption": "Calligraphic panel — “A Name Given by Allah”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yahya/yahya-a-name-from-allah-diagram.svg",
-          "caption": "Schematic diagram of the setting — A Name Given by Allah.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "yahya-wisdom-as-a-child",
@@ -82,21 +68,7 @@
       "verses": [
         "19:12"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yahya/yahya-wisdom-as-a-child-calligraphy.svg",
-          "caption": "Calligraphic panel — “Wisdom as a Child”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yahya/yahya-wisdom-as-a-child-diagram.svg",
-          "caption": "Schematic diagram of the setting — Wisdom as a Child.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "yahya-tenderness-and-purity",
@@ -113,21 +85,7 @@
         "19:13",
         "19:14"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yahya/yahya-tenderness-and-purity-calligraphy.svg",
-          "caption": "Calligraphic panel — “Tenderness, Purity, and Duty”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yahya/yahya-tenderness-and-purity-diagram.svg",
-          "caption": "Schematic diagram of the setting — Tenderness, Purity, and Duty.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     },
     {
       "slug": "yahya-peace-upon-him",
@@ -144,21 +102,7 @@
       "verses": [
         "19:15"
       ],
-      "place": "jerusalem",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/yahya/yahya-peace-upon-him-calligraphy.svg",
-          "caption": "Calligraphic panel — “Peace Be Upon Him”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/yahya/yahya-peace-upon-him-diagram.svg",
-          "caption": "Schematic diagram of the setting — Peace Be Upon Him.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "jerusalem"
     }
   ],
   "routes": [],

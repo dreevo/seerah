@@ -124,21 +124,7 @@
         "6:78",
         "6:79"
       ],
-      "place": "babylon",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-the-stars-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Stars, the Moon, and the Sun”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-the-stars-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Stars, the Moon, and the Sun.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "babylon"
     },
     {
       "slug": "ibrahim-and-his-father",
@@ -158,21 +144,7 @@
         "19:46",
         "19:47"
       ],
-      "place": "babylon",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-and-his-father-calligraphy.svg",
-          "caption": "Calligraphic panel — “Calling His Father”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-and-his-father-diagram.svg",
-          "caption": "Schematic diagram of the setting — Calling His Father.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "babylon"
     },
     {
       "slug": "ibrahim-breaks-the-idols",
@@ -194,21 +166,7 @@
         "21:66",
         "21:67"
       ],
-      "place": "babylon",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-breaks-the-idols-calligraphy.svg",
-          "caption": "Calligraphic panel — “Breaking the Idols”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-breaks-the-idols-diagram.svg",
-          "caption": "Schematic diagram of the setting — Breaking the Idols.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "babylon"
     },
     {
       "slug": "ibrahim-cast-into-the-fire",
@@ -228,21 +186,7 @@
         "21:69",
         "21:70"
       ],
-      "place": "babylon",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-cast-into-the-fire-calligraphy.svg",
-          "caption": "Calligraphic panel — “Cast into the Fire”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-cast-into-the-fire-diagram.svg",
-          "caption": "Schematic diagram of the setting — Cast into the Fire.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "babylon"
     },
     {
       "slug": "ibrahim-and-the-king",
@@ -259,21 +203,7 @@
       "verses": [
         "2:258"
       ],
-      "place": "babylon",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-and-the-king-calligraphy.svg",
-          "caption": "Calligraphic panel — “The King Who Claimed to Give Life”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-and-the-king-diagram.svg",
-          "caption": "Schematic diagram of the setting — The King Who Claimed to Give Life.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "babylon"
     },
     {
       "slug": "ibrahim-the-migration",
@@ -294,28 +224,14 @@
         "37:99",
         "37:100"
       ],
-      "place": "canaan",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-the-migration-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Migration for Allah”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-the-migration-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Migration for Allah.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "canaan"
     },
     {
       "slug": "ibrahim-sarah-in-egypt",
       "title": "Sarah in Egypt",
       "certainty": "WELL_ATTESTED",
       "source": "sahih-al-bukhari",
-      "locator": "no. 3357-3358 — Ibrahim and Sarah before the tyrant",
+      "locator": "Book of the Prophets, no. 3357-3358 — Ibrāhīm, Sāra and the tyrant; the gift of Hājar",
       "source2": "the-noble-quran",
       "locator2": "Surah al-Ankabut 29:26 (his emigration)",
       "summary": "Passing through the land of a tyrant who seized every married woman, Ibrahim tells the truth in the deeper sense — that Sarah is his sister in faith. Three times the tyrant reaches for her; three times her prayer freezes his hand, until he releases her in fear and gives her Hajar as a servant.",
@@ -327,21 +243,7 @@
         "the-tyrant-of-egypt"
       ],
       "verses": [],
-      "place": "egypt",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-sarah-in-egypt-calligraphy.svg",
-          "caption": "Calligraphic panel — “Sarah in Egypt”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-sarah-in-egypt-diagram.svg",
-          "caption": "Schematic diagram of the setting — Sarah in Egypt.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "egypt"
     },
     {
       "slug": "ibrahim-hajar-and-ismail",
@@ -349,7 +251,7 @@
       "certainty": "WELL_ATTESTED",
       "major": true,
       "source": "sahih-al-bukhari",
-      "locator": "no. 3364 — Ibrahim settles Hajar and Ismail at Makkah",
+      "locator": "Book of the Prophets, no. 3364 — Ibrāhīm settles Hājar and Ismāʿīl at Makkah; the spring of Zamzam",
       "source2": "the-noble-quran",
       "locator2": "Surah Ibrahim 14:37",
       "summary": "By Allah's command Ibrahim brings Hajar and the infant Ismail to a barren valley with no water and no people, and leaves them there in trust, praying: 'Our Lord, I have settled some of my offspring in a valley without cultivation by Your Sacred House… so make hearts incline toward them and provide them fruits.'",
@@ -362,21 +264,7 @@
       "verses": [
         "14:37"
       ],
-      "place": "makkah",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-hajar-and-ismail-calligraphy.svg",
-          "caption": "Calligraphic panel — “Hajar and Ismail in the Valley”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-hajar-and-ismail-diagram.svg",
-          "caption": "Schematic diagram of the setting — Hajar and Ismail in the Valley.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "makkah"
     },
     {
       "slug": "the-well-of-zamzam",
@@ -384,7 +272,7 @@
       "certainty": "WELL_ATTESTED",
       "major": true,
       "source": "sahih-al-bukhari",
-      "locator": "no. 3364 — Hajar between Safa and Marwah, and the spring",
+      "locator": "Book of the Prophets, no. 3364 — Hājar between Ṣafā and Marwah, and the spring of Zamzam",
       "summary": "When the water runs out and the child thirsts, Hajar runs seven times between the hills of Safa and Marwah, searching. At the infant's feet the angel strikes the ground and a spring gushes forth — Zamzam. She dams it, saying 'Zam, zam,' and by that water a caravan settles, and the valley comes to life.",
       "why": "Hajar's running, out of trust and effort together, becomes a rite of the Hajj for all time; and Zamzam, springing in the desert, is Allah's answer to Ibrahim's prayer for provision.",
       "people": [
@@ -392,21 +280,7 @@
         "ismail"
       ],
       "verses": [],
-      "place": "makkah",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/the-well-of-zamzam-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Well of Zamzam”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/the-well-of-zamzam-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Well of Zamzam.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "makkah"
     },
     {
       "slug": "the-vision-of-sacrifice",
@@ -427,21 +301,7 @@
         "37:105",
         "37:107"
       ],
-      "place": "makkah",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/the-vision-of-sacrifice-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Vision of Sacrifice”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/the-vision-of-sacrifice-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Vision of Sacrifice.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "makkah"
     },
     {
       "slug": "building-the-kaaba",
@@ -462,21 +322,7 @@
         "2:128",
         "2:129"
       ],
-      "place": "makkah",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/building-the-kaaba-calligraphy.svg",
-          "caption": "Calligraphic panel — “Raising the Foundations of the House”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/building-the-kaaba-diagram.svg",
-          "caption": "Schematic diagram of the setting — Raising the Foundations of the House.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "makkah"
     },
     {
       "slug": "the-call-to-hajj",
@@ -493,21 +339,7 @@
         "22:26",
         "22:27"
       ],
-      "place": "makkah",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/the-call-to-hajj-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Call to Pilgrimage”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/the-call-to-hajj-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Call to Pilgrimage.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "makkah"
     },
     {
       "slug": "ibrahim-khalil-allah",
@@ -526,21 +358,7 @@
         "16:121",
         "16:123"
       ],
-      "place": "makkah",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ibrahim/ibrahim-khalil-allah-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Friend of the Most Merciful”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ibrahim/ibrahim-khalil-allah-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Friend of the Most Merciful.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "makkah"
     }
   ],
   "routes": [

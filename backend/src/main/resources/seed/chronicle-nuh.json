@@ -81,21 +81,7 @@
         "71:3",
         "7:59"
       ],
-      "place": "the-land-of-nuh",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/nuh-sent-to-his-people-calligraphy.svg",
-          "caption": "Calligraphic panel — “Sent to His People”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/nuh-sent-to-his-people-diagram.svg",
-          "caption": "Schematic diagram of the setting — Sent to His People.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-land-of-nuh"
     },
     {
       "slug": "nuh-calls-night-and-day",
@@ -115,21 +101,7 @@
         "71:10",
         "71:11"
       ],
-      "place": "the-land-of-nuh",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/nuh-calls-night-and-day-calligraphy.svg",
-          "caption": "Calligraphic panel — “Calling Night and Day”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/nuh-calls-night-and-day-diagram.svg",
-          "caption": "Schematic diagram of the setting — Calling Night and Day.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-land-of-nuh"
     },
     {
       "slug": "the-people-cling-to-idols",
@@ -149,21 +121,7 @@
         "71:23",
         "71:24"
       ],
-      "place": "the-land-of-nuh",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/the-people-cling-to-idols-calligraphy.svg",
-          "caption": "Calligraphic panel — “Clinging to the Idols”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/the-people-cling-to-idols-diagram.svg",
-          "caption": "Schematic diagram of the setting — Clinging to the Idols.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-land-of-nuh"
     },
     {
       "slug": "nuh-prays-against-them",
@@ -182,21 +140,7 @@
         "71:28",
         "54:10"
       ],
-      "place": "the-land-of-nuh",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/nuh-prays-against-them-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Prayer of Nuh”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/nuh-prays-against-them-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Prayer of Nuh.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-land-of-nuh"
     },
     {
       "slug": "the-building-of-the-ark",
@@ -215,21 +159,7 @@
         "11:37",
         "11:38"
       ],
-      "place": "the-ark",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/the-building-of-the-ark-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Building of the Ark”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/the-building-of-the-ark-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Building of the Ark.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-ark"
     },
     {
       "slug": "the-flood-and-the-pairs",
@@ -247,21 +177,7 @@
         "11:40",
         "23:27"
       ],
-      "place": "the-ark",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/the-flood-and-the-pairs-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Flood and the Pairs”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/the-flood-and-the-pairs-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Flood and the Pairs.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-ark"
     },
     {
       "slug": "nuh-and-his-son",
@@ -283,21 +199,7 @@
         "11:45",
         "11:46"
       ],
-      "place": "the-ark",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/nuh-and-his-son-calligraphy.svg",
-          "caption": "Calligraphic panel — “Nuh and His Son”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/nuh-and-his-son-diagram.svg",
-          "caption": "Schematic diagram of the setting — Nuh and His Son.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "the-ark"
     },
     {
       "slug": "the-ark-rests-on-judi",
@@ -315,21 +217,7 @@
         "11:44",
         "11:48"
       ],
-      "place": "mount-judi",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/the-ark-rests-on-judi-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Ark Rests on Jūdī”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/the-ark-rests-on-judi-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Ark Rests on Jūdī.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "mount-judi"
     },
     {
       "slug": "nuh-a-grateful-servant",
@@ -345,21 +233,7 @@
       "verses": [
         "17:3"
       ],
-      "place": "mount-judi",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/nuh/nuh-a-grateful-servant-calligraphy.svg",
-          "caption": "Calligraphic panel — “A Grateful Servant”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/nuh/nuh-a-grateful-servant-diagram.svg",
-          "caption": "Schematic diagram of the setting — A Grateful Servant.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "mount-judi"
     }
   ],
   "routes": [],

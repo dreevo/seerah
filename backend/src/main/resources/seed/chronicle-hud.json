@@ -52,21 +52,7 @@
         "7:65",
         "11:50"
       ],
-      "place": "al-ahqaf",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/hud/hud-sent-to-ad-calligraphy.svg",
-          "caption": "Calligraphic panel — “Sent to 'Ād”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/hud/hud-sent-to-ad-diagram.svg",
-          "caption": "Schematic diagram of the setting — Sent to 'Ād.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-ahqaf"
     },
     {
       "slug": "hud-the-pride-of-ad",
@@ -85,21 +71,7 @@
         "26:128",
         "26:129"
       ],
-      "place": "al-ahqaf",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/hud/hud-the-pride-of-ad-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Pride of 'Ād”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/hud/hud-the-pride-of-ad-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Pride of 'Ād.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-ahqaf"
     },
     {
       "slug": "hud-warns-and-they-defy",
@@ -119,21 +91,7 @@
         "11:56",
         "7:70"
       ],
-      "place": "al-ahqaf",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/hud/hud-warns-and-they-defy-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Warning and the Defiance”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/hud/hud-warns-and-they-defy-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Warning and the Defiance.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-ahqaf"
     },
     {
       "slug": "hud-the-barren-wind",
@@ -153,21 +111,7 @@
         "69:6",
         "69:7"
       ],
-      "place": "al-ahqaf",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/hud/hud-the-barren-wind-calligraphy.svg",
-          "caption": "Calligraphic panel — “The Barren Wind”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/hud/hud-the-barren-wind-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Barren Wind.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-ahqaf"
     },
     {
       "slug": "hud-the-believers-saved",
@@ -185,21 +129,7 @@
         "11:58",
         "7:72"
       ],
-      "place": "al-ahqaf",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/hud/hud-the-believers-saved-calligraphy.svg",
-          "caption": "Calligraphic panel — “Hud and the Believers Saved”.",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/hud/hud-the-believers-saved-diagram.svg",
-          "caption": "Schematic diagram of the setting — Hud and the Believers Saved.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "al-ahqaf"
     }
   ],
   "routes": [],

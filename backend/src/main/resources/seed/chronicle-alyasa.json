@@ -44,15 +44,7 @@
       "verses": [
         "6:86"
       ],
-      "place": "land-of-bani-israil",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/alyasa/alyasa-among-those-preferred-calligraphy.svg",
-          "caption": "Calligraphic panel — “All We preferred over the worlds” (al-An'am 6:86).",
-          "attribution": "Seerah Platform — original calligraphy"
-        }
-      ]
+      "place": "land-of-bani-israil"
     },
     {
       "slug": "alyasa-among-the-outstanding",
@@ -69,15 +61,7 @@
       "verses": [
         "38:48"
       ],
-      "place": "land-of-bani-israil",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/alyasa/alyasa-among-the-outstanding-calligraphy.svg",
-          "caption": "Calligraphic panel — “All are among the outstanding” (Sad 38:48).",
-          "attribution": "Seerah Platform — original calligraphy"
-        }
-      ]
+      "place": "land-of-bani-israil"
     }
   ],
   "routes": [],

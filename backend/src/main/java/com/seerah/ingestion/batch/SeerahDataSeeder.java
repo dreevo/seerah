@@ -9,8 +9,6 @@ import com.seerah.content.application.port.in.LinkEntitiesUseCase;
 import com.seerah.content.application.port.in.PublishEventUseCase;
 import com.seerah.content.application.port.in.SetEventTextUseCase;
 import com.seerah.content.application.port.in.SubmitEventUseCase;
-import com.seerah.media.api.MediaRegistrar;
-import com.seerah.media.domain.MediaKind;
 import com.seerah.people.application.port.in.CreatePersonUseCase;
 import com.seerah.people.application.port.in.PersonLifecycleUseCases;
 import com.seerah.people.domain.PersonRole;
@@ -75,7 +73,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
     private final PlaceRegistrar placesReg;
     private final RouteRegistrar routesReg;
     private final LearningPathRegistrar pathsReg;
-    private final MediaRegistrar mediaReg;
     private final IngestionLog ingestionLog;
     private final ObjectMapper json;
     private final com.seerah.content.api.ChronicleReadPort chronicles;
@@ -93,7 +90,7 @@ public class SeerahDataSeeder implements ApplicationRunner {
                             CreatePersonUseCase createPerson, PersonLifecycleUseCases personLifecycle,
                             CitationRegistrar citations, VerseRegistrar scripture, VerseReadPort verseRead,
                             PlaceRegistrar placesReg, RouteRegistrar routesReg,
-                            LearningPathRegistrar pathsReg, MediaRegistrar mediaReg,
+                            LearningPathRegistrar pathsReg,
                             IngestionLog ingestionLog, ObjectMapper json,
                             com.seerah.content.api.ChronicleReadPort chronicles) {
         this.chronicles = chronicles;
@@ -111,7 +108,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
         this.placesReg = placesReg;
         this.routesReg = routesReg;
         this.pathsReg = pathsReg;
-        this.mediaReg = mediaReg;
         this.ingestionLog = ingestionLog;
         this.json = json;
     }
@@ -267,13 +263,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
                 UUID plid = places.get(e.get("place").asText());
                 if (plid == null) skip(runId, row, "unknown place: " + e.get("place").asText(), e, skipped);
                 else relate(EntityType.EVENT, id, RelationshipType.OCCURRED_AT, EntityType.PLACE, plid, 1.0);
-            }
-            int ord = 0;
-            for (JsonNode m : e.path("media")) {
-                UUID mid = mediaReg.registerAsset(new MediaRegistrar.RegisterAsset(
-                        m.get("s3Key").asText(), MediaKind.valueOf(m.get("kind").asText()), "image/svg+xml",
-                        4096L, "CC-BY-4.0", m.get("attribution").asText(), null));
-                mediaReg.linkToEvent(mid, id, ord++, m.path("caption").asText(null));
             }
         }
 

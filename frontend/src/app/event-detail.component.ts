@@ -107,22 +107,18 @@ interface SectionRef { id: string; label: string; icon: string; }
             </section>
           }
 
-          @if (e.media.length) {
-            <section id="illustrations" data-sec="illustrations" class="pane">
-              <h2><app-icon name="source" [size]="18" />Illustrations</h2>
-              <div class="media-grid">
-                @for (m of e.media; track m.attribution) {
-                  <div class="media-card">
-                    <div class="mk-glyph">{{ glyph(m.kind) }}</div>
-                    <div class="mk-body">
-                      <div class="mk-kind">{{ pretty(m.kind) }}</div>
-                      @if (m.caption) { <div class="mk-cap">{{ m.caption }}</div> }
-                      <div class="mk-attr">{{ m.attribution }} · {{ m.licence }}</div>
-                    </div>
-                  </div>
-                }
-              </div>
-              <p class="note">Visual language of geography, architecture, and the written word — never a depiction of any person.</p>
+          @if (keyVerse(); as kv) {
+            <section id="calligraphy" data-sec="calligraphy" class="pane">
+              <h2><app-icon name="verse" [size]="18" />The Āyah in Calligraphy</h2>
+              <figure class="calli">
+                <span class="calli-corner tl" aria-hidden="true"></span>
+                <span class="calli-corner tr" aria-hidden="true"></span>
+                <span class="calli-corner bl" aria-hidden="true"></span>
+                <span class="calli-corner br" aria-hidden="true"></span>
+                <div class="calli-ar" dir="rtl">{{ kv.textUthmani }}</div>
+                <figcaption class="calli-ref">سورة {{ kv.surahNameAr }} · Surah {{ kv.surahNameEn }} {{ kv.reference }}</figcaption>
+              </figure>
+              <p class="note">The heart of the event, illuminated in the words of the revelation itself — the written word as art, never a depiction of any person.</p>
             </section>
           }
 
@@ -181,11 +177,14 @@ export class EventDetailComponent {
     if (e.verses.length) s.push({ id: 'revelation', label: 'Revelation', icon: 'verse' });
     if (e.people.length) s.push({ id: 'people', label: 'Companions', icon: 'companions' });
     if (e.places.length) s.push({ id: 'geography', label: 'Geography', icon: 'waypoint' });
-    if (e.media.length) s.push({ id: 'illustrations', label: 'Illustrations', icon: 'source' });
+    if (e.verses.length) s.push({ id: 'calligraphy', label: 'Calligraphy', icon: 'verse' });
     if (e.relatedEvents.length) s.push({ id: 'timeline', label: 'Timeline', icon: 'timeline' });
     if (e.sources.length) s.push({ id: 'sources', label: 'Sources', icon: 'source' });
     return s;
   });
+
+  /** The key āyah rendered as calligraphy — the first verse tied to the event, if any. */
+  keyVerse = computed(() => this.event.value()?.verses?.[0] ?? null);
 
   /** What the event is grounded in, read from its real citations — shown as vivid chips. */
   grounding = computed(() => {
@@ -268,16 +267,5 @@ export class EventDetailComponent {
 
   pretty(v: string): string {
     return v.split('_').map((w) => w.charAt(0) + w.slice(1).toLowerCase()).join(' ');
-  }
-
-  glyph(kind: string): string {
-    switch (kind) {
-      case 'MAP': return '🗺';
-      case 'DIAGRAM': return '◈';
-      case 'CALLIGRAPHY': return '﷽';
-      case 'MANUSCRIPT_SCAN': return '📜';
-      case 'AUDIO': return '♪';
-      default: return '❖';
-    }
   }
 }

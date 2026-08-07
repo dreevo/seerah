@@ -51,21 +51,7 @@
         "37:123",
         "6:85"
       ],
-      "place": "baalbek",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ilyas/ilyas-among-the-messengers-calligraphy.svg",
-          "caption": "Calligraphic panel — “Indeed, Ilyas was among the messengers” (as-Saffat 37:123).",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ilyas/ilyas-among-the-messengers-diagram.svg",
-          "caption": "Schematic diagram of the setting — the town of Baʿl to which Ilyas was sent.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "baalbek"
     },
     {
       "slug": "ilyas-call-against-baal",
@@ -85,21 +71,7 @@
         "37:125",
         "37:126"
       ],
-      "place": "baalbek",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ilyas/ilyas-call-against-baal-calligraphy.svg",
-          "caption": "Calligraphic panel — “Do you call upon Baʿl and leave the best of creators?” (as-Saffat 37:125).",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ilyas/ilyas-call-against-baal-diagram.svg",
-          "caption": "Schematic diagram of the setting — The Call Against Baʿl.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "baalbek"
     },
     {
       "slug": "ilyas-they-denied-him",
@@ -117,21 +89,7 @@
         "37:127",
         "37:128"
       ],
-      "place": "baalbek",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ilyas/ilyas-they-denied-him-calligraphy.svg",
-          "caption": "Calligraphic panel — “Except the chosen servants of Allah” (as-Saffat 37:128).",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ilyas/ilyas-they-denied-him-diagram.svg",
-          "caption": "Schematic diagram of the setting — They Denied Him.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "baalbek"
     },
     {
       "slug": "ilyas-peace-upon-him",
@@ -151,21 +109,7 @@
         "37:131",
         "37:132"
       ],
-      "place": "baalbek",
-      "media": [
-        {
-          "kind": "CALLIGRAPHY",
-          "s3Key": "chronicles/ilyas/ilyas-peace-upon-him-calligraphy.svg",
-          "caption": "Calligraphic panel — “Peace upon Ilyas” (as-Saffat 37:130).",
-          "attribution": "Seerah Platform — original calligraphy"
-        },
-        {
-          "kind": "DIAGRAM",
-          "s3Key": "chronicles/ilyas/ilyas-peace-upon-him-diagram.svg",
-          "caption": "Schematic diagram of the setting — Peace Upon Ilyas.",
-          "attribution": "Seerah Platform — schematic diagram"
-        }
-      ]
+      "place": "baalbek"
     }
   ],
   "routes": [],
