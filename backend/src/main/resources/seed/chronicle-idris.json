@@ -7,6 +7,12 @@
       "workTitle": "The Noble Qur'an",
       "author": "Qur'anic Revelation",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -61,7 +67,9 @@
       "verses": [
         "19:57"
       ],
-      "place": "the-land-of-idris"
+      "place": "the-land-of-idris",
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of the Prophets, no. 3342 — the Prophet ﷺ met Idrīs raised in the fourth heaven during the Ascension"
     },
     {
       "slug": "idris-among-the-patient",

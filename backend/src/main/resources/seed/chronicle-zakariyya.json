@@ -7,6 +7,12 @@
       "workTitle": "The Noble Qur'an",
       "author": "Qur'anic Revelation",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-muslim",
+      "workTitle": "Sahih Muslim",
+      "author": "Muslim ibn al-Hajjaj",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -56,7 +62,9 @@
       "verses": [
         "3:37"
       ],
-      "place": "jerusalem"
+      "place": "jerusalem",
+      "source2": "sahih-muslim",
+      "locator2": "Book of Virtues, no. 2379 — Abū Hurayra: 'Zakariyyā was a carpenter'"
     },
     {
       "slug": "zakariyya-prays-for-an-heir",

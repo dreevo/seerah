@@ -7,6 +7,12 @@
       "workTitle": "The Noble Qur'an",
       "author": "Qur'anic Revelation",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -110,7 +116,9 @@
         "11:65",
         "54:29"
       ],
-      "place": "al-hijr"
+      "place": "al-hijr",
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of the Prophets, no. 3377 — the one who hamstrung Ṣāliḥ's she-camel, a man of might among his people (ʿAbdullāh ibn Zamʿa)"
     },
     {
       "slug": "salih-the-blast",
