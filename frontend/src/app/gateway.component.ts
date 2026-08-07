@@ -18,8 +18,8 @@ const LAYOUT: TreeNode[] = [
   { slug: 'hud', parent: 'nuh', x: 360, y: 436, r: 40, depth: 3, note: "ʿĀd · via Sām" },
   { slug: 'salih', parent: 'nuh', x: 1040, y: 436, r: 40, depth: 3, note: 'Thamūd · via Sām' },
   { slug: 'ibrahim', parent: 'nuh', x: 700, y: 540, r: 50, depth: 3 },
-  { slug: 'lut', parent: 'ibrahim', x: 452, y: 554, r: 40, depth: 4, note: 'his nephew' },
-  { slug: 'shuayb', parent: 'ibrahim', x: 952, y: 550, r: 40, depth: 4, note: 'via Madyan' },
+  { slug: 'lut', parent: 'ibrahim', x: 452, y: 606, r: 40, depth: 4, note: 'his nephew' },
+  { slug: 'shuayb', parent: 'ibrahim', x: 952, y: 606, r: 40, depth: 4, note: 'via Madyan' },
   { slug: 'ismail', parent: 'ibrahim', x: 520, y: 684, r: 24, depth: 4, connectorName: 'Ismāʿīl' },
   { slug: 'ishaq', parent: 'ibrahim', x: 892, y: 684, r: 24, depth: 4, connectorName: 'Isḥāq' },
   { slug: 'seerah', parent: 'ismail', x: 400, y: 864, r: 56, depth: 5, flagship: true },
@@ -35,7 +35,7 @@ const LAYOUT: TreeNode[] = [
   { slug: 'isa', parent: 'dawud', x: 992, y: 1188, r: 42, depth: 7, note: 'through Maryam' },
   { slug: 'sulayman', parent: 'dawud', x: 1226, y: 1154, r: 42, depth: 7 },
   { slug: 'zakariyya', parent: 'dawud', x: 1446, y: 1138, r: 42, depth: 7, note: 'house of Dāwūd' },
-  { slug: 'yahya', parent: 'zakariyya', x: 1486, y: 1286, r: 40, depth: 8, note: 'his son' },
+  { slug: 'yahya', parent: 'zakariyya', x: 1486, y: 1338, r: 40, depth: 8, note: 'his son' },
 ];
 
 const BRANCH_W = [15, 13, 11, 9, 6.5, 5, 4, 3.4, 3]; // by child depth

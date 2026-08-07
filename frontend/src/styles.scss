@@ -90,10 +90,13 @@ a { color: inherit; text-decoration: none; }
 .pnode.flagship .rim { stroke: var(--gold-soft); stroke-width: 2.2; stroke-opacity: .85; }
 .pnode .pglyph { fill: var(--gold-soft); text-anchor: middle; font-family: 'Amiri', serif; }
 .pnode.flagship .pglyph { fill: #F3ECD9; }
-.pnode .pname { fill: #F3ECD9; text-anchor: middle; font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500; }
+.pnode .pname { fill: #F3ECD9; text-anchor: middle; font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 500;
+  paint-order: stroke; stroke: #0A1D2E; stroke-width: 5px; stroke-linejoin: round; }
 .pnode.flagship .pname { font-size: 28px; }
 .pnode .pcount { fill: #7C8794; text-anchor: middle; font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; }
-.pnode .pnote { fill: #C6B683; text-anchor: middle; font-size: 14px; font-weight: 600; font-style: italic; letter-spacing: .2px; }
+.pnode .pnote { fill: #CDBB7E; text-anchor: middle; font-size: 12.5px; font-weight: 600; font-style: italic; letter-spacing: .2px;
+  paint-order: stroke; stroke: #0A1D2E; stroke-width: 4px; stroke-linejoin: round; }
+.pnode .pcount { paint-order: stroke; stroke: #0A1D2E; stroke-width: 3.5px; stroke-linejoin: round; }
 .pnode:hover .disc, .pnode:focus-visible .disc { transform: scale(1.07); }
 .pnode:hover .rim, .pnode:focus-visible .rim { stroke-opacity: 1; stroke-width: 2.5; }
 .pnode:hover .glow { opacity: .4; }
