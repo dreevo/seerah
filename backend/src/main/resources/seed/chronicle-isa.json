@@ -115,6 +115,23 @@
       "place": "bethlehem"
     },
     {
+      "slug": "maryam-untouched-by-satan",
+      "title": "Untouched by Satan at Birth",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3431 — none is born but Satan touches it, save Maryam and her son",
+      "source2": "the-noble-quran",
+      "locator2": "Surah Āl ʿImrān 3:36 — 'I seek refuge for her and her offspring in You from the outcast Satan'",
+      "summary": "The Prophet ﷺ said that no child is born among the offspring of Ādam but Satan touches it at birth — which is why the newborn cries out — except Maryam and her son ʿĪsā. Abū Hurayra then recited the prayer of ʿImrān's wife: 'I seek refuge for her and her offspring in You from the outcast Satan.'",
+      "why": "The Qur'an records the prayer of Maryam's mother at her birth; this ḥadīth tells how Allah answered it — shielding Maryam and ʿĪsā from the touch that meets every other child.",
+      "people": [
+        "maryam",
+        "isa"
+      ],
+      "verses": []
+    },
+    {
       "slug": "isa-speaks-in-the-cradle",
       "title": "The Infant Speaks",
       "certainty": "MUTAWATIR",

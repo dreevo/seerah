@@ -13,6 +13,12 @@
       "workTitle": "Sahih Muslim",
       "author": "Muslim ibn al-Hajjaj",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -194,6 +200,20 @@
       "locator": "Book of Judicial Decisions, no. 1720a — Sulaymān's judgment between the two women whose child a wolf had taken",
       "summary": "Two women each had a son; a wolf carried one away, and they disputed over the survivor. Dāwūd judged the child to the elder. They came to Sulaymān, who said, 'Bring me a knife; I will divide him between you.' The younger cried out, 'Do not! He is her son' — and by her mercy Sulaymān knew the true mother, and gave the child to the younger. So Allah singled out Sulaymān with understanding of the case.",
       "why": "The Qur'an says Allah gave Sulaymān and Dāwūd knowledge and made Sulaymān understand the case (21:78-79); this sound ḥadīth shows that understanding in action — wisdom that reads the heart, not only the claim.",
+      "people": [
+        "sulayman"
+      ],
+      "verses": []
+    },
+    {
+      "slug": "sulayman-if-allah-wills",
+      "title": "The Oath Without 'If Allah Wills'",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3424 — Sulaymān's oath, and the omission of 'in shāʾ Allāh'",
+      "summary": "Sulaymān said, 'Tonight I will go round to seventy wives, each of whom shall bear a horseman who will fight in the cause of Allah.' His companion said, 'Say: if Allah wills' — but Sulaymān did not say it. So none of them bore a child except one, who bore half a man. The Prophet ﷺ said that had Sulaymān said 'if Allah wills,' they would all have borne horsemen striving in Allah's cause.",
+      "why": "A prophet's sincere resolve for Allah's cause still bore no fruit once 'in shāʾ Allāh' was left unsaid — the Qur'an's own command never to say 'I will do this tomorrow' except that Allah wills (18:23-24), taught through Sulaymān.",
       "people": [
         "sulayman"
       ],

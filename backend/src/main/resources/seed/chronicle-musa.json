@@ -496,6 +496,36 @@
         "18:82"
       ],
       "place": "the-two-seas"
+    },
+    {
+      "slug": "musa-the-shyness",
+      "title": "The Shyness of Mūsā, and the Fleeing Stone",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3404 — Allah clears Mūsā of what the Children of Israel alleged",
+      "source2": "the-noble-quran",
+      "locator2": "Surah al-Aḥzāb 33:69 — 'Be not like those who abused Mūsā; then Allah cleared him of what they said'",
+      "summary": "Mūsā was so modest that he kept his body fully covered, and some of the Children of Israel slandered him, claiming he hid a bodily defect. Allah willed to clear him: as Mūsā bathed alone, laying his clothes on a stone, the stone fled with them, and he ran after it calling, 'My garment, O stone!' — until he reached a group of the Children of Israel, who saw him and found him the best of what Allah had created, free of any defect. This, the Prophet ﷺ said, is Allah's clearing of him in the verse of al-Aḥzāb.",
+      "why": "The Qur'an commands the believers not to be like those who abused Mūsā, 'then Allah cleared him.' This ḥadīth narrates the very incident the verse points to — how Allah defends His prophets' honour.",
+      "people": [
+        "musa"
+      ],
+      "verses": []
+    },
+    {
+      "slug": "musa-and-the-angel-of-death",
+      "title": "Mūsā and the Angel of Death",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3407 — the Angel of Death is sent to Mūsā, and Mūsā asks to die near the Holy Land",
+      "summary": "When the Angel of Death came to Mūsā, Mūsā struck him and put out his eye. The angel returned to his Lord, who restored his eye and sent him back, offering Mūsā for every hair his hand covered on the back of an ox a year of life. Mūsā asked what would follow; told 'then death,' he asked to die then and there, and begged to be brought within a stone's throw of the Holy Land. The Prophet ﷺ said that were he there, he would show them Mūsā's grave beside the road, by the red sand-hill.",
+      "why": "Even the prophet who spoke with Allah met death, and chose nearness to the Holy Land at its coming — a sign of how the messengers loved that blessed ground.",
+      "people": [
+        "musa"
+      ],
+      "verses": []
     }
   ],
   "routes": [
