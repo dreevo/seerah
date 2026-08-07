@@ -77,7 +77,7 @@
       "major": true,
       "source": "the-noble-quran",
       "locator": "Surah al-Baqarah 2:34 · al-A'raf 7:11 · al-Hijr 15:30-33",
-      "summary": "The angels all prostrate to Adam in honour — except Iblis. He refuses out of pride, arguing, 'I am better than him; You created me from fire and created him from clay.' So arrogance and envy make their first appearance, and Iblis is cast out and cursed.",
+      "summary": "The angels all prostrate to Adam in honour — except Iblis. He refuses out of arrogance, arguing, 'I am better than him; You created me from fire and created him from clay.' So pride makes its first appearance, and Iblis is cast out.",
       "why": "The first sin in creation is pride, not appetite: Iblis judges by his own reasoning against Allah's command. His envy of Adam sets the enmity that runs through every story after.",
       "people": [
         "adam",
@@ -87,7 +87,9 @@
         "2:34",
         "7:11",
         "15:31",
-        "15:33"
+        "15:33",
+        "7:12",
+        "38:76"
       ]
     },
     {
@@ -164,20 +166,6 @@
       ]
     },
     {
-      "slug": "adam-and-musa-disputed",
-      "title": "Ādam and Mūsā Disputed",
-      "certainty": "WELL_ATTESTED",
-      "major": false,
-      "source": "sahih-al-bukhari",
-      "locator": "Book of the Prophets, no. 3409 — Ādam and Mūsā argue over the fall, and Ādam prevails",
-      "summary": "The Prophet ﷺ told of Ādam and Mūsā disputing. Mūsā said, 'You are Ādam whose mistake expelled you from the Garden.' Ādam answered, 'You are Mūsā whom Allah chose with His messages and His speech; yet you blame me for a matter already written for me before I was created?' The Prophet ﷺ said twice: so Ādam overcame Mūsā in the argument.",
-      "why": "The Qur'an tells Ādam's fall and his forgiveness; this sound ḥadīth adds its meaning — that a decree written before creation is no ground for reproach after repentance has already been accepted.",
-      "people": [
-        "adam"
-      ],
-      "verses": []
-    },
-    {
       "slug": "adam-the-descent-to-earth",
       "title": "The Descent to Earth",
       "certainty": "MUTAWATIR",
@@ -220,7 +208,7 @@
       "certainty": "MUTAWATIR",
       "source": "the-noble-quran",
       "locator": "Surah Al Imran 3:33 · Ta-Ha 20:122",
-      "summary": "Allah chose Adam, and Nuh, and the family of Ibrahim and the family of Imran above the worlds. Then his Lord chose Adam, and turned to him in forgiveness, and guided him — the first of the prophets, and the father of them all.",
+      "summary": "Allah chose Adam, and Nuh, and the family of Ibrahim and the family of Imran above the worlds. Then his Lord chose Adam, and turned to him in forgiveness, and guided him — Adam, the father of humankind, chosen and guided by his Lord.",
       "why": "Adam's story closes as it began: chosen, forgiven, and guided. He is the root of every line of prophecy that follows — the first branch of the tree the whole Library grows from.",
       "people": [
         "adam"
