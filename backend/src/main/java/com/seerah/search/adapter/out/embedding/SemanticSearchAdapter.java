@@ -1,12 +1,16 @@
 package com.seerah.search.adapter.out.embedding;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.seerah.search.application.port.out.SearchIndex;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Stream;
@@ -30,6 +34,7 @@ public class SemanticSearchAdapter implements SearchIndex {
 
     private final AtomicReference<List<Entry>> events = new AtomicReference<>(List.of());
     private final AtomicReference<List<Entry>> people = new AtomicReference<>(List.of());
+    private Map<String, String> descriptors = Map.of();
 
     private record Entry(String type, UUID id, String slug, float[] vec) { }
 
@@ -41,6 +46,7 @@ public class SemanticSearchAdapter implements SearchIndex {
     /** Build the index once the app is up and the seed has run. */
     @EventListener(ApplicationReadyEvent.class)
     public void buildIndex() {
+        descriptors = loadDescriptors();
         events.set(load("EVENT", """
             SELECT e.id, e.slug,
                    (SELECT string_agg(t.value, ' ') FROM translation t
@@ -48,9 +54,23 @@ public class SemanticSearchAdapter implements SearchIndex {
                       AND t.field_name IN ('title', 'summary')) AS text
             FROM event e WHERE e.status = 'PUBLISHED'
             """));
+        // A person is embedded from their names PLUS the two events where they first
+        // appear (title + summary) — their "introduction". That gives relational
+        // context without the dilution of their whole event history, so a query like
+        // "brother of Musa" finds Harun via the event that names him as Musa's brother.
         people.set(load("PERSON", """
-            SELECT p.id, p.slug,
-                   (SELECT string_agg(a.alias, ' ') FROM person_alias a WHERE a.person_id = p.id) AS text
+            SELECT p.id, p.slug, concat_ws(' ',
+                     (SELECT string_agg(a.alias, ' ') FROM person_alias a WHERE a.person_id = p.id),
+                     (SELECT string_agg(intro.txt, ' ') FROM (
+                        SELECT concat_ws(' ',
+                                 (SELECT value FROM translation WHERE entity_type='EVENT' AND entity_id=e.id AND field_name='title'),
+                                 (SELECT value FROM translation WHERE entity_type='EVENT' AND entity_id=e.id AND field_name='summary')) AS txt
+                        FROM relationship r JOIN event e ON e.id = r.subject_id
+                        WHERE r.subject_type='EVENT' AND r.rel_type='PARTICIPATED_IN'
+                          AND r.object_type='PERSON' AND r.object_id = p.id
+                        ORDER BY e.sort_key ASC, e.greg_start ASC NULLS LAST
+                        LIMIT 2) intro)
+                   ) AS text
             FROM person p WHERE p.status = 'PUBLISHED'
             """));
     }
@@ -59,9 +79,24 @@ public class SemanticSearchAdapter implements SearchIndex {
         return jdbc.query(sql, (rs, i) -> {
             UUID id = rs.getObject(1, UUID.class);
             String slug = rs.getString(2);
-            String text = rs.getString(3);
-            return new Entry(type, id, slug, model.embed(text == null || text.isBlank() ? slug : text));
+            String base = rs.getString(3);
+            String text = base == null || base.isBlank() ? slug : base;
+            // A curated identity/kinship descriptor (search-only) leads the person's
+            // text so relational queries resolve: "brother of Musa" -> Harun.
+            String desc = descriptors.get(slug);
+            if (desc != null) text = desc + ". " + desc + ". " + text;
+            return new Entry(type, id, slug, model.embed(text));
         });
+    }
+
+    private Map<String, String> loadDescriptors() {
+        try (var in = new ClassPathResource("search/person-descriptors.json").getInputStream()) {
+            Map<String, String> m = new ObjectMapper().readValue(in, new TypeReference<>() { });
+            m.remove("_note");
+            return m;
+        } catch (Exception e) {
+            return Map.of();
+        }
     }
 
     @Override
