@@ -11,13 +11,16 @@ import { PathPlayerComponent } from './path-player.component';
 export const routes: Routes = [
   { path: '', component: GatewayComponent, title: 'The Prophetic Library — Chronicles' },
 
+  // Global semantic search across the whole library (reachable from anywhere).
+  { path: 'search', component: SearchComponent, title: 'Search the Library' },
+
   // Everything below is scoped to a chosen chronicle (:chronicle route param,
   // bound to each component's `chronicle` input via withComponentInputBinding).
   { path: 'c/:chronicle', component: TimelineComponent, title: 'Chronicle — Timeline' },
   { path: 'c/:chronicle/explore', component: ExploreComponent, title: 'Chronicle — Guided Journeys' },
   { path: 'c/:chronicle/path/:slug', component: PathPlayerComponent, title: 'Chronicle — Journey' },
   { path: 'c/:chronicle/companions', component: CompanionsComponent, title: 'Chronicle — People' },
-  { path: 'c/:chronicle/search', component: SearchComponent, title: 'Chronicle — Search' },
+  { path: 'c/:chronicle/search', redirectTo: '/search' },
 
   // Global detail pages (an event/person carries its own chronicle context).
   { path: 'event/:slug', component: EventDetailComponent, title: 'Chronicle — Event' },

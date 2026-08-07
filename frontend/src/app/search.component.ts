@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { httpResource } from '@angular/common/http';
 
@@ -15,9 +15,9 @@ interface SearchHit {
   imports: [RouterLink],
   template: `
     <section class="hero" style="padding-bottom:18px">
-      <div class="eyebrow">Smart Search</div>
+      <div class="eyebrow">Smart Search · The Whole Library</div>
       <h1>Search by <em>meaning</em></h1>
-      <p class="sub">Describe what you're looking for in your own words — it understands the idea, not just the exact word.</p>
+      <p class="sub">Describe what you're looking for in your own words — across every chronicle. It understands the idea, not just the exact word.</p>
     </section>
 
     <div class="search-box">
@@ -53,15 +53,13 @@ interface SearchHit {
   `,
 })
 export class SearchComponent {
-  chronicle = input.required<string>();
   q = signal('');
 
+  // Global search across every chronicle — no chronicle scope.
   results = httpResource<SearchHit[]>(
     () => {
       const term = this.q().trim();
-      return term.length >= 2
-        ? `/api/public/search?q=${encodeURIComponent(term)}&chronicle=${encodeURIComponent(this.chronicle())}`
-        : undefined;
+      return term.length >= 2 ? `/api/public/search?q=${encodeURIComponent(term)}` : undefined;
     },
     { defaultValue: [] },
   );
