@@ -94,7 +94,6 @@ interface SectionRef { id: string; label: string; icon: string; }
               <div class="grid">
                 @for (p of e.people; track p.id) {
                   <div class="mini">
-                    <span class="mrole" [attr.title]="pretty(p.role)"><app-icon [name]="personIcon(p.role, p.relation)" [size]="16" /></span>
                     @if (p.nameArabic) { <div class="ar" dir="rtl">{{ p.nameArabic }}</div> }
                     <div class="n">{{ p.name }}</div>
                     <div class="r">{{ pretty(p.relation) }} · {{ pretty(p.role) }}</div>
@@ -231,7 +230,6 @@ export class EventDetailComponent {
   }
   certIcon(c: string): string { return IconComponent.certaintyIcon(c); }
   tierIcon(t: string): string { return IconComponent.tierIcon(t); }
-  personIcon(role: string, relation: string): string { return IconComponent.personIcon(role, relation); }
 
   /** Full descriptive label (used as the certainty chip's tooltip). */
   label(c: string): string {

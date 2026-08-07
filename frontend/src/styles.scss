@@ -25,7 +25,7 @@ body {
   background: var(--navy);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip; /* clip (not hidden) so position:sticky descendants still stick */
 }
 a { color: inherit; text-decoration: none; }
 
@@ -41,8 +41,9 @@ a { color: inherit; text-decoration: none; }
 }
 .app { position: relative; z-index: 1; min-height: 100%; display: flex; flex-direction: column; }
 
-/* header */
-header {
+/* app brand bar — scoped to the app's own top header so it never styles a nested
+   <header> such as the event card (.d-head), which must scroll away normally */
+.app > header {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 16px 30px; border-bottom: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(9, 26, 41, .96), rgba(9, 26, 41, .72));
@@ -191,16 +192,18 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .back { display: inline-block; color: var(--gold); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; padding: 20px 0 10px; transition: .25s; }
 .back:hover { color: var(--gold-soft); }
 
-/* full-bleed detail layout: a tall rail hugging the viewport's left edge + a centred reading column */
+/* full-bleed detail layout: a tall rail hugging the viewport's left edge + a centred reading column.
+   The grid cells stretch to the full content height (default align-items: stretch), so the rail
+   column runs the whole page and its sticky nav stays pinned however far you scroll. */
 .detail-shell { width: 100vw; margin-left: calc(50% - 50vw); display: grid;
-  grid-template-columns: 268px minmax(0, 1fr); align-items: start; }
-.secnav-wrap { min-width: 0; }
+  grid-template-columns: 268px minmax(0, 1fr); }
+.secnav-wrap { min-width: 0;
+  background: linear-gradient(180deg, rgba(200, 164, 75, .08), rgba(255, 255, 255, .012) 34%, transparent);
+  border-right: 1px solid var(--line); }
 .detail-main { min-width: 0; max-width: 900px; margin: 0 auto; padding: 0 44px 64px; }
 
-/* the section rail — a full-height illuminated panel with a gold "reading spine" */
-.secnav { position: sticky; top: 0; min-height: 100vh; padding: 34px 22px 34px 40px;
-  background: linear-gradient(180deg, rgba(200, 164, 75, .08), rgba(255, 255, 255, .015) 38%, transparent);
-  border-right: 1px solid var(--line); }
+/* the section rail — the "On this page" links stay pinned at the top of the viewport */
+.secnav { position: sticky; top: 0; max-height: 100vh; overflow-y: auto; padding: 34px 22px 34px 40px; }
 .secnav-h { font-size: 11.5px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; padding-left: 22px; }
 .secnav-h::after { content: ''; display: block; width: 36px; height: 2px; margin: 11px 0 0 22px;
   background: linear-gradient(90deg, var(--gold), transparent); }
@@ -260,8 +263,7 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 /* verse */
 .verse { background: linear-gradient(155deg, var(--parch), var(--sand-2)); border: 1px solid var(--gold); border-radius: 5px; padding: 24px 26px; margin: 14px 0; box-shadow: var(--shadow); }
 .v-ar { font-family: 'Amiri', serif; font-size: 28px; line-height: 2.15; color: #2A1F0E; text-align: right; margin-bottom: 16px; }
-.v-tr { font-family: 'Cormorant Garamond', serif; font-size: 19.5px; line-height: 1.9; color: #3A2E19; font-style: italic; margin-bottom: 14px;
-  background: linear-gradient(transparent 62%, rgba(200, 164, 75, .32) 62%); padding: 0 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.v-tr { font-family: 'Cormorant Garamond', serif; font-size: 19.5px; line-height: 1.85; color: #3A2E19; font-style: italic; margin-bottom: 14px; }
 .v-cite { font-size: 11.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold-deep); font-weight: 700; }
 
 /* grids / minis */
@@ -300,8 +302,8 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 @media (max-width: 900px) {
   .detail-shell { width: auto; margin-left: 0; grid-template-columns: 1fr; }
   .detail-main { max-width: none; margin: 0; padding: 0; }
-  .secnav-wrap { position: sticky; top: 0; z-index: 20; }
-  .secnav { position: static; min-height: 0; margin: 0 -24px; padding: 10px 24px; border-right: none;
+  .secnav-wrap { position: sticky; top: 0; z-index: 20; background: none; border-right: none; }
+  .secnav { position: static; max-height: none; overflow: visible; margin: 0 -24px; padding: 10px 24px;
     border-bottom: 1px solid var(--line); background: rgba(14, 36, 54, .94); backdrop-filter: blur(8px); }
   .secnav-h, .secnav ul::before { display: none; }
   .secnav ul { flex-direction: row; overflow-x: auto; gap: 4px; margin-top: 0; scrollbar-width: none; }

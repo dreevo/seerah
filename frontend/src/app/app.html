@@ -19,10 +19,6 @@
         <a [routerLink]="['/c', c, 'search']" routerLinkActive="on"><app-icon name="search" [size]="15" />Search</a>
         <a [routerLink]="['/c', c, 'ask']" routerLinkActive="on"><app-icon name="ask" [size]="15" />Ask</a>
       </nav>
-    } @else {
-      <nav class="nav">
-        <a routerLink="/" routerLinkActive="on" [routerLinkActiveOptions]="{ exact: true }"><app-icon name="chronicle" [size]="15" />Chronicles</a>
-      </nav>
     }
   </header>
 
