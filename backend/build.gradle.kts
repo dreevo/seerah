@@ -44,11 +44,9 @@ dependencies {
     // --- operations ---
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
-    // --- security: role-based gate on the editorial endpoints (§4.2, §6.5) ---
-    implementation("org.springframework.boot:spring-boot-starter-security")
-
-    // --- search phase (§17): OpenSearch, behind the SearchPort, flag-selected ---
-    implementation("org.opensearch.client:opensearch-rest-client:2.19.6")
+    // The service is read-only (public GETs only) and search is a live Postgres
+    // ILIKE over the fixed corpus — so no Spring Security and no second search
+    // engine. Both were removed with the write/governance pipeline.
 
     // --- test: real Postgres via Testcontainers, boundaries via ArchUnit ---
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -56,7 +54,6 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
     testImplementation("com.tngtech.archunit:archunit-junit5:1.3.0")
-    testImplementation("org.springframework.security:spring-security-test")
 }
 
 tasks.withType<Test> {

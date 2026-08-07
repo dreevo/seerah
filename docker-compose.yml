@@ -1,17 +1,15 @@
 # ============================================================================
 #  Seerah platform — the whole backend as one command:  docker compose up
 #
-#  Brings up PostGIS + the Spring Boot API (with the full chronology seeded).
-#  The Angular reader is run separately in dev (see frontend/README.md) or built
-#  and served statically; run it with `npm start` and it proxies to :8080.
+#  Brings up Postgres + the Spring Boot read API (with the full Qur'an and every
+#  chronicle seeded on first boot). The Angular reader runs separately in dev
+#  (`cd frontend && npm start`, proxied to :8080) or is built and served static.
 #
-#  OpenSearch is optional — enable the search phase with:
-#     docker compose --profile search up
-#  and set search.engine=opensearch (see the `backend` environment below).
+#  The service is read-only: no auth, no message broker, no second search engine.
 # ============================================================================
 services:
   db:
-    image: postgis/postgis:16-3.4
+    image: postgres:16
     environment:
       POSTGRES_USER: seerah
       POSTGRES_PASSWORD: seerah
@@ -35,28 +33,11 @@ services:
       DB_URL: jdbc:postgresql://db:5432/seerah
       DB_USER: seerah
       DB_PASSWORD: seerah
-      # Load the full Qur'an + the pivotal-events chronology on first boot.
+      # Load the full Qur'an + every chronicle on first boot.
       SEERAH_SEED: "true"
-      # --- editorial credentials (dev only; override in real deployments) ---
-      SEERAH_EDITOR_PASSWORD: editor-dev
-      SEERAH_SCHOLAR_PASSWORD: scholar-dev
-      # --- to run search on OpenSearch instead of Postgres, uncomment: ------
-      # SEARCH_ENGINE: opensearch
-      # SEARCH_OPENSEARCH_URI: http://opensearch:9200
     command: ["--seerah.seed=true"]
     ports:
       - "8080:8080"
-
-  # Optional — only started with `--profile search`.
-  opensearch:
-    image: opensearchproject/opensearch:2.17.1
-    profiles: ["search"]
-    environment:
-      discovery.type: single-node
-      DISABLE_SECURITY_PLUGIN: "true"
-      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
-    ports:
-      - "9200:9200"
 
 volumes:
   seerah-db:

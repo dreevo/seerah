@@ -3,21 +3,19 @@ package com.seerah.search.adapter.out.persistence;
 import com.seerah.search.application.port.out.SearchIndex;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.UUID;
 
 /**
- * Postgres-backed search (Phase 1, §17). Matches the query against the published
- * corpus: event titles and summaries (in {@code translation}) and person names (in
- * {@code person_alias}). Case-insensitive {@code ILIKE} — good enough for Latin
- * text and names now; the OpenSearch pipeline with Arabic analysis (§18) replaces
- * this behind the same port later.
+ * Postgres-backed search. Matches the query against the published corpus: event
+ * titles and summaries (in {@code translation}) and person names (in
+ * {@code person_alias}), case-insensitive {@code ILIKE}. This is the search
+ * engine — the corpus is small and fixed, so a live ILIKE over the content tables
+ * needs no separate index, projection, or second engine.
  */
 @Component
-@ConditionalOnProperty(name = "search.engine", havingValue = "postgres", matchIfMissing = true)
 public class SearchIndexAdapter implements SearchIndex {
 
     @PersistenceContext

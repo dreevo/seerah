@@ -7,45 +7,55 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringJoiner;
 import java.util.UUID;
 
 /**
- * PostGIS-backed route store. The path is built as WGS 84 WKT and inserted via
- * {@code ST_GeogFromText}; the distance is measured with {@code ST_Length} at
- * insert time. Reads come back as {@code ST_AsText} and are parsed into points —
- * so the JPA layer stays free of spatial types.
+ * Route store backed by plain tables: a {@code route} row plus its ordered
+ * {@code route_point}s. Distance is the great-circle (haversine) length of the
+ * polyline, computed in Java — no PostGIS. Upsert is delete-then-insert on the
+ * unique slug, which keeps re-seeding idempotent.
  */
 @Component
 public class RouteStoreAdapter implements RouteStore {
+
+    private static final double EARTH_KM = 6371.0088;
 
     @PersistenceContext
     private EntityManager em;
 
     @Override
     public UUID upsert(String slug, UUID eventId, boolean conjectural, List<GeoPoint> points) {
-        String wkt = toWkt(points);
+        em.createNativeQuery("DELETE FROM route WHERE slug = :slug")
+                .setParameter("slug", slug).executeUpdate();
+
         UUID id = UUID.randomUUID();
+        BigDecimal km = BigDecimal.valueOf(lengthKm(points)).setScale(2, RoundingMode.HALF_UP);
         em.createNativeQuery("""
-                INSERT INTO route (id, slug, event_id, is_conjectural, path, distance_km)
-                VALUES (:id, :slug, :event, :conj,
-                        ST_GeogFromText(:wkt),
-                        round(ST_Length(ST_GeogFromText(:wkt))::numeric / 1000.0, 2))
-                ON CONFLICT (slug) DO UPDATE SET
-                    event_id       = EXCLUDED.event_id,
-                    is_conjectural = EXCLUDED.is_conjectural,
-                    path           = EXCLUDED.path,
-                    distance_km    = EXCLUDED.distance_km,
-                    updated_at     = now()
+                INSERT INTO route (id, slug, event_id, is_conjectural, distance_km)
+                VALUES (:id, :slug, :event, :conj, :km)
                 """)
                 .setParameter("id", id)
                 .setParameter("slug", slug)
                 .setParameter("event", eventId)
                 .setParameter("conj", conjectural)
-                .setParameter("wkt", wkt)
+                .setParameter("km", km)
                 .executeUpdate();
+
+        for (int i = 0; i < points.size(); i++) {
+            GeoPoint p = points.get(i);
+            em.createNativeQuery("""
+                    INSERT INTO route_point (route_id, ordinal, lat, lng)
+                    VALUES (:rid, :ord, :lat, :lng)
+                    """)
+                    .setParameter("rid", id)
+                    .setParameter("ord", i)
+                    .setParameter("lat", p.lat())
+                    .setParameter("lng", p.lng())
+                    .executeUpdate();
+        }
         return id;
     }
 
@@ -53,39 +63,51 @@ public class RouteStoreAdapter implements RouteStore {
     @SuppressWarnings("unchecked")
     public List<RouteData> forEvent(UUID eventId) {
         List<Object[]> rows = em.createNativeQuery("""
-                SELECT slug, is_conjectural, distance_km, ST_AsText(path::geometry)
+                SELECT id, slug, is_conjectural, distance_km
                 FROM route WHERE event_id = :eid ORDER BY slug
                 """)
                 .setParameter("eid", eventId)
                 .getResultList();
+
         List<RouteData> out = new ArrayList<>();
         for (Object[] r : rows) {
-            Double km = r[2] == null ? null : ((BigDecimal) r[2]).doubleValue();
-            out.add(new RouteData(r[0].toString(), (Boolean) r[1], km, parseLineString(r[3].toString())));
+            UUID routeId = (UUID) r[0];
+            Double km = r[3] == null ? null : ((BigDecimal) r[3]).doubleValue();
+            out.add(new RouteData(r[1].toString(), (Boolean) r[2], km, pointsOf(routeId)));
         }
         return out;
     }
 
-    private static String toWkt(List<GeoPoint> points) {
-        StringJoiner coords = new StringJoiner(",");
-        for (GeoPoint p : points) {
-            coords.add(p.lng() + " " + p.lat()); // WKT is lon lat
-        }
-        return "SRID=4326;LINESTRING(" + coords + ")";
-    }
-
-    /** Parse "LINESTRING(lng lat,lng lat,…)" into points (lat/lng order flipped back). */
-    private static List<GeoPoint> parseLineString(String wkt) {
+    @SuppressWarnings("unchecked")
+    private List<GeoPoint> pointsOf(UUID routeId) {
+        List<Object[]> rows = em.createNativeQuery("""
+                SELECT lat, lng FROM route_point WHERE route_id = :rid ORDER BY ordinal
+                """)
+                .setParameter("rid", routeId)
+                .getResultList();
         List<GeoPoint> pts = new ArrayList<>();
-        int open = wkt.indexOf('(');
-        int close = wkt.lastIndexOf(')');
-        if (open < 0 || close < 0) return pts;
-        for (String pair : wkt.substring(open + 1, close).split(",")) {
-            String[] lonlat = pair.trim().split("\\s+");
-            if (lonlat.length == 2) {
-                pts.add(new GeoPoint(Double.parseDouble(lonlat[1]), Double.parseDouble(lonlat[0])));
-            }
+        for (Object[] r : rows) {
+            pts.add(new GeoPoint(((Number) r[0]).doubleValue(), ((Number) r[1]).doubleValue()));
         }
         return pts;
+    }
+
+    /** Great-circle length of the polyline in kilometres. */
+    private static double lengthKm(List<GeoPoint> pts) {
+        double total = 0;
+        for (int i = 1; i < pts.size(); i++) {
+            total += haversineKm(pts.get(i - 1), pts.get(i));
+        }
+        return total;
+    }
+
+    private static double haversineKm(GeoPoint a, GeoPoint b) {
+        double dLat = Math.toRadians(b.lat() - a.lat());
+        double dLng = Math.toRadians(b.lng() - a.lng());
+        double la1 = Math.toRadians(a.lat());
+        double la2 = Math.toRadians(b.lat());
+        double h = Math.sin(dLat / 2) * Math.sin(dLat / 2)
+                + Math.cos(la1) * Math.cos(la2) * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+        return 2 * EARTH_KM * Math.asin(Math.min(1.0, Math.sqrt(h)));
     }
 }

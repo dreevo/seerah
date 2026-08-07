@@ -37,9 +37,10 @@ class ArchitectureTest {
                     .should().dependOnClassesThat().resideInAPackage("jakarta.persistence..");
 
     /** §23.4 — the web ring depends on ports, not on persistence adapters. */
+    /** The read BFF is the only HTTP surface; it composes published ports, never persistence. */
     @ArchTest
     static final ArchRule web_does_not_touch_persistence =
-            noClasses().that().resideInAPackage("..adapter.in.web..")
+            noClasses().that().resideInAPackage("com.seerah.publicapi..")
                     .should().dependOnClassesThat().resideInAPackage("..adapter.out.persistence..");
 
     /** §6.8.2 — content may reach provenance only through provenance.api. */
@@ -91,11 +92,6 @@ class ArchitectureTest {
     static final ArchRule search_adapters_are_private =
             noClasses().that().resideOutsideOfPackage("com.seerah.search..")
                     .should().dependOnClassesThat().resideInAPackage("com.seerah.search.adapter..");
-
-    @ArchTest
-    static final ArchRule review_adapters_are_private =
-            noClasses().that().resideOutsideOfPackage("com.seerah.review..")
-                    .should().dependOnClassesThat().resideInAPackage("com.seerah.review.adapter..");
 
     @ArchTest
     static final ArchRule media_adapters_are_private =

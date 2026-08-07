@@ -9,7 +9,6 @@ import org.springframework.boot.testcontainers.service.connection.ServiceConnect
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -24,7 +23,7 @@ class PublicApiIntegrationTest {
 
     @Container
     @ServiceConnection
-    static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>(DockerImageName.parse("postgis/postgis:16-3.4").asCompatibleSubstituteFor("postgres"));
+    static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>("postgres:16");
 
     @Autowired PublicReadController publicApi;
     @Autowired com.seerah.assistant.api.AssistantPort assistant;
@@ -61,8 +60,8 @@ class PublicApiIntegrationTest {
         assertThat(badr.places()).extracting(p -> p.name()).contains("Badr");
         assertThat(badr.places().get(0).latitude()).isNotNull();
 
-        // it carries a scholarly approval (§13.6) — it could not have published otherwise
-        assertThat(badr.approvals()).isGreaterThanOrEqualTo(1);
+        // it is cited: publishing is impossible without a supporting source (§13.2)
+        assertThat(badr.sources()).isNotEmpty();
 
         // a stylised illustration, always attributed and never a person (§6.5, §12.9)
         assertThat(badr.media()).isNotEmpty();

@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Answers a query only from published, reviewed content (§5.7 — the corpus, not a
- * model, is the source of truth). Events lead the results, then people.
+ * Answers a query only from published content (§5.7 — the corpus, not a model, is
+ * the source of truth). Events lead the results, then people.
  */
 @Service
 @Transactional(readOnly = true)
@@ -27,7 +27,6 @@ public class SearchService implements SearchPort {
         if (query == null || query.isBlank()) {
             return List.of();
         }
-        // Pass the raw term; each engine (Postgres ILIKE, OpenSearch match) builds its own query.
         String term = query.strip();
         List<SearchMatch> hits = new ArrayList<>();
         index.matchingEvents(term, limit).forEach(r -> hits.add(new SearchMatch("EVENT", r.id(), r.slug())));

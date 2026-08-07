@@ -36,7 +36,7 @@ public final class PublicViews {
     public record EventDetail(
             UUID id, String slug, String title, String summary, String why,
             String certainty, Integer hijriYear, Integer gregYear, boolean major,
-            int approvals, String chronicleSlug, String chronicleTitle,
+            String chronicleSlug, String chronicleTitle,
             List<RelatedPerson> people,
             List<RelatedVerse> verses,
             List<RelatedPlace> places,

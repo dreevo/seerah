@@ -21,7 +21,6 @@ import com.seerah.provenance.api.CitationRegistrar;
 import com.seerah.provenance.api.CitationRegistrar.AddCitation;
 import com.seerah.provenance.api.CitationRegistrar.AddScholarlyPosition;
 import com.seerah.provenance.api.CitationRegistrar.RegisterSource;
-import com.seerah.review.api.ReviewRegistrar;
 import com.seerah.scripture.api.VerseReadPort;
 import com.seerah.scripture.api.VerseRegistrar;
 import com.seerah.scripture.domain.RevelationPlace;
@@ -43,6 +42,8 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import com.seerah.ingestion.validation.SeedValidator;
+
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -59,8 +60,6 @@ import java.util.UUID;
 @ConditionalOnProperty(name = "seerah.seed", havingValue = "true")
 public class SeerahDataSeeder implements ApplicationRunner {
 
-    private static final String SCHOLAR_EMAIL = "board@seerah.platform";
-    private static final String SCHOLAR_NAME = "Scholarly Advisory Board";
 
     private final CreateEventUseCase createEvent;
     private final SetEventTextUseCase setText;
@@ -74,7 +73,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
     private final VerseRegistrar scripture;
     private final VerseReadPort verseRead;
     private final PlaceRegistrar placesReg;
-    private final ReviewRegistrar review;
     private final RouteRegistrar routesReg;
     private final LearningPathRegistrar pathsReg;
     private final MediaRegistrar mediaReg;
@@ -94,7 +92,7 @@ public class SeerahDataSeeder implements ApplicationRunner {
                             PublishEventUseCase publishEvent, LinkEntitiesUseCase link,
                             CreatePersonUseCase createPerson, PersonLifecycleUseCases personLifecycle,
                             CitationRegistrar citations, VerseRegistrar scripture, VerseReadPort verseRead,
-                            PlaceRegistrar placesReg, ReviewRegistrar review, RouteRegistrar routesReg,
+                            PlaceRegistrar placesReg, RouteRegistrar routesReg,
                             LearningPathRegistrar pathsReg, MediaRegistrar mediaReg,
                             IngestionLog ingestionLog, ObjectMapper json,
                             com.seerah.content.api.ChronicleReadPort chronicles) {
@@ -111,7 +109,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
         this.scripture = scripture;
         this.verseRead = verseRead;
         this.placesReg = placesReg;
-        this.review = review;
         this.routesReg = routesReg;
         this.pathsReg = pathsReg;
         this.mediaReg = mediaReg;
@@ -205,6 +202,15 @@ public class SeerahDataSeeder implements ApplicationRunner {
             raw = in.readAllBytes();
         }
         JsonNode root = json.readTree(raw);
+
+        // Governance at authoring time: refuse to seed a file that breaks the
+        // editorial invariants (uncited event, malformed verse, dangling step…).
+        List<String> problems = SeedValidator.validate(runName, root);
+        if (!problems.isEmpty()) {
+            throw new IllegalStateException("Invalid seed file " + resource + ":\n  - "
+                    + String.join("\n  - ", problems));
+        }
+
         UUID runId = ingestionLog.startRun(runName, sha256(raw));
         int[] skipped = {0};
 
@@ -385,7 +391,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
                     pos.get("key").asText(), pos.get("heldBy").asText(), pos.get("summary").asText(), null, ord++));
         }
 
-        review.approve(EntityType.EVENT, id, 1, SCHOLAR_EMAIL, SCHOLAR_NAME, "seed sign-off");
         publishEvent.publish(id);
         return id;
     }

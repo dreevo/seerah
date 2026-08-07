@@ -16,7 +16,6 @@ import com.seerah.publicapi.PublicViews.MapPoint;
 import com.seerah.publicapi.PublicViews.RouteLine;
 import com.seerah.platform.error.NotFoundException;
 import com.seerah.provenance.api.CitationDirectory;
-import com.seerah.review.api.ReviewPort;
 import com.seerah.publicapi.PublicViews.EventDetail;
 import com.seerah.publicapi.PublicViews.PersonDetail;
 import com.seerah.publicapi.PublicViews.PersonEventItem;
@@ -64,7 +63,6 @@ public class PublicReadController {
     private final RouteReadPort routes;
     private final VerseReadPort verses;
     private final CitationDirectory citations;
-    private final ReviewPort review;
     private final SearchPort search;
     private final AssistantPort assistant;
     private final LearningPathReadPort paths;
@@ -74,7 +72,7 @@ public class PublicReadController {
                                 RelationshipReadPort relationships,
                                 PersonReadPort people, PlaceReadPort places, RouteReadPort routes,
                                 VerseReadPort verses, CitationDirectory citations,
-                                ReviewPort review, SearchPort search, AssistantPort assistant,
+                                SearchPort search, AssistantPort assistant,
                                 LearningPathReadPort paths, MediaReadPort media) {
         this.events = events;
         this.chronicles = chronicles;
@@ -84,7 +82,6 @@ public class PublicReadController {
         this.routes = routes;
         this.verses = verses;
         this.citations = citations;
-        this.review = review;
         this.search = search;
         this.assistant = assistant;
         this.paths = paths;
@@ -148,8 +145,6 @@ public class PublicReadController {
                 .map(c -> new SourceItem(c.workTitle(), c.tier(), c.locator(), c.quote(), c.grade()))
                 .toList();
 
-        int approvals = review.approvalCount(EntityType.EVENT, d.id());
-
         List<RouteLine> routeLines = routes.routesForEvent(d.id()).stream()
                 .map(r -> new RouteLine(r.slug(), r.conjectural(), r.distanceKm(),
                         r.points().stream().map(p -> new MapPoint(p.lat(), p.lng())).toList()))
@@ -160,7 +155,7 @@ public class PublicReadController {
                 .toList();
 
         return new EventDetail(d.id(), d.slug(), d.title(), d.summary(), d.why(), d.certainty(),
-                d.hijriYear(), d.gregYear(), d.major(), approvals, d.chronicleSlug(), d.chronicleTitle(),
+                d.hijriYear(), d.gregYear(), d.major(), d.chronicleSlug(), d.chronicleTitle(),
                 peopleOut, versesOut, placesOut, routeLines, mediaItems, eventsOut, sources);
     }
 
