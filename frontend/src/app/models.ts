@@ -97,7 +97,6 @@ export interface EventDetail {
   hijriYear: number | null;
   gregYear: number | null;
   major: boolean;
-  approvals: number;
   chronicleSlug: string | null;
   chronicleTitle: string | null;
   people: RelatedPerson[];
