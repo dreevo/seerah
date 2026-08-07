@@ -76,6 +76,7 @@ export interface SourceItem {
   tier: string;
   locator: string;
   quote: string | null;
+  quoteAr: string | null;
   grade: string | null;
 }
 

@@ -88,6 +88,24 @@ interface SectionRef { id: string; label: string; icon: string; }
             </section>
           }
 
+          @if (hadithSources().length) {
+            <section id="hadith" data-sec="hadith" class="pane">
+              <h2><app-icon name="source" [size]="18" />The Prophetic Narration</h2>
+              @for (s of hadithSources(); track s.locator) {
+                <figure class="hadith">
+                  <div class="h-ar" dir="rtl">{{ s.quoteAr }}</div>
+                  <div class="h-en">“{{ matn(s.quote) }}”</div>
+                  <figcaption class="h-cite">
+                    @if (s.grade) { <span class="grade g-{{ s.grade }}">{{ gradeLabel(s.grade) }}</span> }
+                    <span class="h-src">{{ s.workTitle }}</span>
+                    @if (narrator(s.quote); as n) { <span class="h-nar">Narrated by {{ n }}</span> }
+                  </figcaption>
+                </figure>
+              }
+              <p class="note">The words of the ḥadīth as recorded in the collection — the isnād (chain) precedes the report in the Arabic.</p>
+            </section>
+          }
+
           @if (e.people.length) {
             <section id="people" data-sec="people" class="pane">
               <h2><app-icon name="companions" [size]="18" />Companions Involved</h2>
@@ -164,12 +182,36 @@ export class EventDetailComponent {
     if (e.summary) s.push({ id: 'what', label: 'What Happened', icon: 'info' });
     if (e.why) s.push({ id: 'why', label: 'Why It Happened', icon: 'explore' });
     if (e.verses.length) s.push({ id: 'revelation', label: 'Revelation', icon: 'verse' });
+    if (e.sources.some((x) => x.quoteAr)) s.push({ id: 'hadith', label: 'Ḥadīth', icon: 'source' });
     if (e.people.length) s.push({ id: 'people', label: 'Companions', icon: 'companions' });
     if (e.places.length) s.push({ id: 'geography', label: 'Geography', icon: 'waypoint' });
     if (e.relatedEvents.length) s.push({ id: 'timeline', label: 'Timeline', icon: 'timeline' });
     if (e.sources.length) s.push({ id: 'sources', label: 'Sources', icon: 'source' });
     return s;
   });
+
+  /** The cited ḥadīth that carry their full literal text (Arabic isnād + matn + English). */
+  hadithSources = computed(() => (this.event.value()?.sources ?? []).filter((s) => !!s.quoteAr));
+
+  /** The narrator named at the head of the report, if the English begins with one. */
+  narrator(en: string | null): string | null {
+    if (!en) return null;
+    let m = en.match(/^Narrated ([^:]{2,60}?):/);
+    if (m) return m[1].replace(/[`]/g, '').trim();
+    m = en.match(/^([A-Z][\w' .`-]{2,40}?) reported/);
+    if (m) return m[1].replace(/[`]/g, '').trim();
+    return null;
+  }
+
+  /** The report itself — the isnād/attribution prefix stripped so the words stand out. */
+  matn(en: string | null): string {
+    if (!en) return '';
+    const i = en.indexOf(':');
+    if (i > 0 && i < 100 && /narrat|report|said|saying/i.test(en.slice(0, i))) {
+      return en.slice(i + 1).trim();
+    }
+    return en.trim();
+  }
 
   /** What the event is grounded in, read from its real citations — shown as vivid chips. */
   grounding = computed(() => {

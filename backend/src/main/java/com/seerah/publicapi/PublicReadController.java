@@ -63,13 +63,14 @@ public class PublicReadController {
     private final CitationDirectory citations;
     private final SearchPort search;
     private final LearningPathReadPort paths;
+    private final HadithTexts hadith;
 
     public PublicReadController(EventReadPort events, ChronicleReadPort chronicles,
                                 RelationshipReadPort relationships,
                                 PersonReadPort people, PlaceReadPort places, RouteReadPort routes,
                                 VerseReadPort verses, CitationDirectory citations,
                                 SearchPort search,
-                                LearningPathReadPort paths) {
+                                LearningPathReadPort paths, HadithTexts hadith) {
         this.events = events;
         this.chronicles = chronicles;
         this.relationships = relationships;
@@ -80,6 +81,7 @@ public class PublicReadController {
         this.citations = citations;
         this.search = search;
         this.paths = paths;
+        this.hadith = hadith;
     }
 
     /** The library of chronicles the reader can choose between (the Seerah + prophets' stories). */
@@ -136,7 +138,11 @@ public class PublicReadController {
         }
 
         List<SourceItem> sources = citations.citationsFor(EntityType.EVENT, d.id()).stream()
-                .map(c -> new SourceItem(c.workTitle(), c.tier(), c.locator(), c.quote(), c.grade()))
+                .map(c -> {
+                    String[] t = hadith.lookup(c.workTitle(), c.locator()); // [english, arabic] for a ḥadīth
+                    return new SourceItem(c.workTitle(), c.tier(), c.locator(),
+                            t != null ? t[0] : c.quote(), t != null ? t[1] : null, c.grade());
+                })
                 .toList();
 
         List<RouteLine> routeLines = routes.routesForEvent(d.id()).stream()

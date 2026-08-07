@@ -29,7 +29,7 @@ public final class PublicViews {
 
     public record RouteLine(String slug, boolean conjectural, Double distanceKm, List<MapPoint> points) { }
 
-    public record SourceItem(String workTitle, String tier, String locator, String quote, String grade) { }
+    public record SourceItem(String workTitle, String tier, String locator, String quote, String quoteAr, String grade) { }
 
     public record EventDetail(
             UUID id, String slug, String title, String summary, String why,
