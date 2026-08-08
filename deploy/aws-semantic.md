@@ -38,11 +38,18 @@ EC2 → **Launch instance**:
 - **Security group (inbound):** SSH `22` from *your IP*, HTTP `80` and HTTPS `443` from `0.0.0.0/0`.
 - Launch, then **allocate an Elastic IP** and associate it (stable public IP; free while attached).
 
-## 3. Point DNS at the server
-Create an **A record** for your domain → the Elastic IP. Verify:
-```bash
-dig +short your-domain     # must return the Elastic IP before you start Caddy
-```
+## 3. Public URL — no domain required
+You don't need to buy a domain. Pick one:
+
+- **Free HTTPS via nip.io (recommended):** `nip.io` resolves `<ip>.nip.io` to your IP, so
+  Caddy can still get a real certificate. In `.env` (step 6) set
+  `SITE_DOMAIN=<EC2-PUBLIC-IP>.nip.io` (e.g. `52.14.203.11.nip.io`). Your URL is then
+  `https://<EC2-PUBLIC-IP>.nip.io`. (Needs 80 **and** 443 open — step 2 did that.)
+- **Plain HTTP:** set `SITE_DOMAIN=:80`. URL is `http://<EC2-PUBLIC-IP>` — works fully, just no
+  padlock.
+- **Own a domain?** Point an **A record** at the Elastic IP and use it as `SITE_DOMAIN`.
+
+Either way, skip to step 4 — nothing else to configure.
 
 ## 4. Prepare the server
 SSH in (`ssh -i key.pem ubuntu@<elastic-ip>`), then:
