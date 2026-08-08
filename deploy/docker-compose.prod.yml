@@ -32,9 +32,11 @@ services:
       # First boot seeds the DB (Qur'an + chronicles) and builds the search index;
       # the seeder is idempotent, so leaving this true is harmless on later boots.
       SEERAH_SEED: "true"
-      # ~1.1 GB heap within a 2 GB container; the ONNX model uses off-heap native memory.
-      JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=55"
-    mem_limit: 2g
+      # true  -> on-device ONNX semantic search (needs ~2 GB; Oracle/roomy hosts)
+      # false -> lightweight Postgres keyword search (fits a 1 GB AWS t3.micro)
+      SEERAH_SEARCH_SEMANTIC: ${SEERAH_SEARCH_SEMANTIC:-true}
+      JAVA_TOOL_OPTIONS: ${JAVA_OPTS:--XX:MaxRAMPercentage=55}
+    mem_limit: ${BACKEND_MEM:-2g}
     expose:
       - "8080"          # internal only — reached via the web (Caddy) service
 

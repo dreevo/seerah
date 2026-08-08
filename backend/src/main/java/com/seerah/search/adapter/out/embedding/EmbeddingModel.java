@@ -7,6 +7,7 @@ import ai.onnxruntime.OrtEnvironment;
 import ai.onnxruntime.OrtSession;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +25,7 @@ import java.util.Set;
  * cost. The model + tokenizer ride along on the classpath ({@code models/minilm}).
  */
 @Component
+@ConditionalOnProperty(name = "seerah.search.semantic", havingValue = "true", matchIfMissing = true)
 public class EmbeddingModel {
 
     public static final int DIM = 384;

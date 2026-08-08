@@ -3,6 +3,7 @@ package com.seerah.search.adapter.out.embedding;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.seerah.search.application.port.out.SearchIndex;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.io.ClassPathResource;
@@ -24,6 +25,7 @@ import java.util.stream.Stream;
  * The corpus is tiny, so a brute-force scan is instant and needs no vector DB.
  */
 @Component
+@ConditionalOnProperty(name = "seerah.search.semantic", havingValue = "true", matchIfMissing = true)
 public class SemanticSearchAdapter implements SearchIndex {
 
     /** Below this cosine, a candidate is treated as unrelated (keeps junk out). */

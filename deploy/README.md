@@ -110,8 +110,10 @@ docker compose -f docker-compose.prod.yml down              # stop (keeps volume
 - **Certificate didn't issue:** it's almost always ports (step 2, *both* places) or DNS
   not yet pointing at the VM (step 3). `docker compose ... logs -f web` shows the ACME error.
 - **Memory:** the backend is capped at 2 GB (`mem_limit`), ~1.1 GB JVM heap + the ONNX
-  model's off‑heap native memory. Comfortable on a 12 GB VM. If you ever run on a tiny
-  box and need to drop the 86 MB model, that's the one thing to change — ask and I'll add
-  a `SEERAH_SEARCH_SEMANTIC=false` flag with a keyword‑search fallback.
+  model's off‑heap native memory. Comfortable on a 12 GB VM. To run on a tiny box, set
+  `SEERAH_SEARCH_SEMANTIC=false` (plus the `JAVA_OPTS`/`BACKEND_MEM` overrides in
+  `.env.example`) — it skips the 86 MB model entirely and serves a Postgres keyword search.
+- **AWS free tier?** Yes — see [`aws.md`](aws.md). It's free for 12 months on a 1 GB
+  t3.micro (so keyword search, not semantic). Oracle is free forever with full features.
 - **Testing without a domain:** set `SITE_DOMAIN=:80` in `.env` (Caddy serves plain HTTP
   on the IP, no TLS) to smoke‑test, then switch to a real domain for HTTPS.

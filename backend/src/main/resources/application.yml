@@ -38,6 +38,13 @@ management:
     health:
       show-details: when-authorized
 
+seerah:
+  search:
+    # On-device semantic search (all-MiniLM ONNX). Set false — or env
+    # SEERAH_SEARCH_SEMANTIC=false — for a lightweight Postgres keyword search
+    # on memory-constrained hosts (e.g. a 1 GB free-tier box).
+    semantic: ${SEERAH_SEARCH_SEMANTIC:true}
+
 logging:
   level:
     org.flywaydb: info
