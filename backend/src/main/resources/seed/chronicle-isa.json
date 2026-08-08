@@ -267,6 +267,20 @@
       "locator2": "Book of the Prophets, no. 3435 — whoever testifies that ʿĪsā is the slave of Allah, His word and a spirit from Him, Allah admits him to Paradise"
     },
     {
+      "slug": "isa-nearest-to-the-prophet",
+      "title": "Nearest of People to ʿĪsā",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3443 — the Prophet ﷺ nearest to ʿĪsā; the prophets are brothers",
+      "summary": "The Prophet ﷺ said: 'Both in this world and in the Hereafter, I am the nearest of all people to ʿĪsā son of Maryam. The prophets are paternal brothers; their mothers are different, but their religion is one' — for there was no prophet between him and ʿĪsā.",
+      "why": "The ḥadīth binds the messengers into one family under one religion, and places ʿĪsā and Muḥammad ﷺ closest of all — the last two links before the final message.",
+      "people": [
+        "isa"
+      ],
+      "verses": []
+    },
+    {
       "slug": "isa-foretells-ahmad",
       "title": "Glad Tidings of Aḥmad",
       "certainty": "MUTAWATIR",

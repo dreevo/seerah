@@ -334,14 +334,18 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .h-nar::before { content: '·'; margin-right: 8px; color: rgba(24, 132, 84, .55); }
 .h-ref { color: #6b5a2a; opacity: .8; }
 
+/* ḥadīth text (left) + isnād chain-tree (right, ~40%); stacks on narrow screens */
+.h-wrap { display: flex; gap: 20px; align-items: flex-start; margin: 14px 0; }
+.h-wrap > .hadith { flex: 1 1 auto; min-width: 0; margin: 0; }
+.h-wrap > .isnad-tree { flex: 0 0 320px; margin: 0; align-self: flex-start; position: sticky; top: 84px; }
+@media (max-width: 900px) { .h-wrap { flex-direction: column; } .h-wrap > .isnad-tree { flex-basis: auto; width: 100%; } }
+
 /* long ḥadīth — each language paginated on its own (‹ ›) so the two stay coherent */
 .h-pager { display: flex; align-items: center; gap: 12px; margin: 10px 0 16px; padding-top: 12px;
   border-top: 1px solid rgba(24, 132, 84, .22); }
-.h-pager.ar { flex-direction: row-reverse; }
 .hp-btn { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(24, 132, 84, .5);
   background: rgba(24, 132, 84, .1); color: #1a6b47; font-size: 18px; line-height: 1; cursor: pointer;
   display: grid; place-items: center; transition: .15s; flex: 0 0 auto; }
-.h-pager.ar .hp-btn { transform: scaleX(-1); }
 .hp-btn:hover:not(:disabled) { background: rgba(24, 132, 84, .22); }
 .hp-btn:disabled { opacity: .35; cursor: default; }
 .hp-dots { display: flex; gap: 7px; flex: 1; flex-wrap: wrap; }

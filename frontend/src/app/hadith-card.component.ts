@@ -8,6 +8,7 @@ const PAGE_CHARS = 640;   // above this a single language's text becomes pageabl
 @Component({
   selector: 'app-hadith-card',
   template: `
+    <div class="h-wrap">
     <figure class="hadith">
       <div class="h-ar" dir="rtl">{{ arPages()[arPage()] }}</div>
       @if (arPages().length > 1) {
@@ -66,6 +67,7 @@ const PAGE_CHARS = 640;   // above this a single language's text becomes pageabl
         </ol>
       </figure>
     }
+    </div>
   `,
 })
 export class HadithCardComponent {

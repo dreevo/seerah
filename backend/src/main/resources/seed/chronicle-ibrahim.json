@@ -361,6 +361,20 @@
         "16:123"
       ],
       "place": "makkah"
+    },
+    {
+      "slug": "ibrahim-circumcised",
+      "title": "The Circumcision of Ibrāhīm",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3356 — Ibrāhīm circumcised himself at eighty",
+      "summary": "The Messenger of Allah ﷺ said that Ibrāhīm circumcised himself at the age of eighty, with an adze (a curved blade) — a mark of his submission and of the upright way (ḥanīfiyya) that Muslims inherit from him.",
+      "why": "A small, concrete detail the Prophet ﷺ preserved of Ibrāhīm's life — the obedience of the ḥanīf who followed every command of his Lord, even late in life.",
+      "people": [
+        "ibrahim"
+      ],
+      "verses": []
     }
   ],
   "routes": [

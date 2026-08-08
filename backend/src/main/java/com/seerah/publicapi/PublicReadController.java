@@ -141,14 +141,26 @@ public class PublicReadController {
             }
         }
 
-        List<SourceItem> sources = citations.citationsFor(EntityType.EVENT, d.id()).stream()
+        List<SourceItem> sources = new ArrayList<>(citations.citationsFor(EntityType.EVENT, d.id()).stream()
                 .map(c -> {
                     HadithTexts.Entry t = hadith.lookup(c.workTitle(), c.locator()); // literal text + isnād
                     return new SourceItem(c.workTitle(), c.tier(), c.locator(),
                             t != null ? t.en() : c.quote(), t != null ? t.ar() : null,
                             t != null ? t.chain() : null, c.grade());
                 })
-                .toList();
+                .toList());
+
+        // An event that has verses revealed around it is, by that, grounded in the Qur'an —
+        // ensure the Qur'an is credited in the sources even when both citation slots hold ḥadīth.
+        boolean citesQuran = sources.stream()
+                .anyMatch(s -> s.workTitle() != null && s.workTitle().toLowerCase().contains("qur"));
+        if (!versesOut.isEmpty() && !citesQuran) {
+            String locator = versesOut.stream()
+                    .map(v -> "Surah " + v.surahNameEn() + " " + v.reference())
+                    .distinct()
+                    .collect(java.util.stream.Collectors.joining(" · "));
+            sources.add(0, new SourceItem("The Noble Qur'an", "PRIMARY", locator, null, null, null, null));
+        }
 
         List<RouteLine> routeLines = routes.routesForEvent(d.id()).stream()
                 .map(r -> new RouteLine(r.slug(), r.conjectural(), r.distanceKm(),
