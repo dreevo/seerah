@@ -1,5 +1,6 @@
 package com.seerah.places.application.port.out;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -16,4 +17,6 @@ public interface PlaceStore {
     Optional<PlaceData> findById(UUID id, String locale);
 
     Optional<PlaceData> findBySlug(String slug, String locale);
+
+    List<PlaceData> findAll(String locale);
 }

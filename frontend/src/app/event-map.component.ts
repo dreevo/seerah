@@ -1,8 +1,9 @@
 import {
   afterNextRender, Component, computed, DestroyRef, effect, ElementRef, inject, input, viewChild,
 } from '@angular/core';
+import { httpResource } from '@angular/common/http';
 import * as L from 'leaflet';
-import { RelatedPlace, RouteLine } from './models';
+import { MapPlace, RelatedPlace, RouteLine } from './models';
 import { placeKind, PlaceKind } from './geo/hejaz-geo';
 import { iconSvg } from './icon.component';
 
@@ -25,7 +26,7 @@ interface Placed { p: RelatedPlace; kind: PlaceKind; }
         <div class="legend">
           @for (l of legend(); track l.k) { <span class="lg"><i class="lg-{{ l.k }}"></i>{{ l.t }}</span> }
         </div>
-        <span class="disclaimer">Physical relief basemap · journeys stylised, not to scale · no figural imagery</span>
+        <span class="disclaimer">This event highlighted · faint dots are other prophets' places, for context · journeys stylised, not to scale</span>
       </div>
     </div>
   `,
@@ -34,15 +35,20 @@ export class EventMapComponent {
   places = input<RelatedPlace[]>([]);
   routes = input<RouteLine[]>([]);
 
+  /** Every place in the corpus — drawn faintly so a single event keeps the whole geography for context. */
+  private allPlaces = httpResource<MapPlace[]>(() => '/api/public/places', { defaultValue: [] });
+
   private host = viewChild.required<ElementRef<HTMLElement>>('host');
   private map?: L.Map;
   private overlays = L.layerGroup();
+  private context = L.layerGroup();
   private bounds: [number, number][] = [];
 
   constructor() {
     // Build the map only after the browser has laid the container out.
     afterNextRender(() => requestAnimationFrame(() => this.initMap()));
     effect(() => { this.places(); this.routes(); this.draw(); });
+    effect(() => { this.allPlaces.value(); this.drawContext(); });
     inject(DestroyRef).onDestroy(() => this.map?.remove());
   }
 
@@ -51,16 +57,37 @@ export class EventMapComponent {
       zoomControl: false, attributionControl: true, minZoom: 2, maxZoom: 9,
     });
     L.tileLayer(
-      'https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}',
-      { attribution: 'Tiles © Esri — Physical Map', maxZoom: 9, maxNativeZoom: 8, keepBuffer: 4 },
+      'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png',
+      { subdomains: 'abcd', attribution: '© OpenStreetMap · © CARTO', maxZoom: 9, maxNativeZoom: 9, keepBuffer: 4 },
     ).addTo(map);
     L.control.zoom({ position: 'topleft' }).addTo(map);
     L.control.scale({ position: 'bottomleft', imperial: false, maxWidth: 140 }).addTo(map);
+    this.context.addTo(map);   // context layer beneath the event's own markers
     this.overlays.addTo(map);
     this.map = map;
     map.setView([26, 39], 5);
     map.invalidateSize();
     this.draw();
+    this.drawContext();
+  }
+
+  /** Every other place across the corpus, drawn as small unlabelled dots for orientation. */
+  private drawContext() {
+    const map = this.map;
+    if (!map) return;
+    this.context.clearLayers();
+    const here = new Set(this.places().map((p) => p.slug));
+    for (const p of this.allPlaces.value()) {
+      if (p.latitude == null || p.longitude == null || here.has(p.slug)) continue;
+      const kind = placeKind(p.slug, p.name);
+      const m = L.marker([p.latitude, p.longitude], { icon: L.divIcon({
+        className: 'mpin-ctx-wrap', iconSize: [16, 16], iconAnchor: [8, 8],
+        html: `<span class="mpin-ctx pk-${kind}">${iconSvg(kind, 9, '#0A1D2E', 2.2)}</span>`,
+      }), opacity: 1, zIndexOffset: -500 });
+      m.bindTooltip(p.name + (p.modernName ? `<em>${p.modernName}</em>` : ''),
+        { direction: 'top', offset: [0, -9], className: 'map-lbl ctx' });
+      m.addTo(this.context);
+    }
   }
 
   placed = computed<Placed[]>(() =>

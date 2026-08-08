@@ -172,6 +172,16 @@ public class PublicReadController {
                 peopleOut, versesOut, placesOut, routeLines, eventsOut, sources);
     }
 
+    /** Every located place across all chronicles — the map's context layer. */
+    @GetMapping("/places")
+    public List<PublicViews.MapPlace> places(@RequestParam(defaultValue = "en") String locale) {
+        return places.publishedList(locale).stream()
+                .filter(p -> p.latitude() != null && p.longitude() != null)
+                .map(p -> new PublicViews.MapPlace(p.slug(), p.name(), p.modernName(),
+                        p.latitude(), p.longitude(), p.approximate()))
+                .toList();
+    }
+
     @GetMapping("/people")
     public List<PersonListItem> companions(@RequestParam(defaultValue = "en") String locale,
                                            @RequestParam(required = false) String chronicle) {

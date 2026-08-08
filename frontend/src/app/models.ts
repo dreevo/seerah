@@ -61,6 +61,16 @@ export interface RelatedPlace {
   relation: string;
 }
 
+/** A located place from any chronicle, for the map's global context layer. */
+export interface MapPlace {
+  slug: string;
+  name: string;
+  modernName: string | null;
+  latitude: number | null;
+  longitude: number | null;
+  approximate: boolean;
+}
+
 export interface MapPoint {
   lat: number;
   lng: number;

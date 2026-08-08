@@ -8,6 +8,7 @@ import com.seerah.shared.ScriptKind;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -42,6 +43,12 @@ public class PlaceService implements PlaceReadPort, PlaceRegistrar {
     @Transactional(readOnly = true)
     public Optional<PlaceView> findBySlug(String slug, String locale) {
         return store.findBySlug(slug, locale).map(PlaceService::toView);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<PlaceView> publishedList(String locale) {
+        return store.findAll(locale).stream().map(PlaceService::toView).toList();
     }
 
     private static PlaceView toView(PlaceStore.PlaceData d) {

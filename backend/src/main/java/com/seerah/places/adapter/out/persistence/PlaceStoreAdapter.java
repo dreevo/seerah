@@ -4,6 +4,7 @@ import com.seerah.places.application.port.out.PlaceStore;
 import com.seerah.shared.EntityType;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -46,6 +47,11 @@ public class PlaceStoreAdapter implements PlaceStore {
     @Override
     public Optional<PlaceData> findBySlug(String slug, String locale) {
         return places.findBySlug(slug).map(p -> toData(p, locale));
+    }
+
+    @Override
+    public List<PlaceData> findAll(String locale) {
+        return places.findAll().stream().map(p -> toData(p, locale)).toList();
     }
 
     private PlaceData toData(PlaceJpaEntity p, String locale) {

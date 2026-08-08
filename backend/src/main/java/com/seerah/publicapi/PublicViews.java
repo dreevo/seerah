@@ -28,6 +28,10 @@ public final class PublicViews {
 
     public record MapPoint(double lat, double lng) { }
 
+    /** A located place for the map's global context layer (every prophet's geography). */
+    public record MapPlace(String slug, String name, String modernName,
+                           Double latitude, Double longitude, boolean approximate) { }
+
     public record RouteLine(String slug, boolean conjectural, Double distanceKm, List<MapPoint> points) { }
 
     public record SourceItem(String workTitle, String tier, String locator, String quote, String quoteAr,
