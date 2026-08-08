@@ -139,27 +139,3 @@ export interface PersonDetail {
   events: PersonEventItem[];
 }
 
-export interface PathSummary {
-  slug: string;
-  title: string;
-  blurb: string | null;
-  audience: string;
-  estMinutes: number | null;
-  stepCount: number;
-}
-
-export interface PathStep {
-  ordinal: number;
-  eventSlug: string;
-  eventTitle: string;
-  prompt: string | null;
-}
-
-export interface PathDetail {
-  slug: string;
-  title: string;
-  blurb: string | null;
-  audience: string;
-  estMinutes: number | null;
-  steps: PathStep[];
-}

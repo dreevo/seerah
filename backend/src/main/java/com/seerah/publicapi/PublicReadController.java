@@ -3,9 +3,6 @@ package com.seerah.publicapi;
 import com.seerah.content.api.ChronicleReadPort;
 import com.seerah.content.api.EventReadPort;
 import com.seerah.content.api.RelatedEntity;
-import com.seerah.content.api.LearningPathReadPort;
-import com.seerah.content.api.LearningPathViews.PathDetail;
-import com.seerah.content.api.LearningPathViews.PathSummary;
 import com.seerah.content.api.RelationshipReadPort;
 import com.seerah.people.api.PersonReadPort;
 import com.seerah.places.api.PlaceReadPort;
@@ -62,7 +59,6 @@ public class PublicReadController {
     private final VerseReadPort verses;
     private final CitationDirectory citations;
     private final SearchPort search;
-    private final LearningPathReadPort paths;
     private final HadithTexts hadith;
     private final UndatedEvents undated;
 
@@ -71,7 +67,7 @@ public class PublicReadController {
                                 PersonReadPort people, PlaceReadPort places, RouteReadPort routes,
                                 VerseReadPort verses, CitationDirectory citations,
                                 SearchPort search,
-                                LearningPathReadPort paths, HadithTexts hadith,
+                                HadithTexts hadith,
                                 UndatedEvents undated) {
         this.events = events;
         this.chronicles = chronicles;
@@ -82,7 +78,6 @@ public class PublicReadController {
         this.verses = verses;
         this.citations = citations;
         this.search = search;
-        this.paths = paths;
         this.hadith = hadith;
         this.undated = undated;
     }
@@ -246,27 +241,6 @@ public class PublicReadController {
             }
         }
         return hits;
-    }
-
-    @GetMapping("/paths")
-    public List<PathSummary> paths(@RequestParam(defaultValue = "en") String locale,
-                                   @RequestParam(required = false) String chronicle) {
-        List<PathSummary> all = paths.publishedPaths(locale);
-        if (chronicle == null) return all;
-        // A path belongs to a chronicle when its steps walk that chronicle's events.
-        Set<String> slugs = new HashSet<>();
-        for (var e : events.publishedTimeline(locale, chronicle)) slugs.add(e.slug());
-        return all.stream()
-                .filter(s -> paths.pathBySlug(s.slug(), locale)
-                        .map(d -> d.steps().stream().anyMatch(st -> slugs.contains(st.eventSlug())))
-                        .orElse(false))
-                .toList();
-    }
-
-    @GetMapping("/paths/{slug}")
-    public PathDetail path(@PathVariable String slug, @RequestParam(defaultValue = "en") String locale) {
-        return paths.pathBySlug(slug, locale)
-                .orElseThrow(() -> new NotFoundException("path.not_found", "No learning path with slug " + slug));
     }
 
     private static String pretty(String v) {

@@ -2,7 +2,6 @@ package com.seerah.ingestion.batch;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.seerah.content.api.LearningPathRegistrar;
 import com.seerah.content.application.port.in.ApproveEventUseCase;
 import com.seerah.content.application.port.in.CreateEventUseCase;
 import com.seerah.content.application.port.in.LinkEntitiesUseCase;
@@ -72,7 +71,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
     private final VerseReadPort verseRead;
     private final PlaceRegistrar placesReg;
     private final RouteRegistrar routesReg;
-    private final LearningPathRegistrar pathsReg;
     private final IngestionLog ingestionLog;
     private final ObjectMapper json;
     private final com.seerah.content.api.ChronicleReadPort chronicles;
@@ -90,7 +88,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
                             CreatePersonUseCase createPerson, PersonLifecycleUseCases personLifecycle,
                             CitationRegistrar citations, VerseRegistrar scripture, VerseReadPort verseRead,
                             PlaceRegistrar placesReg, RouteRegistrar routesReg,
-                            LearningPathRegistrar pathsReg,
                             IngestionLog ingestionLog, ObjectMapper json,
                             com.seerah.content.api.ChronicleReadPort chronicles) {
         this.chronicles = chronicles;
@@ -107,7 +104,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
         this.verseRead = verseRead;
         this.placesReg = placesReg;
         this.routesReg = routesReg;
-        this.pathsReg = pathsReg;
         this.ingestionLog = ingestionLog;
         this.json = json;
     }
@@ -281,15 +277,6 @@ public class SeerahDataSeeder implements ApplicationRunner {
             }
             routesReg.upsertRoute(r.get("slug").asText(), events.get(r.get("event").asText()),
                     r.get("conjectural").asBoolean(), pts);
-        }
-
-        for (JsonNode p : root.path("paths")) {
-            UUID pid = pathsReg.createPath(p.get("slug").asText(), p.get("title").asText(),
-                    p.path("blurb").asText(null), "GENERAL", p.path("est").asInt(0));
-            int step = 1;
-            for (JsonNode s : p.path("steps")) {
-                pathsReg.addEventStep(pid, step++, events.get(s.asText()), null);
-            }
         }
 
         ingestionLog.finish(runId, order.size(), order.size(), skipped[0], "COMPLETED");

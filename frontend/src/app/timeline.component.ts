@@ -27,7 +27,7 @@ const U_TOP = 40;       // first undated card's drop below the axis
     </section>
 
     <div class="tl-controls">
-      @if (eras().length) {
+      @if (eras().length && hasSpine()) {
         <div class="seg">
           <button [class.on]="era() === 'all'" (click)="era.set('all')">All Periods</button>
           @for (e of eras(); track e.name; let i = $index) {

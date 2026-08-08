@@ -14,7 +14,6 @@
       @if (chronicle.slug(); as c) {
         <a routerLink="/" class="home" title="All chronicles"><app-icon name="chronicle" [size]="15" /></a>
         <a [routerLink]="['/c', c]" routerLinkActive="on" [routerLinkActiveOptions]="{ exact: true }"><app-icon name="timeline" [size]="15" />Timeline</a>
-        <a [routerLink]="['/c', c, 'explore']" routerLinkActive="on"><app-icon name="explore" [size]="15" />Explore</a>
         <a [routerLink]="['/c', c, 'companions']" routerLinkActive="on"><app-icon name="companions" [size]="15" />People</a>
       }
       <a routerLink="/search" routerLinkActive="on" title="Search the whole library"><app-icon name="search" [size]="15" />Search</a>

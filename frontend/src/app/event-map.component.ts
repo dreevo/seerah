@@ -26,7 +26,7 @@ interface Placed { p: RelatedPlace; kind: PlaceKind; }
         <div class="legend">
           @for (l of legend(); track l.k) { <span class="lg"><i class="lg-{{ l.k }}"></i>{{ l.t }}</span> }
         </div>
-        <span class="disclaimer">This event highlighted · faint dots are other prophets' places, for context · journeys stylised, not to scale</span>
+        <span class="disclaimer">This event highlighted in gold · the other dots are other prophets' places (zoom in for their names) · journeys stylised, not to scale</span>
       </div>
     </div>
   `,
@@ -43,6 +43,7 @@ export class EventMapComponent {
   private overlays = L.layerGroup();
   private context = L.layerGroup();
   private bounds: [number, number][] = [];
+  private contextBounds: [number, number][] = [];
 
   constructor() {
     // Build the map only after the browser has laid the container out.
@@ -65,7 +66,12 @@ export class EventMapComponent {
     this.context.addTo(map);   // context layer beneath the event's own markers
     this.overlays.addTo(map);
     this.map = map;
+    // Context names would clutter the wide overview, so reveal them only once zoomed in;
+    // the event's own labels always show. Labels de-overlap as you zoom, so this reads clean.
+    const toggleCtxLabels = () => this.host().nativeElement.classList.toggle('show-ctx-labels', map.getZoom() >= 6);
+    map.on('zoomend', toggleCtxLabels);
     map.setView([26, 39], 5);
+    toggleCtxLabels();
     map.invalidateSize();
     this.draw();
     this.drawContext();
@@ -76,18 +82,21 @@ export class EventMapComponent {
     const map = this.map;
     if (!map) return;
     this.context.clearLayers();
+    this.contextBounds = [];
     const here = new Set(this.places().map((p) => p.slug));
     for (const p of this.allPlaces.value()) {
       if (p.latitude == null || p.longitude == null || here.has(p.slug)) continue;
       const kind = placeKind(p.slug, p.name);
+      this.contextBounds.push([p.latitude, p.longitude]);
       const m = L.marker([p.latitude, p.longitude], { icon: L.divIcon({
-        className: 'mpin-ctx-wrap', iconSize: [16, 16], iconAnchor: [8, 8],
-        html: `<span class="mpin-ctx pk-${kind}">${iconSvg(kind, 9, '#0A1D2E', 2.2)}</span>`,
-      }), opacity: 1, zIndexOffset: -500 });
-      m.bindTooltip(p.name + (p.modernName ? `<em>${p.modernName}</em>` : ''),
-        { direction: 'top', offset: [0, -9], className: 'map-lbl ctx' });
+        className: 'mpin-ctx-wrap', iconSize: [18, 18], iconAnchor: [9, 9],
+        html: `<span class="mpin-ctx pk-${kind}">${iconSvg(kind, 10, '#F3ECD9', 2)}</span>`,
+      }), zIndexOffset: -500 });
+      m.bindTooltip(p.name, { permanent: true, direction: 'top', offset: [0, -10], className: 'map-lbl ctx' });
       m.addTo(this.context);
     }
+    // Refit so the default view shows the whole geography with this event highlighted.
+    this.fit();
   }
 
   placed = computed<Placed[]>(() =>
@@ -141,9 +150,10 @@ export class EventMapComponent {
     this.fit();
   }
 
-  // Centre + zoom (robust to any container-size timing, unlike fitBounds).
+  // Centre + zoom to the whole geography (this event's places + all context places),
+  // so the map opens on the big picture with the current event highlighted within it.
   private fit() {
-    const map = this.map, b = this.bounds;
+    const map = this.map, b = [...this.bounds, ...this.contextBounds];
     if (!map || !b.length) return;
     const lats = b.map((p) => p[0]), lngs = b.map((p) => p[1]);
     const minLat = Math.min(...lats), maxLat = Math.max(...lats);

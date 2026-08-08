@@ -457,13 +457,16 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .seemap .map-lbl::before { border-top-color: rgba(10, 29, 46, .86); }
 .seemap .map-rl { background: #0A1D2E; border: 1px solid var(--line); color: var(--gold-soft); font-size: 10.5px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
 /* context places from other prophets — small, faint, unlabelled until hovered */
-.seemap .mpin-ctx { display: grid; place-items: center; width: 15px; height: 15px; border-radius: 50%;
-  background: rgba(70, 92, 112, .72); border: 1.5px solid rgba(233, 240, 247, .55); opacity: .62;
-  transition: transform .15s, opacity .15s; }
-.seemap .mpin-ctx svg { opacity: .85; }
-.seemap .mpin-ctx-wrap:hover .mpin-ctx { opacity: 1; transform: scale(1.35); background: var(--gold); border-color: #6E551F; }
-.seemap .map-lbl.ctx { background: rgba(10, 29, 46, .78); color: #C8D3DE; font-weight: 500; font-size: 10px; }
-.seemap .map-lbl.ctx::before { border-top-color: rgba(10, 29, 46, .78); }
+.seemap .mpin-ctx { display: grid; place-items: center; width: 17px; height: 17px; border-radius: 50%;
+  background: #2C4A63; border: 2px solid #F3ECD9; opacity: .95;
+  box-shadow: 0 1px 5px -1px rgba(0, 0, 0, .5); transition: transform .15s; }
+.seemap .mpin-ctx svg { opacity: .95; }
+.seemap .mpin-ctx-wrap:hover .mpin-ctx { transform: scale(1.4); background: var(--gold); border-color: #6E551F; }
+.seemap .map-lbl.ctx { background: rgba(10, 29, 46, .82); color: #DCE6F0; font-weight: 600; font-size: 10px; padding: 1px 6px; }
+.seemap .map-lbl.ctx::before { border-top-color: rgba(10, 29, 46, .82); }
+/* context names only once zoomed in (kept off the wide overview to avoid clutter) */
+.seemap .leaf .map-lbl.ctx { display: none; }
+.seemap .leaf.show-ctx-labels .map-lbl.ctx { display: block; }
 
 .seemap .rt-halo { stroke: #0A1D2E; stroke-width: 5; stroke-opacity: .5; stroke-linecap: round; stroke-linejoin: round; }
 .seemap .rt-flow { stroke: #F0DCA0; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 7 7; animation: mapflow 1s linear infinite; filter: drop-shadow(0 0 2px rgba(227,206,147,.5)); }
