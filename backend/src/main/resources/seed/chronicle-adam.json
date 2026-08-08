@@ -13,6 +13,12 @@
       "workTitle": "Sahih al-Bukhari",
       "author": "Muhammad al-Bukhari",
       "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-muslim",
+      "workTitle": "Sahih Muslim",
+      "author": "Muslim ibn al-Hajjaj",
+      "tier": "PRIMARY"
     }
   ],
   "people": [
@@ -217,6 +223,20 @@
         "3:33",
         "20:122"
       ]
+    },
+    {
+      "slug": "adam-created-on-friday",
+      "title": "Created on a Friday",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-muslim",
+      "locator": "Book of Jumuʿah, no. 854 — the best day the sun rises on is Friday: on it Ādam was created",
+      "summary": "The Prophet ﷺ said: the best day on which the sun has risen is Friday — on it Ādam was created, on it he was admitted into the Garden, and on it he was expelled from it.",
+      "why": "The ḥadīth gathers the turning-points of Ādam's story onto a single day, and by them marks Friday as the best of days.",
+      "people": [
+        "adam"
+      ],
+      "verses": []
     }
   ],
   "routes": [],

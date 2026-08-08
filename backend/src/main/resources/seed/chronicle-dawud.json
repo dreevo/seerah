@@ -120,6 +120,20 @@
       "locator2": "Book of the Prophets, no. 3417 — the recitation of the Zabūr was made easy for Dāwūd"
     },
     {
+      "slug": "dawud-the-fasting",
+      "title": "The Prayer and Fasting of Dāwūd",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of Tahajjud, no. 1131 — the most beloved prayer and fasting to Allah are Dāwūd's",
+      "summary": "The Messenger of Allah ﷺ said that the most beloved prayer to Allah is the prayer of Dāwūd, and the most beloved fasting to Allah is the fasting of Dāwūd: he would sleep half the night, pray a third of it, then sleep a sixth, and he used to fast one day and not the next.",
+      "why": "The Qur'an praises Dāwūd as one ever-turning to his Lord; this ḥadīth shows the shape that devotion took — a measured, lasting worship the Prophet ﷺ held up as the most beloved to Allah.",
+      "people": [
+        "dawud"
+      ],
+      "verses": []
+    },
+    {
       "slug": "dawud-iron-made-soft",
       "title": "Iron Made Soft",
       "certainty": "MUTAWATIR",
