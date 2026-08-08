@@ -1,0 +1,41 @@
+# AWS free-tier stack: EC2 t3.micro (app + semantic search) + external RDS Postgres.
+# The database lives on RDS (not on the 1 GB box), and semantic search runs on the
+# ~22 MB quantized model, so the whole app fits in 1 GB.
+#   docker compose -f docker-compose.aws.yml --env-file .env up -d --build
+name: seerah
+
+services:
+  backend:
+    build: ../backend
+    restart: unless-stopped
+    environment:
+      DB_URL: ${DB_URL}                       # full JDBC URL of the RDS instance
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      SEERAH_SEED: "true"                      # first boot seeds RDS (idempotent after)
+      SEERAH_SEARCH_SEMANTIC: "true"           # keep semantic search ON
+      SEERAH_SEARCH_MODEL: "model-int8.onnx"   # 22 MB quantized model — fits 1 GB
+      JAVA_TOOL_OPTIONS: "-Xmx448m"            # bounded heap; ONNX uses off-heap memory
+    expose:
+      - "8080"                                 # internal only — reached via Caddy
+    # No mem_limit: on a 1 GB box let the OS + swap manage; runtime fits without swapping.
+
+  web:
+    build: ../frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data                       # persists the Let's Encrypt certificate
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

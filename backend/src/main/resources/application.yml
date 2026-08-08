@@ -44,6 +44,10 @@ seerah:
     # SEERAH_SEARCH_SEMANTIC=false — for a lightweight Postgres keyword search
     # on memory-constrained hosts (e.g. a 1 GB free-tier box).
     semantic: ${SEERAH_SEARCH_SEMANTIC:true}
+    # The embedding model file under models/minilm. Default is the full fp32 model;
+    # set SEERAH_SEARCH_MODEL=model-int8.onnx (~22 MB) to keep semantic search on a
+    # 1 GB box (near-identical results, ~130 MB less memory).
+    model: ${SEERAH_SEARCH_MODEL:model.onnx}
 
 logging:
   level:

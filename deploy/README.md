@@ -113,7 +113,9 @@ docker compose -f docker-compose.prod.yml down              # stop (keeps volume
   model's off‑heap native memory. Comfortable on a 12 GB VM. To run on a tiny box, set
   `SEERAH_SEARCH_SEMANTIC=false` (plus the `JAVA_OPTS`/`BACKEND_MEM` overrides in
   `.env.example`) — it skips the 86 MB model entirely and serves a Postgres keyword search.
-- **AWS free tier?** Yes — see [`aws.md`](aws.md). It's free for 12 months on a 1 GB
-  t3.micro (so keyword search, not semantic). Oracle is free forever with full features.
+- **AWS free tier?** Yes — two guides: [`aws-semantic.md`](aws-semantic.md) keeps **semantic
+  search** (EC2 t3.micro + RDS Postgres + the 22 MB quantized model), and [`aws.md`](aws.md) is
+  the simpler single-box **keyword-search** variant. Both are free for 12 months. Oracle is free
+  forever with full features.
 - **Testing without a domain:** set `SITE_DOMAIN=:80` in `.env` (Caddy serves plain HTTP
   on the IP, no TLS) to smoke‑test, then switch to a real domain for HTTPS.

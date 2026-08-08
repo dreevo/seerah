@@ -4,10 +4,11 @@ Yes, it runs on AWS free tier — with two honest caveats vs. Oracle:
 
 1. **Free for 12 months only** (then a t3.micro is ~$7.50/mo). Oracle's ARM tier is free
    *forever*. If you want permanent-free, prefer Oracle (`README.md`).
-2. **1 GB RAM.** The only free-tier compute is **EC2 t3.micro (1 GB)**, which is too small
-   for the 86 MB on-device search model. So on AWS you run with **keyword search instead of
-   semantic** (`SEERAH_SEARCH_SEMANTIC=false`) — everything else (timeline, event pages,
-   ḥadīth trees, map, chronicles) is identical.
+2. **1 GB RAM.** The only free-tier compute is **EC2 t3.micro (1 GB)**. This guide keeps it
+   simple with **keyword search** on a single box. **Want semantic search on AWS free tier
+   anyway?** It fits if you move the DB to RDS and use the 22 MB quantized model — see
+   [`aws-semantic.md`](aws-semantic.md). Everything else (timeline, event pages, ḥadīth trees,
+   map, chronicles) is identical either way.
 
 Same one-container-origin design as Oracle (Caddy serves the SPA + proxies `/api`, auto
 HTTPS); only the sizing env differs.

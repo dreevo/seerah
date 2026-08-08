@@ -7,6 +7,7 @@ import ai.onnxruntime.OrtEnvironment;
 import ai.onnxruntime.OrtSession;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
@@ -30,6 +31,11 @@ public class EmbeddingModel {
 
     public static final int DIM = 384;
 
+    /** Which ONNX file under models/minilm to load — the full fp32 model by default,
+     *  or the ~22 MB int8-quantized one (model-int8.onnx) on memory-constrained hosts. */
+    @Value("${seerah.search.model:model.onnx}")
+    private String modelFile;
+
     private HuggingFaceTokenizer tokenizer;
     private OrtEnvironment env;
     private OrtSession session;
@@ -45,7 +51,7 @@ public class EmbeddingModel {
         tokenizer = HuggingFaceTokenizer.newInstance(tokFile);
 
         byte[] model;
-        try (var in = new ClassPathResource("models/minilm/model.onnx").getInputStream()) {
+        try (var in = new ClassPathResource("models/minilm/" + modelFile).getInputStream()) {
             model = in.readAllBytes();
         }
         env = OrtEnvironment.getEnvironment();

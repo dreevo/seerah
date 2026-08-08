@@ -14,3 +14,10 @@ node_modules/
 
 # deploy secrets
 deploy/.env
+deploy/.env.aws
+
+# never commit key material
+*.pem
+*.key
+deploy/*.key
+deploy/ssh-key-*
