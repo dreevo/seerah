@@ -1,0 +1,21 @@
+# Seerah — one origin serving the SPA and proxying the API (so no CORS, TLS automatic).
+{
+	email {$ACME_EMAIL}
+}
+
+{$SITE_DOMAIN} {
+	encode zstd gzip
+
+	# API + health checks -> the Spring Boot backend (same origin => no CORS needed)
+	@backend path /api/* /actuator/*
+	handle @backend {
+		reverse_proxy backend:8080
+	}
+
+	# everything else -> the Angular build, with client-side routing fallback
+	handle {
+		root * /srv
+		try_files {path} /index.html
+		file_server
+	}
+}

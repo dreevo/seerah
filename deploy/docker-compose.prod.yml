@@ -1,0 +1,60 @@
+# Production stack for a single VM (e.g. Oracle Cloud Always Free / Ampere A1).
+#   Postgres + Spring Boot API (full semantic search) + Caddy (SPA + API proxy + HTTPS).
+# Run from this folder:  docker compose -f docker-compose.prod.yml --env-file .env up -d --build
+name: seerah
+
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - seerah-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER}"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+  backend:
+    build: ../backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://db:5432/${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      # First boot seeds the DB (Qur'an + chronicles) and builds the search index;
+      # the seeder is idempotent, so leaving this true is harmless on later boots.
+      SEERAH_SEED: "true"
+      # ~1.1 GB heap within a 2 GB container; the ONNX model uses off-heap native memory.
+      JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=55"
+    mem_limit: 2g
+    expose:
+      - "8080"          # internal only — reached via the web (Caddy) service
+
+  web:
+    build: ../frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SITE_DOMAIN: ${SITE_DOMAIN}
+      ACME_EMAIL: ${ACME_EMAIL}
+    volumes:
+      - ../deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data          # persists the Let's Encrypt certificates
+      - caddy_config:/config
+
+volumes:
+  seerah-db:
+  caddy_data:
+  caddy_config:
