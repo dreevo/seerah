@@ -375,6 +375,24 @@
         "ibrahim"
       ],
       "verses": []
+    },
+    {
+      "slug": "ibrahim-first-clothed",
+      "title": "The First to Be Clothed",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3349 — the first to be clothed on the Day of Resurrection is Ibrāhīm",
+      "source2": "the-noble-quran",
+      "locator2": "Surah al-Anbiyāʾ 21:104 (as We began the first creation, We shall repeat it)",
+      "summary": "The Prophet ﷺ said that people will be gathered on the Day of Resurrection barefoot, naked, and uncircumcised — and he recited, 'As We began the first creation, We shall repeat it; a promise binding upon Us; indeed, We will do it' — and that the first of all people to be clothed on that Day will be Ibrāhīm.",
+      "why": "Of all who stand on that Day, Ibrāhīm — the friend of the Most Merciful — is honoured first; a mark of the rank the Qur'an gives him.",
+      "people": [
+        "ibrahim"
+      ],
+      "verses": [
+        "21:104"
+      ]
     }
   ],
   "routes": [

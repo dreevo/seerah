@@ -242,6 +242,24 @@
         "17:3"
       ],
       "place": "mount-judi"
+    },
+    {
+      "slug": "nuh-witness-on-judgment-day",
+      "title": "The Witness on the Day of Resurrection",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3339 — Nūḥ is asked whether he conveyed; this ummah bears witness for him",
+      "source2": "the-noble-quran",
+      "locator2": "Surah al-Baqarah 2:143 (a just nation, witnesses over mankind)",
+      "summary": "The Prophet ﷺ said that on the Day of Resurrection Nūḥ will be brought with his nation, and Allah will ask him, 'Did you convey the Message?' He will say, 'Yes, my Lord.' His people will be asked, 'Did he convey it to you?' and they will say, 'No warner came to us.' Allah will ask Nūḥ, 'Who witnesses for you?' and he will answer, 'Muḥammad and his nation' — and this ummah will testify that he delivered his message. This, the Prophet ﷺ said, is the meaning of Allah's word: 'Thus We made you a just nation, that you be witnesses over mankind.'",
+      "why": "Nūḥ's long call, denied in his lifetime, is vindicated at the end: the last ummah stands witness that the first messenger was true to his charge.",
+      "people": [
+        "nuh"
+      ],
+      "verses": [
+        "2:143"
+      ]
     }
   ],
   "routes": [],

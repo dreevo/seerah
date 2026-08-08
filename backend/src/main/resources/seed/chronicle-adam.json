@@ -237,6 +237,20 @@
         "adam"
       ],
       "verses": []
+    },
+    {
+      "slug": "adam-and-musa-disputed",
+      "title": "Ādam and Mūsā Disputed",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3409 — Ādam and Mūsā argue over the fall, and Ādam prevails",
+      "summary": "The Prophet ﷺ told of Ādam and Mūsā disputing. Mūsā said, 'You are Ādam whose mistake expelled you from the Garden.' Ādam answered, 'You are Mūsā whom Allah chose with His messages and His speech; yet you blame me for a matter already written for me before I was created?' The Prophet ﷺ said twice: so Ādam overcame Mūsā in the argument.",
+      "why": "A meeting the Prophet ﷺ reported — not an episode of Ādam's earthly life (Mūsā came generations later) — on the meaning of a decree written before creation, and repentance already accepted.",
+      "people": [
+        "adam"
+      ],
+      "verses": []
     }
   ],
   "routes": [],
