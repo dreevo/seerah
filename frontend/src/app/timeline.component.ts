@@ -56,10 +56,12 @@ const U_TOP = 40;       // first undated card's drop below the axis
     } @else {
       <div class="tl-wrap">
         <div class="tl" [style.width.px]="width()" [style.height.px]="tlHeight()">
-          @for (b of bands(); track b.name + b.left) {
-            <div class="era-band {{ b.cls }}" [style.left.px]="b.left" [style.width.px]="b.width">{{ b.name }}</div>
+          @if (hasSpine()) {
+            @for (b of bands(); track b.name + b.left) {
+              <div class="era-band {{ b.cls }}" [style.left.px]="b.left" [style.width.px]="b.width">{{ b.name }}</div>
+            }
+            <div class="axis" [style.width.px]="width()"></div>
           }
-          <div class="axis" [style.width.px]="width()"></div>
           @for (n of nodes(); track n.item.id) {
             <button class="node" [class.up]="n.up" [class.dn]="!n.up"
                     [style.left.px]="n.x - 80" [style.top.px]="n.top" (click)="open(n.item)">
@@ -81,11 +83,11 @@ const U_TOP = 40;       // first undated card's drop below the axis
           <!-- the "?" branch: events the sources confirm but never place in time,
                growing off the END of the line so they read as neither before nor after -->
           @if (undatedNodes().length) {
-            <div class="ubranch-line" [style.left.px]="junctionX()" [style.top.px]="axisY" [style.height.px]="branchHeight()"></div>
-            <div class="ubranch-junction" [style.left.px]="junctionX() - 15" [style.top.px]="axisY - 15">?</div>
-            <div class="ubranch-cap" [style.left.px]="junctionX() + 24" [style.top.px]="axisY - 62">
+            <div class="ubranch-line" [style.left.px]="junctionX()" [style.top.px]="branchY()" [style.height.px]="branchHeight()"></div>
+            <div class="ubranch-junction" [style.left.px]="junctionX() - 15" [style.top.px]="branchY() - 15">?</div>
+            <div class="ubranch-cap" [style.left.px]="junctionX() + 24" [style.top.px]="branchY() - 62">
               <div class="ubc-t">Confirmed · timing not given</div>
-              <div class="ubc-s">off the dated line — neither before nor after</div>
+              <div class="ubc-s">{{ hasSpine() ? 'off the dated line — neither before nor after' : 'the sources place these at no fixed time' }}</div>
             </div>
             @for (u of undatedNodes(); track u.item.id) {
               <button class="unode" [style.left.px]="u.left" [style.top.px]="u.top" (click)="open(u.item)">
@@ -147,14 +149,18 @@ export class TimelineComponent {
 
   private x(i: number): number { return PAD + i * SPACING[this.zoom()]; }
 
-  /** Where the branch leaves the line: just past the last dated node (or at the start if none). */
-  junctionX = computed(() => {
-    const n = this.spine().length;
-    return (n ? this.x(n - 1) : PAD) + Math.round(SPACING[this.zoom()] * 0.62);
-  });
+  hasSpine = computed(() => this.spine().length > 0);
+
+  /** Where the branch leaves the line: just past the last dated node — or near the top-left
+   *  when there is no dated line at all, so an all-undated chronicle doesn't sink to the bottom. */
+  junctionX = computed(() =>
+    this.hasSpine() ? this.x(this.spine().length - 1) + Math.round(SPACING[this.zoom()] * 0.62) : PAD);
+
+  /** The branch hangs off the axis when there are dated events, else it starts near the top. */
+  branchY = computed(() => (this.hasSpine() ? AXIS_Y : 108));
 
   undatedNodes = computed<UNode[]>(() =>
-    this.undatedItems().map((item, i) => ({ item, left: this.junctionX() + 30, top: AXIS_Y + U_TOP + i * U_GAP })));
+    this.undatedItems().map((item, i) => ({ item, left: this.junctionX() + 30, top: this.branchY() + U_TOP + i * U_GAP })));
 
   branchHeight = computed(() => {
     const n = this.undatedItems().length;
@@ -165,7 +171,9 @@ export class TimelineComponent {
     this.x(this.spine().length - 1) + PAD,
     this.undatedItems().length ? this.junctionX() + 330 : 0));
 
-  tlHeight = computed(() => Math.max(720, AXIS_Y + this.branchHeight() + 130));
+  tlHeight = computed(() => this.hasSpine()
+    ? Math.max(720, AXIS_Y + this.branchHeight() + 130)
+    : this.branchY() + this.branchHeight() + 70);
 
   nodes = computed<Node[]>(() => {
     const vis = this.spine();
