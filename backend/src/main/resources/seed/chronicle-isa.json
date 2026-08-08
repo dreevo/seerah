@@ -281,6 +281,49 @@
       "verses": []
     },
     {
+      "slug": "isa-and-the-thief",
+      "title": "ʿĪsā and the Thief",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3444 — ʿĪsā believes the man's oath over his own eyes",
+      "summary": "The Prophet ﷺ said that ʿĪsā saw a man stealing and asked him, 'Did you steal?' The man said, 'No — by Allah, besides whom there is no true god.' ʿĪsā said, 'I believe in Allah and disbelieve my own eyes.'",
+      "why": "A picture of ʿĪsā's certainty: an oath by Allah outweighs even what his own eyes had seen.",
+      "people": [
+        "isa"
+      ],
+      "verses": []
+    },
+    {
+      "slug": "isa-do-not-exaggerate",
+      "title": "Do Not Exaggerate",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3445 — do not overpraise as the Christians overpraised the son of Maryam",
+      "summary": "ʿUmar related that the Prophet ﷺ said: 'Do not exaggerate in praising me as the Christians exaggerated concerning the son of Maryam. I am only a servant, so say: the servant of Allah and His Messenger.'",
+      "why": "The Prophet ﷺ guards against the very error made about ʿĪsā — raising a servant of Allah beyond his station.",
+      "people": [
+        "isa"
+      ],
+      "verses": []
+    },
+    {
+      "slug": "maryam-among-the-perfected",
+      "title": "Among the Perfected Women",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3411 — none of the women reached perfection save Āsiya and Maryam",
+      "summary": "The Prophet ﷺ said that many men reached perfection, but among women none reached it except Āsiya the wife of Pharaoh and Maryam the daughter of ʿImrān.",
+      "why": "The Qur'an holds up Maryam as chosen above the women of the worlds; this ḥadīth names her among the very few who reached completeness of faith.",
+      "people": [
+        "isa",
+        "maryam"
+      ],
+      "verses": []
+    },
+    {
       "slug": "isa-foretells-ahmad",
       "title": "Glad Tidings of Aḥmad",
       "certainty": "MUTAWATIR",

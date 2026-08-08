@@ -220,6 +220,24 @@
       "verses": []
     },
     {
+      "slug": "sulayman-unique-kingdom",
+      "title": "A Kingdom for No One After",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3423 — the Prophet ﷺ recalls Sulaymān's prayer for an unmatched kingdom",
+      "source2": "the-noble-quran",
+      "locator2": "Surah Ṣād 38:35 (grant me a kingdom that will not belong to anyone after me)",
+      "summary": "The Prophet ﷺ said that a strong jinn came to disrupt his prayer and Allah gave him power over it; he meant to bind it to a pillar of the mosque for all to see, but he remembered the prayer of his brother Sulaymān — 'My Lord, forgive me and grant me a kingdom that will not belong to anyone after me' — so he let it go.",
+      "why": "Sulaymān's request for a kingdom unmatched by any after him is honoured: the Prophet ﷺ withholds his own power over the jinn out of deference to it.",
+      "people": [
+        "sulayman"
+      ],
+      "verses": [
+        "38:35"
+      ]
+    },
+    {
       "slug": "sulayman-the-death",
       "title": "The Death of Sulayman",
       "certainty": "MUTAWATIR",
