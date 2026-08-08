@@ -27,7 +27,7 @@ const U_TOP = 40;       // first undated card's drop below the axis
     </section>
 
     <div class="tl-controls">
-      @if (eras().length && hasSpine()) {
+      @if (eras().length && hasDatedEvents()) {
         <div class="seg">
           <button [class.on]="era() === 'all'" (click)="era.set('all')">All Periods</button>
           @for (e of eras(); track e.name; let i = $index) {
@@ -128,6 +128,9 @@ export class TimelineComponent {
   // Backend already returns events in chronological (sort_key) order — preserve it.
   private ordered = computed<TimelineItem[]>(() => this.events.value());
   hasDates = computed(() => this.ordered().some((e) => e.gregYear != null));
+  /** Does the chronicle have any dated event at all? (Drives the period filter's presence —
+   *  must NOT depend on the current era selection, or picking an all-undated period hides it.) */
+  hasDatedEvents = computed(() => this.ordered().some((e) => !e.undated));
 
   visible = computed<TimelineItem[]>(() => {
     const all = this.ordered();
