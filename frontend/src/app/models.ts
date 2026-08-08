@@ -79,6 +79,8 @@ export interface SourceItem {
   locator: string;
   quote: string | null;
   quoteAr: string | null;
+  /** Isnād narrators, collector-ward first → Companion last; null when not a bundled ḥadīth or unverified. */
+  chain: string[] | null;
   grade: string | null;
 }
 

@@ -4,12 +4,13 @@ import { httpResource } from '@angular/common/http';
 import { EventDetail } from './models';
 import { EventMapComponent } from './event-map.component';
 import { IconComponent } from './icon.component';
+import { HadithCardComponent } from './hadith-card.component';
 
 interface SectionRef { id: string; label: string; icon: string; }
 
 @Component({
   selector: 'app-event-detail',
-  imports: [RouterLink, EventMapComponent, IconComponent],
+  imports: [RouterLink, EventMapComponent, IconComponent, HadithCardComponent],
   template: `
     @if (event.isLoading()) {
       <a class="back" routerLink="/">← Back</a>
@@ -92,17 +93,9 @@ interface SectionRef { id: string; label: string; icon: string; }
             <section id="hadith" data-sec="hadith" class="pane">
               <h2><app-icon name="source" [size]="18" />The Prophetic Narration</h2>
               @for (s of hadithSources(); track s.locator) {
-                <figure class="hadith">
-                  <div class="h-ar" dir="rtl">{{ s.quoteAr }}</div>
-                  <div class="h-en">“{{ matn(s.quote) }}”</div>
-                  <figcaption class="h-cite">
-                    @if (s.grade) { <span class="grade g-{{ s.grade }}">{{ gradeLabel(s.grade) }}</span> }
-                    <span class="h-src">{{ s.workTitle }}</span>
-                    @if (narrator(s.quote); as n) { <span class="h-nar">Narrated by {{ n }}</span> }
-                  </figcaption>
-                </figure>
+                <app-hadith-card [source]="s" />
               }
-              <p class="note">The words of the ḥadīth as recorded in the collection — the isnād (chain) precedes the report in the Arabic.</p>
+              <p class="note">The words of each ḥadīth exactly as recorded in the collection. Long reports turn the pages ‹ › ; where the chain of narration could be verified up to a Companion, it is drawn beside the text.</p>
             </section>
           }
 

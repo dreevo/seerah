@@ -6,6 +6,9 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,12 +19,18 @@ import java.util.regex.Pattern;
  * numbering matches sunnah.com for al-Bukhārī/Tirmidhī; Muslim was matched by
  * content). Keyed "collection:number". The BFF attaches the text to a citation so
  * a ḥadīth can be shown in full, exactly like a Qur'anic verse — not just cited.
+ * When present, {@code chain} carries the isnād's narrators (mechanically extracted
+ * from the Arabic isnād, collector-ward first → Companion last) — only bundled when
+ * the chain provably ends in a known Companion, so a shown chain is always sound.
  */
 @Component
 public class HadithTexts {
 
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    public record Entry(String en, String ar, List<String> chain) { }
+
     private static final Pattern NUM = Pattern.compile("no\\.\\s*(\\d+)");
-    private Map<String, Map<String, String>> texts = Map.of();
+    private Map<String, Entry> texts = Map.of();
 
     @PostConstruct
     void load() throws Exception {
@@ -30,14 +39,13 @@ public class HadithTexts {
         }
     }
 
-    /** {@code [english, arabic]} for a citation, or null if it is not a bundled ḥadīth. */
-    public String[] lookup(String workTitle, String locator) {
+    /** The bundled text (+ isnād chain) for a citation, or null if it is not a bundled ḥadīth. */
+    public Entry lookup(String workTitle, String locator) {
         String coll = collection(workTitle);
         if (coll == null || locator == null) return null;
         Matcher m = NUM.matcher(locator);
         if (!m.find()) return null;
-        Map<String, String> t = texts.get(coll + ":" + m.group(1));
-        return t == null ? null : new String[] { t.get("en"), t.get("ar") };
+        return texts.get(coll + ":" + m.group(1));
     }
 
     private static String collection(String workTitle) {

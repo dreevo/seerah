@@ -5,12 +5,15 @@ import { ChronicleItem, TimelineItem } from './models';
 import { Era, erasFor } from './chronicle-config';
 
 interface Band { name: string; cls: string; left: number; width: number; }
-interface Node { item: TimelineItem; x: number; top: number; up: boolean; stem: number; eraCls: string; }
+interface Node { item: TimelineItem; x: number; top: number; up: boolean; stem: number; eraCls: string; eraName: string; }
+interface UNode { item: TimelineItem; left: number; top: number; }
 
 const SPACING = [236, 300, 392];
 const ZL = ['Compact', 'Comfortable', 'Spacious'];
 const PAD = 150;
 const AXIS_Y = 340;
+const U_GAP = 118;      // vertical gap between undated cards on the branch
+const U_TOP = 40;       // first undated card's drop below the axis
 
 @Component({
   selector: 'app-timeline',
@@ -40,6 +43,10 @@ const AXIS_Y = 340;
       </div>
     </div>
 
+    @if (!hasDates() && visible().length) {
+      <p class="tl-datenote">The prophets before Islam predate any recorded calendar, so this line carries no CE or AH dates — events follow the order the Qur’ān and authentic ḥadīth relate them in, and each card shows its phase in the account. Events the sources place at no fixed point branch off the end, marked <span class="qm">?</span>.</p>
+    }
+
     @if (events.isLoading()) {
       <p class="state">Loading the chronology…</p>
     } @else if (events.error()) {
@@ -47,9 +54,8 @@ const AXIS_Y = 340;
     } @else if (visible().length === 0) {
       <p class="state">No events published yet in this chronicle.</p>
     } @else {
-      @if (spine().length) {
       <div class="tl-wrap">
-        <div class="tl" [style.width.px]="width()">
+        <div class="tl" [style.width.px]="width()" [style.height.px]="tlHeight()">
           @for (b of bands(); track b.name + b.left) {
             <div class="era-band {{ b.cls }}" [style.left.px]="b.left" [style.width.px]="b.width">{{ b.name }}</div>
           }
@@ -62,7 +68,7 @@ const AXIS_Y = 340;
                 @if (n.item.major) { <span class="keytag">✦ Pivotal</span> }
                 <div class="cardtop">
                   <span class="era-dot {{ n.eraCls }}"></span>
-                  <div class="yr">{{ yearLabel(n.item) }}</div>
+                  <div class="yr">{{ yearLabel(n.item) || n.eraName }}</div>
                 </div>
                 <div class="ttl">{{ n.item.title }}</div>
                 <span class="cat" [class]="'c-' + n.item.certainty">{{ label(n.item.certainty) }}</span>
@@ -71,32 +77,34 @@ const AXIS_Y = 340;
               <div class="stem" [style.height.px]="n.stem" [style.top]="n.up ? '100%' : 'auto'" [style.bottom]="n.up ? 'auto' : '100%'"></div>
             </button>
           }
-        </div>
-      </div>
-      <div class="tl-hint">{{ spine().length }} dated events · scroll sideways to explore · click any event to open it</div>
-      }
 
-      @if (undatedItems().length) {
-        <div class="undated-band">
-          <div class="ub-head">
-            <span class="ub-q">?</span>
-            <div>
-              <div class="ub-title">Confirmed — timing not given by the sources</div>
-              <div class="ub-note">These events are established by the Qur’ān or authentic ḥadīth, but no source places them at a point in time, so they sit off the dated line.</div>
+          <!-- the "?" branch: events the sources confirm but never place in time,
+               growing off the END of the line so they read as neither before nor after -->
+          @if (undatedNodes().length) {
+            <div class="ubranch-line" [style.left.px]="junctionX()" [style.top.px]="axisY" [style.height.px]="branchHeight()"></div>
+            <div class="ubranch-junction" [style.left.px]="junctionX() - 15" [style.top.px]="axisY - 15">?</div>
+            <div class="ubranch-cap" [style.left.px]="junctionX() + 24" [style.top.px]="axisY - 62">
+              <div class="ubc-t">Confirmed · timing not given</div>
+              <div class="ubc-s">off the dated line — neither before nor after</div>
             </div>
-          </div>
-          <div class="ub-grid">
-            @for (u of undatedItems(); track u.id) {
-              <button class="ub-card" (click)="open(u)">
-                <span class="ub-mark">?</span>
-                @if (u.major) { <span class="keytag">✦ Pivotal</span> }
-                <div class="ttl">{{ u.title }}</div>
-                <span class="cat c-{{ u.certainty }}">{{ label(u.certainty) }}</span>
+            @for (u of undatedNodes(); track u.item.id) {
+              <button class="unode" [style.left.px]="u.left" [style.top.px]="u.top" (click)="open(u.item)">
+                <span class="utick" [style.width.px]="u.left - junctionX()"></span>
+                <div class="card ucard">
+                  @if (u.item.major) { <span class="keytag">✦ Pivotal</span> }
+                  <div class="ttl">{{ u.item.title }}</div>
+                  <span class="cat" [class]="'c-' + u.item.certainty">{{ label(u.item.certainty) }}</span>
+                  <span class="umark">?</span>
+                </div>
               </button>
             }
-          </div>
+          }
         </div>
-      }
+      </div>
+      <div class="tl-hint">
+        {{ spine().length }} dated events{{ undatedItems().length ? ' · ' + undatedItems().length + ' undated (on the ? branch)' : '' }}
+        · scroll sideways to explore · click any event to open it
+      </div>
     }
   `,
 })
@@ -104,6 +112,7 @@ export class TimelineComponent {
   chronicle = input.required<string>();
   zoom = signal(0);
   era = signal<'all' | number>('all');
+  readonly axisY = AXIS_Y;
 
   events = httpResource<TimelineItem[]>(
     () => `/api/public/timeline?locale=en&chronicle=${encodeURIComponent(this.chronicle())}`,
@@ -116,6 +125,7 @@ export class TimelineComponent {
 
   // Backend already returns events in chronological (sort_key) order — preserve it.
   private ordered = computed<TimelineItem[]>(() => this.events.value());
+  hasDates = computed(() => this.ordered().some((e) => e.gregYear != null));
 
   visible = computed<TimelineItem[]>(() => {
     const all = this.ordered();
@@ -136,7 +146,26 @@ export class TimelineComponent {
   }
 
   private x(i: number): number { return PAD + i * SPACING[this.zoom()]; }
-  width = computed(() => Math.max(1200, this.x(this.spine().length - 1) + PAD));
+
+  /** Where the branch leaves the line: just past the last dated node (or at the start if none). */
+  junctionX = computed(() => {
+    const n = this.spine().length;
+    return (n ? this.x(n - 1) : PAD) + Math.round(SPACING[this.zoom()] * 0.62);
+  });
+
+  undatedNodes = computed<UNode[]>(() =>
+    this.undatedItems().map((item, i) => ({ item, left: this.junctionX() + 30, top: AXIS_Y + U_TOP + i * U_GAP })));
+
+  branchHeight = computed(() => {
+    const n = this.undatedItems().length;
+    return n ? U_TOP + (n - 1) * U_GAP + 30 : 0;
+  });
+
+  width = computed(() => Math.max(1200,
+    this.x(this.spine().length - 1) + PAD,
+    this.undatedItems().length ? this.junctionX() + 330 : 0));
+
+  tlHeight = computed(() => Math.max(720, AXIS_Y + this.branchHeight() + 130));
 
   nodes = computed<Node[]>(() => {
     const vis = this.spine();
@@ -144,12 +173,13 @@ export class TimelineComponent {
       const up = i % 2 === 0;
       const long = up ? i % 4 === 0 : i % 4 === 1;
       const h = long ? 150 : 92;
+      const era = this.eraOf(item, i, vis.length);
       return { item, x: this.x(i), top: up ? AXIS_Y - h - 116 : AXIS_Y + h, up, stem: h,
-        eraCls: this.eraOf(item, i, vis.length)?.cls ?? 'e1' };
+        eraCls: era?.cls ?? 'e1', eraName: era?.name ?? '' };
     });
   });
 
-  // Group consecutive visible events sharing an era label into period bands.
+  // Group consecutive spine events sharing an era label into period bands.
   bands = computed<Band[]>(() => {
     const vis = this.spine();
     if (!this.eras().length || !vis.length) return [];
@@ -176,7 +206,6 @@ export class TimelineComponent {
   private titleParts = computed<[string, string]>(() => {
     const t = this.info.value()?.title ?? '';
     if (!t) return ['The Chronicle', ''];
-    // Colour the final word gold (matches the Seerah hero look).
     const parts = t.split(' ');
     if (parts.length < 2) return [t, ''];
     return [parts.slice(0, -1).join(' '), parts[parts.length - 1]];

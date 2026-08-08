@@ -143,9 +143,10 @@ public class PublicReadController {
 
         List<SourceItem> sources = citations.citationsFor(EntityType.EVENT, d.id()).stream()
                 .map(c -> {
-                    String[] t = hadith.lookup(c.workTitle(), c.locator()); // [english, arabic] for a ḥadīth
+                    HadithTexts.Entry t = hadith.lookup(c.workTitle(), c.locator()); // literal text + isnād
                     return new SourceItem(c.workTitle(), c.tier(), c.locator(),
-                            t != null ? t[0] : c.quote(), t != null ? t[1] : null, c.grade());
+                            t != null ? t.en() : c.quote(), t != null ? t.ar() : null,
+                            t != null ? t.chain() : null, c.grade());
                 })
                 .toList();
 

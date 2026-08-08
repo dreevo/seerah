@@ -153,31 +153,42 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .zoom .lvl { min-width: 84px; text-align: center; color: var(--gold-soft); font-weight: 500; }
 .tl-hint { text-align: center; color: #5F6D7B; font-size: 10.5px; letter-spacing: 1.3px; padding: 2px 20px 40px; }
 
-/* the detached "?" branch — events confirmed by the sources but not placed in time */
-.undated-band { max-width: 1180px; margin: 4px auto 46px; padding: 0 22px; }
-.undated-band .ub-head { display: flex; align-items: flex-start; gap: 16px; padding: 20px 0 18px;
-  border-top: 2px dashed rgba(200, 164, 75, .38); }
-.ub-q { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center;
-  font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 700; color: var(--gold);
-  background: rgba(200, 164, 75, .1); border: 1.5px solid rgba(200, 164, 75, .5); }
-.ub-title { font-family: 'Cormorant Garamond', serif; font-size: 21px; color: var(--gold-soft); font-weight: 500; }
-.ub-note { color: var(--muted); font-size: 13.5px; line-height: 1.6; margin-top: 4px; max-width: 74ch; }
-.ub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
-.ub-card { position: relative; text-align: left; cursor: pointer; background: linear-gradient(160deg, rgba(20, 42, 62, .72), rgba(12, 28, 44, .72));
-  border: 1px solid var(--line); border-left: 3px solid rgba(200, 164, 75, .55); border-radius: 7px;
-  padding: 15px 16px 14px; color: inherit; transition: transform .14s, border-color .14s, box-shadow .14s; }
-.ub-card:hover { transform: translateY(-2px); border-color: rgba(200, 164, 75, .7); box-shadow: var(--shadow); }
-.ub-card:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-.ub-mark { position: absolute; top: 11px; right: 12px; font-family: 'Cormorant Garamond', serif;
-  font-size: 17px; font-weight: 700; color: var(--gold); opacity: .8; }
-.ub-card .ttl { font-family: 'Cormorant Garamond', serif; font-size: 18.5px; line-height: 1.25; color: #EAF1F7;
-  margin: 2px 34px 12px 0; }
-.ub-card .cat { font-size: 9.5px; letter-spacing: .7px; text-transform: uppercase; font-weight: 700;
-  padding: 4px 9px; border-radius: 3px; }
-.ub-card .keytag { position: absolute; bottom: -8px; left: 14px; font-size: 8px; letter-spacing: 1px;
+/* the detached "?" branch — grows off the END of the dated line so undated
+   events read as neither before nor after the events on the line */
+.ubranch-line { position: absolute; width: 3px; border-radius: 3px;
+  background: repeating-linear-gradient(var(--gold) 0 7px, transparent 7px 13px);
+  opacity: .7; }
+.ubranch-junction { position: absolute; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; font-family: 'Cormorant Garamond', serif; font-size: 20px;
+  font-weight: 700; color: var(--navy); background: var(--gold);
+  box-shadow: 0 0 0 5px rgba(200, 164, 75, .18), 0 3px 12px -3px rgba(0, 0, 0, .6); z-index: 3; }
+.ubranch-cap { position: absolute; width: 250px; }
+.ubranch-cap .ubc-t { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--gold-soft);
+  font-weight: 600; letter-spacing: .3px; }
+.ubranch-cap .ubc-s { color: var(--muted); font-size: 11.5px; font-style: italic; margin-top: 2px; }
+.unode { position: absolute; background: none; border: 0; padding: 0; cursor: pointer; }
+.unode .utick { position: absolute; top: 50%; right: 100%; height: 2px;
+  background: rgba(200, 164, 75, .5); }
+.ucard { width: 216px; position: relative; text-align: left; padding: 15px 17px; border-radius: 6px;
+  border: 1px solid var(--line); border-left: 3px solid rgba(200, 164, 75, .6);
+  background: linear-gradient(160deg, rgba(200, 164, 75, .1), rgba(255, 255, 255, .03));
+  backdrop-filter: blur(3px); transition: .3s; }
+.ucard .ttl { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #EAF1F7; line-height: 1.22;
+  font-weight: 500; margin-right: 26px; }
+.ucard .cat { display: inline-block; margin-top: 11px; }
+.ucard .keytag { position: absolute; top: -9px; left: 12px; font-size: 8px; letter-spacing: 1px;
   background: var(--gold); color: var(--navy); padding: 3px 7px; border-radius: 3px; font-weight: 700;
-  text-transform: uppercase; }
-@media (max-width: 560px) { .ub-grid { grid-template-columns: 1fr 1fr; } }
+  text-transform: uppercase; box-shadow: 0 4px 10px -3px rgba(0, 0, 0, .5); }
+.ucard .umark { position: absolute; top: 12px; right: 13px; font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-weight: 700; color: var(--gold); opacity: .85; }
+.unode:hover .ucard { transform: translateY(-3px); border-color: var(--gold);
+  box-shadow: 0 16px 34px -14px rgba(0, 0, 0, .6); }
+.unode:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 6px; }
+
+/* explains why the line carries no calendar dates */
+.tl-datenote { max-width: 760px; margin: -4px auto 22px; text-align: center; color: var(--muted);
+  font-size: 13px; line-height: 1.65; font-style: italic; }
+.tl-datenote .qm { font-style: normal; font-weight: 700; color: var(--gold); }
 
 /* zoomable timeline canvas — full-bleed, breaks out of the narrow column */
 .tl-wrap { position: relative; width: 100vw; margin-left: calc(50% - 50vw);
@@ -210,7 +221,7 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .node .card .cat { display: inline-block; margin-top: 11px; }
 .node .card .keytag { position: absolute; top: -9px; right: -7px; font-size: 8px; letter-spacing: 1px; background: var(--gold); color: var(--navy); padding: 3px 7px; border-radius: 3px; font-weight: 700; text-transform: uppercase; box-shadow: 0 4px 10px -3px rgba(0, 0, 0, .5); }
 .node.dn .card .keytag { top: auto; bottom: -9px; }
-.cert, .node .card .cat { font-size: 10px; letter-spacing: 1.1px; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; font-weight: 700; white-space: nowrap; }
+.cert, .node .card .cat, .ucard .cat { font-size: 10px; letter-spacing: 1.1px; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; font-weight: 700; white-space: nowrap; }
 /* certainty — each level its own clear, vivid colour */
 .c-MUTAWATIR { background: rgba(38, 166, 108, .2); color: #58D69A; border: 1px solid rgba(38, 166, 108, .5); }
 .c-WELL_ATTESTED { background: rgba(64, 150, 196, .2); color: #74C4EC; border: 1px solid rgba(64, 150, 196, .5); }
@@ -321,6 +332,52 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .h-src { color: #6b5a2a; }
 .h-nar { font-weight: 600; letter-spacing: .3px; text-transform: none; font-style: italic; color: #5c6b3a; }
 .h-nar::before { content: '·'; margin-right: 8px; color: rgba(24, 132, 84, .55); }
+.h-ref { color: #6b5a2a; opacity: .8; }
+
+/* long ḥadīth split into pages (‹ ›) + the isnād chain drawn beside the text */
+.h-body { display: flex; gap: 22px; align-items: flex-start; }
+.h-main { flex: 1 1 auto; min-width: 0; }
+.h-main .h-en { margin-bottom: 4px; }
+.h-pager { display: flex; align-items: center; gap: 12px; margin-top: 14px; padding-top: 12px;
+  border-top: 1px solid rgba(24, 132, 84, .22); }
+.hp-btn { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(24, 132, 84, .5);
+  background: rgba(24, 132, 84, .1); color: #1a6b47; font-size: 18px; line-height: 1; cursor: pointer;
+  display: grid; place-items: center; transition: .15s; }
+.hp-btn:hover:not(:disabled) { background: rgba(24, 132, 84, .22); }
+.hp-btn:disabled { opacity: .35; cursor: default; }
+.hp-dots { display: flex; gap: 7px; flex: 1; flex-wrap: wrap; }
+.hp-dot { width: 8px; height: 8px; border-radius: 50%; border: 0; padding: 0; cursor: pointer;
+  background: rgba(24, 132, 84, .28); transition: .15s; }
+.hp-dot.on { background: rgba(24, 132, 84, .95); transform: scale(1.25); }
+.hp-count { font-size: 11px; letter-spacing: 1px; color: #4A5C2E; font-weight: 700;
+  font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.isnad { flex: 0 0 208px; align-self: stretch; padding-left: 20px;
+  border-left: 1px solid rgba(24, 132, 84, .28); }
+.isnad-h { font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 800;
+  color: #1a6b47; margin-bottom: 14px; }
+.isnad-h span { font-style: italic; text-transform: none; letter-spacing: .3px; color: #6b7a4a; font-weight: 600; }
+.isnad-list { list-style: none; margin: 0; padding: 0; }
+.isn { position: relative; padding: 0 0 15px 20px; }
+.isn::before { content: ''; position: absolute; left: 4px; top: 15px; bottom: -1px; width: 2px;
+  background: rgba(24, 132, 84, .3); }
+.isn:last-child::before { display: none; }
+.isn .dot { position: absolute; left: 0; top: 5px; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--parch); border: 2px solid rgba(24, 132, 84, .7); }
+.isn .nm { display: block; font-size: 14px; line-height: 1.35; color: #2A1F0E; }
+.isn.prophet .dot { background: var(--gold); border-color: var(--gold-deep); box-shadow: 0 0 0 3px rgba(200, 164, 75, .25); }
+.isn.prophet .nm { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: #2A1F0E; }
+.isn.prophet .nm b { color: var(--gold-deep); }
+.isn.collector .dot { background: rgba(24, 132, 84, .9); }
+.isn.collector .nm { font-style: italic; color: #4A5C2E; font-size: 13px; }
+.h-isnadnote { margin-top: 14px; }
+@media (max-width: 720px) {
+  .h-body { flex-direction: column; gap: 4px; }
+  .isnad { flex-basis: auto; align-self: stretch; width: 100%; padding: 16px 0 0; margin-top: 8px;
+    border-left: 0; border-top: 1px solid rgba(24, 132, 84, .28); }
+  .isnad-list { display: flex; flex-wrap: wrap; gap: 0 18px; }
+  .isn { padding-bottom: 10px; }
+}
 
 /* sources */
 .src { display: flex; justify-content: space-between; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(200, 164, 75, .12); font-size: 14.5px; }
