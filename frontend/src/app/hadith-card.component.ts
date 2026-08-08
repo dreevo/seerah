@@ -1,45 +1,41 @@
 import { Component, computed, input, signal } from '@angular/core';
 import { SourceItem } from './models';
 
-const PAGE_CHARS = 620;   // above this, the ḥadīth becomes pageable rather than one long block
+const PAGE_CHARS = 640;   // above this a single language's text becomes pageable
 
-/** One ḥadīth shown in full — literal Arabic + English, paginated when long, with its isnād. */
+/** One ḥadīth in full — literal Arabic + English (each paginated on its own when long),
+ *  followed by its isnād drawn as a chain-tree in the app's own idiom. */
 @Component({
   selector: 'app-hadith-card',
   template: `
     <figure class="hadith">
-      <div class="h-body">
-        <div class="h-main">
-          <div class="h-ar" dir="rtl">{{ arPages()[page()] }}</div>
-          <div class="h-en">“{{ enPages()[page()] }}”</div>
-
-          @if (pageCount() > 1) {
-            <div class="h-pager">
-              <button class="hp-btn" (click)="prev()" [disabled]="page() === 0" aria-label="Previous part">‹</button>
-              <div class="hp-dots">
-                @for (d of dots(); track d) {
-                  <button class="hp-dot" [class.on]="d === page()" (click)="page.set(d)" [attr.aria-label]="'Part ' + (d + 1)"></button>
-                }
-              </div>
-              <span class="hp-count">{{ page() + 1 }} / {{ pageCount() }}</span>
-              <button class="hp-btn" (click)="next()" [disabled]="page() === pageCount() - 1" aria-label="Next part">›</button>
-            </div>
-          }
+      <div class="h-ar" dir="rtl">{{ arPages()[arPage()] }}</div>
+      @if (arPages().length > 1) {
+        <div class="h-pager ar">
+          <button class="hp-btn" (click)="turn(arPage, arPages(), -1)" [disabled]="arPage() === 0" aria-label="Previous (Arabic)">‹</button>
+          <div class="hp-dots">
+            @for (d of dots(arPages()); track d) {
+              <button class="hp-dot" [class.on]="d === arPage()" (click)="arPage.set(d)" [attr.aria-label]="'Arabic part ' + (d + 1)"></button>
+            }
+          </div>
+          <span class="hp-count">{{ arPage() + 1 }} / {{ arPages().length }} · عربى</span>
+          <button class="hp-btn" (click)="turn(arPage, arPages(), 1)" [disabled]="arPage() === arPages().length - 1" aria-label="Next (Arabic)">›</button>
         </div>
+      }
 
-        @if (displayChain().length) {
-          <aside class="isnad" aria-label="Chain of narration">
-            <div class="isnad-h">Chain of narration <span>isnād</span></div>
-            <ol class="isnad-list">
-              <li class="isn prophet"><span class="dot"></span><span class="nm">Prophet Muḥammad <b>ﷺ</b></span></li>
-              @for (n of displayChain(); track $index) {
-                <li class="isn"><span class="dot"></span><span class="nm" dir="rtl">{{ n }}</span></li>
-              }
-              <li class="isn collector"><span class="dot"></span><span class="nm">Recorded in {{ source().workTitle }}</span></li>
-            </ol>
-          </aside>
-        }
-      </div>
+      <div class="h-en">“{{ enPages()[enPage()] }}”</div>
+      @if (enPages().length > 1) {
+        <div class="h-pager">
+          <button class="hp-btn" (click)="turn(enPage, enPages(), -1)" [disabled]="enPage() === 0" aria-label="Previous (English)">‹</button>
+          <div class="hp-dots">
+            @for (d of dots(enPages()); track d) {
+              <button class="hp-dot" [class.on]="d === enPage()" (click)="enPage.set(d)" [attr.aria-label]="'English part ' + (d + 1)"></button>
+            }
+          </div>
+          <span class="hp-count">{{ enPage() + 1 }} / {{ enPages().length }} · English</span>
+          <button class="hp-btn" (click)="turn(enPage, enPages(), 1)" [disabled]="enPage() === enPages().length - 1" aria-label="Next (English)">›</button>
+        </div>
+      }
 
       <figcaption class="h-cite">
         @if (source().grade) { <span class="grade g-{{ source().grade }}">{{ gradeLabel(source().grade!) }}</span> }
@@ -47,23 +43,40 @@ const PAGE_CHARS = 620;   // above this, the ḥadīth becomes pageable rather t
         @if (source().locator) { <span class="h-ref">{{ ref() }}</span> }
         @if (narrator(); as n) { <span class="h-nar">Narrated by {{ n }}</span> }
       </figcaption>
-      @if (!displayChain().length) {
-        <p class="note h-isnadnote">The full chain of narration (isnād) precedes the report in the Arabic above.</p>
-      }
     </figure>
+
+    @if (displayChain().length) {
+      <figure class="isnad-tree" aria-label="Chain of narration">
+        <figcaption class="it-head"><span class="ar">سِلْسِلَةُ الإِسْنَاد</span><span class="en">Chain of narration — up to the Prophet ﷺ</span></figcaption>
+        <ol class="it-spine">
+          <li class="it-node prophet" [style.--i]="0">
+            <span class="it-dot"></span>
+            <div class="it-name"><span class="ar">النَّبِيُّ ﷺ</span><span class="en">Prophet Muḥammad</span></div>
+          </li>
+          @for (n of displayChain(); track $index) {
+            <li class="it-node" [style.--i]="$index + 1">
+              <span class="it-dot"></span>
+              <div class="it-name"><span class="ar" dir="rtl">{{ n }}</span></div>
+            </li>
+          }
+          <li class="it-node rec" [style.--i]="displayChain().length + 1">
+            <span class="it-dot"></span>
+            <div class="it-name"><span class="en">Recorded in {{ source().workTitle }}</span><span class="ref">{{ ref() }}</span></div>
+          </li>
+        </ol>
+      </figure>
+    }
   `,
 })
 export class HadithCardComponent {
   source = input.required<SourceItem>();
-  page = signal(0);
+  arPage = signal(0);
+  enPage = signal(0);
 
-  private enPagesAll = computed(() => this.paginate(this.matn(this.source().quote), this.source().quoteAr ?? ''));
-  enPages = computed(() => this.enPagesAll().en);
-  arPages = computed(() => this.enPagesAll().ar);
-  pageCount = computed(() => this.enPages().length);
-  dots = computed(() => Array.from({ length: this.pageCount() }, (_, i) => i));
+  arPages = computed(() => this.split(this.source().quoteAr ?? ''));
+  enPages = computed(() => this.split(this.matn(this.source().quote)));
 
-  /** Narrators top-down from just under the Prophet (the Companion) to the collector's teacher. */
+  /** Narrators top-down: the Companion (just under the Prophet) → the collector's teacher. */
   displayChain = computed(() => (this.source().chain ?? []).slice().reverse());
 
   ref = computed(() => {
@@ -71,8 +84,10 @@ export class HadithCardComponent {
     return m ? m[0] : (this.source().locator ?? '');
   });
 
-  prev() { this.page.update((p) => Math.max(0, p - 1)); }
-  next() { this.page.update((p) => Math.min(this.pageCount() - 1, p + 1)); }
+  dots(pages: string[]): number[] { return pages.map((_, i) => i); }
+  turn(page: ReturnType<typeof signal<number>>, pages: string[], d: number) {
+    page.update((p) => Math.max(0, Math.min(pages.length - 1, p + d)));
+  }
 
   gradeLabel(g: string): string {
     switch (g) {
@@ -94,7 +109,7 @@ export class HadithCardComponent {
     return null;
   }
 
-  /** The report itself — the "Narrated X:" / "X reported:" attribution stripped so the words stand out. */
+  /** The report itself — the "Narrated X:" / "X reported:" attribution stripped. */
   matn(en: string | null): string {
     if (!en) return '';
     const i = en.indexOf(':');
@@ -104,28 +119,18 @@ export class HadithCardComponent {
     return en.trim();
   }
 
-  /** Split a long ḥadīth into aligned Arabic/English pages at sentence boundaries. */
-  private paginate(en: string, ar: string): { en: string[]; ar: string[] } {
-    if (en.length <= PAGE_CHARS && ar.length <= PAGE_CHARS) return { en: [en], ar: [ar] };
-    const n = Math.max(1, Math.ceil(Math.max(en.length, ar.length) / PAGE_CHARS));
-    return { en: this.chunk(en, n), ar: this.chunk(ar, n) };
-  }
-
-  /** Distribute a text's sentences into n buckets of roughly-equal length. */
-  private chunk(text: string, n: number): string[] {
-    // split at sentence ends AND Arabic commas; Arabic periods are wrapped in
-    // directional marks (‏.‏), so allow those between the punctuation and the space.
+  /** Split one language's text into coherent pages at sentence boundaries (each ≤ ~PAGE_CHARS). */
+  private split(text: string): string[] {
+    if (text.length <= PAGE_CHARS) return [text];
+    // Arabic periods are wrapped in directional marks (‏.‏), so allow those after the punctuation.
     const parts = text.split(/(?<=[.؟!؛،])[‎‏]*\s+/).filter((s) => s.trim());
-    if (parts.length <= 1) return [text];
-    const target = text.length / n;
-    const out: string[] = [];
+    const pages: string[] = [];
     let buf = '';
     for (const p of parts) {
-      buf = buf ? buf + ' ' + p : p;
-      if (buf.length >= target && out.length < n - 1) { out.push(buf); buf = ''; }
+      if (buf && buf.length + p.length > PAGE_CHARS) { pages.push(buf); buf = p; }
+      else buf = buf ? buf + ' ' + p : p;
     }
-    if (buf) out.push(buf);
-    while (out.length < n) out.push('');
-    return out;
+    if (buf) pages.push(buf);
+    return pages.length ? pages : [text];
   }
 }

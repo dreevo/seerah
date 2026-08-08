@@ -95,7 +95,7 @@ interface SectionRef { id: string; label: string; icon: string; }
               @for (s of hadithSources(); track s.locator) {
                 <app-hadith-card [source]="s" />
               }
-              <p class="note">The words of each ḥadīth exactly as recorded in the collection. Long reports turn the pages ‹ › ; where the chain of narration could be verified up to a Companion, it is drawn beside the text.</p>
+              <p class="note">The words of each ḥadīth exactly as recorded in the collection. Long reports turn the pages ‹ › — Arabic and English each paged on its own. Where the chain of narration could be verified up to a Companion, it is drawn beneath as a chain-tree.</p>
             </section>
           }
 
