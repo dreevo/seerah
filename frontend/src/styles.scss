@@ -67,6 +67,11 @@ a { color: inherit; text-decoration: none; }
 .gw-top h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 5vw, 50px); font-weight: 400; color: #fff; line-height: 1.1; animation: rise .8s .32s both; }
 .gw-top h1 em { font-style: normal; color: var(--gold-soft); }
 .gw-top .gw-lede { color: #93A3B2; font-size: 14px; max-width: 600px; margin: 14px auto 0; line-height: 1.7; font-weight: 300; animation: rise .8s .44s both; }
+.gw-top .gw-lede b { color: var(--gold-soft); font-weight: 500; }
+/* the traced line of descent, spelled out */
+.gw-trace { text-align: center; min-height: 28px; margin: 10px auto 0; padding: 0 20px; }
+.gw-trace-line { font-family: 'Cormorant Garamond', serif; font-size: 18.5px; color: var(--gold-soft); letter-spacing: .3px; }
+.gw-trace-hint { font-size: 12px; color: #5F6D7B; font-style: italic; letter-spacing: .3px; }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
 .ptree { max-width: 1340px; margin: 4px auto 0; padding: 0 12px; }
@@ -105,6 +110,24 @@ a { color: inherit; text-decoration: none; }
 /* connector prophets — small, faint, keep the lineage honest */
 .pnode.connector .cdot { fill: var(--gold-deep); stroke: var(--gold); stroke-width: 1; opacity: .7; }
 .pnode.connector .cname { fill: #9FB0BF; text-anchor: middle; font-family: 'Amiri', serif; font-size: 15px; }
+.pnode.connector { cursor: default; }
+
+/* the river of prophethood — a bead of light travelling the main line to the Seal ﷺ */
+.river { fill: none; stroke: #F7E7AE; stroke-width: 4; stroke-linecap: round;
+  stroke-dasharray: 0.06 0.94; filter: drop-shadow(0 0 4px rgba(247, 231, 174, .85));
+  animation: riverflow 2.8s linear infinite both; pointer-events: none; }
+@keyframes riverflow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -1; } }
+
+/* trace mode — light the hovered prophet's line of descent back to Ādam, dim the rest */
+.branch, .branch-core, .pnode, .river { transition: opacity .28s ease; }
+.ptree svg.tracing .branch:not(.lit), .ptree svg.tracing .branch-core:not(.lit) { opacity: .1; }
+.ptree svg.tracing .pnode:not(.lit) { opacity: .24; }
+.ptree svg.tracing .river { opacity: .16; }
+.branch.lit { stroke: #F0DCA0; opacity: 1; }
+.branch-core.lit { stroke: #FFF3CE; opacity: 1; }
+.pnode.lit .rim { stroke: #F7E7AE; stroke-opacity: 1; stroke-width: 2.6; }
+.pnode.lit .glow { opacity: .5; }
+.pnode.lit .disc { filter: brightness(1.2); }
 
 /* drifting light motes */
 .mote { fill: #E3CE93; opacity: 0; animation: drift 12s ease-in-out infinite; }
@@ -117,7 +140,8 @@ a { color: inherit; text-decoration: none; }
 }
 @keyframes breathe { 0%, 100% { opacity: .14; } 50% { opacity: .32; } }
 @media (prefers-reduced-motion: reduce) {
-  .branch, .branch-core, .pnode, .mote, .gw-top * { animation-duration: .01ms !important; }
+  .branch, .branch-core, .pnode, .mote, .gw-top *, .river { animation-duration: .01ms !important; }
+  .river { stroke-dasharray: none; opacity: .55; stroke-width: 2; }
 }
 .nav a:hover { color: var(--gold-soft); background: rgba(200, 164, 75, .09); }
 .nav a.on { color: var(--navy); background: var(--gold); font-weight: 600; }

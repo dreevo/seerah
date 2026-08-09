@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { httpResource } from '@angular/common/http';
 import { ChronicleItem } from './models';
@@ -39,6 +39,20 @@ const LAYOUT: TreeNode[] = [
 ];
 
 const BRANCH_W = [15, 13, 11, 9, 6.5, 5, 4, 3.4, 3]; // by child depth
+
+// Each node's parent, and the set of every ancestor up to Ādam — so hovering any
+// prophet can light the exact line of descent that carries down to him.
+const PARENT = new Map(LAYOUT.map((n) => [n.slug, n.parent] as const));
+const ANCESTORS = new Map<string, Set<string>>();
+for (const n of LAYOUT) {
+  const set = new Set<string>();
+  let cur: string | null = n.slug;
+  while (cur) { set.add(cur); cur = PARENT.get(cur) ?? null; }
+  ANCESTORS.set(n.slug, set);
+}
+// The main line of prophethood — the trunk that flows to the final Messenger ﷺ
+// (Ādam → Idrīs → Nūḥ → Ibrāhīm → Ismāʿīl → Muhammad). Its edges carry the "river".
+const TRUNK = new Set(['idris', 'nuh', 'ibrahim', 'ismail', 'seerah']);
 
 // Tidy-tree horizontal layout (Reingold–Tilford flavour): pack the leaves at a
 // uniform gap and centre every parent exactly over its children. The root then
@@ -96,14 +110,19 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
       <div class="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
       <h1>The <em>Tree</em> of the Prophets</h1>
       <p class="gw-lede">One connected chain of guidance — from Ādam, the father of humankind, to Muhammad ﷺ,
-        the final Messenger. Follow the lineage; choose a life to enter its chronicle.</p>
+        the final Messenger. <b>Hover any prophet to trace his line of descent back to Ādam.</b> Choose a life to enter its chronicle.</p>
     </section>
+
+    <div class="gw-trace" [class.on]="active()">
+      @if (traceLabel(); as t) { <span class="gw-trace-line">{{ t }}</span> }
+      @else { <span class="gw-trace-hint">The line of descent appears here as you trace it ↑</span> }
+    </div>
 
     @if (chronicles.error()) {
       <p class="state err">The library service is unavailable. Is the backend running on :8080?</p>
     } @else {
       <div class="ptree">
-        <svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets">
+        <svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets" [class.tracing]="active()">
           <defs>
             <radialGradient id="leaf" cx="42%" cy="34%" r="72%">
               <stop offset="0%" stop-color="#1f4a63" /><stop offset="60%" stop-color="#123a52" /><stop offset="100%" stop-color="#0b2537" />
@@ -128,15 +147,20 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
 
           <!-- branches grow from the root outward -->
           @for (b of branches(); track b.id) {
-            <path class="branch" [attr.d]="b.d" [attr.stroke-width]="b.w" pathLength="1" [style.animation-delay.ms]="b.delay" />
-            <path class="branch-core" [attr.d]="b.d" [attr.stroke-width]="b.w * 0.4" pathLength="1" [style.animation-delay.ms]="b.delay + 120" />
+            <path class="branch" [class.lit]="branchLit(b.id)" [attr.d]="b.d" [attr.stroke-width]="b.w" pathLength="1" [style.animation-delay.ms]="b.delay" />
+            <path class="branch-core" [class.lit]="branchLit(b.id)" [attr.d]="b.d" [attr.stroke-width]="b.w * 0.4" pathLength="1" [style.animation-delay.ms]="b.delay + 120" />
+            @if (b.trunk) {
+              <path class="river" [attr.d]="b.d" pathLength="1" [style.animation-delay.ms]="b.riverDelay" />
+            }
           }
 
           <!-- prophet nodes -->
           @for (n of nodes(); track n.slug) {
-            <g class="pnode {{ n.kind }}" [class.flagship]="n.flagship"
+            <g class="pnode {{ n.kind }}" [class.flagship]="n.flagship" [class.lit]="lit(n.slug)"
                [attr.transform]="'translate(' + n.x + ' ' + n.y + ')'" [style.animation-delay.ms]="n.delay"
                [attr.tabindex]="n.kind === 'chronicle' ? 0 : null" [attr.role]="n.kind === 'chronicle' ? 'link' : null"
+               (mouseenter)="active.set(n.slug)" (mouseleave)="active.set(null)"
+               (focus)="active.set(n.slug)" (blur)="active.set(null)"
                (click)="enter(n)" (keydown.enter)="enter(n)">
               @if (n.kind === 'chronicle') {
                 <circle class="glow" [attr.r]="n.r + 16" filter="url(#soft)" />
@@ -163,6 +187,40 @@ export class GatewayComponent {
   chronicles = httpResource<ChronicleItem[]>(() => '/api/public/chronicles', { defaultValue: [] });
 
   readonly viewBox = VIEWBOX;
+
+  /** The prophet currently being traced (hovered/focused), or null. */
+  active = signal<string | null>(null);
+
+  /** A node is lit when it lies on the traced prophet's line of descent. */
+  lit(slug: string): boolean {
+    const a = this.active();
+    return !!a && ANCESTORS.get(a)!.has(slug);
+  }
+  /** A branch (keyed by its child slug) is lit when the child is on that line. */
+  branchLit(childSlug: string): boolean {
+    const a = this.active();
+    return !!a && ANCESTORS.get(a)!.has(childSlug);
+  }
+
+  private displayName = computed(() => {
+    const byslug = new Map(this.chronicles.value().map((c) => [c.slug, c]));
+    const m = new Map<string, string>();
+    for (const n of LAYOUT) {
+      const c = byslug.get(n.slug);
+      m.set(n.slug, c ? c.title.replace(/^The Story of Prophet |^The Life of the Prophet /, '') : (n.connectorName ?? n.slug));
+    }
+    return m;
+  });
+
+  /** The traced line spelled out, Ādam → … → the hovered prophet. */
+  traceLabel = computed(() => {
+    const a = this.active();
+    if (!a) return '';
+    const path: string[] = [];
+    for (let cur: string | null = a; cur; cur = PARENT.get(cur) ?? null) path.unshift(cur);
+    const name = this.displayName();
+    return path.map((s) => name.get(s) ?? s).join('  ›  ');
+  });
 
   readonly motes = Array.from({ length: 36 }, (_, i) => ({
     i, x: VIEW.x + Math.random() * VIEW.w, y: VIEW.y + Math.random() * VIEW.h,
@@ -194,6 +252,8 @@ export class GatewayComponent {
         id: n.slug, w: BRANCH_W[Math.min(n.depth, BRANCH_W.length - 1)],
         d: `M ${px} ${py} C ${px} ${my}, ${cx} ${my}, ${cx} ${n.y}`,
         delay: 200 + n.depth * 260,
+        trunk: TRUNK.has(n.slug),
+        riverDelay: 1400 + n.depth * 500,   // a bead of light travels down the trunk, in order
       };
     });
   });
