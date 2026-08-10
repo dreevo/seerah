@@ -41,6 +41,9 @@ const U_TOP = 40;       // first undated card's drop below the axis
         <span class="lvl">{{ zoomLabel() }}</span>
         <button (click)="zoomBy(1)" [disabled]="zoom() === 2" aria-label="Wider">+</button>
       </div>
+      @if (visible().length) {
+        <button class="tl-story" (click)="playStory()">▶ Play the story</button>
+      }
     </div>
 
     @if (!hasDates() && visible().length) {
@@ -228,6 +231,7 @@ export class TimelineComponent {
 
   zoomBy(d: number) { this.zoom.update((z) => Math.max(0, Math.min(2, z + d))); }
   open(item: TimelineItem) { this.router.navigate(['/event', item.slug]); }
+  playStory() { this.router.navigate(['/c', this.chronicle(), 'story']); }
 
   yearLabel(item: TimelineItem): string {
     if (item.gregYear == null) return '';

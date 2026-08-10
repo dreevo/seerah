@@ -7,6 +7,7 @@ import { PersonDetailComponent } from './person-detail.component';
 import { SearchComponent } from './search.component';
 import { MessengersWayComponent } from './messengers-way.component';
 import { ConstellationComponent } from './constellation.component';
+import { StoryComponent } from './story.component';
 
 export const routes: Routes = [
   { path: '', component: GatewayComponent, title: 'The Prophetic Library — Chronicles' },
@@ -22,6 +23,8 @@ export const routes: Routes = [
   // Everything below is scoped to a chosen chronicle (:chronicle route param,
   // bound to each component's `chronicle` input via withComponentInputBinding).
   { path: 'c/:chronicle', component: TimelineComponent, title: 'Chronicle — Timeline' },
+  // Cinematic playback of a whole chronicle, scene by scene.
+  { path: 'c/:chronicle/story', component: StoryComponent, title: 'Chronicle — Story' },
   { path: 'c/:chronicle/companions', component: CompanionsComponent, title: 'Chronicle — People' },
   { path: 'c/:chronicle/search', redirectTo: '/search' },
 

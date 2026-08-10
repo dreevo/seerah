@@ -212,6 +212,62 @@ public class PublicReadController {
         return t == null ? "" : t.replaceFirst("^The Story of Prophet |^The Life of the Prophet |^The Story of ", "");
     }
 
+    /**
+     * A whole chronicle as an ordered, cinematic walkthrough — each event a "beat"
+     * carrying its summary, the one āyah revealed around it, where it happened, and
+     * its primary source. This is Story Mode: the timeline told scene by scene.
+     */
+    @GetMapping("/chronicles/{slug}/story")
+    public PublicViews.Story story(@PathVariable String slug, @RequestParam(defaultValue = "en") String locale) {
+        var c = chronicles.bySlug(slug)
+                .orElseThrow(() -> new NotFoundException("chronicle.not_found", "No chronicle with slug " + slug));
+
+        List<PublicViews.StoryBeat> beats = new ArrayList<>();
+        for (var t : events.publishedTimeline(locale, slug)) {
+            var d = events.findDetailBySlug(t.slug(), locale).orElse(null);
+            if (d == null) continue;
+
+            RelatedVerse verse = null;
+            RelatedPlace place = null;
+            for (RelatedEntity edge : relationships.neighboursOf(EntityType.EVENT, d.id())) {
+                if (edge.objectType() == EntityType.VERSE && verse == null) {
+                    var v = verses.findById(edge.objectId(), locale).orElse(null);
+                    if (v != null) {
+                        verse = new RelatedVerse(v.reference(), v.surahNameEn(), v.surahNameAr(),
+                                v.textUthmani(), v.translationText(), v.translator(), edge.relType().name());
+                    }
+                } else if (edge.objectType() == EntityType.PLACE && place == null) {
+                    var pl = places.findById(edge.objectId(), locale).orElse(null);
+                    if (pl != null && pl.latitude() != null && pl.longitude() != null) {
+                        place = new RelatedPlace(pl.id(), pl.slug(), pl.name(), pl.modernName(),
+                                pl.latitude(), pl.longitude(), pl.approximate(), edge.relType().name());
+                    }
+                }
+            }
+
+            // The strongest citation: a PRIMARY-tier source if any, else the first.
+            SourceItem source = citations.citationsFor(EntityType.EVENT, d.id()).stream()
+                    .min(Comparator.comparingInt(cit -> "PRIMARY".equalsIgnoreCase(cit.tier()) ? 0 : 1))
+                    .map(cit -> {
+                        HadithTexts.Entry txt = hadith.lookup(cit.workTitle(), cit.locator());
+                        return new SourceItem(cit.workTitle(), cit.tier(), cit.locator(),
+                                txt != null ? txt.en() : cit.quote(), txt != null ? txt.ar() : null,
+                                txt != null ? txt.chain() : null, cit.grade());
+                    })
+                    .orElse(null);
+            // An event grounded in the Qur'an but citing only ḥadīth still credits the Qur'an.
+            if (source == null && verse != null) {
+                source = new SourceItem("The Noble Qur'an", "PRIMARY",
+                        "Surah " + verse.surahNameEn() + " " + verse.reference(), null, null, null, null);
+            }
+
+            beats.add(new PublicViews.StoryBeat(d.slug(), d.title(), d.summary(), d.why(),
+                    d.hijriYear(), d.gregYear(), d.major(), undated.isUndated(d.slug()),
+                    verse, place, source));
+        }
+        return new PublicViews.Story(c.slug(), cleanTitle(c.title()), c.glyph(), c.titleAr(), c.blurb(), beats);
+    }
+
     @GetMapping("/people")
     public List<PersonListItem> companions(@RequestParam(defaultValue = "en") String locale,
                                            @RequestParam(required = false) String chronicle) {

@@ -67,4 +67,15 @@ public final class PublicViews {
     public record SurahRef(int n, String name, String nameAr, int count) { }
 
     public record ProphetSurahs(String chronicle, String prophet, String glyph, int total, List<SurahRef> surahs) { }
+
+    // --- Story Mode: a cited, ordered walkthrough of one chronicle ----------
+
+    /** One scene in a chronicle's story: an event with its key āyah, place and primary source. */
+    public record StoryBeat(String slug, String title, String summary, String why,
+                            Integer hijriYear, Integer gregYear, boolean major, boolean undated,
+                            RelatedVerse verse, RelatedPlace place, SourceItem source) { }
+
+    /** A whole chronicle rendered as an ordered sequence of beats to play through. */
+    public record Story(String chronicle, String prophet, String glyph, String titleAr,
+                        String blurb, List<StoryBeat> beats) { }
 }
