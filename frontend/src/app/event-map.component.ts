@@ -1,5 +1,5 @@
 import {
-  afterNextRender, Component, computed, DestroyRef, effect, ElementRef, inject, input, viewChild,
+  afterNextRender, Component, computed, DestroyRef, effect, ElementRef, inject, input, signal, viewChild,
 } from '@angular/core';
 import { httpResource } from '@angular/common/http';
 import * as L from 'leaflet';
@@ -8,6 +8,17 @@ import { placeKind, PlaceKind } from './geo/hejaz-geo';
 import { iconSvg } from './icon.component';
 
 interface Placed { p: RelatedPlace; kind: PlaceKind; }
+type LL = [number, number];
+/** A route prepared for playback: its points plus cumulative km at each point. */
+interface Journey { pts: LL[]; cum: number[]; total: number; }
+
+/** Great-circle distance in km between two [lat,lng] points. */
+function haversineKm(a: LL, b: LL): number {
+  const R = 6371, toR = Math.PI / 180;
+  const dLat = (b[0] - a[0]) * toR, dLng = (b[1] - a[1]) * toR;
+  const s = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * toR) * Math.cos(b[0] * toR) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.min(1, Math.sqrt(s)));
+}
 
 // A real map, rendered with Leaflet over a label-free physical-relief basemap
 // (Esri World Physical Map — terrain and seas, no anachronistic modern roads or
@@ -21,6 +32,19 @@ interface Placed { p: RelatedPlace; kind: PlaceKind; }
       <div class="seemap-stage">
         <div #host class="leaf"></div>
         <div class="mc compass" aria-hidden="true"><span class="n">N</span><span class="arrow">▲</span></div>
+        @if (hasJourney()) {
+          <div class="jr-ctl">
+            <button class="jr-btn" (click)="playing() ? stop() : play()">
+              {{ playing() ? '❚❚ Stop' : (progress() >= 1 ? '↺ Replay the journey' : '▶ Play the journey') }}
+            </button>
+            @if (playing() || progress() > 0) {
+              <div class="jr-hud">
+                <span class="jr-route">{{ journeyLabel() }}</span>
+                <span class="jr-km">{{ liveKm() }} km</span>
+              </div>
+            }
+          </div>
+        }
       </div>
       <div class="seemap-foot">
         <div class="legend">
@@ -42,15 +66,21 @@ export class EventMapComponent {
   private map?: L.Map;
   private overlays = L.layerGroup();
   private context = L.layerGroup();
-  private bounds: [number, number][] = [];
-  private contextBounds: [number, number][] = [];
+  private playLayer = L.layerGroup();
+  private bounds: LL[] = [];
+  private contextBounds: LL[] = [];
+
+  // --- journey playback ---
+  playing = signal(false);
+  progress = signal(0);
+  private raf = 0;
 
   constructor() {
     // Build the map only after the browser has laid the container out.
     afterNextRender(() => requestAnimationFrame(() => this.initMap()));
     effect(() => { this.places(); this.routes(); this.draw(); });
     effect(() => { this.allPlaces.value(); this.drawContext(); });
-    inject(DestroyRef).onDestroy(() => this.map?.remove());
+    inject(DestroyRef).onDestroy(() => { cancelAnimationFrame(this.raf); this.map?.remove(); });
   }
 
   private initMap() {
@@ -65,6 +95,7 @@ export class EventMapComponent {
     L.control.scale({ position: 'bottomleft', imperial: false, maxWidth: 140 }).addTo(map);
     this.context.addTo(map);   // context layer beneath the event's own markers
     this.overlays.addTo(map);
+    this.playLayer.addTo(map); // journey playback (traveller + trail) on top
     this.map = map;
     // Context names would clutter the wide overview, so reveal them only once zoomed in;
     // the event's own labels always show. Labels de-overlap as you zoom, so this reads clean.
@@ -106,6 +137,7 @@ export class EventMapComponent {
   private draw() {
     const map = this.map;
     if (!map) return;
+    this.resetPlay();          // a new event cancels any journey in progress
     this.overlays.clearLayers();
     this.bounds = [];
 
@@ -152,19 +184,111 @@ export class EventMapComponent {
 
   // Centre + zoom to the whole geography (this event's places + all context places),
   // so the map opens on the big picture with the current event highlighted within it.
-  private fit() {
-    const map = this.map, b = [...this.bounds, ...this.contextBounds];
+  private fit() { this.centerZoom([...this.bounds, ...this.contextBounds], false); }
+
+  private centerZoom(b: LL[], animate: boolean, pad = 0.4) {
+    const map = this.map;
     if (!map || !b.length) return;
     const lats = b.map((p) => p[0]), lngs = b.map((p) => p[1]);
     const minLat = Math.min(...lats), maxLat = Math.max(...lats);
     const minLng = Math.min(...lngs), maxLng = Math.max(...lngs);
     const cLat = (minLat + maxLat) / 2, cLng = (minLng + maxLng) / 2;
-    const span = Math.max(maxLat - minLat, (maxLng - minLng) * 0.72) + 0.4;
+    const span = Math.max(maxLat - minLat, (maxLng - minLng) * 0.72) + pad;
     let zoom = 9;
     for (const [s, z] of [[0.6, 9], [1.2, 8], [2.6, 7], [5, 6], [10, 5], [1e9, 4]] as [number, number][]) {
       if (span <= s) { zoom = z; break; }
     }
-    map.setView([cLat, cLng], zoom, { animate: false });
+    map.setView([cLat, cLng], zoom, { animate });
+  }
+
+  // --- journey playback ---------------------------------------------------
+
+  hasJourney = computed(() => this.routes().some((r) => r.points.length >= 2));
+
+  /** Each route prepared with cumulative distances so a traveller can move along it. */
+  journeys = computed<Journey[]>(() => this.routes()
+    .map((r) => r.points.map((pt) => [pt.lat, pt.lng] as LL))
+    .filter((pts) => pts.length >= 2)
+    .map((pts) => {
+      const cum = [0];
+      for (let i = 1; i < pts.length; i++) cum.push(cum[i - 1] + haversineKm(pts[i - 1], pts[i]));
+      return { pts, cum, total: cum[cum.length - 1] };
+    }));
+
+  private totalKm = computed(() => this.journeys().reduce((s, j) => s + j.total, 0));
+  liveKm = computed(() => Math.round(this.totalKm() * this.progress()));
+
+  /** "Makkah → Madīnah · 340 km" — endpoints named from the event's own places. */
+  journeyLabel = computed(() => {
+    const js = this.journeys();
+    if (!js.length) return '';
+    const last = js[js.length - 1].pts;
+    const from = this.nearestPlaceName(js[0].pts[0]);
+    const to = this.nearestPlaceName(last[last.length - 1]);
+    const head = from && to && from !== to ? `${from} → ${to}` : this.pretty(this.routes()[0].slug);
+    return `${head} · ${Math.round(this.totalKm())} km`;
+  });
+
+  private nearestPlaceName(pt: LL): string | null {
+    const near = (list: { name: string; lat: number; lng: number }[]): string | null => {
+      let best: string | null = null, bd = Infinity;
+      for (const x of list) { const d = haversineKm(pt, [x.lat, x.lng]); if (d < bd) { bd = d; best = x.name; } }
+      return bd < 150 ? best : null;   // only name it if a place is genuinely near the endpoint
+    };
+    // Prefer the event's own places; fall back to the whole corpus for the far endpoint.
+    const own = this.placed().map((pl) => ({ name: pl.p.name, lat: pl.p.latitude!, lng: pl.p.longitude! }));
+    const all = this.allPlaces.value().filter((p) => p.latitude != null)
+      .map((p) => ({ name: p.name, lat: p.latitude!, lng: p.longitude! }));
+    return near(own) ?? near(all);
+  }
+
+  play() {
+    const js = this.journeys();
+    if (!this.map || !js.length) return;
+    cancelAnimationFrame(this.raf);
+    this.host().nativeElement.classList.add('playing');
+    this.centerZoom(js.flatMap((j) => j.pts), true, 0.8);   // zoom in to the journey
+    this.playing.set(true);
+    const dur = Math.max(4500, Math.min(11000, this.totalKm() * 9)); // pace by distance
+    const t0 = performance.now();
+    const step = (now: number) => {
+      const p = Math.min(1, (now - t0) / dur);
+      this.progress.set(p);
+      this.renderPlay(p);
+      if (p < 1 && this.playing()) this.raf = requestAnimationFrame(step);
+      else this.playing.set(false);   // finished: keep the full trail + "Replay"
+    };
+    this.raf = requestAnimationFrame(step);
+  }
+
+  stop() { this.resetPlay(); this.fit(); }
+
+  private resetPlay() {
+    cancelAnimationFrame(this.raf);
+    this.playing.set(false);
+    this.progress.set(0);
+    this.playLayer.clearLayers();
+    this.host()?.nativeElement.classList.remove('playing');
+  }
+
+  /** Draw the growing trail and the traveller at fraction p (0..1) along every route. */
+  private renderPlay(p: number) {
+    this.playLayer.clearLayers();
+    for (const j of this.journeys()) {
+      const { pts, cum, total } = j;
+      const d = p * total;
+      let i = 0;
+      while (i < cum.length - 2 && cum[i + 1] < d) i++;
+      const seg = Math.max(1e-9, cum[i + 1] - cum[i]);
+      const t = Math.max(0, Math.min(1, (d - cum[i]) / seg));
+      const cur: LL = [pts[i][0] + (pts[i + 1][0] - pts[i][0]) * t, pts[i][1] + (pts[i + 1][1] - pts[i][1]) * t];
+      L.polyline([...pts.slice(0, i + 1), cur], { className: 'jr-trail', interactive: false }).addTo(this.playLayer);
+      const brg = Math.atan2(pts[i + 1][1] - pts[i][1], pts[i + 1][0] - pts[i][0]) * 180 / Math.PI;
+      L.marker(cur, { interactive: false, zIndexOffset: 1000, icon: L.divIcon({
+        className: 'jr-mark-wrap', iconSize: [26, 26], iconAnchor: [13, 13],
+        html: `<span class="jr-mark"><span class="jr-pulse"></span><span class="jr-arrow" style="transform:rotate(${90 - brg}deg)">➤</span></span>`,
+      }) }).addTo(this.playLayer);
+    }
   }
 
   legend = computed(() => {
