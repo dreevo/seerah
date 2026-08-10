@@ -501,7 +501,7 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 .seemap .approx { stroke: #C8A44B; stroke-width: 1; stroke-opacity: .5; fill: #C8A44B; fill-opacity: .08; }
 
 /* journey playback — a traveller moves along the route, the trail growing behind */
-.jr-ctl { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 403;
+.jr-ctl { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 1001;
   display: flex; flex-direction: column-reverse; align-items: center; gap: 8px; pointer-events: none; }
 .jr-btn { pointer-events: auto; cursor: pointer; background: rgba(8, 22, 35, .9); border: 1px solid var(--gold);
   color: var(--gold-soft); font: 600 12px/1 'Inter', sans-serif; letter-spacing: .6px; padding: 9px 18px;
