@@ -666,3 +666,16 @@ footer .fnote { font-size: 10.5px; color: #4E5C6A; font-style: italic; }
 @keyframes mwreveal { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .mw-foot { text-align: center; color: #5F6D7B; font-size: 11.5px; font-style: italic; margin-top: 18px; }
 @media (prefers-reduced-motion: reduce) { .mw-cell.active { animation: none; } }
+
+/* #3 + #5 — scroll reveals: each section rises and the sacred text comes into
+   focus as it enters view. Progressive enhancement: browsers without scroll
+   timelines simply show everything (no animation), and reduced-motion opts out. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .detail-main .pane { animation: revealrise linear both; animation-timeline: view(); animation-range: entry 3% cover 24%; }
+    .v-ar, .h-ar { animation: inkrise linear both; animation-timeline: view(); animation-range: entry 6% entry 48%; }
+    .mw-nation, .isnad-tree { animation: revealrise linear both; animation-timeline: view(); animation-range: entry 2% cover 20%; }
+  }
+}
+@keyframes revealrise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes inkrise { from { opacity: 0; filter: blur(3.5px); } to { opacity: 1; filter: none; } }
