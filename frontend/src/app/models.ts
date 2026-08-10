@@ -61,6 +61,11 @@ export interface RelatedPlace {
   relation: string;
 }
 
+/** A sūrah a prophet appears in, with how many of its āyāt cite him. */
+export interface SurahRef { n: number; name: string; nameAr: string; count: number; }
+/** One prophet's presence across the Qur'an — the data behind his constellation. */
+export interface ProphetSurahs { chronicle: string; prophet: string; glyph: string; total: number; surahs: SurahRef[]; }
+
 /** A located place from any chronicle, for the map's global context layer. */
 export interface MapPlace {
   slug: string;

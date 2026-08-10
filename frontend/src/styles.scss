@@ -679,3 +679,49 @@ footer .fnote { font-size: 10.5px; color: #4E5C6A; font-style: italic; }
 }
 @keyframes revealrise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes inkrise { from { opacity: 0; filter: blur(3.5px); } to { opacity: 1; filter: none; } }
+
+/* The Constellation of the Prophets — sūrahs as stars, prophets as constellations */
+.gw-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 26px; margin: 8px auto 2px; }
+.cst { padding: 38px 18px 22px; }
+.cst-head { text-align: center; }
+.cst-head .eyebrow { font-size: 10px; letter-spacing: 4.5px; color: var(--gold); text-transform: uppercase; font-weight: 600; }
+.cst-head h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.6vw, 46px); font-weight: 400; color: #fff; margin: 12px 0 0; }
+.cst-head h1 em { font-style: normal; color: var(--gold-soft); }
+.cst-lede { color: #93A3B2; font-size: 14.5px; max-width: 680px; margin: 14px auto 0; line-height: 1.75; font-weight: 300; }
+.cst-lede b { color: var(--gold-soft); font-weight: 500; }
+
+.cst-stage { width: 100vw; margin: 16px 0 0 calc(50% - 50vw); display: flex; gap: 22px; justify-content: center; align-items: flex-start; padding: 0 26px; }
+.cst-sky { flex: 1 1 auto; max-width: 1050px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 42%, rgba(24, 48, 70, .55), rgba(8, 18, 30, .35)); }
+.cst-sky svg { width: 100%; height: auto; display: block; }
+
+.cst-star .dot { fill: #F0DCA0; opacity: .5; animation: twinkle 4.5s ease-in-out infinite; transition: fill .3s, opacity .3s; }
+.cst-star .halo { opacity: 0; transition: opacity .3s; }
+.cst-star.lit .dot { fill: #FFF3CE; opacity: 1; }
+.cst-star.lit .halo { opacity: .95; }
+.cst-star.dim .dot { opacity: .14; }
+.cst-star .slabel { fill: #EAF1F7; font: 600 12.5px 'Cormorant Garamond', serif; text-anchor: middle;
+  paint-order: stroke; stroke: #0A1420; stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
+@keyframes twinkle { 0%, 100% { opacity: .38; } 50% { opacity: .8; } }
+.cst-line { fill: none; stroke: #F5E4A8; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 0 3px rgba(245, 228, 168, .7)); stroke-dasharray: 1; stroke-dashoffset: 1; animation: cdraw 1s ease forwards; }
+@keyframes cdraw { to { stroke-dashoffset: 0; } }
+
+.cst-list { flex: 0 0 236px; max-height: 620px; overflow-y: auto; padding-right: 4px; }
+.cst-list-h { font-size: 10px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; padding-left: 10px; }
+.cst-p { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; padding: 7px 10px; border-radius: 7px;
+  border: 1px solid transparent; background: none; color: #C8D3DE; cursor: pointer; transition: .15s; }
+.cst-p:hover, .cst-p.on { background: rgba(200, 164, 75, .1); border-color: rgba(200, 164, 75, .4); }
+.cst-p .g { font-family: 'Amiri', serif; color: var(--gold-soft); font-size: 15px; width: 20px; text-align: center; flex: 0 0 auto; }
+.cst-p .nm { flex: 1; font-family: 'Cormorant Garamond', serif; font-size: 16.5px; color: #EAF1F7; }
+.cst-p.on .nm { color: var(--gold-soft); }
+.cst-p .ct { font: 700 11px 'Inter', sans-serif; color: var(--gold-soft); background: rgba(200, 164, 75, .12); padding: 2px 8px; border-radius: 10px; font-variant-numeric: tabular-nums; }
+
+.cst-caption { text-align: center; margin: 18px auto 0; max-width: 900px; min-height: 46px; padding: 0 16px; }
+.cst-open { font-family: 'Cormorant Garamond', serif; font-size: 21px; color: var(--gold-soft); text-decoration: none; margin-right: 12px; }
+.cst-open:hover { color: var(--gold); }
+.cst-stat { font: 700 11px 'Inter', sans-serif; color: var(--gold); letter-spacing: .6px; }
+.cst-surahs { display: block; color: #93A3B2; font-size: 13px; margin-top: 6px; font-style: italic; }
+.cst-hint { color: #5F6D7B; font-style: italic; font-size: 13.5px; }
+@media (prefers-reduced-motion: reduce) { .cst-star .dot { animation: none; } .cst-line { animation: none; stroke-dashoffset: 0; } }
+@media (max-width: 820px) { .cst-stage { flex-direction: column; align-items: stretch; } .cst-list { flex-basis: auto; max-height: 240px; } }

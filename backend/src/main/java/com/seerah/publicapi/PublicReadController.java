@@ -34,8 +34,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
@@ -175,6 +178,38 @@ public class PublicReadController {
                 .map(p -> new PublicViews.MapPlace(p.slug(), p.name(), p.modernName(),
                         p.latitude(), p.longitude(), p.approximate()))
                 .toList();
+    }
+
+    /** Which sūrahs each prophet appears in, and how many āyāt — the Qur'an constellation. */
+    @GetMapping("/quran-map")
+    public List<PublicViews.ProphetSurahs> quranMap(@RequestParam(defaultValue = "en") String locale) {
+        List<PublicViews.ProphetSurahs> out = new ArrayList<>();
+        for (var c : chronicles.published()) {
+            Map<Integer, int[]> counts = new HashMap<>();
+            Map<Integer, String[]> names = new HashMap<>();
+            for (var e : events.publishedTimeline(locale, c.slug())) {
+                for (RelatedEntity edge : relationships.neighboursOf(EntityType.EVENT, e.id())) {
+                    if (edge.objectType() != EntityType.VERSE) continue;
+                    verses.findById(edge.objectId(), locale).ifPresent(v -> {
+                        counts.computeIfAbsent(v.surahNumber(), k -> new int[1])[0]++;
+                        names.putIfAbsent(v.surahNumber(), new String[] { v.surahNameEn(), v.surahNameAr() });
+                    });
+                }
+            }
+            if (counts.isEmpty()) continue;
+            int total = counts.values().stream().mapToInt(a -> a[0]).sum();
+            List<PublicViews.SurahRef> surahs = counts.entrySet().stream()
+                    .map(en -> new PublicViews.SurahRef(en.getKey(),
+                            names.get(en.getKey())[0], names.get(en.getKey())[1], en.getValue()[0]))
+                    .sorted(Comparator.comparingInt(PublicViews.SurahRef::n))
+                    .toList();
+            out.add(new PublicViews.ProphetSurahs(c.slug(), cleanTitle(c.title()), c.glyph(), total, surahs));
+        }
+        return out;
+    }
+
+    private static String cleanTitle(String t) {
+        return t == null ? "" : t.replaceFirst("^The Story of Prophet |^The Life of the Prophet |^The Story of ", "");
     }
 
     @GetMapping("/people")

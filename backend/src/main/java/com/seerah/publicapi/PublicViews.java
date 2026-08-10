@@ -61,4 +61,10 @@ public final class PublicViews {
     // --- search -------------------------------------------------------------
 
     public record SearchHit(String type, String slug, String title, String subtitle, String arabic) { }
+
+    // --- Qur'an constellation: which sūrahs each prophet appears in --------
+
+    public record SurahRef(int n, String name, String nameAr, int count) { }
+
+    public record ProphetSurahs(String chronicle, String prophet, String glyph, int total, List<SurahRef> surahs) { }
 }

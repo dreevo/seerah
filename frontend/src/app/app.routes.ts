@@ -6,6 +6,7 @@ import { CompanionsComponent } from './companions.component';
 import { PersonDetailComponent } from './person-detail.component';
 import { SearchComponent } from './search.component';
 import { MessengersWayComponent } from './messengers-way.component';
+import { ConstellationComponent } from './constellation.component';
 
 export const routes: Routes = [
   { path: '', component: GatewayComponent, title: 'The Prophetic Library — Chronicles' },
@@ -15,6 +16,8 @@ export const routes: Routes = [
 
   // A cross-chronicle teaching view: the recurring pattern of the warner-prophets.
   { path: 'the-way', component: MessengersWayComponent, title: 'The Way of the Messengers' },
+  // The prophets mapped across the sūrahs of the Qur'an, as constellations.
+  { path: 'constellation', component: ConstellationComponent, title: 'The Constellation of the Prophets' },
 
   // Everything below is scoped to a chosen chronicle (:chronicle route param,
   // bound to each component's `chronicle` input via withComponentInputBinding).

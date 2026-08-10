@@ -179,7 +179,10 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
           }
         </svg>
       </div>
-      <a class="gw-cta" routerLink="/the-way">✦ &nbsp;See how every warning rhymed — <em>The Way of the Messengers</em> &nbsp;→</a>
+      <div class="gw-ctas">
+        <a class="gw-cta" routerLink="/the-way">✦ &nbsp;<em>The Way of the Messengers</em> — one pattern across five nations</a>
+        <a class="gw-cta" routerLink="/constellation">✦ &nbsp;<em>The Constellation</em> — the prophets across the sūrahs</a>
+      </div>
       <p class="tl-hint">Every chronicle is reviewed, cited content · No depiction of prophets or companions · Peace be upon them all</p>
     }
   `,
