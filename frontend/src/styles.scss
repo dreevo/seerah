@@ -612,3 +612,57 @@ main { flex: 1; max-width: 960px; width: 100%; margin: 0 auto; padding: 0 24px 6
 footer { text-align: center; padding: 34px 20px 44px; border-top: 1px solid var(--line); color: #5F6D7B; font-size: 11px; letter-spacing: 1.2px; line-height: 1.9; }
 footer b { color: var(--gold); font-weight: 600; letter-spacing: 2px; }
 footer .fnote { font-size: 10.5px; color: #4E5C6A; font-style: italic; }
+
+/* The Way of the Messengers — the recurring pattern across the warner-prophets */
+.gw-cta { display: block; width: 100%; text-align: center; margin: 6px auto 2px; text-decoration: none;
+  color: var(--gold-soft); font-size: 13.5px; letter-spacing: .3px; transition: .15s; }
+.gw-cta em { font-style: normal; font-family: 'Cormorant Garamond', serif; font-size: 16px; }
+.gw-cta:hover { color: var(--gold); }
+
+.mw { max-width: 1240px; margin: 0 auto; padding: 40px 18px 72px; }
+.mw-head { text-align: center; margin-bottom: 24px; }
+.mw-head .eyebrow { font-size: 10px; letter-spacing: 4.5px; color: var(--gold); text-transform: uppercase; font-weight: 600; }
+.mw-head h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4.6vw, 46px); font-weight: 400; color: #fff; margin: 12px 0 0; }
+.mw-head h1 em { font-style: normal; color: var(--gold-soft); }
+.mw-lede { color: #93A3B2; font-size: 14.5px; max-width: 700px; margin: 14px auto 0; line-height: 1.75; font-weight: 300; }
+.mw-lede b { color: var(--gold-soft); font-weight: 500; }
+
+.mw-controls { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 auto 22px; flex-wrap: wrap; }
+.mw-btn { background: rgba(8, 22, 35, .8); border: 1px solid var(--line); color: var(--gold-soft); font: 600 12px 'Inter', sans-serif; padding: 8px 14px; border-radius: 20px; cursor: pointer; transition: .15s; }
+.mw-btn:hover { border-color: var(--gold); color: var(--gold); }
+.mw-btn.play { min-width: 92px; }
+.mw-beatlabel { display: flex; flex-direction: column; margin-left: 8px; text-align: left; }
+.mw-bt { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #EAF1F7; }
+.mw-bt b { color: var(--gold); }
+.mw-bs { font-size: 12px; color: var(--muted); font-style: italic; }
+
+/* break out of the 960px content column so all five beats fit side by side */
+.mw-scroll { width: 100vw; margin-left: calc(50% - 50vw); overflow-x: auto; padding: 4px 24px 10px; }
+.mw-grid { display: grid; grid-template-columns: 132px repeat(5, minmax(170px, 1fr)); gap: 10px;
+  max-width: 1300px; margin: 0 auto; min-width: 960px; }
+.mw-beat { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .03); color: #9FB0BF; font: 600 12.5px 'Inter', sans-serif; letter-spacing: .2px; cursor: pointer; transition: .3s; }
+.mw-beat .mw-bnum { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: rgba(200, 164, 75, .15); color: var(--gold-soft); font-size: 11px; flex: 0 0 auto; }
+.mw-beat.done { color: var(--gold-soft); border-color: rgba(200, 164, 75, .3); }
+.mw-beat.active { color: var(--navy); background: var(--gold); border-color: var(--gold); box-shadow: 0 4px 16px -4px rgba(200, 164, 75, .6); }
+.mw-beat.active .mw-bnum { background: rgba(10, 29, 46, .25); color: var(--navy); }
+
+.mw-nation { display: flex; flex-direction: column; justify-content: center; gap: 1px; padding: 8px 8px 8px 2px; text-decoration: none; border-right: 1px solid var(--line); }
+.mw-nation .ar { font-family: 'Amiri', serif; font-size: 20px; color: var(--gold-soft); line-height: 1.2; }
+.mw-nation .nm { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #EAF1F7; }
+.mw-nation .to { font-size: 11px; color: var(--muted); letter-spacing: .3px; }
+.mw-nation:hover .nm { color: var(--gold-soft); }
+
+.mw-cell { position: relative; text-align: left; min-height: 66px; padding: 11px 13px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--line); background: rgba(255, 255, 255, .02); color: inherit; transition: .3s; }
+.mw-cell:not(.on) { border-style: dashed; opacity: .3; cursor: default; }
+.mw-cell.on { background: linear-gradient(160deg, rgba(20, 42, 62, .72), rgba(12, 28, 44, .72)); }
+.mw-cell.active { border-color: var(--gold); background: linear-gradient(160deg, rgba(200, 164, 75, .14), rgba(255, 255, 255, .03));
+  box-shadow: 0 0 0 1px rgba(200, 164, 75, .5) inset, 0 8px 22px -9px rgba(200, 164, 75, .45); animation: mwreveal .4s both; }
+.mw-cell.on:hover { border-color: var(--gold-soft); transform: translateY(-2px); }
+.mw-ct { display: block; font-family: 'Cormorant Garamond', serif; font-size: 16px; line-height: 1.25; color: #EAF1F7; }
+.mw-sig { display: inline-block; margin-top: 8px; font-size: 9px; letter-spacing: .5px; text-transform: uppercase; font-weight: 700;
+  color: #E4796A; background: rgba(193, 80, 63, .16); border: 1px solid rgba(193, 80, 63, .4); padding: 2px 7px; border-radius: 3px; }
+@keyframes mwreveal { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.mw-foot { text-align: center; color: #5F6D7B; font-size: 11.5px; font-style: italic; margin-top: 18px; }
+@media (prefers-reduced-motion: reduce) { .mw-cell.active { animation: none; } }

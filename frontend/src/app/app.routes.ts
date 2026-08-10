@@ -5,12 +5,16 @@ import { EventDetailComponent } from './event-detail.component';
 import { CompanionsComponent } from './companions.component';
 import { PersonDetailComponent } from './person-detail.component';
 import { SearchComponent } from './search.component';
+import { MessengersWayComponent } from './messengers-way.component';
 
 export const routes: Routes = [
   { path: '', component: GatewayComponent, title: 'The Prophetic Library — Chronicles' },
 
   // Global semantic search across the whole library (reachable from anywhere).
   { path: 'search', component: SearchComponent, title: 'Search the Library' },
+
+  // A cross-chronicle teaching view: the recurring pattern of the warner-prophets.
+  { path: 'the-way', component: MessengersWayComponent, title: 'The Way of the Messengers' },
 
   // Everything below is scoped to a chosen chronicle (:chronicle route param,
   // bound to each component's `chronicle` input via withComponentInputBinding).

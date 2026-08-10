@@ -1,5 +1,5 @@
 import { Component, computed, inject, signal } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { httpResource } from '@angular/common/http';
 import { ChronicleItem } from './models';
 
@@ -104,6 +104,7 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
 
 @Component({
   selector: 'app-gateway',
+  imports: [RouterLink],
   template: `
     <section class="gw-top">
       <div class="eyebrow">The Prophetic Library</div>
@@ -178,6 +179,7 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
           }
         </svg>
       </div>
+      <a class="gw-cta" routerLink="/the-way">✦ &nbsp;See how every warning rhymed — <em>The Way of the Messengers</em> &nbsp;→</a>
       <p class="tl-hint">Every chronicle is reviewed, cited content · No depiction of prophets or companions · Peace be upon them all</p>
     }
   `,
