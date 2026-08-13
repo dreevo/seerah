@@ -32,6 +32,7 @@ final class Narrators {
         put("أبو ذر", "أبو ذر الغفاري", "Abū Dharr al-Ghifārī");
         put("عبد الله بن زمعة", "عبد الله بن زمعة", "ʿAbdullāh ibn Zamʿa");
         put("ابن عمر", "عبد الله بن عمر", "Ibn ʿUmar");
+        put("عبد الله بن مسعود", "عبد الله بن مسعود", "Ibn Masʿūd");
         put("عبادة", "عبادة بن الصامت", "ʿUbāda ibn al-Ṣāmit");
         put("أنس", "أنس بن مالك", "Anas ibn Mālik");
         put("أنس بن مالك", "أنس بن مالك", "Anas ibn Mālik");

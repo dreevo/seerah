@@ -397,6 +397,16 @@
         "12:101"
       ],
       "place": "egypt"
+    },
+    {
+      "slug": "yusuf-the-noble-lineage",
+      "title": "The Noble, Son of the Noble",
+      "certainty": "WELL_ATTESTED",
+      "major": false,
+      "source": "sahih-al-bukhari",
+      "locator": "Book of the Prophets, no. 3390 — 'The noble, son of the noble, son of the noble, son of the noble: Yūsuf son of Yaʿqūb son of Isḥāq son of Ibrāhīm'",
+      "summary": "The Prophet ﷺ honoured Yūsuf's descent in a single line: 'The noble, the son of the noble, the son of the noble, the son of the noble — Yūsuf son of Yaʿqūb son of Isḥāq son of Ibrāhīm.' Four generations of prophethood, one born of the next.",
+      "why": "A rare succession of four prophets in unbroken descent — Ibrāhīm, then Isḥāq, then Yaʿqūb, then Yūsuf — named and honoured by the Prophet ﷺ himself."
     }
   ],
   "routes": [
