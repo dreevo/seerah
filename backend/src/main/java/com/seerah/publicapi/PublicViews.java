@@ -78,4 +78,15 @@ public final class PublicViews {
     /** A whole chronicle rendered as an ordered sequence of beats to play through. */
     public record Story(String chronicle, String prophet, String glyph, String titleAr,
                         String blurb, List<StoryBeat> beats) { }
+
+    // --- The Isnād: the chains of transmission behind the corpus' ḥadīth ----
+
+    /** An event a ḥadīth report is cited in — where a Companion's narration lands in the library. */
+    public record IsnadEventRef(String slug, String title, String chronicle, String prophet, String glyph) { }
+
+    /** One ḥadīth report: its collection, grade, full isnād, the Companion who anchors it,
+     *  and the events across the chronicles that cite it. */
+    public record IsnadReport(String collection, String collectorName, String number, String grade,
+                              String companionAr, String companionEn, List<String> chain,
+                              List<IsnadEventRef> events) { }
 }

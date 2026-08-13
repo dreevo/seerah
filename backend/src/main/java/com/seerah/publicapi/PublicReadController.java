@@ -37,6 +37,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -266,6 +267,54 @@ public class PublicReadController {
                     verse, place, source));
         }
         return new PublicViews.Story(c.slug(), cleanTitle(c.title()), c.glyph(), c.titleAr(), c.blurb(), beats);
+    }
+
+    /**
+     * The isnād behind the corpus: every ḥadīth we cite, its full chain, the Companion
+     * who anchors it, and the events it grounds — the raw material for the network that
+     * shows how these narrations reach us from the Prophet ﷺ through named Companions.
+     */
+    @GetMapping("/isnad")
+    public List<PublicViews.IsnadReport> isnad(@RequestParam(defaultValue = "en") String locale) {
+        // key "collection:number" → the report we are assembling for that ḥadīth
+        Map<String, List<PublicViews.IsnadEventRef>> eventsByKey = new LinkedHashMap<>();
+        Map<String, HadithTexts.Entry> entryByKey = new LinkedHashMap<>();
+        Map<String, String> gradeByKey = new HashMap<>();
+
+        for (var c : chronicles.published()) {
+            String prophet = cleanTitle(c.title());
+            for (var e : events.publishedTimeline(locale, c.slug())) {
+                for (var cit : citations.citationsFor(EntityType.EVENT, e.id())) {
+                    String key = hadith.key(cit.workTitle(), cit.locator());
+                    if (key == null) continue;
+                    HadithTexts.Entry entry = hadith.lookup(cit.workTitle(), cit.locator());
+                    if (entry == null || entry.chain() == null || entry.chain().isEmpty()) continue;
+                    entryByKey.putIfAbsent(key, entry);
+                    if (cit.grade() != null) gradeByKey.putIfAbsent(key, cit.grade());
+                    eventsByKey.computeIfAbsent(key, k -> new ArrayList<>())
+                            .add(new PublicViews.IsnadEventRef(e.slug(), e.title(), c.slug(), prophet, c.glyph()));
+                }
+            }
+        }
+
+        List<PublicViews.IsnadReport> out = new ArrayList<>();
+        for (var en : entryByKey.entrySet()) {
+            String[] parts = en.getKey().split(":", 2);
+            var chain = en.getValue().chain();
+            Narrators.Companion comp = Narrators.of(chain.get(chain.size() - 1));
+            out.add(new PublicViews.IsnadReport(parts[0], collectorName(parts[0]), parts[1],
+                    gradeByKey.get(en.getKey()), comp.ar(), comp.en(), chain, eventsByKey.get(en.getKey())));
+        }
+        return out;
+    }
+
+    private static String collectorName(String coll) {
+        return switch (coll) {
+            case "bukhari" -> "Ṣaḥīḥ al-Bukhārī";
+            case "muslim" -> "Ṣaḥīḥ Muslim";
+            case "tirmidhi" -> "Jāmiʿ al-Tirmidhī";
+            default -> coll;
+        };
     }
 
     @GetMapping("/people")

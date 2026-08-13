@@ -145,6 +145,15 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
           </span>
           <span class="tlens-txt"><b>The Constellation</b><em>prophets across the sūrahs</em></span>
         </a>
+        <a class="tlens" routerLink="/isnad" aria-label="How the narrations reach us">
+          <span class="tlens-emb chains">
+            <svg viewBox="0 0 40 24" aria-hidden="true">
+              <path d="M6 12 C 14 4, 18 20, 26 12 S 34 4, 38 12" />
+              <circle cx="6" cy="12" r="2.7"/><circle cx="20" cy="12" r="1.9"/><circle cx="34" cy="12" r="2.7"/>
+            </svg>
+          </span>
+          <span class="tlens-txt"><b>How the Narrations Reach Us</b><em>the chains of isnād</em></span>
+        </a>
       </div>
 
       <div class="ptree" #tree>

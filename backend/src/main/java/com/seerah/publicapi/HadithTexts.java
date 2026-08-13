@@ -41,11 +41,16 @@ public class HadithTexts {
 
     /** The bundled text (+ isnād chain) for a citation, or null if it is not a bundled ḥadīth. */
     public Entry lookup(String workTitle, String locator) {
+        String key = key(workTitle, locator);
+        return key == null ? null : texts.get(key);
+    }
+
+    /** The "collection:number" key for a citation (e.g. "bukhari:3374"), or null if not a bundled ḥadīth. */
+    public String key(String workTitle, String locator) {
         String coll = collection(workTitle);
         if (coll == null || locator == null) return null;
         Matcher m = NUM.matcher(locator);
-        if (!m.find()) return null;
-        return texts.get(coll + ":" + m.group(1));
+        return m.find() ? coll + ":" + m.group(1) : null;
     }
 
     private static String collection(String workTitle) {
