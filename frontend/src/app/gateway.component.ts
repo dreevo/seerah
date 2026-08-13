@@ -127,17 +127,22 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
       <!-- two "lenses" onto the whole corpus — cross-cutting views beside the lineage -->
       <div class="tree-lenses">
         <a class="tlens" routerLink="/the-way" aria-label="The Way of the Messengers">
-          <svg viewBox="0 0 40 24" aria-hidden="true" class="tlens-emb">
-            <path d="M4 12 H36" /><circle cx="4" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/>
-            <circle cx="20" cy="12" r="2.6"/><circle cx="28" cy="12" r="2.6"/><circle cx="36" cy="12" r="2.6"/>
-          </svg>
+          <span class="tlens-emb">
+            <svg viewBox="0 0 40 24" aria-hidden="true">
+              <path d="M4 12 H36" /><circle cx="4" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/>
+              <circle cx="20" cy="12" r="2.6"/><circle cx="28" cy="12" r="2.6"/><circle cx="36" cy="12" r="2.6"/>
+            </svg>
+          </span>
           <span class="tlens-txt"><b>The Way of the Messengers</b><em>one pattern · five nations</em></span>
         </a>
         <a class="tlens" routerLink="/constellation" aria-label="The Constellation of the Prophets">
-          <svg viewBox="0 0 40 24" aria-hidden="true" class="tlens-emb cst">
-            <path d="M6 18 L15 7 L24 14 L34 5" />
-            <circle cx="6" cy="18" r="2"/><circle cx="15" cy="7" r="2.8"/><circle cx="24" cy="14" r="2.2"/><circle cx="34" cy="5" r="2.6"/>
-          </svg>
+          <span class="tlens-emb stars">
+            <svg viewBox="0 0 40 24" aria-hidden="true">
+              <path d="M6 16 L14 8 L20 14 L26 8 L34 16" />
+              <circle cx="6" cy="16" r="2.2"/><circle cx="14" cy="8" r="2.7"/><circle cx="20" cy="14" r="1.9"/>
+              <circle cx="26" cy="8" r="2.7"/><circle cx="34" cy="16" r="2.2"/>
+            </svg>
+          </span>
           <span class="tlens-txt"><b>The Constellation</b><em>prophets across the sūrahs</em></span>
         </a>
       </div>
