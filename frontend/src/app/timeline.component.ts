@@ -26,6 +26,18 @@ const U_TOP = 40;       // first undated card's drop below the axis
         'A connected chronology — filter by period, adjust the spacing, and scroll across the story; open any event for the verses, people, and geography behind it.' }}</p>
     </section>
 
+    @if (visible().length) {
+      <button class="tl-storycta" (click)="playStory()" aria-label="Play the story">
+        <span class="tsc-play"><span class="tsc-tri">▶</span></span>
+        <span class="tsc-txt">
+          <b>Play the Story</b>
+          <em>Watch {{ titleEm() || 'this life' }} unfold scene by scene — each moment with its āyah, place &amp; source</em>
+        </span>
+        <span class="tsc-meta">{{ visible().length }} scenes</span>
+        <span class="tsc-go">Begin →</span>
+      </button>
+    }
+
     <div class="tl-controls">
       @if (eras().length && hasDatedEvents()) {
         <div class="seg">
@@ -41,9 +53,6 @@ const U_TOP = 40;       // first undated card's drop below the axis
         <span class="lvl">{{ zoomLabel() }}</span>
         <button (click)="zoomBy(1)" [disabled]="zoom() === 2" aria-label="Wider">+</button>
       </div>
-      @if (visible().length) {
-        <button class="tl-story" (click)="playStory()">▶ Play the story</button>
-      }
     </div>
 
     @if (!hasDates() && visible().length) {

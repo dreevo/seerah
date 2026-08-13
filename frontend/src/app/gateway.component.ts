@@ -1,5 +1,7 @@
-import { Component, computed, inject, signal } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import {
+  Component, computed, effect, ElementRef, HostListener, signal, viewChild,
+} from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { httpResource } from '@angular/common/http';
 import { ChronicleItem } from './models';
 
@@ -111,10 +113,10 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
       <div class="basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
       <h1>The <em>Tree</em> of the Prophets</h1>
       <p class="gw-lede">One connected chain of guidance — from Ādam, the father of humankind, to Muhammad ﷺ,
-        the final Messenger. <b>Hover any prophet to trace his line of descent back to Ādam.</b> Choose a life to enter its chronicle.</p>
+        the final Messenger. <b>Hover a prophet to trace his descent — click to open his story or timeline.</b></p>
     </section>
 
-    <div class="gw-trace" [class.on]="active()">
+    <div class="gw-trace" [class.on]="current()">
       @if (traceLabel(); as t) { <span class="gw-trace-line">{{ t }}</span> }
       @else { <span class="gw-trace-hint">The line of descent appears here as you trace it ↑</span> }
     </div>
@@ -122,8 +124,26 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
     @if (chronicles.error()) {
       <p class="state err">The library service is unavailable. Is the backend running on :8080?</p>
     } @else {
-      <div class="ptree">
-        <svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets" [class.tracing]="active()">
+      <!-- two "lenses" onto the whole corpus — cross-cutting views beside the lineage -->
+      <div class="tree-lenses">
+        <a class="tlens" routerLink="/the-way" aria-label="The Way of the Messengers">
+          <svg viewBox="0 0 40 24" aria-hidden="true" class="tlens-emb">
+            <path d="M4 12 H36" /><circle cx="4" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/>
+            <circle cx="20" cy="12" r="2.6"/><circle cx="28" cy="12" r="2.6"/><circle cx="36" cy="12" r="2.6"/>
+          </svg>
+          <span class="tlens-txt"><b>The Way of the Messengers</b><em>one pattern · five nations</em></span>
+        </a>
+        <a class="tlens" routerLink="/constellation" aria-label="The Constellation of the Prophets">
+          <svg viewBox="0 0 40 24" aria-hidden="true" class="tlens-emb cst">
+            <path d="M6 18 L15 7 L24 14 L34 5" />
+            <circle cx="6" cy="18" r="2"/><circle cx="15" cy="7" r="2.8"/><circle cx="24" cy="14" r="2.2"/><circle cx="34" cy="5" r="2.6"/>
+          </svg>
+          <span class="tlens-txt"><b>The Constellation</b><em>prophets across the sūrahs</em></span>
+        </a>
+      </div>
+
+      <div class="ptree" #tree>
+        <svg #svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets" [class.tracing]="current()">
           <defs>
             <radialGradient id="leaf" cx="42%" cy="34%" r="72%">
               <stop offset="0%" stop-color="#1f4a63" /><stop offset="60%" stop-color="#123a52" /><stop offset="100%" stop-color="#0b2537" />
@@ -158,11 +178,12 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
           <!-- prophet nodes -->
           @for (n of nodes(); track n.slug) {
             <g class="pnode {{ n.kind }}" [class.flagship]="n.flagship" [class.lit]="lit(n.slug)"
+               [class.open]="current() === n.slug"
                [attr.transform]="'translate(' + n.x + ' ' + n.y + ')'" [style.animation-delay.ms]="n.delay"
-               [attr.tabindex]="n.kind === 'chronicle' ? 0 : null" [attr.role]="n.kind === 'chronicle' ? 'link' : null"
-               (mouseenter)="active.set(n.slug)" (mouseleave)="active.set(null)"
-               (focus)="active.set(n.slug)" (blur)="active.set(null)"
-               (click)="enter(n)" (keydown.enter)="enter(n)">
+               [attr.tabindex]="n.kind === 'chronicle' ? 0 : null" [attr.role]="n.kind === 'chronicle' ? 'button' : null"
+               (mouseenter)="open(n.slug)" (mouseleave)="scheduleClose()"
+               (focus)="open(n.slug)" (blur)="scheduleClose()"
+               (click)="tap(n, $event)" (keydown.enter)="tap(n, $event)">
               @if (n.kind === 'chronicle') {
                 <circle class="glow" [attr.r]="n.r + 16" filter="url(#soft)" />
                 <circle class="disc" [attr.r]="n.r" [attr.fill]="n.flagship ? 'url(#leaf-flag)' : 'url(#leaf)'" />
@@ -178,33 +199,107 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
             </g>
           }
         </svg>
-      </div>
-      <div class="gw-ctas">
-        <a class="gw-cta" routerLink="/the-way">✦ &nbsp;<em>The Way of the Messengers</em> — one pattern across five nations</a>
-        <a class="gw-cta" routerLink="/constellation">✦ &nbsp;<em>The Constellation</em> — the prophets across the sūrahs</a>
+
+        <!-- the choice that blooms from a node: enter the timeline, or play the story -->
+        @if (popNode(); as n) {
+          @if (popPos(); as p) {
+            <div class="np-pop" [class.below]="p.below" [style.left.px]="p.x"
+                 [style.top.px]="p.below ? p.y + p.rpx + 13 : p.y - p.rpx - 13"
+                 (mouseenter)="hold()" (mouseleave)="scheduleClose()">
+              <div class="np-head"><span class="np-glyph">{{ n.glyph }}</span>{{ n.name }}</div>
+              <div class="np-actions">
+                <a class="np-btn story" [routerLink]="['/c', n.slug, 'story']" (click)="pinned.set(null)">
+                  <span class="np-ic">▶</span><span class="np-l"><b>Play the Story</b><em>{{ n.count }} scenes, told with āyāt</em></span>
+                </a>
+                <a class="np-btn" [routerLink]="['/c', n.slug]" (click)="pinned.set(null)">
+                  <span class="np-ic">❯</span><span class="np-l"><b>Timeline</b><em>the connected chronology</em></span>
+                </a>
+              </div>
+            </div>
+          }
+        }
       </div>
       <p class="tl-hint">Every chronicle is reviewed, cited content · No depiction of prophets or companions · Peace be upon them all</p>
     }
   `,
 })
 export class GatewayComponent {
-  private router = inject(Router);
   chronicles = httpResource<ChronicleItem[]>(() => '/api/public/chronicles', { defaultValue: [] });
 
   readonly viewBox = VIEWBOX;
 
-  /** The prophet currently being traced (hovered/focused), or null. */
-  active = signal<string | null>(null);
+  private svg = viewChild<ElementRef<SVGSVGElement>>('svg');
+  private tree = viewChild<ElementRef<HTMLElement>>('tree');
 
-  /** A node is lit when it lies on the traced prophet's line of descent. */
+  /** The prophet being hovered/focused (transient). */
+  active = signal<string | null>(null);
+  /** The prophet whose choice-popover is held open by a click/tap (sticky, for touch). */
+  pinned = signal<string | null>(null);
+  /** Whichever prophet is in focus right now — pinned wins, else hovered. */
+  current = computed(() => this.active() ?? this.pinned());
+  private closeT?: ReturnType<typeof setTimeout>;
+
+  constructor() {
+    // Keep the popover anchored to its node whenever the focus changes.
+    effect(() => { const n = this.popNode(); if (n) this.place(n); });
+  }
+
+  /** A node is lit when it lies on the focused prophet's line of descent. */
   lit(slug: string): boolean {
-    const a = this.active();
+    const a = this.current();
     return !!a && ANCESTORS.get(a)!.has(slug);
   }
   /** A branch (keyed by its child slug) is lit when the child is on that line. */
   branchLit(childSlug: string): boolean {
-    const a = this.active();
+    const a = this.current();
     return !!a && ANCESTORS.get(a)!.has(childSlug);
+  }
+
+  // --- the node choice-popover (Timeline vs Story) -------------------------
+
+  open(slug: string) { clearTimeout(this.closeT); this.active.set(slug); }
+  hold() { clearTimeout(this.closeT); }
+  /** Close on leave — but a short grace lets the pointer travel onto the popover. */
+  scheduleClose() { clearTimeout(this.closeT); this.closeT = setTimeout(() => this.active.set(null), 170); }
+
+  /** Click/tap a node: pin its popover open (so touch users get the choice too). */
+  tap(n: { kind: string; slug: string }, e: Event) {
+    if (n.kind !== 'chronicle') return;
+    e.stopPropagation();
+    this.pinned.set(this.pinned() === n.slug ? null : n.slug);
+    this.active.set(this.pinned());
+  }
+  @HostListener('document:click', ['$event'])
+  onDocClick(e: Event) {
+    if (!this.pinned()) return;
+    const t = e.target as HTMLElement;
+    if (t.closest('.pnode') || t.closest('.np-pop')) return;
+    this.pinned.set(null);
+  }
+  @HostListener('window:resize')
+  onResize() { const n = this.popNode(); if (n) this.place(n); }
+
+  /** The focused node, only when it's a real chronicle (connectors have no popover). */
+  popNode = computed(() => {
+    const s = this.current();
+    if (!s) return null;
+    const n = this.nodes().find((x) => x.slug === s);
+    return n && n.kind === 'chronicle' ? n : null;
+  });
+  popPos = signal<{ x: number; y: number; rpx: number; below: boolean } | null>(null);
+
+  /** Project a node's SVG-space centre to a pixel offset within the tree container. */
+  private place(n: { x: number; y: number; r: number }) {
+    const svg = this.svg()?.nativeElement, host = this.tree()?.nativeElement;
+    if (!svg || !host) return;
+    const ctm = svg.getScreenCTM();
+    if (!ctm) return;
+    const pt = svg.createSVGPoint();
+    pt.x = n.x; pt.y = n.y;
+    const s = pt.matrixTransform(ctm);
+    const hr = host.getBoundingClientRect();
+    const y = s.y - hr.top, rpx = n.r * ctm.a;
+    this.popPos.set({ x: s.x - hr.left, y, rpx, below: y - rpx < 130 });
   }
 
   private displayName = computed(() => {
@@ -217,9 +312,9 @@ export class GatewayComponent {
     return m;
   });
 
-  /** The traced line spelled out, Ādam → … → the hovered prophet. */
+  /** The traced line spelled out, Ādam → … → the focused prophet. */
   traceLabel = computed(() => {
-    const a = this.active();
+    const a = this.current();
     if (!a) return '';
     const path: string[] = [];
     for (let cur: string | null = a; cur; cur = PARENT.get(cur) ?? null) path.unshift(cur);
@@ -262,8 +357,4 @@ export class GatewayComponent {
       };
     });
   });
-
-  enter(n: { kind: string; slug: string }) {
-    if (n.kind === 'chronicle') this.router.navigate(['/c', n.slug]);
-  }
 }
