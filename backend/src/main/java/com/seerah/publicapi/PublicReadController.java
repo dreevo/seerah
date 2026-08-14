@@ -186,6 +186,7 @@ public class PublicReadController {
     public List<PublicViews.ProphetSurahs> quranMap(@RequestParam(defaultValue = "en") String locale) {
         List<PublicViews.ProphetSurahs> out = new ArrayList<>();
         for (var c : chronicles.published()) {
+            if ("COLLECTION".equals(c.kind())) continue;   // the constellation is of prophets, not the Qur'an-stories set
             Map<Integer, int[]> counts = new HashMap<>();
             Map<Integer, String[]> names = new HashMap<>();
             for (var e : events.publishedTimeline(locale, c.slug())) {

@@ -45,6 +45,8 @@ final class Narrators {
         put("عبد الله بن عمرو بن العاص", "عبد الله بن عمرو بن العاص", "ʿAbdullāh ibn ʿAmr ibn al-ʿĀṣ");
         put("عمر بن الخطاب", "عمر بن الخطاب", "ʿUmar ibn al-Khaṭṭāb");
         put("أبو موسى", "أبو موسى الأشعري", "Abū Mūsā al-Ashʿarī");
+        put("صهيب", "صهيب الرومي", "Ṣuhayb al-Rūmī");
+        put("زينب بنت جحش", "زينب بنت جحش", "Zaynab bint Jaḥsh");
     }
 
     /** Resolve the last isnād link to a canonical Companion, or fall back to its Arabic. */

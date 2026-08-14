@@ -156,6 +156,16 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
         </a>
       </div>
 
+      <!-- the Qur'an's narratives that stand outside the line of the prophets -->
+      <a class="qs-band" routerLink="/stories">
+        <span class="qsb-orn" aria-hidden="true">◈</span>
+        <span class="qsb-txt">
+          <b>Stories &amp; Signs of the Qur’ān</b>
+          <em>Beyond the line of the prophets — the Cave, Dhū al-Qarnayn, Luqmān, the Ditch &amp; more</em>
+        </span>
+        <span class="qsb-go">Enter →</span>
+      </a>
+
       <div class="ptree" #tree>
         <svg #svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets" [class.tracing]="current()">
           <defs>

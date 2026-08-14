@@ -163,6 +163,8 @@ public class SeerahDataSeeder implements ApplicationRunner {
                 .orElseThrow(() -> new IllegalStateException("alyasa chronicle missing — check V19 migration"));
         UUID dhulkifl = chronicles.idBySlug("dhulkifl")
                 .orElseThrow(() -> new IllegalStateException("dhulkifl chronicle missing — check V19 migration"));
+        UUID quranStories = chronicles.idBySlug("quran-stories")
+                .orElseThrow(() -> new IllegalStateException("quran-stories chronicle missing — check V21 migration"));
 
         ingest(adam, "seed/chronicle-adam.json", "editorial-adam");
         ingest(idris, "seed/chronicle-idris.json", "editorial-idris");
@@ -184,6 +186,7 @@ public class SeerahDataSeeder implements ApplicationRunner {
         ingest(alyasa, "seed/chronicle-alyasa.json", "editorial-alyasa");
         ingest(dhulkifl, "seed/chronicle-dhulkifl.json", "editorial-dhulkifl");
         ingest(isa, "seed/chronicle-isa.json", "editorial-isa");
+        ingest(quranStories, "seed/chronicle-quran-stories.json", "editorial-quran-stories");
         ingest(seerah, "seed/chronology.json", "editorial-chronology");
     }
 

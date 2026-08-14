@@ -9,6 +9,7 @@ import { MessengersWayComponent } from './messengers-way.component';
 import { ConstellationComponent } from './constellation.component';
 import { StoryComponent } from './story.component';
 import { IsnadComponent } from './isnad.component';
+import { StoriesComponent } from './stories.component';
 
 export const routes: Routes = [
   { path: '', component: GatewayComponent, title: 'The Prophetic Library — Chronicles' },
@@ -22,6 +23,8 @@ export const routes: Routes = [
   { path: 'constellation', component: ConstellationComponent, title: 'The Constellation of the Prophets' },
   // The isnād behind the corpus: Companions and the chains that carry the narrations.
   { path: 'isnad', component: IsnadComponent, title: 'How the Narrations Reach Us' },
+  // The Qur'an's narratives beyond the line of the prophets — a browsable gallery.
+  { path: 'stories', component: StoriesComponent, title: 'Stories of the Qur’an' },
 
   // Everything below is scoped to a chosen chronicle (:chronicle route param,
   // bound to each component's `chronicle` input via withComponentInputBinding).

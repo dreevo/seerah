@@ -1,0 +1,131 @@
+{
+  "_note": "Stories & Signs of the Qur'an — narratives the Qur'an tells that stand outside the line of the prophets. Qur'an-sourced; sahih hadith added where the Sunnah relates the fuller account. Every summary says only what the source says.",
+  "sources": [
+    {
+      "slug": "the-noble-quran",
+      "workTitle": "The Noble Qur'an",
+      "author": "Qur'anic Revelation",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-al-bukhari",
+      "workTitle": "Sahih al-Bukhari",
+      "author": "Muhammad al-Bukhari",
+      "tier": "PRIMARY"
+    },
+    {
+      "slug": "sahih-muslim",
+      "workTitle": "Sahih Muslim",
+      "author": "Muslim ibn al-Hajjaj",
+      "tier": "PRIMARY"
+    }
+  ],
+  "people": [],
+  "places": [],
+  "routes": [],
+  "paths": [],
+  "events": [
+    {
+      "slug": "ashab-al-kahf",
+      "title": "The People of the Cave",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Kahf 18:9-26",
+      "summary": "Young men who believed in their Lord fled a people who worshipped others beside Him and took refuge in a cave, praying, 'Our Lord, grant us mercy from Yourself and prepare for us right guidance.' Allah sealed their hearing in sleep for many years — three hundred and nine — then awakened them; they supposed they had stayed but a day or part of a day. Their account was made a sign that Allah's promise of resurrection is true.",
+      "why": "A sign that the One who can hold a soul in sleep for three centuries and return it can raise the dead — and that Allah shelters those who flee to Him with their faith.",
+      "verses": [
+        "18:10",
+        "18:13",
+        "18:25"
+      ]
+    },
+    {
+      "slug": "dhul-qarnayn",
+      "title": "Dhū al-Qarnayn and the Barrier",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Kahf 18:83-98",
+      "source2": "sahih-al-bukhari",
+      "locator2": "Book of the Prophets, no. 3598 — a hole opened in the barrier of Gog and Magog: 'Woe to the Arabs from an evil drawn near'",
+      "summary": "A righteous ruler whom Allah established in the earth and to whom He gave the means to all things. He journeyed to the setting-place of the sun, then to its rising, judging with justice; then, between two mountains, he found a people tormented by Gog and Magog. Refusing their payment, he had them bring sheets of iron and molten copper and raised a barrier Gog and Magog could neither scale nor breach — saying, 'This is a mercy from my Lord; but when my Lord's promise comes, He will level it.'",
+      "why": "Power spent in Allah's service and justice: a king who took no reward, credited every strength to his Lord, and shielded the weak — behind a barrier the Prophet ﷺ said would open near the end of time.",
+      "verses": [
+        "18:83",
+        "18:94",
+        "18:98"
+      ]
+    },
+    {
+      "slug": "luqman-the-wise",
+      "title": "Luqmān's Counsel to His Son",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Luqmān 31:12-19",
+      "summary": "To Luqmān — a servant, not a prophet — Allah gave wisdom and said, 'Be grateful to Allah.' He counselled his son: 'O my son, do not associate anything with Allah; associating partners is a great wrong.' He taught him that Allah brings forth the smallest deed though hidden in a rock or the heavens; to establish prayer, enjoin good and forbid evil, and bear what befalls him with patience; not to turn his cheek from people in scorn nor walk the earth in exultation; and to be moderate in his pace and lower his voice.",
+      "why": "The Qur'an preserves a father's counsel as timeless guidance — that the root of all right is to worship none but Allah, and its branches are gratitude, prayer, humility, and patience.",
+      "verses": [
+        "31:12",
+        "31:13",
+        "31:18"
+      ]
+    },
+    {
+      "slug": "ashab-al-ukhdud",
+      "title": "The People of the Ditch",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Burūj 85:4-8",
+      "source2": "sahih-muslim",
+      "locator2": "Book of Zuhd, no. 3005 — the boy and the king: how a people came to believe and were burned in the trench",
+      "summary": "The Qur'an curses the makers of the trench — the fire fed with fuel — who sat by it as witnesses to what they did to the believers, resenting them for nothing but that they believed in Allah, the Almighty, the Praiseworthy. The Prophet ﷺ related the fuller account: a boy guided to faith who outshone a king's sorcerer, whose steadfastness led a whole people to believe — so the tyrant burned them in trenches rather than let them worship their Lord.",
+      "why": "The oldest witness that faith can cost everything and lose nothing: a people burned alive for believing, remembered in the Qur'an as the wronged and their persecutors as the cursed.",
+      "verses": [
+        "85:4",
+        "85:7",
+        "85:8"
+      ]
+    },
+    {
+      "slug": "the-people-of-saba",
+      "title": "The People of Saba’ and the Flood",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah Sabaʾ 34:15-17",
+      "summary": "For Saba’ there was a sign in their land: two gardens, on the right and the left, in a good country under a forgiving Lord. They were told, 'Eat from the provision of your Lord and be grateful to Him.' But they turned away, so Allah loosed upon them the flood of the dam and exchanged their two gardens for gardens of bitter fruit, tamarisk, and a few lote trees. Thus He repaid them for their ingratitude — and is any so repaid but the ungrateful?",
+      "why": "A nation given ease and plenty, asked only for gratitude; when they refused, the very dam that watered them became their ruin — for blessings ungoverned by thankfulness are withdrawn.",
+      "verses": [
+        "34:15",
+        "34:16",
+        "34:17"
+      ]
+    },
+    {
+      "slug": "ashab-al-sabt",
+      "title": "The Sabbath-Breakers",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Aʿrāf 7:163-166",
+      "summary": "A town by the sea was tested in the Sabbath: their fish came openly on the day they were forbidden to fish, and stayed away otherwise. Some contrived to take them by a trick; a group forbade the wrong and warned the doers; a third asked why warn a people bound for ruin. When they forgot the reminder and persisted in insolence, Allah saved those who forbade evil and seized the wrongdoers — and said to the transgressors, 'Be apes, despised.'",
+      "why": "A warning against evading Allah's limits by cunning — and a mercy recorded for those who forbid wrong even when it seems unheeded: they alone were saved.",
+      "verses": [
+        "7:163",
+        "7:165",
+        "7:166"
+      ]
+    },
+    {
+      "slug": "ashab-al-fil",
+      "title": "The People of the Elephant",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Fīl 105:1-5",
+      "summary": "An army came with an elephant to destroy the Sacred House. 'Have you not seen how your Lord dealt with the companions of the elephant? Did He not turn their plot astray, and send against them birds in flocks, pelting them with stones of baked clay, and make them like devoured stubble?' Their vast host was undone before it could reach the Kaʿba.",
+      "why": "Allah's own defence of His House on the eve of the final Prophet's coming — a sign, recalled whenever the sūra is recited, that no power can overcome what Allah protects.",
+      "verses": [
+        "105:1",
+        "105:3",
+        "105:4"
+      ]
+    }
+  ]
+}
