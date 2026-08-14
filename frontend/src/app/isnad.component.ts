@@ -80,7 +80,7 @@ const CX = 500, CY = 356, R1 = 236;
                   <circle class="halo" [attr.r]="c.r + 10" fill="url(#prophglow)" />
                   <circle class="disc" [attr.r]="c.r" />
                   <circle class="ring" [attr.r]="c.r" />
-                  <text class="c-ct" y="1" dominant-baseline="central" [attr.font-size]="Math.min(c.r * 0.85, 16)">{{ c.count }}</text>
+                  <text class="c-ct" y="0" dy="0.35em" [attr.font-size]="Math.min(c.r * 0.85, 16)">{{ c.count }}</text>
                 </g>
               }
 
@@ -89,7 +89,7 @@ const CX = 500, CY = 356, R1 = 236;
                 <circle class="pglow" [attr.cx]="cx" [attr.cy]="cy" r="72" fill="url(#prophglow)" />
                 <circle class="pdisc" [attr.cx]="cx" [attr.cy]="cy" r="42" />
                 <circle class="prim" [attr.cx]="cx" [attr.cy]="cy" r="42" />
-                <text class="pglyph" [attr.x]="cx" [attr.y]="cy + 2" dominant-baseline="central">ﷺ</text>
+                <text class="pglyph" [attr.x]="cx" [attr.y]="cy" dy="0.33em">ﷺ</text>
                 <text class="plbl" [attr.x]="cx" [attr.y]="cy + 63">The Prophet ﷺ</text>
               </g>
 
