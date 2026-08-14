@@ -1118,21 +1118,41 @@ svg.sel .spoke:not(.lit) { stroke: rgba(200,164,75,.05); }
 /* ============================================================
    Stories of the Qur'an — the collection band (gateway) + gallery (/stories)
    ============================================================ */
-.qs-band {
-  display: flex; align-items: center; gap: 16px; text-decoration: none;
-  width: 100vw; margin: 14px 0 2px calc(50% - 50vw); padding: 14px clamp(24px, 6vw, 90px);
-  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(200,164,75,.08), rgba(200,164,75,0));
-  transition: background .25s;
+/* a golden leaf growing off the tree → the Qur'an's stories beyond the prophets */
+.qs-leaf { position: absolute; top: 5%; right: 2.5%; z-index: 4; width: 132px;
+  display: flex; flex-direction: column; align-items: center; text-decoration: none; text-align: center; }
+.qsl-glow { position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+  width: 130px; height: 130px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(200,164,75,.32), rgba(200,164,75,0) 68%);
+  animation: qslbreath 4.5s ease-in-out infinite; }
+@keyframes qslbreath { 0%,100% { opacity: .5; transform: translateX(-50%) scale(.9); } 50% { opacity: 1; transform: translateX(-50%) scale(1.12); } }
+.qs-leaf .qsl-svg { width: 66px; height: auto; transform-origin: 50% 100%;   /* .qs-leaf prefix beats .ptree svg */
+  animation: leafsway 6s ease-in-out infinite; filter: drop-shadow(0 3px 6px rgba(120,90,20,.5)); transition: filter .3s; }
+@keyframes leafsway { 0%,100% { transform: rotate(-6deg); } 50% { transform: rotate(7deg); } }
+.qsl-stem { fill: none; stroke: #8A6B22; stroke-width: 3.4; stroke-linecap: round; }
+.qsl-blade { fill: url(#leafgrad); stroke: var(--gold-soft); stroke-width: 1.4; }
+.qsl-mid { fill: none; stroke: rgba(90,66,20,.55); stroke-width: 1.6; stroke-linecap: round; }
+.qsl-vein { fill: none; stroke: rgba(90,66,20,.4); stroke-width: 1; }
+.qsl-lbl { margin-top: 6px; display: flex; flex-direction: column; }
+.qsl-lbl b { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--gold-soft);
+  line-height: 1.1; letter-spacing: .2px; transition: color .25s; }
+.qsl-lbl em { font-style: normal; font-size: 10.5px; color: var(--muted); letter-spacing: .2px; margin-top: 2px; }
+.qsl-tip { max-width: 210px; margin-top: 8px; font-size: 11px; line-height: 1.5; color: var(--gold);
+  opacity: 0; transform: translateY(-4px); transition: opacity .3s, transform .3s; pointer-events: none; }
+.qs-leaf:hover .qsl-svg { filter: drop-shadow(0 0 12px rgba(227,206,147,.85)); }
+.qs-leaf:hover .qsl-glow { opacity: 1; animation-play-state: paused; }
+.qs-leaf:hover .qsl-lbl b { color: #F4EEDF; }
+.qs-leaf:hover .qsl-tip { opacity: 1; transform: none; }
+.qs-leaf:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; border-radius: 12px; }
+@media (max-width: 900px) {
+  .qs-leaf { position: static; width: auto; flex-direction: row; gap: 12px; justify-content: center;
+    margin: 4px auto 0; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; }
+  .qsl-glow { display: none; }
+  .qs-leaf .qsl-svg { width: 34px; }
+  .qsl-lbl { text-align: left; }
+  .qsl-tip { display: none; }
 }
-.qs-band:hover { background: linear-gradient(180deg, rgba(200,164,75,.16), rgba(200,164,75,.03)); }
-.qsb-orn { flex: none; font-size: 26px; color: var(--gold); }
-.qsb-txt { flex: 1; display: flex; flex-direction: column; min-width: 0; }
-.qsb-txt b { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #F4EEDF; line-height: 1.15; }
-.qsb-txt em { font-style: normal; font-size: 13px; color: var(--muted); }
-.qsb-go { flex: none; font: 700 13px 'Inter', sans-serif; color: var(--gold-soft); letter-spacing: .3px; }
-.qs-band:hover .qsb-go { color: var(--gold); }
-@media (max-width: 620px) { .qsb-go { display: none; } .qsb-txt b { font-size: 18px; } .qsb-txt em { font-size: 12px; } }
+@media (prefers-reduced-motion: reduce) { .qsl-svg, .qsl-glow { animation: none; } }
 
 .qs { padding: 34px 18px 30px; }
 .qs-head { text-align: center; max-width: 760px; margin: 0 auto 26px; }

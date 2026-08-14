@@ -156,16 +156,6 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
         </a>
       </div>
 
-      <!-- the Qur'an's narratives that stand outside the line of the prophets -->
-      <a class="qs-band" routerLink="/stories">
-        <span class="qsb-orn" aria-hidden="true">◈</span>
-        <span class="qsb-txt">
-          <b>Stories &amp; Signs of the Qur’ān</b>
-          <em>Beyond the line of the prophets — the Cave, Dhū al-Qarnayn, Luqmān, the Ditch &amp; more</em>
-        </span>
-        <span class="qsb-go">Enter →</span>
-      </a>
-
       <div class="ptree" #tree>
         <svg #svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets" [class.tracing]="current()">
           <defs>
@@ -242,6 +232,26 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
             </div>
           }
         }
+
+        <!-- a golden leaf off the same tree: the Qur'an's stories beyond the prophets -->
+        <a class="qs-leaf" routerLink="/stories" aria-label="Stories of the Qur'an">
+          <span class="qsl-glow" aria-hidden="true"></span>
+          <svg class="qsl-svg" viewBox="0 0 100 168" aria-hidden="true">
+            <defs>
+              <linearGradient id="leafgrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#F3E4B0" /><stop offset="55%" stop-color="#C8A44B" /><stop offset="100%" stop-color="#8A6B22" />
+              </linearGradient>
+            </defs>
+            <path class="qsl-stem" d="M50 166 C 49 140, 51 120, 50 96" />
+            <path class="qsl-blade" d="M50 150 C 6 112, 12 40, 50 6 C 88 40, 94 112, 50 150 Z" />
+            <path class="qsl-mid" d="M50 146 L50 18" />
+            <path class="qsl-vein" d="M50 118 C 36 112, 30 104, 26 92 M50 118 C 64 112, 70 104, 74 92
+                                      M50 92 C 38 87, 32 80, 29 70 M50 92 C 62 87, 68 80, 71 70
+                                      M50 66 C 41 62, 36 56, 33 48 M50 66 C 59 62, 64 56, 67 48" />
+          </svg>
+          <span class="qsl-lbl"><b>Stories of the Qur’ān</b><em>seven signs among the nations</em></span>
+          <span class="qsl-tip" aria-hidden="true">The Cave · Dhū al-Qarnayn · Luqmān · the Ditch · Sabaʾ · the Sabbath · the Elephant</span>
+        </a>
       </div>
       <p class="tl-hint">Every chronicle is reviewed, cited content · No depiction of prophets or companions · Peace be upon them all</p>
     }
