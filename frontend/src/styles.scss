@@ -616,45 +616,42 @@ footer .fnote { font-size: 10.5px; color: #4E5C6A; font-style: italic; }
 /* the gateway is the positioning context for its two flanking flourishes */
 app-gateway { position: relative; display: block; }
 
-/* LEFT: three seals — cross-cutting ways of reading the library; hover a seal to reveal it */
-.gw-lenses { position: absolute; top: 20px; left: calc(50% - 50vw + 24px); z-index: 6;   /* to the screen's left edge */
-  display: flex; flex-direction: column; gap: 18px; }
-.glens { position: relative; display: block; text-decoration: none; }
-.glens-orb { position: relative; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
-  border: 1px solid var(--gold); background: radial-gradient(circle at 42% 36%, #17384f, #0b2537);
-  box-shadow: 0 10px 26px -14px rgba(0,0,0,.7); transition: transform .25s, border-color .25s, box-shadow .25s; }
-.glens-orb::before { content: ''; position: absolute; inset: 5px; border-radius: 50%; border: 1px solid rgba(200,164,75,.3); }
-.glens-orb::after { content: ''; position: absolute; inset: -7px; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(200,164,75,.2), transparent 70%); opacity: .4;
-  animation: glenspulse 4.6s ease-in-out infinite; }
-.glens:nth-child(2) .glens-orb::after { animation-delay: 1.5s; }
-.glens:nth-child(3) .glens-orb::after { animation-delay: 3s; }
-@keyframes glenspulse { 0%,100% { opacity: .3; transform: scale(.9); } 50% { opacity: .7; transform: scale(1.1); } }
-.glens:hover .glens-orb, .glens.on .glens-orb { transform: scale(1.08); border-color: var(--gold-soft);
-  box-shadow: 0 0 18px 2px rgba(200,164,75,.4), 0 12px 26px -12px rgba(0,0,0,.7); }
-.gemb { width: 30px; height: 20px; overflow: visible; }
-.gemb path { fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-opacity: .72; stroke-linecap: round; }
-.gemb circle { fill: var(--gold-soft); }
-.gemb.stars circle { fill: #FFF3CE; }
-.gemb.chains path { stroke-dasharray: 2 2.4; }
-.glens:hover .gemb path, .glens.on .gemb path { stroke-opacity: 1; }
-.glens:hover .gemb circle, .glens.on .gemb circle { filter: drop-shadow(0 0 3px rgba(227,206,147,.9)); }
-/* the reveal: name + descriptor slide out to the right */
-.glens-tip { position: absolute; left: calc(100% + 12px); top: 50%; white-space: nowrap; z-index: 7;
-  display: flex; flex-direction: column; padding: 9px 15px; border-radius: 12px; border: 1px solid var(--gold);
+/* LEFT: a trisected disc — three ways to see the prophets; hover a wedge to reveal it */
+.gw-lenses { position: absolute; top: 20px; left: calc(50% - 50vw + 26px); z-index: 6;   /* to the screen's left edge */
+  display: flex; flex-direction: column; align-items: center; }
+.gw-pie { width: 138px; height: 138px; overflow: visible;
+  filter: drop-shadow(0 0 10px rgba(200,164,75,.22)); animation: piebreath 4.8s ease-in-out infinite; }
+@keyframes piebreath { 0%,100% { filter: drop-shadow(0 0 8px rgba(200,164,75,.18)); } 50% { filter: drop-shadow(0 0 16px rgba(200,164,75,.34)); } }
+.pie-wedge { fill: rgba(18,42,60,.72); cursor: pointer; transition: fill .25s; }
+.pie-wedge:hover, .pie-wedge.on { fill: rgba(35,82,115,.92); }
+.pie-wedge:focus { outline: none; }
+.pie-div line { stroke: rgba(200,164,75,.4); stroke-width: 1; }
+.pie-rim { fill: none; stroke: var(--gold); stroke-width: 1.5; }
+.pie-emb { pointer-events: none; }
+.pie-emb path { fill: none; stroke: var(--gold); stroke-width: 2.5; stroke-opacity: .72; stroke-linecap: round; transition: stroke-opacity .25s; }
+.pie-emb circle { fill: var(--gold-soft); }
+.pie-emb.stars circle { fill: #FFF3CE; }
+.pie-emb.chains path { stroke-dasharray: 3 3.4; }
+.pie-emb.on path { stroke-opacity: 1; }
+.pie-emb.on circle { filter: drop-shadow(0 0 3px rgba(227,206,147,.9)); }
+/* the reveal card, to the right of the disc */
+.gw-pie-tip { position: absolute; left: calc(100% + 14px); top: 56px; white-space: nowrap; z-index: 7;
+  display: flex; flex-direction: column; padding: 10px 16px; border-radius: 12px; border: 1px solid var(--gold);
   background: rgba(10,26,40,.96); backdrop-filter: blur(6px); box-shadow: 0 14px 30px -16px rgba(0,0,0,.8);
-  pointer-events: none; opacity: 0; transform: translate(-8px, -50%); transition: opacity .22s, transform .22s; }
-.glens:hover .glens-tip, .glens.on .glens-tip { opacity: 1; transform: translate(0, -50%); }
-.glens-tip b { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: #F4EEDF; }
-.glens-tip em { font-style: normal; font-size: 11.5px; color: var(--muted); margin-top: 1px; }
-.glens:focus-visible .glens-orb { border-color: var(--gold-soft); box-shadow: 0 0 0 3px rgba(200,164,75,.45); }
+  pointer-events: none; animation: pietip .2s ease-out both; }
+@keyframes pietip { from { opacity: 0; transform: translateX(-8px); } to { opacity: 1; transform: none; } }
+.gw-pie-tip b { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #F4EEDF; }
+.gw-pie-tip em { font-style: normal; font-size: 12px; color: var(--muted); margin-top: 1px; }
+.gw-pie-cap { text-align: center; margin-top: 8px; display: flex; flex-direction: column; }
+.gw-pie-cap b { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: var(--gold-soft); line-height: 1.1; }
+.gw-pie-cap em { font-style: normal; font-size: 11px; color: var(--muted); margin-top: 2px; }
 
 @media (max-width: 1180px) {   /* flanks don't fit beside a centred hero → fold into the flow */
-  .gw-lenses { position: static; flex-direction: row; justify-content: center; gap: 16px; margin: 12px auto 0; }
-  .glens-tip { left: 50%; top: calc(100% + 8px); transform: translate(-50%, -6px); }
-  .glens:hover .glens-tip, .glens.on .glens-tip { transform: translate(-50%, 0); }
+  .gw-lenses { position: static; margin: 10px auto 0; }
+  .gw-pie-tip { left: 50%; top: calc(100% + 8px); transform: translateX(-50%); }
+  @keyframes pietip { from { opacity: 0; } to { opacity: 1; } }
 }
-@media (prefers-reduced-motion: reduce) { .glens-orb::after { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .gw-pie { animation: none; } }
 
 /* The choice-popover that blooms from a prophet node */
 .pnode.open .disc { filter: brightness(1.12); }
@@ -1134,7 +1131,7 @@ svg.sel .spoke:not(.lit) { stroke: rgba(200,164,75,.05); }
    Stories of the Qur'an — the collection band (gateway) + gallery (/stories)
    ============================================================ */
 /* seven lanterns hung from a bough — the Qur'an's stories, floated to the screen's top-right */
-.gw-lanterns { position: absolute; top: 6px; right: calc(50% - 50vw + 18px); z-index: 6; width: 254px; }
+.gw-lanterns { position: absolute; top: 6px; right: calc(50% - 50vw + 18px); z-index: 6; width: 322px; }
 .gw-lanterns .qs-lanterns { display: block; width: 100%; height: auto; overflow: visible; }
 .lbranch { fill: none; stroke: #7a5f22; stroke-width: 3; stroke-linecap: round; opacity: .9;
   filter: drop-shadow(0 1px 0 rgba(0,0,0,.4)); }
@@ -1155,9 +1152,10 @@ svg.sel .spoke:not(.lit) { stroke: rgba(200,164,75,.05); }
 .lswing:hover .lhalo, .lswing.on .lhalo, .lswing:hover .lflame, .lswing.on .lflame { opacity: 1; }
 .lswing:focus { outline: none; }
 .lswing:focus-visible .lbody { stroke: #FFE9A8; }
-.qsl-title { fill: var(--gold-soft); font-family: 'Cormorant Garamond', serif; font-size: 15.5px;
-  letter-spacing: .3px; cursor: pointer; transition: fill .2s; }
-.qsl-title:hover { fill: #F4EEDF; }
+.qsl-title { fill: #F6EFE0; font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 700;
+  letter-spacing: .4px; cursor: pointer; transition: fill .2s;
+  paint-order: stroke; stroke: rgba(6,15,26,.85); stroke-width: 3px; stroke-linejoin: round; }
+.qsl-title:hover { fill: #fff; }
 @media (max-width: 1180px) {
   .gw-lanterns { position: static; width: min(300px, 86%); margin: 8px auto 0; }
 }

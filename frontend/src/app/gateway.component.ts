@@ -116,33 +116,43 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
         the final Messenger. <b>Hover a prophet to trace his descent — click to open his story or timeline.</b></p>
     </section>
 
-    <!-- LEFT: three seals — cross-cutting ways of reading the library; hover to reveal -->
-    <div class="gw-lenses" aria-label="Three ways to read the library">
-      <a class="glens" routerLink="/the-way" [class.on]="lensHover() === 'way'"
-         (mouseenter)="lensHover.set('way')" (mouseleave)="lensHover.set(null)" aria-label="The Way of the Messengers">
-        <span class="glens-orb"><svg class="gemb" viewBox="0 0 40 24" aria-hidden="true">
-          <path d="M4 12 H36" /><circle cx="4" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/>
-          <circle cx="20" cy="12" r="2.6"/><circle cx="28" cy="12" r="2.6"/><circle cx="36" cy="12" r="2.6"/>
-        </svg></span>
-        <span class="glens-tip"><b>The Way of the Messengers</b><em>one recurring pattern</em></span>
-      </a>
-      <a class="glens" routerLink="/constellation" [class.on]="lensHover() === 'stars'"
-         (mouseenter)="lensHover.set('stars')" (mouseleave)="lensHover.set(null)" aria-label="The Constellation of the Prophets">
-        <span class="glens-orb"><svg class="gemb stars" viewBox="0 0 40 24" aria-hidden="true">
-          <path d="M6 16 L14 8 L20 14 L26 8 L34 16" />
-          <circle cx="6" cy="16" r="2.2"/><circle cx="14" cy="8" r="2.7"/><circle cx="20" cy="14" r="1.9"/>
-          <circle cx="26" cy="8" r="2.7"/><circle cx="34" cy="16" r="2.2"/>
-        </svg></span>
-        <span class="glens-tip"><b>The Constellation</b><em>prophets across the sūrahs</em></span>
-      </a>
-      <a class="glens" routerLink="/isnad" [class.on]="lensHover() === 'chain'"
-         (mouseenter)="lensHover.set('chain')" (mouseleave)="lensHover.set(null)" aria-label="How the Narrations Reach Us">
-        <span class="glens-orb"><svg class="gemb chains" viewBox="0 0 40 24" aria-hidden="true">
-          <path d="M6 12 C 14 4, 18 20, 26 12 S 34 4, 38 12" />
-          <circle cx="6" cy="12" r="2.7"/><circle cx="20" cy="12" r="1.9"/><circle cx="34" cy="12" r="2.7"/>
-        </svg></span>
-        <span class="glens-tip"><b>How the Narrations Reach Us</b><em>the chains of isnād</em></span>
-      </a>
+    <!-- LEFT: a trisected disc — three ways to see the prophets' stories; hover a wedge to reveal it -->
+    <div class="gw-lenses">
+      <svg class="gw-pie" viewBox="0 0 140 140" role="group" aria-label="Three ways to explore the prophets' stories">
+        <path class="pie-wedge" [class.on]="lensHover() === 'way'" d="M70 70 L70 6 A64 64 0 0 1 125.4 102 Z"
+              (mouseenter)="lensHover.set('way')" (mouseleave)="lensHover.set(null)" (click)="goLens('/the-way')"
+              (keydown.enter)="goLens('/the-way')" tabindex="0" role="link" aria-label="The Way of the Messengers" />
+        <path class="pie-wedge" [class.on]="lensHover() === 'stars'" d="M70 70 L125.4 102 A64 64 0 0 1 14.6 102 Z"
+              (mouseenter)="lensHover.set('stars')" (mouseleave)="lensHover.set(null)" (click)="goLens('/constellation')"
+              (keydown.enter)="goLens('/constellation')" tabindex="0" role="link" aria-label="The Constellation" />
+        <path class="pie-wedge" [class.on]="lensHover() === 'chain'" d="M70 70 L14.6 102 A64 64 0 0 1 70 6 Z"
+              (mouseenter)="lensHover.set('chain')" (mouseleave)="lensHover.set(null)" (click)="goLens('/isnad')"
+              (keydown.enter)="goLens('/isnad')" tabindex="0" role="link" aria-label="How the Narrations Reach Us" />
+        <g class="pie-div"><line x1="70" y1="70" x2="70" y2="6" /><line x1="70" y1="70" x2="125.4" y2="102" /><line x1="70" y1="70" x2="14.6" y2="102" /></g>
+        <circle class="pie-rim" cx="70" cy="70" r="64" />
+        <!-- emblems (transparent to the pointer so the wedge under them still lights) -->
+        <g class="pie-emb" [class.on]="lensHover() === 'way'" transform="translate(99.4 53)">
+          <g transform="scale(.62) translate(-20 -12)">
+            <path d="M4 12 H36" /><circle cx="4" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/>
+            <circle cx="20" cy="12" r="2.6"/><circle cx="28" cy="12" r="2.6"/><circle cx="36" cy="12" r="2.6"/>
+          </g>
+        </g>
+        <g class="pie-emb stars" [class.on]="lensHover() === 'stars'" transform="translate(70 104)">
+          <g transform="scale(.62) translate(-20 -12)">
+            <path d="M6 16 L14 8 L20 14 L26 8 L34 16" />
+            <circle cx="6" cy="16" r="2.2"/><circle cx="14" cy="8" r="2.7"/><circle cx="20" cy="14" r="1.9"/>
+            <circle cx="26" cy="8" r="2.7"/><circle cx="34" cy="16" r="2.2"/>
+          </g>
+        </g>
+        <g class="pie-emb chains" [class.on]="lensHover() === 'chain'" transform="translate(40.6 53)">
+          <g transform="scale(.62) translate(-20 -12)">
+            <path d="M6 12 C 14 4, 18 20, 26 12 S 34 4, 38 12" />
+            <circle cx="6" cy="12" r="2.7"/><circle cx="20" cy="12" r="1.9"/><circle cx="34" cy="12" r="2.7"/>
+          </g>
+        </g>
+      </svg>
+      @if (lensInfo(); as i) { <div class="gw-pie-tip"><b>{{ i.n }}</b><em>{{ i.d }}</em></div> }
+      <div class="gw-pie-cap"><b>Ways to Explore</b><em>the prophets, seen three ways</em></div>
     </div>
 
     <!-- RIGHT: seven lanterns — the Qur'an's stories -->
@@ -282,6 +292,17 @@ export class GatewayComponent {
   // staggers the sway and flame flicker so they never move in unison.
   lensHover = signal<string | null>(null);
   lanternHover = signal<string | null>(null);
+
+  /** The name + descriptor of the pie wedge currently hovered, for the reveal card. */
+  lensInfo = computed<{ n: string; d: string } | null>(() => {
+    switch (this.lensHover()) {
+      case 'way': return { n: 'The Way of the Messengers', d: 'one recurring pattern across the nations' };
+      case 'stars': return { n: 'The Constellation', d: 'the prophets across the sūrahs' };
+      case 'chain': return { n: 'How the Narrations Reach Us', d: 'the chains of isnād behind the ḥadīth' };
+      default: return null;
+    }
+  });
+  goLens(route: string) { this.router.navigate([route]); }
   readonly lanterns = [
     { slug: 'ashab-al-kahf', name: 'The Cave', x: 24, y: 22, delay: 0 },
     { slug: 'dhul-qarnayn', name: 'Dhū al-Qarnayn', x: 66, y: 33, delay: 0.7 },
