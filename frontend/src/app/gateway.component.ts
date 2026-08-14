@@ -202,7 +202,7 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
                 <circle class="glow" [attr.r]="n.r + 16" filter="url(#soft)" />
                 <circle class="disc" [attr.r]="n.r" [attr.fill]="n.flagship ? 'url(#leaf-flag)' : 'url(#leaf)'" />
                 <circle class="rim" [attr.r]="n.r" />
-                <text class="pglyph" [attr.font-size]="n.r * 0.9" y="1" dominant-baseline="central">{{ n.glyph }}</text>
+                <text class="pglyph" [attr.font-size]="n.r * 0.9" y="0" dy="0.32em">{{ n.glyph }}</text>
                 <text class="pname" [attr.y]="n.r + 26">{{ n.name }}</text>
                 <text class="pcount" [attr.y]="n.r + 46">{{ n.count }} events</text>
                 @if (n.note) { <text class="pnote" [attr.y]="-n.r - 12">{{ n.note }}</text> }

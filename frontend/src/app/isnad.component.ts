@@ -97,7 +97,7 @@ const CX = 500, CY = 356, R1 = 236;
               @if (tip(); as t) {
                 <g class="c-tip">
                   <rect [attr.x]="t.x - t.w / 2" [attr.y]="t.y - 13" [attr.width]="t.w" height="26" rx="13" />
-                  <text [attr.x]="t.x" [attr.y]="t.y + 1" text-anchor="middle" dominant-baseline="central">{{ t.name }}</text>
+                  <text [attr.x]="t.x" [attr.y]="t.y" dy="0.35em" text-anchor="middle">{{ t.name }}</text>
                 </g>
               }
             </svg>
@@ -190,7 +190,7 @@ const CX = 500, CY = 356, R1 = 236;
                     @if (!$last) { <line class="d-edge" [attr.x1]="g.x + 24" y1="46" [attr.x2]="g.x + 122" y2="46" /> }
                     <circle class="d-node" [attr.cx]="g.x" cy="46" [attr.r]="g.big ? 20 : 15"
                             [class.d-src]="g.src" [class.d-book]="g.book" />
-                    @if (g.glyph) { <text class="d-glyph" [attr.x]="g.x" y="52">{{ g.glyph }}</text> }
+                    @if (g.glyph) { <text class="d-glyph" [attr.x]="g.x" y="46" dy="0.34em">{{ g.glyph }}</text> }
                     <text class="d-lbl" [attr.x]="g.x" y="82">{{ g.t }}</text>
                     <text class="d-era" [attr.x]="g.x" y="99">{{ g.e }}</text>
                   }
@@ -209,13 +209,13 @@ const CX = 500, CY = 356, R1 = 236;
                 </div>
                 <svg class="hs-dia grade" viewBox="0 0 620 120" role="img" aria-label="From the tests to a grade of sahih, hasan or daif">
                   <rect class="d-gate" x="232" y="46" width="156" height="30" rx="8" />
-                  <text class="d-gate-t" x="310" y="66">the five tests</text>
+                  <text class="d-gate-t" x="310" y="61" dy="0.35em">the five tests</text>
                   <line class="d-edge" x1="388" y1="61" x2="470" y2="26" />
                   <line class="d-edge" x1="388" y1="61" x2="470" y2="61" />
                   <line class="d-edge" x1="388" y1="61" x2="470" y2="96" />
-                  <g class="d-grade sahih"><rect x="470" y="12" width="138" height="28" rx="14"/><text x="539" y="30">Ṣaḥīḥ · sound</text></g>
-                  <g class="d-grade hasan"><rect x="470" y="47" width="138" height="28" rx="14"/><text x="539" y="65">Ḥasan · good</text></g>
-                  <g class="d-grade daif"><rect x="470" y="82" width="138" height="28" rx="14"/><text x="539" y="100">Ḍaʿīf · weak</text></g>
+                  <g class="d-grade sahih"><rect x="470" y="12" width="138" height="28" rx="14"/><text x="539" y="26" dy="0.35em">Ṣaḥīḥ · sound</text></g>
+                  <g class="d-grade hasan"><rect x="470" y="47" width="138" height="28" rx="14"/><text x="539" y="61" dy="0.35em">Ḥasan · good</text></g>
+                  <g class="d-grade daif"><rect x="470" y="82" width="138" height="28" rx="14"/><text x="539" y="96" dy="0.35em">Ḍaʿīf · weak</text></g>
                 </svg>
               </section>
 
