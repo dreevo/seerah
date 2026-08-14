@@ -1,10 +1,16 @@
 import { Component, computed, input, signal } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { httpResource } from '@angular/common/http';
 import { ChronicleItem, TimelineItem } from './models';
 import { Era, erasFor } from './chronicle-config';
 
 interface Band { name: string; cls: string; left: number; width: number; }
+/** A card in the gallery shown for chronicles the sources never place in time. */
+interface GBeat {
+  slug: string; title: string; summary: string | null;
+  verse: { reference: string; surahNameEn: string } | null;
+  source: { workTitle: string; grade: string | null } | null;
+}
 interface Node { item: TimelineItem; x: number; top: number; up: boolean; stem: number; eraCls: string; eraName: string; }
 interface UNode { item: TimelineItem; left: number; top: number; }
 
@@ -17,6 +23,7 @@ const U_TOP = 40;       // first undated card's drop below the axis
 
 @Component({
   selector: 'app-timeline',
+  imports: [RouterLink],
   template: `
     <section class="hero">
       <div class="eyebrow">{{ info.value()?.subtitle || 'Interactive Chronology' }}</div>
@@ -38,25 +45,30 @@ const U_TOP = 40;       // first undated card's drop below the axis
       </button>
     }
 
-    <div class="tl-controls">
-      @if (eras().length && hasDatedEvents()) {
-        <div class="seg">
-          <button [class.on]="era() === 'all'" (click)="era.set('all')">All Periods</button>
-          @for (e of eras(); track e.name; let i = $index) {
-            <button [class.on]="era() === i" (click)="era.set(i)">{{ e.name }}</button>
-          }
+    @if (!allUndated()) {
+      <div class="tl-controls">
+        @if (eras().length && hasDatedEvents()) {
+          <div class="seg">
+            <button [class.on]="era() === 'all'" (click)="era.set('all')">All Periods</button>
+            @for (e of eras(); track e.name; let i = $index) {
+              <button [class.on]="era() === i" (click)="era.set(i)">{{ e.name }}</button>
+            }
+          </div>
+        }
+        <div class="zoom">
+          <span>SPACING</span>
+          <button (click)="zoomBy(-1)" [disabled]="zoom() === 0" aria-label="Tighter">−</button>
+          <span class="lvl">{{ zoomLabel() }}</span>
+          <button (click)="zoomBy(1)" [disabled]="zoom() === 2" aria-label="Wider">+</button>
         </div>
-      }
-      <div class="zoom">
-        <span>SPACING</span>
-        <button (click)="zoomBy(-1)" [disabled]="zoom() === 0" aria-label="Tighter">−</button>
-        <span class="lvl">{{ zoomLabel() }}</span>
-        <button (click)="zoomBy(1)" [disabled]="zoom() === 2" aria-label="Wider">+</button>
       </div>
-    </div>
+    }
 
-    @if (!hasDates() && visible().length) {
+    @if (!hasDates() && visible().length && !allUndated()) {
       <p class="tl-datenote">The prophets before Islam predate any recorded calendar, so this line carries no CE or AH dates — events follow the order the Qur’ān and authentic ḥadīth relate them in, and each card shows its phase in the account. Events the sources place at no fixed point branch off the end, marked <span class="qm">?</span>.</p>
+    }
+    @if (allUndated() && visible().length) {
+      <p class="tl-datenote">The sources confirm these accounts but place them at no fixed point in time, so they are gathered here rather than strung on a line.</p>
     }
 
     @if (events.isLoading()) {
@@ -65,6 +77,24 @@ const U_TOP = 40;       // first undated card's drop below the axis
       <p class="state err">The chronology service is unavailable. Is the backend running on :8080?</p>
     } @else if (visible().length === 0) {
       <p class="state">No events published yet in this chronicle.</p>
+    } @else if (allUndated()) {
+      <!-- no time axis to hang these on — present them as a clean gallery of cards -->
+      @if (gallery.isLoading()) { <p class="state">Opening the accounts…</p> }
+      @else {
+        <div class="qs-grid tl-gallery">
+          @for (b of galleryBeats(); track b.slug) {
+            <a class="qs-card" [routerLink]="['/event', b.slug]">
+              <span class="qs-orn" aria-hidden="true">◈</span>
+              <h3>{{ b.title }}</h3>
+              @if (b.summary) { <p class="qs-sum">{{ b.summary }}</p> }
+              <div class="qs-foot">
+                @if (b.verse; as v) { <span class="qs-ref">۝ {{ v.surahNameEn }} · {{ v.reference }}</span> }
+                @if (b.source; as s) { <span class="qs-src">{{ srcMark(s) }} {{ cleanWork(s.workTitle) }}</span> }
+              </div>
+            </a>
+          }
+        </div>
+      }
     } @else {
       <div class="tl-wrap">
         <div class="tl" [style.width.px]="width()" [style.height.px]="tlHeight()">
@@ -155,6 +185,18 @@ export class TimelineComponent {
 
   /** The dated spine — events whose "when" the sources fix. Drives all positioning. */
   spine = computed<TimelineItem[]>(() => this.visible().filter((i) => !i.undated));
+
+  /** No event in this chronicle is placed in time → there is no line to draw; show a gallery. */
+  allUndated = computed(() => this.ordered().length > 0 && this.ordered().every((e) => e.undated));
+
+  /** Summaries + āyah for the gallery, fetched only when there is no timeline to draw. */
+  gallery = httpResource<{ beats: GBeat[] }>(
+    () => (this.allUndated() ? `/api/public/chronicles/${encodeURIComponent(this.chronicle())}/story` : undefined),
+    { defaultValue: { beats: [] } },
+  );
+  galleryBeats = computed<GBeat[]>(() => this.gallery.value()?.beats ?? []);
+  srcMark(s: { workTitle: string }): string { return /qur/i.test(s.workTitle) ? '۝' : '⚑'; }
+  cleanWork(w: string): string { return w.replace(/^The Noble /, ''); }
   /** Confirmed events with no source-given time — rendered on the detached "?" branch. */
   undatedItems = computed<TimelineItem[]>(() => this.visible().filter((i) => i.undated));
 

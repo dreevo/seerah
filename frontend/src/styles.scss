@@ -1190,3 +1190,6 @@ svg.sel .spoke:not(.lit) { stroke: rgba(200,164,75,.05); }
   border: 1px solid rgba(127,185,139,.3); border-radius: 999px; padding: 4px 10px; }
 .qs-src em { font-style: normal; color: #7FB98B; }
 .qs-note { text-align: center; color: #5F6D7B; font-size: 11.5px; font-style: italic; margin: 26px auto 0; }
+
+/* all-undated chronicles render the gallery instead of a timeline canvas */
+.tl-gallery { margin: 12px auto 0; padding: 0 18px; }
