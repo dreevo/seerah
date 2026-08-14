@@ -116,6 +116,71 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
         the final Messenger. <b>Hover a prophet to trace his descent — click to open his story or timeline.</b></p>
     </section>
 
+    <!-- LEFT: three seals — cross-cutting ways of reading the library; hover to reveal -->
+    <div class="gw-lenses" aria-label="Three ways to read the library">
+      <a class="glens" routerLink="/the-way" [class.on]="lensHover() === 'way'"
+         (mouseenter)="lensHover.set('way')" (mouseleave)="lensHover.set(null)" aria-label="The Way of the Messengers">
+        <span class="glens-orb"><svg class="gemb" viewBox="0 0 40 24" aria-hidden="true">
+          <path d="M4 12 H36" /><circle cx="4" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/>
+          <circle cx="20" cy="12" r="2.6"/><circle cx="28" cy="12" r="2.6"/><circle cx="36" cy="12" r="2.6"/>
+        </svg></span>
+        <span class="glens-tip"><b>The Way of the Messengers</b><em>one recurring pattern</em></span>
+      </a>
+      <a class="glens" routerLink="/constellation" [class.on]="lensHover() === 'stars'"
+         (mouseenter)="lensHover.set('stars')" (mouseleave)="lensHover.set(null)" aria-label="The Constellation of the Prophets">
+        <span class="glens-orb"><svg class="gemb stars" viewBox="0 0 40 24" aria-hidden="true">
+          <path d="M6 16 L14 8 L20 14 L26 8 L34 16" />
+          <circle cx="6" cy="16" r="2.2"/><circle cx="14" cy="8" r="2.7"/><circle cx="20" cy="14" r="1.9"/>
+          <circle cx="26" cy="8" r="2.7"/><circle cx="34" cy="16" r="2.2"/>
+        </svg></span>
+        <span class="glens-tip"><b>The Constellation</b><em>prophets across the sūrahs</em></span>
+      </a>
+      <a class="glens" routerLink="/isnad" [class.on]="lensHover() === 'chain'"
+         (mouseenter)="lensHover.set('chain')" (mouseleave)="lensHover.set(null)" aria-label="How the Narrations Reach Us">
+        <span class="glens-orb"><svg class="gemb chains" viewBox="0 0 40 24" aria-hidden="true">
+          <path d="M6 12 C 14 4, 18 20, 26 12 S 34 4, 38 12" />
+          <circle cx="6" cy="12" r="2.7"/><circle cx="20" cy="12" r="1.9"/><circle cx="34" cy="12" r="2.7"/>
+        </svg></span>
+        <span class="glens-tip"><b>How the Narrations Reach Us</b><em>the chains of isnād</em></span>
+      </a>
+    </div>
+
+    <!-- RIGHT: seven lanterns — the Qur'an's stories -->
+    <div class="gw-lanterns">
+      <svg class="qs-lanterns" viewBox="0 0 300 164" role="group" aria-label="Stories of the Qur'an — seven lanterns">
+        <defs>
+          <radialGradient id="lglow" cx="50%" cy="46%" r="55%">
+            <stop offset="0%" stop-color="#FFE9A8" /><stop offset="50%" stop-color="#E8A33C" stop-opacity=".9" />
+            <stop offset="100%" stop-color="#E8A33C" stop-opacity="0" />
+          </radialGradient>
+          <linearGradient id="lbodyg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3a2c10" /><stop offset="100%" stop-color="#201709" />
+          </linearGradient>
+        </defs>
+        <path class="lbranch" d="M12 18 C 96 52, 204 52, 288 18" />
+        @for (l of lanterns; track l.slug) {
+          <g [attr.transform]="'translate(' + l.x + ' ' + l.y + ')'">
+            <g class="lswing" [class.on]="lanternHover() === l.slug" [style.animation-delay.s]="l.delay"
+               (mouseenter)="lanternHover.set(l.slug)" (mouseleave)="lanternHover.set(null)"
+               (click)="goStory(l.slug)" (keydown.enter)="goStory(l.slug)" tabindex="0" role="link"
+               [attr.aria-label]="l.name">
+              <circle class="lhalo" cx="0" cy="31" r="17" fill="url(#lglow)" [style.animation-delay.s]="l.delay" />
+              <line class="lthread" x1="0" y1="0" x2="0" y2="14" />
+              <circle class="lring" cx="0" cy="14" r="2" />
+              <path class="lcap" d="M-5 17 L5 17 L4 20 L-4 20 Z" />
+              <path class="lbody" d="M-5 20 C -5 17 5 17 5 20 L5 41 C5 44 -5 44 -5 41 Z" />
+              <ellipse class="lflame" cx="0" cy="31" rx="4.3" ry="7" fill="url(#lglow)" [style.animation-delay.s]="l.delay" />
+              <line class="lpane" x1="-1.8" y1="21" x2="-1.8" y2="40" /><line class="lpane" x1="1.8" y1="21" x2="1.8" y2="40" />
+              <line class="lfin" x1="0" y1="44" x2="0" y2="47" /><circle class="lknob" cx="0" cy="48" r="1.5" />
+              @if (lanternHover() === l.slug) { <text class="lname" x="0" y="62">{{ l.name }}</text> }
+            </g>
+          </g>
+        }
+        <text class="qsl-title" x="150" y="150" text-anchor="middle" role="link" tabindex="0"
+              (click)="openStories()" (keydown.enter)="openStories()">Stories of the Qur’ān</text>
+      </svg>
+    </div>
+
     <div class="gw-trace" [class.on]="current()">
       @if (traceLabel(); as t) { <span class="gw-trace-line">{{ t }}</span> }
       @else { <span class="gw-trace-hint">The line of descent appears here as you trace it ↑</span> }
@@ -124,38 +189,6 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
     @if (chronicles.error()) {
       <p class="state err">The library service is unavailable. Is the backend running on :8080?</p>
     } @else {
-      <!-- two "lenses" onto the whole corpus — cross-cutting views beside the lineage -->
-      <div class="tree-lenses">
-        <a class="tlens" routerLink="/the-way" aria-label="The Way of the Messengers">
-          <span class="tlens-emb">
-            <svg viewBox="0 0 40 24" aria-hidden="true">
-              <path d="M4 12 H36" /><circle cx="4" cy="12" r="2.6"/><circle cx="12" cy="12" r="2.6"/>
-              <circle cx="20" cy="12" r="2.6"/><circle cx="28" cy="12" r="2.6"/><circle cx="36" cy="12" r="2.6"/>
-            </svg>
-          </span>
-          <span class="tlens-txt"><b>The Way of the Messengers</b><em>one pattern · five nations</em></span>
-        </a>
-        <a class="tlens" routerLink="/constellation" aria-label="The Constellation of the Prophets">
-          <span class="tlens-emb stars">
-            <svg viewBox="0 0 40 24" aria-hidden="true">
-              <path d="M6 16 L14 8 L20 14 L26 8 L34 16" />
-              <circle cx="6" cy="16" r="2.2"/><circle cx="14" cy="8" r="2.7"/><circle cx="20" cy="14" r="1.9"/>
-              <circle cx="26" cy="8" r="2.7"/><circle cx="34" cy="16" r="2.2"/>
-            </svg>
-          </span>
-          <span class="tlens-txt"><b>The Constellation</b><em>prophets across the sūrahs</em></span>
-        </a>
-        <a class="tlens" routerLink="/isnad" aria-label="How the narrations reach us">
-          <span class="tlens-emb chains">
-            <svg viewBox="0 0 40 24" aria-hidden="true">
-              <path d="M6 12 C 14 4, 18 20, 26 12 S 34 4, 38 12" />
-              <circle cx="6" cy="12" r="2.7"/><circle cx="20" cy="12" r="1.9"/><circle cx="34" cy="12" r="2.7"/>
-            </svg>
-          </span>
-          <span class="tlens-txt"><b>How the Narrations Reach Us</b><em>the chains of isnād</em></span>
-        </a>
-      </div>
-
       <div class="ptree" #tree>
         <svg #svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets" [class.tracing]="current()">
           <defs>
@@ -233,39 +266,6 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
           }
         }
 
-        <!-- seven lanterns hung from a bough beside the tree: the Qur'an's stories -->
-        <svg class="qs-lanterns" viewBox="0 0 300 164" role="group" aria-label="Stories of the Qur'an — seven lanterns">
-          <defs>
-            <radialGradient id="lglow" cx="50%" cy="46%" r="55%">
-              <stop offset="0%" stop-color="#FFE9A8" /><stop offset="50%" stop-color="#E8A33C" stop-opacity=".9" />
-              <stop offset="100%" stop-color="#E8A33C" stop-opacity="0" />
-            </radialGradient>
-            <linearGradient id="lbodyg" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#3a2c10" /><stop offset="100%" stop-color="#201709" />
-            </linearGradient>
-          </defs>
-          <path class="lbranch" d="M12 18 C 96 52, 204 52, 288 18" />
-          @for (l of lanterns; track l.slug) {
-            <g [attr.transform]="'translate(' + l.x + ' ' + l.y + ')'">
-              <g class="lswing" [class.on]="lanternHover() === l.slug" [style.animation-delay.s]="l.delay"
-                 (mouseenter)="lanternHover.set(l.slug)" (mouseleave)="lanternHover.set(null)"
-                 (click)="goStory(l.slug)" (keydown.enter)="goStory(l.slug)" tabindex="0" role="link"
-                 [attr.aria-label]="l.name">
-                <circle class="lhalo" cx="0" cy="31" r="17" fill="url(#lglow)" [style.animation-delay.s]="l.delay" />
-                <line class="lthread" x1="0" y1="0" x2="0" y2="14" />
-                <circle class="lring" cx="0" cy="14" r="2" />
-                <path class="lcap" d="M-5 17 L5 17 L4 20 L-4 20 Z" />
-                <path class="lbody" d="M-5 20 C -5 17 5 17 5 20 L5 41 C5 44 -5 44 -5 41 Z" />
-                <ellipse class="lflame" cx="0" cy="31" rx="4.3" ry="7" fill="url(#lglow)" [style.animation-delay.s]="l.delay" />
-                <line class="lpane" x1="-1.8" y1="21" x2="-1.8" y2="40" /><line class="lpane" x1="1.8" y1="21" x2="1.8" y2="40" />
-                <line class="lfin" x1="0" y1="44" x2="0" y2="47" /><circle class="lknob" cx="0" cy="48" r="1.5" />
-                @if (lanternHover() === l.slug) { <text class="lname" x="0" y="62">{{ l.name }}</text> }
-              </g>
-            </g>
-          }
-          <text class="qsl-title" x="150" y="150" text-anchor="middle" role="link" tabindex="0"
-                (click)="openStories()" (keydown.enter)="openStories()">Stories of the Qur’ān</text>
-        </svg>
       </div>
       <p class="tl-hint">Every chronicle is reviewed, cited content · No depiction of prophets or companions · Peace be upon them all</p>
     }
@@ -280,6 +280,7 @@ export class GatewayComponent {
   // The Qur'an's stories, hung as seven lanterns from a bough beside the tree.
   // x/y place each lantern's hanging-point along the drooping branch; delay
   // staggers the sway and flame flicker so they never move in unison.
+  lensHover = signal<string | null>(null);
   lanternHover = signal<string | null>(null);
   readonly lanterns = [
     { slug: 'ashab-al-kahf', name: 'The Cave', x: 24, y: 22, delay: 0 },

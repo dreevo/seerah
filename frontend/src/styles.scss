@@ -613,31 +613,48 @@ footer { text-align: center; padding: 34px 20px 44px; border-top: 1px solid var(
 footer b { color: var(--gold); font-weight: 600; letter-spacing: 2px; }
 footer .fnote { font-size: 10.5px; color: #4E5C6A; font-style: italic; }
 
-/* Two "lenses" onto the whole corpus — a prominent pair of portals above the canopy */
-.tree-lenses { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px;
-  width: 100vw; margin: 12px 0 2px calc(50% - 50vw); padding: 0 24px; }
-.tlens { display: inline-flex; align-items: center; gap: 12px; flex: 1 1 300px; max-width: 400px;
-  text-decoration: none; padding: 11px 17px 11px 13px; border-radius: 14px; border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(18,42,60,.82), rgba(11,29,43,.82));
-  box-shadow: 0 12px 30px -20px rgba(8,24,38,.8); transition: transform .2s, border-color .2s, box-shadow .2s; }
-.tlens:hover { transform: translateY(-2px); border-color: var(--gold); box-shadow: 0 18px 36px -18px rgba(200,164,75,.45); }
-.tlens-emb { flex: none; align-self: center; width: 40px; height: 24px; min-height: 0; display: block; overflow: hidden; }
-.tlens-emb svg { display: block; width: 40px; height: 24px; overflow: visible; }
-.tlens-emb path { fill: none; stroke: var(--gold); stroke-width: 1.4; stroke-opacity: .55; stroke-linecap: round; }
-.tlens-emb circle { fill: var(--gold-soft); }
-.tlens-emb.stars circle { fill: #FFF3CE; }
-.tlens:hover .tlens-emb path { stroke-opacity: 1; }
-.tlens:hover .tlens-emb circle { filter: drop-shadow(0 0 3px rgba(227,206,147,.9)); }
-.tlens-txt { display: flex; flex-direction: column; line-height: 1.16; min-width: 0; }
-.tlens-txt b { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 600; color: #F4EEDF; }
-.tlens-txt em { font-style: normal; font-size: 11.5px; color: var(--muted); letter-spacing: .2px; }
-@media (max-width: 560px) {
-  .tree-lenses { gap: 9px; }
-  .tlens { flex: 1 1 46%; padding: 9px 11px; gap: 9px; }
-  .tlens-txt em { display: none; }
-  .tlens-txt b { font-size: 14px; }
-  .tlens-emb { width: 30px; }
+/* the gateway is the positioning context for its two flanking flourishes */
+app-gateway { position: relative; display: block; }
+
+/* LEFT: three seals — cross-cutting ways of reading the library; hover a seal to reveal it */
+.gw-lenses { position: absolute; top: 20px; left: calc(50% - 50vw + 24px); z-index: 6;   /* to the screen's left edge */
+  display: flex; flex-direction: column; gap: 18px; }
+.glens { position: relative; display: block; text-decoration: none; }
+.glens-orb { position: relative; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%;
+  border: 1px solid var(--gold); background: radial-gradient(circle at 42% 36%, #17384f, #0b2537);
+  box-shadow: 0 10px 26px -14px rgba(0,0,0,.7); transition: transform .25s, border-color .25s, box-shadow .25s; }
+.glens-orb::before { content: ''; position: absolute; inset: 5px; border-radius: 50%; border: 1px solid rgba(200,164,75,.3); }
+.glens-orb::after { content: ''; position: absolute; inset: -7px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(200,164,75,.2), transparent 70%); opacity: .4;
+  animation: glenspulse 4.6s ease-in-out infinite; }
+.glens:nth-child(2) .glens-orb::after { animation-delay: 1.5s; }
+.glens:nth-child(3) .glens-orb::after { animation-delay: 3s; }
+@keyframes glenspulse { 0%,100% { opacity: .3; transform: scale(.9); } 50% { opacity: .7; transform: scale(1.1); } }
+.glens:hover .glens-orb, .glens.on .glens-orb { transform: scale(1.08); border-color: var(--gold-soft);
+  box-shadow: 0 0 18px 2px rgba(200,164,75,.4), 0 12px 26px -12px rgba(0,0,0,.7); }
+.gemb { width: 30px; height: 20px; overflow: visible; }
+.gemb path { fill: none; stroke: var(--gold); stroke-width: 1.6; stroke-opacity: .72; stroke-linecap: round; }
+.gemb circle { fill: var(--gold-soft); }
+.gemb.stars circle { fill: #FFF3CE; }
+.gemb.chains path { stroke-dasharray: 2 2.4; }
+.glens:hover .gemb path, .glens.on .gemb path { stroke-opacity: 1; }
+.glens:hover .gemb circle, .glens.on .gemb circle { filter: drop-shadow(0 0 3px rgba(227,206,147,.9)); }
+/* the reveal: name + descriptor slide out to the right */
+.glens-tip { position: absolute; left: calc(100% + 12px); top: 50%; white-space: nowrap; z-index: 7;
+  display: flex; flex-direction: column; padding: 9px 15px; border-radius: 12px; border: 1px solid var(--gold);
+  background: rgba(10,26,40,.96); backdrop-filter: blur(6px); box-shadow: 0 14px 30px -16px rgba(0,0,0,.8);
+  pointer-events: none; opacity: 0; transform: translate(-8px, -50%); transition: opacity .22s, transform .22s; }
+.glens:hover .glens-tip, .glens.on .glens-tip { opacity: 1; transform: translate(0, -50%); }
+.glens-tip b { font-family: 'Cormorant Garamond', serif; font-size: 17px; font-weight: 600; color: #F4EEDF; }
+.glens-tip em { font-style: normal; font-size: 11.5px; color: var(--muted); margin-top: 1px; }
+.glens:focus-visible .glens-orb { border-color: var(--gold-soft); box-shadow: 0 0 0 3px rgba(200,164,75,.45); }
+
+@media (max-width: 1180px) {   /* flanks don't fit beside a centred hero → fold into the flow */
+  .gw-lenses { position: static; flex-direction: row; justify-content: center; gap: 16px; margin: 12px auto 0; }
+  .glens-tip { left: 50%; top: calc(100% + 8px); transform: translate(-50%, -6px); }
+  .glens:hover .glens-tip, .glens.on .glens-tip { transform: translate(-50%, 0); }
 }
+@media (prefers-reduced-motion: reduce) { .glens-orb::after { animation: none; } }
 
 /* The choice-popover that blooms from a prophet node */
 .pnode.open .disc { filter: brightness(1.12); }
@@ -936,8 +953,6 @@ footer .fnote { font-size: 10.5px; color: #4E5C6A; font-style: italic; }
 /* ============================================================
    The Isnād — how the narrations reach us (/isnad)
    ============================================================ */
-.tlens-emb.chains circle { fill: var(--gold-soft); }
-.tlens-emb.chains path { stroke-dasharray: 2 2.4; }
 
 .isn { padding: 34px 18px 26px; }
 .isn-head { text-align: center; max-width: 760px; margin: 0 auto; }
@@ -1118,9 +1133,9 @@ svg.sel .spoke:not(.lit) { stroke: rgba(200,164,75,.05); }
 /* ============================================================
    Stories of the Qur'an — the collection band (gateway) + gallery (/stories)
    ============================================================ */
-/* seven lanterns hung from a bough beside the tree → the Qur'an's stories */
-.ptree .qs-lanterns { position: absolute; top: 3%; right: 1%; width: 300px; height: auto;   /* beats .ptree svg */
-  z-index: 4; overflow: visible; }
+/* seven lanterns hung from a bough — the Qur'an's stories, floated to the screen's top-right */
+.gw-lanterns { position: absolute; top: 6px; right: calc(50% - 50vw + 18px); z-index: 6; width: 254px; }
+.gw-lanterns .qs-lanterns { display: block; width: 100%; height: auto; overflow: visible; }
 .lbranch { fill: none; stroke: #7a5f22; stroke-width: 3; stroke-linecap: round; opacity: .9;
   filter: drop-shadow(0 1px 0 rgba(0,0,0,.4)); }
 .lswing { transform-origin: 0 0; cursor: pointer; animation: lswing 4.6s ease-in-out infinite; }
@@ -1143,8 +1158,8 @@ svg.sel .spoke:not(.lit) { stroke: rgba(200,164,75,.05); }
 .qsl-title { fill: var(--gold-soft); font-family: 'Cormorant Garamond', serif; font-size: 15.5px;
   letter-spacing: .3px; cursor: pointer; transition: fill .2s; }
 .qsl-title:hover { fill: #F4EEDF; }
-@media (max-width: 900px) {
-  .ptree .qs-lanterns { position: static; display: block; width: min(320px, 86%); margin: 6px auto 0; }
+@media (max-width: 1180px) {
+  .gw-lanterns { position: static; width: min(300px, 86%); margin: 8px auto 0; }
 }
 @media (prefers-reduced-motion: reduce) { .lswing, .lflame, .lhalo { animation: none; } }
 
