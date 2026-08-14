@@ -1,7 +1,7 @@
 import {
-  Component, computed, effect, ElementRef, HostListener, signal, viewChild,
+  Component, computed, effect, ElementRef, HostListener, inject, signal, viewChild,
 } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { httpResource } from '@angular/common/http';
 import { ChronicleItem } from './models';
 
@@ -233,34 +233,65 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
           }
         }
 
-        <!-- a golden leaf off the same tree: the Qur'an's stories beyond the prophets -->
-        <a class="qs-leaf" routerLink="/stories" aria-label="Stories of the Qur'an">
-          <span class="qsl-glow" aria-hidden="true"></span>
-          <svg class="qsl-svg" viewBox="0 0 100 168" aria-hidden="true">
-            <defs>
-              <linearGradient id="leafgrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#F3E4B0" /><stop offset="55%" stop-color="#C8A44B" /><stop offset="100%" stop-color="#8A6B22" />
-              </linearGradient>
-            </defs>
-            <path class="qsl-stem" d="M50 166 C 49 140, 51 120, 50 96" />
-            <path class="qsl-blade" d="M50 150 C 6 112, 12 40, 50 6 C 88 40, 94 112, 50 150 Z" />
-            <path class="qsl-mid" d="M50 146 L50 18" />
-            <path class="qsl-vein" d="M50 118 C 36 112, 30 104, 26 92 M50 118 C 64 112, 70 104, 74 92
-                                      M50 92 C 38 87, 32 80, 29 70 M50 92 C 62 87, 68 80, 71 70
-                                      M50 66 C 41 62, 36 56, 33 48 M50 66 C 59 62, 64 56, 67 48" />
-          </svg>
-          <span class="qsl-lbl"><b>Stories of the Qur’ān</b><em>seven signs among the nations</em></span>
-          <span class="qsl-tip" aria-hidden="true">The Cave · Dhū al-Qarnayn · Luqmān · the Ditch · Sabaʾ · the Sabbath · the Elephant</span>
-        </a>
+        <!-- seven lanterns hung from a bough beside the tree: the Qur'an's stories -->
+        <svg class="qs-lanterns" viewBox="0 0 300 164" role="group" aria-label="Stories of the Qur'an — seven lanterns">
+          <defs>
+            <radialGradient id="lglow" cx="50%" cy="46%" r="55%">
+              <stop offset="0%" stop-color="#FFE9A8" /><stop offset="50%" stop-color="#E8A33C" stop-opacity=".9" />
+              <stop offset="100%" stop-color="#E8A33C" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="lbodyg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#3a2c10" /><stop offset="100%" stop-color="#201709" />
+            </linearGradient>
+          </defs>
+          <path class="lbranch" d="M12 18 C 96 52, 204 52, 288 18" />
+          @for (l of lanterns; track l.slug) {
+            <g [attr.transform]="'translate(' + l.x + ' ' + l.y + ')'">
+              <g class="lswing" [class.on]="lanternHover() === l.slug" [style.animation-delay.s]="l.delay"
+                 (mouseenter)="lanternHover.set(l.slug)" (mouseleave)="lanternHover.set(null)"
+                 (click)="goStory(l.slug)" (keydown.enter)="goStory(l.slug)" tabindex="0" role="link"
+                 [attr.aria-label]="l.name">
+                <circle class="lhalo" cx="0" cy="31" r="17" fill="url(#lglow)" [style.animation-delay.s]="l.delay" />
+                <line class="lthread" x1="0" y1="0" x2="0" y2="14" />
+                <circle class="lring" cx="0" cy="14" r="2" />
+                <path class="lcap" d="M-5 17 L5 17 L4 20 L-4 20 Z" />
+                <path class="lbody" d="M-5 20 C -5 17 5 17 5 20 L5 41 C5 44 -5 44 -5 41 Z" />
+                <ellipse class="lflame" cx="0" cy="31" rx="4.3" ry="7" fill="url(#lglow)" [style.animation-delay.s]="l.delay" />
+                <line class="lpane" x1="-1.8" y1="21" x2="-1.8" y2="40" /><line class="lpane" x1="1.8" y1="21" x2="1.8" y2="40" />
+                <line class="lfin" x1="0" y1="44" x2="0" y2="47" /><circle class="lknob" cx="0" cy="48" r="1.5" />
+                @if (lanternHover() === l.slug) { <text class="lname" x="0" y="62">{{ l.name }}</text> }
+              </g>
+            </g>
+          }
+          <text class="qsl-title" x="150" y="150" text-anchor="middle" role="link" tabindex="0"
+                (click)="openStories()" (keydown.enter)="openStories()">Stories of the Qur’ān</text>
+        </svg>
       </div>
       <p class="tl-hint">Every chronicle is reviewed, cited content · No depiction of prophets or companions · Peace be upon them all</p>
     }
   `,
 })
 export class GatewayComponent {
+  private router = inject(Router);
   chronicles = httpResource<ChronicleItem[]>(() => '/api/public/chronicles', { defaultValue: [] });
 
   readonly viewBox = VIEWBOX;
+
+  // The Qur'an's stories, hung as seven lanterns from a bough beside the tree.
+  // x/y place each lantern's hanging-point along the drooping branch; delay
+  // staggers the sway and flame flicker so they never move in unison.
+  lanternHover = signal<string | null>(null);
+  readonly lanterns = [
+    { slug: 'ashab-al-kahf', name: 'The Cave', x: 24, y: 22, delay: 0 },
+    { slug: 'dhul-qarnayn', name: 'Dhū al-Qarnayn', x: 66, y: 33, delay: 0.7 },
+    { slug: 'luqman-the-wise', name: 'Luqmān', x: 108, y: 41, delay: 1.4 },
+    { slug: 'ashab-al-ukhdud', name: 'The Ditch', x: 150, y: 44, delay: 0.4 },
+    { slug: 'the-people-of-saba', name: 'Sabaʾ', x: 192, y: 41, delay: 1.1 },
+    { slug: 'ashab-al-sabt', name: 'The Sabbath', x: 234, y: 33, delay: 1.8 },
+    { slug: 'ashab-al-fil', name: 'The Elephant', x: 276, y: 22, delay: 0.3 },
+  ];
+  goStory(slug: string) { this.router.navigate(['/event', slug]); }
+  openStories() { this.router.navigate(['/stories']); }
 
   private svg = viewChild<ElementRef<SVGSVGElement>>('svg');
   private tree = viewChild<ElementRef<HTMLElement>>('tree');
