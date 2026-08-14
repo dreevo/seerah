@@ -719,6 +719,10 @@ footer .fnote { font-size: 10.5px; color: #4E5C6A; font-style: italic; }
   color: #E4796A; background: rgba(193, 80, 63, .16); border: 1px solid rgba(193, 80, 63, .4); padding: 2px 7px; border-radius: 3px; }
 @keyframes mwreveal { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 .mw-foot { text-align: center; color: #5F6D7B; font-size: 11.5px; font-style: italic; margin-top: 18px; }
+.mw-note { max-width: 780px; margin: 12px auto 0; text-align: center; color: #8794A1; font-size: 13px; line-height: 1.7; }
+.mw-note b { color: var(--gold-soft); font-weight: 600; }
+.mw-note a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,164,75,.4); }
+.mw-note a:hover { color: var(--gold-soft); }
 @media (prefers-reduced-motion: reduce) { .mw-cell.active { animation: none; } }
 
 /* #3 + #5 — scroll reveals: each section rises and the sacred text comes into

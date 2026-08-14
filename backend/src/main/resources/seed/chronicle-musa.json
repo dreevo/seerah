@@ -473,6 +473,23 @@
       "place": "the-wilderness"
     },
     {
+      "slug": "musa-qarun-and-his-treasure",
+      "title": "Qārūn and His Treasure",
+      "certainty": "MUTAWATIR",
+      "source": "the-noble-quran",
+      "locator": "Surah al-Qasas 28:76-82",
+      "summary": "Qārūn was of Mūsā's people, but the treasures Allah gave him — whose very keys would burden a band of strong men — made him tyrannise them. Urged to seek the Hereafter with his wealth, to do good and not forget his share of the world, he answered: 'I was given it only for knowledge I possess.' He came out before the people in his adornment, and those who craved the worldly life envied him — until Allah caused the earth to swallow him and his home, with no party to help him against Allah. The next morning those who had wished for his place gave thanks they were not in it.",
+      "why": "A warning set inside Mūsā's own nation: wealth ungoverned by gratitude becomes tyranny, and the splendour the world envies can sink into the earth in a moment — for provision is Allah's alone to extend or restrain.",
+      "people": [
+        "musa"
+      ],
+      "verses": [
+        "28:76",
+        "28:78",
+        "28:81"
+      ]
+    },
+    {
       "slug": "musa-and-al-khidr",
       "title": "Musa and al-Khidr",
       "certainty": "MUTAWATIR",

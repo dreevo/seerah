@@ -52,6 +52,13 @@ const NATIONS: Nation[] = [
     { slug: 'shuayb-the-punishment', t: 'The Earthquake', sig: 'The earthquake / the cloud' },
     { slug: 'shuayb-and-believers-saved', t: 'The Believers Saved' },
   ] },
+  { ar: 'مُوسَىٰ', name: 'Mūsā', to: 'Pharaoh & his people', chronicle: 'musa', cells: [
+    { slug: 'musa-before-pharaoh', t: 'Sent to Pharaoh' },
+    { slug: 'musa-and-the-magicians', t: 'The Sorcerers Summoned' },
+    { slug: 'musa-the-signs-on-egypt', t: 'The Signs on Egypt' },
+    { slug: 'musa-drowning-of-pharaoh', t: 'The Drowning', sig: 'Drowned in the sea' },
+    { slug: 'musa-parting-of-the-sea', t: 'Israel Brought Across' },
+  ] },
 ];
 
 @Component({
@@ -62,9 +69,9 @@ const NATIONS: Nation[] = [
       <div class="mw-head">
         <div class="eyebrow">A pattern across the Qur’ān</div>
         <h1>The <em>Way</em> of the Messengers</h1>
-        <p class="mw-lede">To ʿĀd, Thamūd, the people of Lūṭ and Madyan — and before them the people of Nūḥ —
+        <p class="mw-lede">To the people of Nūḥ, then ʿĀd, Thamūd, the people of Lūṭ and Madyan, and Pharaoh’s Egypt —
           the Qur’ān tells one recurring arc: a messenger sent, a people who cling to their way,
-          denial and defiance, a reckoning, and the believers delivered. Watch five nations move through
+          denial and defiance, a reckoning, and the believers delivered. Watch six nations move through
           the <b>same five beats</b> — each meeting a doom of its own.</p>
       </div>
 
@@ -106,6 +113,10 @@ const NATIONS: Nation[] = [
         </div>
       </div>
       <p class="mw-foot">Every cell is a real, cited event — click to open it. Sequence and wording follow the Qur’ān.</p>
+      <p class="mw-note">The Qur’ān also names peoples whose story it does not detail — the <b>People of ar-Rass</b> and
+        <b>Tubbaʿ</b> (25:38, 50:12–14) — so they cannot be drawn here without inventing what the source withholds.
+        And within Pharaoh’s Egypt stands <b>Qārūn</b>, a man of Mūsā’s own people whom the earth swallowed for his
+        arrogance (28:76–82) — <a routerLink="/event/musa-qarun-and-his-treasure">read his account</a>.</p>
     </section>
   `,
 })
