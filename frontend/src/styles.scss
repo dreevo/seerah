@@ -59,6 +59,16 @@ a { color: inherit; text-decoration: none; }
 .nav a:hover app-icon, .nav a.on app-icon { opacity: 1; }
 .nav a.on app-icon { color: var(--navy); }
 .nav a.home { padding: 8px 10px; }
+/* on phones the nav goes icon-only so it never overflows the header */
+@media (max-width: 560px) {
+  .app > header { padding: 12px 15px; gap: 10px; }
+  .nav { gap: 2px; }
+  .nav a { padding: 9px 9px; }
+  .nav-lbl { display: none; }
+  .brand-ar { font-size: 16px; }
+  .brand-en { font-size: 9px; letter-spacing: 2.6px; }
+  .brand .star { font-size: 22px; }
+}
 
 /* chronicle gateway — the tree of the prophets */
 .gw-top { text-align: center; padding: 40px 16px 6px; }

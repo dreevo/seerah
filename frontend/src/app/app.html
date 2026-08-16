@@ -12,11 +12,11 @@
     </a>
     <nav class="nav">
       @if (chronicle.slug(); as c) {
-        <a routerLink="/" class="home" title="All chronicles"><app-icon name="chronicle" [size]="15" /></a>
-        <a [routerLink]="['/c', c]" routerLinkActive="on" [routerLinkActiveOptions]="{ exact: true }"><app-icon name="timeline" [size]="15" />Timeline</a>
-        <a [routerLink]="['/c', c, 'companions']" routerLinkActive="on"><app-icon name="companions" [size]="15" />People</a>
+        <a routerLink="/" class="home" title="All chronicles" aria-label="All chronicles"><app-icon name="chronicle" [size]="15" /></a>
+        <a [routerLink]="['/c', c]" routerLinkActive="on" [routerLinkActiveOptions]="{ exact: true }" title="Timeline"><app-icon name="timeline" [size]="15" /><span class="nav-lbl">Timeline</span></a>
+        <a [routerLink]="['/c', c, 'companions']" routerLinkActive="on" title="People"><app-icon name="companions" [size]="15" /><span class="nav-lbl">People</span></a>
       }
-      <a routerLink="/search" routerLinkActive="on" title="Search the whole library"><app-icon name="search" [size]="15" />Search</a>
+      <a routerLink="/search" routerLinkActive="on" title="Search the whole library"><app-icon name="search" [size]="15" /><span class="nav-lbl">Search</span></a>
     </nav>
   </header>
 
