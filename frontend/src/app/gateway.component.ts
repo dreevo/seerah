@@ -1,5 +1,5 @@
 import {
-  Component, computed, effect, ElementRef, HostListener, inject, signal, viewChild,
+  afterNextRender, Component, computed, effect, ElementRef, HostListener, inject, signal, viewChild,
 } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { httpResource } from '@angular/common/http';
@@ -199,6 +199,7 @@ const VIEWBOX = `${VIEW.x} ${VIEW.y} ${VIEW.w} ${VIEW.h}`;
     @if (chronicles.error()) {
       <p class="state err">The library service is unavailable. Is the backend running on :8080?</p>
     } @else {
+      <p class="ptree-hint">Drag to explore the tree · pinch to zoom · tap a prophet to open</p>
       <div class="ptree" #tree>
         <svg #svg [attr.viewBox]="viewBox" role="img" aria-label="Genealogy of the prophets" [class.tracing]="current()">
           <defs>
@@ -329,6 +330,13 @@ export class GatewayComponent {
   constructor() {
     // Keep the popover anchored to its node whenever the focus changes.
     effect(() => { const n = this.popNode(); if (n) this.place(n); });
+    // On phones the tree is a drag-to-pan canvas — open it centred on the trunk (Ādam).
+    afterNextRender(() => {
+      const el = this.tree()?.nativeElement;
+      if (el && matchMedia('(max-width: 760px)').matches) {
+        requestAnimationFrame(() => { el.scrollLeft = (el.scrollWidth - el.clientWidth) / 2; });
+      }
+    });
   }
 
   /** A node is lit when it lies on the focused prophet's line of descent. */

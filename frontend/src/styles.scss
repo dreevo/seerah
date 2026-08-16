@@ -76,6 +76,18 @@ a { color: inherit; text-decoration: none; }
 
 .ptree { position: relative; max-width: 1340px; margin: 4px auto 0; padding: 0 12px; }
 .ptree svg { width: 100%; height: auto; display: block; overflow: visible; }
+/* a hint shown only where the tree becomes a drag-to-pan canvas (phones) */
+.ptree-hint { display: none; text-align: center; color: var(--muted); font-size: 12px; font-style: italic;
+  margin: 8px auto 0; }
+@media (max-width: 760px) {
+  /* keep the exact tree design, but render it big enough to read and let the reader
+     drag to pan (and pinch-zoom natively) instead of squashing it to phone width */
+  .ptree { overflow: auto; max-height: 74vh; padding: 6px; -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--line); border-radius: 14px; background: rgba(8, 20, 32, .28);
+    scrollbar-width: thin; scrollbar-color: var(--gold-deep) transparent; }
+  .ptree svg { width: 860px; }
+  .ptree-hint { display: block; }
+}
 
 /* branches draw themselves from root to leaf */
 .branch { fill: none; stroke: url(#bark); stroke-linecap: round; opacity: .9;
